@@ -1,6 +1,4 @@
 'use client';
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight, FileText, Phone, Target, Star, BookOpen } from 'lucide-react';
 import { Mochiy_Pop_One, Poppins } from 'next/font/google';
 import FlexibleInfoCard from './methodicalcomponent';
 
