@@ -73,7 +73,12 @@ const Header = () => {
 
           {/* Logo - centered on mobile, left on desktop */}
           <div className="flex items-center lg:flex-none">
-            <BlackLogoWithText />
+            <div className="lg:hidden">
+              <BlackLogoWithText logoHeight={50} textHeight={130} />
+            </div>
+            <div className="hidden lg:block">
+              <BlackLogoWithText logoHeight={80} textHeight={150} />
+            </div>
           </div>
 
           {/* Mobile: Call us button on right */}
@@ -117,25 +122,10 @@ const Header = () => {
               </nav>
               
               <button className="ml-3 border border-white text-white px-5 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-base">
-
                 Call us
               </button>
             </div>
           </div>
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={toggleMobileMenu}
-              className="text-white hover:text-gray-300 transition-colors duration-200"
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
-
         </div>
 
         {/* Mobile Navigation */}
