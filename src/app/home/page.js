@@ -1,8 +1,8 @@
 import Footer from '@/components/footer';
 import Header from '@/components/Header.jsx';
-import Home from '@/components/Home.jsx';
-import MakingFinanceWonderful from '@/components/MakingFinanceWonderful';
-import WhoWeArePage from '@/components/WhoWeArePage';
+import Home from './Home.jsx';
+import MakingFinanceWonderful from './MakingFinanceWonderful';
+import WhoWeArePage from './WhoWeArePage';
 import MethodicalApproach from './medothical';
 
 export default function HomePage() {
