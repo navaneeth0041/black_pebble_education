@@ -1,7 +1,6 @@
 import React from 'react';
 import { Mochiy_Pop_One, Poppins } from 'next/font/google';
 
-// Configure the fonts
 const mochiyPopOne = Mochiy_Pop_One({
   weight: '400',
   subsets: ['latin'],
@@ -20,7 +19,7 @@ export default function Home1() {
       <div className="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl w-full text-center relative">
       <div className="mb-12 sm:mb-10 md:mb-12">
           <div className="relative inline-block mb-3 sm:mb-6">
-            <div className="hidden sm:block absolute -left-16 md:-left-20 lg:-left-24 top-2 md:top-4 lg:top-6 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24">
+            <div className="hidden sm:block absolute -right-12 md:-right-16 lg:-right-18 bottom-2 md:bottom-4 lg:bottom-6 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24">
               <img
                 src="/home_page_assets/8/Clip path group.svg"
                 alt="Hand Icon"
@@ -28,7 +27,7 @@ export default function Home1() {
               />
             </div>
 
-            <div className="hidden sm:block absolute -right-16 md:-right-20 lg:-right-24 bottom-2 md:bottom-4 lg:bottom-6 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24">
+            <div className="hidden sm:block absolute -left-3 md:-left-5 lg:-left-5 top-2 md:top-4 lg:top-6 w-12 h-12 md:w-16 md:h-16 lg:w-25 lg:h-20 xl:w-20 xl:h-24">
               <img
                 src="/home_page_assets/8/Group 54.svg"
                 alt="Coins Icon"
