@@ -41,23 +41,25 @@ export default function FinancialLiteracyPage() {
                   Financial Illiteracy
                 </span>
                 <span className={`${mochiyPopOne.className} block text-3xl md:text-6xl font-normal leading-tight whitespace-nowrap`}>
+
                   are Stark
                 </span>
               </div>
               
               {/* Subtitle */}
               <p className={`${poppins.className} text-2xl lg:text-3xl text-[#39BB9C] font-normal opacity-70`}>
+
                 Poor Financial Knowledge
               </p>
             </div>
 
             {/* Right Section - Image */}
             <div className="lg:w-1/2 w-full relative">
-              {/* Container with extra padding-left to push images right */}
               <div className="relative flex justify-end items-center pl-4 lg:pl-18">
                 
                 {/* Main Family Image */}
                 <div className="rounded-2xl overflow-hidden w-full max-w-xl pb-30 sm:py-10 lg:py-14 lg:max-w-2xl relative z-10 mx-auto">
+
                   <img 
                     src="./home_page_assets/3/Frame 69.svg" 
                     alt="Family learning about finances"

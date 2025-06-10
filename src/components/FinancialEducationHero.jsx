@@ -20,6 +20,7 @@ const FinancialEducationHero = () => {
       <div className="max-w-4xl mx-auto mb-8">
         <p className={`${poppins.className} text-xl md:text-2xl lg:text-3xl font-light leading-relaxed`}>
           We ensure your child develops <em className="text-[#FFE4A1] font-semibold not-italic">financial knowledge</em>, <em className="text-[#FFE4A1]  font-semibold not-italic">a financial mindset</em>, and healthy <em className="text-[#FFE4A1]  font-semibold not-italic">financial behavior</em> so that they not only<br />
+
           <span className="font-semibold tracking-wide">KNOW</span> and <span className="font-semibold tracking-wide">GROW</span> money, but also <span className="font-semibold tracking-wide">LOVE MONEY</span>.
         </p>
       </div>
