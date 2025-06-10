@@ -3,17 +3,16 @@ import React from "react";
 import Image from "next/image";
 import localFont from "next/font/local";
 
-// Load custom fonts
-const candal = localFont({
-  src: "../fonts/candal/Candal-Regular.ttf",
-  variable: "--font-candal",
-  display: "swap",
+const candal = Candal-Regular({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
 });
 
-const poppins = localFont({
-  src: "../fonts/poppins/Poppins-Regular.ttf",
-  variable: "--font-poppins",
-  display: "swap",
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 const WhyPebbleBellaSection = () => {
