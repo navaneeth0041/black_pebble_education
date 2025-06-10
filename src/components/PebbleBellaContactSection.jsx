@@ -49,14 +49,14 @@ const PebbleBellaContactSection = () => {
         
         {/* Centered Blurred Background Container with heading inside */}
         <div className="flex justify-center items-center min-h-[80vh]">
-          <div className="relative max-w-5xl w-full">
-            {/* Blurred Background Container - centered */}
+          <div className="relative max-w-6xl w-full">
+            {/* Blurred Background Container - centered with increased width */}
             <div 
               className="backdrop-blur-sm bg-white/10 rounded-2xl p-8 md:p-12 relative mx-auto"
               style={{
                 backdropFilter: "blur(8px)",
                 background: "rgba(255, 255, 255, 0.08)",
-                maxWidth: "900px"
+                maxWidth: "1100px"
               }}
             >
               {/* Sun Icon - positioned on the exact left top corner of container, larger size */}
@@ -70,9 +70,9 @@ const PebbleBellaContactSection = () => {
                 />
               </div>
               
-              {/* Title - adjusted positioning */}
+              {/* Title - left aligned */}
               <h1
-                className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8 md:mb-12 text-center ${candal.className}`}
+                className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8 md:mb-12 text-left ${candal.className}`}
               >
                 Why be a Pebble Bella
               </h1>
@@ -155,8 +155,8 @@ const PebbleBellaContactSection = () => {
               </form>
             </div>
 
-            {/* Thread decoration - mostly outside container, small overlap at bottom left corner */}
-            <div className="absolute -left-20 bottom-2 w-[450px] h-[500px] md:w-[550px] md:h-[600px] opacity-40 z-5">
+            {/* Thread decoration - positioned at bottom left corner with small overlap on button and blurred section */}
+            <div className="absolute -left-66 bottom-[-170px] w-[350px] h-[400px] md:w-[450px] md:h-[500px] opacity-40 z-5">
               <Image
                 src="./brand_ambassor_assets/thread.svg"
                 alt=""
@@ -166,7 +166,7 @@ const PebbleBellaContactSection = () => {
             </div>
 
             {/* Stack - positioned lower at bottom right */}
-            <div className="absolute -right-6 -bottom-4 md:-right-8 md:-bottom-6 w-[160px] h-[190px] md:w-[200px] md:h-[240px] opacity-90 z-15">
+            <div className="absolute -right-6 -bottom-4 md:-right-8 md:-bottom-20 w-[160px] h-[190px] md:w-[200px] md:h-[240px] opacity-90 z-15">
               <Image
                 src="./brand_ambassor_assets/stack.svg"
                 alt=""
