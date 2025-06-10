@@ -23,6 +23,7 @@ module.exports = {
         'candal': ['Candal', 'sans-serif'],
         'raleway': ['Raleway', 'sans-serif'],
         'lato': ['Lato', 'sans-serif'],
+        'mochiy': ['"Mochiy Pop One"', 'sans-serif'],
       },
       backgroundImage: {
         'hero-pattern': "url('/images/hero-bg-pattern.svg')",
