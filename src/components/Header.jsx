@@ -28,7 +28,7 @@ const Header = () => {
       dropdownItems: ['Teen Option 1', 'Teen Option 2', 'Teen Option 3']
     },
     { 
-      label: 'Self-help Kits', 
+      label: 'Self Help Kits', 
       hasDropdown: true,
       dropdownItems: ['Kit Option 1', 'Kit Option 2', 'Kit Option 3']
     },
@@ -116,13 +116,25 @@ const Header = () => {
                 ))}
               </nav>
               
-              {/* Call us button inside the rounded container */}
               <button className="ml-3 border border-white text-white px-5 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-base">
+
                 Call us
               </button>
             </div>
           </div>
-
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMobileMenu}
+              className="text-white hover:text-gray-300 transition-colors duration-200"
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
 
         </div>
 
@@ -165,9 +177,6 @@ const Header = () => {
                     )}
                   </div>
                 ))}
-                <div className="pt-4">
-                  {/* Remove Call us button from mobile menu since it's now in header */}
-                </div>
               </div>
             </div>
           </div>
