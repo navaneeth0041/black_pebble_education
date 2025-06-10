@@ -1,3 +1,4 @@
+import FinancialLiteracyPage from '@/components/FinancialLiteracyPgae';
 import Header from '@/components/Header.jsx';
 import Home from '@/components/Home.jsx';
 import MakingFinanceWonderful from '@/components/MakingFinanceWonderful';
@@ -10,6 +11,7 @@ export default function BrandAmbassadorPage() {
       <Home />
       <WhoWeArePage/>
       <MakingFinanceWonderful/>
+      <FinancialLiteracyPage/>
 
     </>
   );
