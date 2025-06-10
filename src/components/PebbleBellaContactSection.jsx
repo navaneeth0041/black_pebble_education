@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { Candal, Poppins } from "next/font/google";
 
-const candal = candal-Regular({
+const candal = Candal({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
