@@ -5,6 +5,7 @@ import Home from './Home.jsx';
 import MakingFinanceWonderful from './MakingFinanceWonderful';
 import WhoWeArePage from './WhoWeArePage';
 import MethodicalApproach from './medothical';
+import UniquePedagogy from './UniquePedagogy';
 
 export default function HomePage() {
   return (
@@ -13,8 +14,10 @@ export default function HomePage() {
       <Home />
       <WhoWeArePage/>
       <MakingFinanceWonderful/>
+      <UniquePedagogy/>      
       <FinancialLiteracyPage/>
       <MethodicalApproach />
+
       <Footer />
     </>
   );
