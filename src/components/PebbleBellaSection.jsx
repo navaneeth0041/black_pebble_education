@@ -4,13 +4,13 @@ import Image from 'next/image';
 import { Candal, Poppins } from "next/font/google";
 
 const candal = Candal({
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
 });
 
 const poppins = Poppins({
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
 });
