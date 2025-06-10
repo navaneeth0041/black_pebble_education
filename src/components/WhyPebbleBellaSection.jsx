@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import localFont from "next/font/local";
 
-const candal = Candal-Regular({
+const candal = candal-Regular({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
