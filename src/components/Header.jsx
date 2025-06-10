@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
+import BlackLogoWithText from './blacklogo';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -53,44 +54,46 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full bg-[#2d333a] border border-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <div className="flex items-center">
-              <img 
-                src="/logo/logo_black.svg" 
-                alt="Qb Black Pebble Education" 
-                className="h-12 w-auto lg:h-14 object-contain"
-                style={{ minWidth: '200px', maxWidth: 'none' }}
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'block';
-                }}
-              />
-              <div 
-                className="text-white font-bold text-xl lg:text-2xl font-candal hidden"
-                style={{ display: 'none' }}
-              >
-                <span className="bg-white text-gray-900 px-2 py-1 rounded mr-1">Qb</span>
-                Black Pebble
-                <span className="text-xs align-top ml-1">TM</span>
-              </div>
-            </div>
+    <header className="w-full bg-[#343434]">
+      <div className="mx-auto px-10 py-6 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-12 lg:h-14">
+          {/* Mobile: Toggle button on left */}
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMobileMenu}
+              className="text-white hover:text-gray-300 transition-colors duration-200"
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+
+          {/* Logo - centered on mobile, left on desktop */}
+          <div className="flex items-center lg:flex-none">
+            <BlackLogoWithText />
+          </div>
+
+          {/* Mobile: Call us button on right */}
+          <div className="lg:hidden">
+            <button className="border border-white text-white px-4 py-1.5 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-sm">
+              Call us
+            </button>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center">
             {/* Rounded background container for navigation */}
-            <div className="bg-gray-600/50 rounded-full px-2 py-1 flex items-center space-x-1">
-              <nav className="flex items-center space-x-1">
+            <div className="rounded-full px-4 py-2 flex items-center space-x-3" style={{ backgroundColor: 'rgba(71,71,71,0.16)' }}>
+              <nav className="flex items-center space-x-4">
                 {navigationItems.map((item, index) => (
                   <div key={index} className="relative group">
-                    <button className={`flex items-center text-white px-4 py-2 rounded-full hover:bg-gray-500/70 transition-colors duration-200`}>
-                      <span className="font-medium text-sm whitespace-nowrap">{item.label}</span>
+                    <button className="flex items-center text-white px-5 py-2 rounded-full hover:bg-gray-500/70 transition-colors duration-200">
+                      <span className="font-medium text-base whitespace-nowrap">{item.label}</span>
                       {item.hasDropdown && (
-                        <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+                        <ChevronDown className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                       )}
                     </button>
                     {/* Dropdown */}
@@ -113,13 +116,12 @@ const Header = () => {
                 ))}
               </nav>
               
-              {/* Call us button inside the rounded container */}
-              <button className="ml-2 border border-white text-white px-5 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-sm">
+              <button className="ml-3 border border-white text-white px-5 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-base">
+
                 Call us
               </button>
             </div>
           </div>
-
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
@@ -133,11 +135,12 @@ const Header = () => {
               )}
             </button>
           </div>
+
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50" style={{ top: '80px' }}>
+          <div className="lg:hidden fixed inset-0 z-50" style={{ top: '60px' }}>
             {/* Backdrop */}
             <div className="absolute inset-0 bg-black/50" onClick={toggleMobileMenu}></div>
             
@@ -174,11 +177,6 @@ const Header = () => {
                     )}
                   </div>
                 ))}
-                <div className="pt-4">
-                  <button className="w-full border border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium">
-                    Call us
-                  </button>
-                </div>
               </div>
             </div>
           </div>
