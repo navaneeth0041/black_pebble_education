@@ -35,14 +35,14 @@ export default function FinancialLiteracyPage() {
               {/* Main Heading */}
               <div className="text-[#39BB9C]">
                 <span className={`${mochiyPopOne.className} block text-3xl md:text-6xl font-normal leading-tight whitespace-nowrap`}>
-                  The consequences of
+                  The consequences
                 </span>
                 <span className={`${mochiyPopOne.className} block text-3xl md:text-6xl  font-normal leading-tight whitespace-nowrap`}>
-                  Financial Illiteracy
+                  of Financial
                 </span>
                 <span className={`${mochiyPopOne.className} block text-3xl md:text-6xl font-normal leading-tight whitespace-nowrap`}>
 
-                  are Stark
+                  Illiteracy are Stark
                 </span>
               </div>
               
