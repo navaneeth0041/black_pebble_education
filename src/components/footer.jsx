@@ -52,13 +52,8 @@ const Footer = () => {
       <div className="px-6 mx-auto py-4">
         {/* Top Section: Logo and YouTube */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-6">
-          <div className="mb-4 lg:mb-0 w-full lg:w-auto flex justify-center lg:justify-start">
-            <div className="lg:hidden">
-              <BlackLogoWithText logoHeight={80} textHeight={150} />
-            </div>
-            <div className="hidden lg:block">
-              <BlackLogoWithText logoHeight={80} textHeight={150} />
-            </div>
+          <div className="mb-4 lg:mb-0">
+            <BlackLogoWithText />
           </div>
 
           {/* YouTube Section - Responsive positioning */}
