@@ -12,6 +12,14 @@ export default function HomePage() {
       <Home />
       <WhoWeArePage/>
       <MakingFinanceWonderful/>
+<<<<<<< Updated upstream
+=======
+      <UniquePedagogy/>      
+      <FinancialLiteracyPage/>
+      <FinancialEducationHero/>
+      <MoneyClassComparison/>
+      <Testimonials/>
+>>>>>>> Stashed changes
       <MethodicalApproach />
       <Footer />
     </>

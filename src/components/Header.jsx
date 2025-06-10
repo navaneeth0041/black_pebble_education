@@ -77,7 +77,7 @@ const Header = () => {
               <BlackLogoWithText logoHeight={50} textHeight={130} />
             </div>
             <div className="hidden lg:block">
-              <BlackLogoWithText logoHeight={80} textHeight={150} />
+              <BlackLogoWithText logoHeight={100} textHeight={200} />
             </div>
           </div>
 

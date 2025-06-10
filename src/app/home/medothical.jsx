@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, FileText, Phone, Target, Star, BookOpen } fr
 import { Mochiy_Pop_One, Poppins } from 'next/font/google';
 import FlexibleInfoCard from './methodicalcomponent';
 
-const mochiyPopOne = Mochiy_Pop_One({
+const PopOne = Mochiy_Pop_One({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
@@ -21,7 +21,7 @@ const MethodicalApproach = () => {
       <div className="mx-auto">
         {/* Header */}
         <div className="text-left mb-12">
-          <h2 className={`${mochiyPopOne.className} text-4xl md:text-5xl font-bold text-[#09BE9D] mb-4 font-[mochiy]`} style={{ fontSize: '4vw', lineHeight: '8vh' }}>
+          <h2 className={`${PopOne.className} text-4xl md:text-5xl font-bold text-[#09BE9D] mb-4`} style={{ fontSize: '4vw', lineHeight: '8vh' }}>
             Our Methodical Approach
           </h2>
           <p className={` ${poppins.className} text-xl text-black font-medium`} style={{ fontSize: '3vmin', lineHeight: '6vh' }}>
