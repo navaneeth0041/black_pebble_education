@@ -1,5 +1,19 @@
 import React from 'react';
 
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
+
+const PopOne = Mochiy_Pop_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 const ComparisonPage = () => {
   const comparisonData = [
     {
@@ -50,14 +64,17 @@ const CoinIcon = ({ className }) => (
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-cyan-50 flex items-center justify-center p-4 md:p-8">
+    <div className="min-h-screen bg-[#F3FFF9] flex items-center justify-center p-4 md:p-8">
       <div className="max-w-6xl w-full">
         {/* Header Section */}
+        {/* Header Section */}
         <div className="text-center mb-8 md:mb-12">
-          <div className="flex justify-center items-center gap-6 mb-6">
+          <div className="flex justify-center items-center gap-4 md:gap-6 mb-6">
             <CoinIcon className="" />
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-teal-600 leading-tight">
-              Not Just Another Money Class
+            <h1 className={`font-bold text-[#08A59A] leading-tight ${PopOne.className} text-3xl md:text-5xl lg:text-5xl`}>
+              <span className="block md:inline">Not Just</span>
+              <span className="block md:inline"> Another Money</span>
+              <span className="block md:inline"> Class</span>
             </h1>
           </div>
         </div>
@@ -67,30 +84,31 @@ const CoinIcon = ({ className }) => (
           <div className="grid grid-cols-3 gap-4 md:gap-8">
             <div></div>
             <div className="text-center">
-              <h2 className="text-lg md:text-xl font-bold text-teal-600 mb-1">
+              <h2 className="text-lg md:hidden font-bold text-[#39BB9C] mb-1">BPE</h2>
+              <h2 className="hidden md:block text-lg md:text-xl font-bold text-[#39BB9C] mb-1">
                 Black Pebble
               </h2>
-              <h2 className="text-lg md:text-xl font-bold text-teal-600 mb-1">
+              <h2 className="hidden md:block text-lg md:text-xl font-bold text-[#39BB9C] mb-1">
                 Education
               </h2>
             </div>
             <div className="text-center">
-              <h2 className="text-lg md:text-xl font-bold text-black-600 mb-1">
+              <h2 className="text-lg md:hidden font-bold text-black-600 mb-1">OFP</h2>
+              <h2 className="hidden md:block text-lg md:text-xl font-bold text-black-600 mb-1">
                 Other Finance
               </h2>
-              <h2 className="text-lg md:text-xl font-bold text-black-600 mb-1">
+              <h2 className="hidden md:block text-lg md:text-xl font-bold text-black-600 mb-1">
                 Programs
               </h2>
             </div>
           </div>
         </div>
-
         {/* Feature Rows */}
         <div className="space-y-3 md:space-y-4">
           {comparisonData.map((item, index) => (
             <div
               key={index}
-              className="bg-white/60 backdrop-blur-sm rounded-2xl border border-gray-200 p-4 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-white backdrop-blur-sm rounded-2xl p-4 md:p-6  transition-shadow duration-300"
             >
               <div className="grid grid-cols-3 gap-4 md:gap-8 items-center">
                 <div>

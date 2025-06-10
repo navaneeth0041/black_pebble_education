@@ -19,8 +19,8 @@ export default function HomePage() {
       <MakingFinanceWonderful/>
       <UniquePedagogy/>      
       <FinancialLiteracyPage/>
-      <MoneyClassComparison/>
       <FinancialEducationHero/>
+      <MoneyClassComparison/>
       <Testimonials/>
       <MethodicalApproach />
       <Footer />

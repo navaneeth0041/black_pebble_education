@@ -1,5 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
+
+const PopOne = Mochiy_Pop_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const UniquePedagogy = () => {
   const cards = [
@@ -36,32 +48,36 @@ const UniquePedagogy = () => {
   ];
 
   return (
-    <section className="text-white pt-30 pb-40 overflow-hidden" style={{backgroundColor: '#343434'}}>
+    <section className="text-white pt-30 pb-40 overflow-hidden min-h-[60vh] lg:min-h-screen" style={{backgroundColor: '#343434'}}>
       <div className="max-w-6xl mx-auto text-center">
         {/* Icon */}
         <div className="flex justify-center mb-8">
-          <div className="w-16 h-16 relative">
+          <div className="w-100 h-30 relative">
             <Image
               src="/home_page_assets/2/Clip path group.svg"
               alt="Unique Pedagogy Icon"
-              width={64}
-              height={64}
+              width={150}
+              height={150}
               className="w-full h-full"
             />
           </div>
         </div>
 
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-8" style={{color: '#09be9d'}}>
-          Our Unique Pedagogy
+        <h2
+          className={`${poppins.className} text-3xl md:text-7xl font-bold py-2`}
+          style={{ color: '#09be9d' }}
+        >
+          <span className="block md:inline">Our Unique</span>
+          <span className="block md:inline"> Pedagogy</span>
         </h2>
 
         {/* Description */}
-        <div className="max-w-3xl mx-auto mb-16">
-          <p className="text-lg leading-relaxed" style={{color: '#00bf63'}}>
-            Our <span className="font-semibold" style={{color: '#f89006'}}>research-backed</span> and{' '}
-            <span className="font-semibold" style={{color: '#f89006'}}>IP-protected</span>{' '}
-            <span className="font-semibold" style={{color: '#f89006'}}>Teaching Methodology</span> is designed for
+        <div className={`max-w-3xl mx-auto mb-16 py-2 md:py-4 ${poppins.className}`}>
+          <p className="text-lg lg:text-xl leading-relaxed" style={{color: '#39BB9C'}}>
+            Our <span className="font-semibold" style={{color: '#FFE4A1'}}>research-backed</span> and{' '}
+            <span className="font-semibold" style={{color: '#FFE4A1'}}>IP-protected</span>{' '}
+            Teaching Methodology is designed for
             maximum learning and retention. The content of our courses accounts for the
             diversity and variety in the financial backgrounds of culturally-rich India.
           </p>
