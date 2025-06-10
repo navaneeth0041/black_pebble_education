@@ -5,7 +5,7 @@ import PebbleBellaContactSection from '@/components/PebbleBellaContactSection.js
 import Footer from '@/components/footer';
 import HeroSection from '@/components/HeroSection';
 
-export default function BrandAmbassadorPage() {
+export default function BrandAmbrPage() {
   return (
     <>
       <Header />

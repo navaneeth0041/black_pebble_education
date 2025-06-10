@@ -16,7 +16,7 @@ const poppins = Poppins({
 export default function Home1() {
   return (
     <div className="min-h-screen bg-[#343434] flex items-center justify-center p-2 sm:p-6 md:p-8 overflow-x-hidden">
-      <div className="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl w-full text-center relative">
+      <div className="sm:max-w-md md:max-w-2xl lg:max-w-4xl w-full text-center relative">
       <div className="mb-12 sm:mb-10 md:mb-12">
           <div className="relative inline-block mb-3 sm:mb-6">
             <div className="hidden sm:block absolute -right-12 md:-right-16 lg:-right-18 bottom-2 md:bottom-4 lg:bottom-6 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24">
