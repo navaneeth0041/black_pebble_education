@@ -7,6 +7,7 @@ import WhoWeArePage from '../../components/WhoWeArePage.jsx';
 import MethodicalApproach from '@/components/Medothical.jsx';
 import UniquePedagogy from './UniquePedagogy.jsx';
 import MoneyClassComparison from '@/components/MoneyClassComparison.jsx';
+import FinancialEducationHero from '@/components/FinancialEducationHero.jsx';
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
       <UniquePedagogy/>      
       <FinancialLiteracyPage/>
       <MoneyClassComparison/>
+      <FinancialEducationHero/>
       <MethodicalApproach />
       <Footer />
     </>
