@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import { Candal, Poppins } from "next/font/google";
+import { Candal, Poppins } from 'next/font/google';
 
 const candal = Candal({
   weight: ['400', '600', '700'],
