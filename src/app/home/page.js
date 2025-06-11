@@ -9,6 +9,7 @@ import UniquePedagogy from './UniquePedagogy.jsx';
 import MoneyClassComparison from '@/components/MoneyClassComparison.jsx';
 import FinancialEducationHero from '@/components/FinancialEducationHero.jsx';
 import Testimonials from '@/components/Testimonials.jsx'
+import ImpactPage from '@/components/ImapctStarts.jsx';
 
 export default function HomePage() {
   return (
@@ -22,6 +23,7 @@ export default function HomePage() {
       <FinancialEducationHero/>
       <MoneyClassComparison/>
       <Testimonials/>
+      <ImpactPage />
       <MethodicalApproach />
       <Footer />
     </>
