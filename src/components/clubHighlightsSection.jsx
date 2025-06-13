@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function ClubHighlights() {
   return (
+    <>
     <div className="bg-gray-100 py-12 md:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
@@ -59,5 +60,6 @@ export default function ClubHighlights() {
         </div>
       </div>
     </div>
+    </>
   );
 }

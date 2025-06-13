@@ -15,6 +15,7 @@ const poppins = Poppins({
 
 export default function FinanceHeroSection() {
   return (
+    <>
     <div className="min-h-[70vh] lg:min-h-screen bg-[#343434] flex items-center justify-start sm:p-6 md:p-8 lg:pl-28 overflow-x-hidden">
       <div className="w-full max-w-[1212px] relative">
         
@@ -60,5 +61,11 @@ export default function FinanceHeroSection() {
 
       </div>
     </div>
+    <img
+        src="/effects/black.png"
+        alt="black transition"
+        className='w-[200%] block relative -top-7 z-0'
+      />
+    </>
   );
 }
