@@ -48,7 +48,8 @@ const UniquePedagogy = () => {
   ];
 
   return (
-    <section className="text-white pt-30 pb-40 overflow-hidden min-h-[60vh] lg:min-h-screen" style={{backgroundColor: '#343434'}}>
+    <>
+    <section className="text-white pt-40 pb-40 overflow-hidden min-h-[60vh] lg:min-h-screen -mt-5 lg:-mt-30" style={{backgroundColor: '#343434'}}>
       <div className="max-w-6xl mx-auto text-center">
         {/* Icon */}
         <div className="flex justify-center mb-8">
@@ -127,6 +128,12 @@ const UniquePedagogy = () => {
         </div>
       </div>
     </section>
+    <img
+        src="/effects/black.png"
+        alt="black transition"
+        className='w-[200%] block relative -top-7 z-0'
+      />
+    </> 
   );
 };
 

@@ -77,7 +77,9 @@ export default function MakingFinanceWonderful() {
   ];
 
   return (
-    <div className="min-h-[60vh] lg:min-h-screen bg-[#E8F9F5] flex items-center justify-center p-4 md:p-8">
+    <>
+    <div className="min-h-[70vh] lg:min-h-screen  flex flex-col items-center justify-center sm:p-6 md:p-8 overflow-x-hidden relative z-10"
+      style={{ background: 'linear-gradient(225deg, #D6FFE9 0%, #E6FFF9 77%, #ECECEC 100%)' }}>
       <div>
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* Left Side - Title and Piggy Bank */}
@@ -106,7 +108,7 @@ export default function MakingFinanceWonderful() {
 
           {/* Right Side - Feature Cards Grid */}
           <div className="w-full lg:flex-1">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-md md:max-w-none mx-auto p-6 sm:p-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-md md:max-w-none mx-auto  sm:p-10">
               {features.map((feature, index) => (
                 <FeatureCard
                   key={index}
@@ -122,5 +124,13 @@ export default function MakingFinanceWonderful() {
         </div>
       </div>
     </div>
+    <img
+        src="/effects/littlegreen.png"
+        alt="green transition"
+        className='w-[120%] block relative -top-4  z-0'
+        style={{ margin: 0, padding: 0, display: 'block' }}
+      />
+    
+    </> 
   );
 }

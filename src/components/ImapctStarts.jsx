@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function ImpactPage() {
   return (
-    <div className="min-h-screen bg-white p-4 md:p-8" style={{ fontFamily: 'Poppins, sans-serif' }}>
+    <div className="min-h-[60vh] lg:min-h-9/10 bg-white py-4 md:p-8" style={{ fontFamily: 'Poppins, sans-serif' }}>
       <div className="max-w-6xl mx-auto">
         <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
           
-          <div className="order-1 lg:order-2 mb-8 lg:mb-0">
+          <div className="order-1 lg:order-2 mb-8 lg:mb-0 py-8">
             <h1 className="text-[#035276] font-normal text-[32px] md:text-[45px] leading-[149%] tracking-[-0.855px] text-center lg:text-left"
                 style={{ fontFamily: '"Mochiy Pop One", sans-serif' }}>
               The Impact Starts Early, and Lasts Forever

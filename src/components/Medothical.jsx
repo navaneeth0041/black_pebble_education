@@ -152,7 +152,8 @@ const MethodicalApproach = () => {
   };
 
   return (
-    <div className="w-full py-16 px-6" style={{ backgroundColor: '#F3FFF9' }}>
+    <>
+    <div className="w-full min-h-screen py-16 px-6" style={{ backgroundColor: '#F3FFF9' }}>
       <div className="mx-auto pl-4">
         
         <div className="text-left mb-12">
@@ -280,6 +281,12 @@ const MethodicalApproach = () => {
         </div>
       </div>
     </div>
+    <img
+        src="/effects/prefooter.png"
+        alt="black transition"
+        className='w-[200%] block relative -top-8 z-30'
+      />
+    </> 
   );
 };
 

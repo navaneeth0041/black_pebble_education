@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { Candal, Poppins } from 'next/font/google';
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
 
-const candal = Candal({
+const mochiyPopOne = Mochiy_Pop_One({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
@@ -38,7 +38,7 @@ const PebbleBellaContactSection = () => {
 
   return (
     <section
-      className={`w-full min-h-screen relative overflow-hidden ${candal.variable} ${poppins.variable}`}
+      className={`w-full min-h-screen relative overflow-hidden ${mochiyPopOne.variable} ${poppins.variable}`}
       style={{
         background: "linear-gradient(135deg, #00D4AA 0%, #00A896 50%, #048A81 100%)"
       }}
@@ -70,7 +70,7 @@ const PebbleBellaContactSection = () => {
               
               {/* Title - left aligned */}
               <h1
-                className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8 md:mb-12 text-left ${candal.className}`}
+                className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8 md:mb-12 text-left ${mochiyPopOne.className}`}
               >
                 Why be a Pebble Bella
               </h1>
