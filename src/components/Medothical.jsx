@@ -154,7 +154,7 @@ const MethodicalApproach = () => {
   return (
     <div className="w-full py-16 px-6" style={{ backgroundColor: '#F3FFF9' }}>
       <div className="mx-auto pl-4">
-        {}
+        
         <div className="text-left mb-12">
           <h2 
             className={`${PopOne.className} text-4xl md:text-5xl font-bold text-[#09BE9D] mb-4`} 
