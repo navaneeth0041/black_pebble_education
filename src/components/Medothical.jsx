@@ -89,7 +89,7 @@ const MethodicalApproach = () => {
       mainIcon: "/home_page_assets/7/teach.svg",
       secondaryIcon: null,
       bottomDecoration: null, 
-      headline: " Course Delivery",
+      headline: "Course Delivery",
       description: "We deliver LIVE session online or offline for the registered course.",
       bgColor: "bg-[#4ECDC4]",
       iconSize: "w-25 h-25"
