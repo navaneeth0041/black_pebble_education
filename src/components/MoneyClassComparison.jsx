@@ -64,7 +64,8 @@ const CoinIcon = ({ className }) => (
 
 
   return (
-    <div className="min-h-screen bg-[#F3FFF9] flex items-center justify-center p-4 md:p-8">
+    <>
+    <div className="min-h-screen  -mt-5 lg:-mt-30 pt-40 bg-[#F3FFF9] flex items-center justify-center p-4 md:p-8">
       <div className="max-w-6xl w-full">
         {/* Header Section */}
         {/* Header Section */}
@@ -128,6 +129,12 @@ const CoinIcon = ({ className }) => (
         </div>
       </div>
     </div>
+    <img
+        src="/effects/moneyclass.png"
+        alt="black transition"
+        className='w-[200%] block relative -top-7 z-0'
+      />
+    </> 
   );
 };
 

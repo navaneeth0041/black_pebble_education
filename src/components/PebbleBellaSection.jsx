@@ -1,9 +1,9 @@
 "use client"
 import React from 'react';
 import Image from 'next/image';
-import { Candal, Poppins } from 'next/font/google';
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
 
-const candal = Candal({
+const mochiyPopOne = Mochiy_Pop_One({
   weight: '400',
   subsets: ['latin'],
   display: 'swap',
@@ -44,14 +44,14 @@ const PebbleBellaSection = () => {
   ];
 
   return (
-    <section className={`w-full bg-white py-8 md:py-16 lg:py-20 ${candal.variable} ${poppins.variable}`}>
+    <section className={`w-full min-h-[60vh] lg:min-h-screen bg-white py-8 md:py-16 lg:py-20 ${mochiyPopOne.variable} ${poppins.variable}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="order-2 lg:order-1">
-            <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-8 lg:mb-12 leading-tight ${candal.className}`}>
-              <span className="text-[#4ECDC4] opacity-60">Who We Want as</span><br />
-              <span className="text-[#4ECDC4]">Pebble Bella</span>
+            <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-8 lg:mb-12 leading-tight ${mochiyPopOne.className}`}>
+              <span className="text-[#7AD3BE] opacity-60">Who We Want as</span><br />
+              <span className="text-[#39BB9C]">Pebble Bella</span>
             </h2>
             
             <div className="space-y-6 lg:space-y-8">
@@ -70,10 +70,10 @@ const PebbleBellaSection = () => {
                   
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className={`text-[#4ECDC4] font-bold text-lg md:text-xl mb-2 leading-tight ${poppins.className}`}>
+                    <h3 className={`text-[#39BB9C] font-bold text-lg md:text-xl mb-2 leading-tight ${poppins.className}`}>
                       {quality.title}
                     </h3>
-                    <p className={`text-[#4ECDC4] text-sm md:text-base leading-relaxed ${poppins.className}`}>
+                    <p className={`text-[#39BB9C] text-sm md:text-base leading-relaxed ${poppins.className}`}>
                       {quality.description}
                     </p>
                   </div>

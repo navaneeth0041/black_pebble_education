@@ -14,7 +14,11 @@ const poppins = Poppins({
 });
 const FinancialEducationHero = () => {
   return (
-    <section className="py-24 px-4 text-center text-white bg-gradient-to-tr from-[#017a9b] via-[#00b899] to-[#b2e2b4]">
+    <>
+    <section className="py-24 px-4 -mt-5 lg:-mt-30 pt-35 text-center text-white"
+    style={{
+        background: 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)'
+      }}>
       
       {/* Top Paragraph */}
       <div className="max-w-4xl mx-auto mb-8">
@@ -34,6 +38,14 @@ const FinancialEducationHero = () => {
         Know Money. Grow Money. Love Money.
       </h2>
     </section>
+    <img
+        src="/effects/darkgreen.png"
+        alt="green transition"
+        className='w-[120%] block relative -top-6  z-0'
+        style={{ margin: 0, padding: 0, display: 'block' }}
+      />
+    
+    </> 
   );
 };
 

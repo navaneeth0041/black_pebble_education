@@ -15,7 +15,8 @@ const poppins = Poppins({
 
 export default function Home1() {
   return (
-    <div className="min-h-[70vh] lg:min-h-screen bg-[#343434] flex items-center justify-center sm:p-6 md:p-8 overflow-x-hidden">
+    <>
+    <div className="min-h-[70vh] lg:min-h-screen bg-[#343434] flex flex-col items-center justify-center sm:p-6 md:p-8 overflow-x-hidden relative z-10">
       <div className="sm:max-w-md md:max-w-2xl lg:max-w-4xl w-full text-center relative">
       <div className="mb-12 sm:mb-10 md:mb-12">
           <div className="relative inline-block mb-3 sm:mb-6">
@@ -70,9 +71,15 @@ export default function Home1() {
             <button className={`${poppins.className} bg-transparent border-2 border-white hover:border-gray-400 text-white hover:text-white font-semibold px-6 sm:px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base`}>
                 Be our Brand Ambassador
             </button>
-            </div>
+        </div>
 
       </div>
     </div>
+    <img
+        src="/effects/black.png"
+        alt="black transition"
+        className='w-[200%] block relative -top-7 z-0'
+      />
+    </>  
   );
 }

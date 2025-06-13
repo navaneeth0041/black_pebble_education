@@ -15,6 +15,7 @@ const poppins = Poppins({
 
 export default function FinancialLiteracyPage() {
   return (
+    <>
     <div className="bg-white max-h-[90vh] lg:max-h-[70vh] py-10">
       <div className="px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
@@ -90,5 +91,11 @@ export default function FinancialLiteracyPage() {
         </div>
       </div>
     </div>
+    <img
+        src="/effects/white.png"
+        alt="black transition"
+        className='w-[200%] block relative -top-7 z-0'
+      />
+    </> 
   );
 }
