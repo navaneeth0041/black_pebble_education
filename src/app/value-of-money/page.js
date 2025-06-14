@@ -13,6 +13,7 @@ export default function ValueOfMoney() {
         <ValueOfMoneyHero />
         <CourseCurriculum />
         <CourseSnapshot />
+        <TestimonialCard />
         <PreFooter
          mainTitle="Why Learn the Value of Money So Early?"
          subText1="Some kids grow up without the concept of pocket money.They believe money is an infinite resource.This can result in indulgence or unchecked expenses,causing financial mishaps."
