@@ -2,6 +2,21 @@
 import React from "react";
 import Image from "next/image";
 
+
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
+
+const mochiyPopOne = Mochiy_Pop_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const poppins = Poppins({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export default function WhyChooseUsSection() {
   const features = [
     {
@@ -19,24 +34,25 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <div className="bg-blue-400 text-white py-12 md:py-16 lg:py-20 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+    <div className="bg-[#4598CA] text-white py-12 md:py-16 lg:py-30 relative overflow-hidden min-h-[70vh] -mt-5 lg:-mt-30 pt-40">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
           {/* Left Section - Title and Decorative Element */}
           <div className="lg:flex-1 flex flex-col items-start">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight ${mochiyPopOne.variable}`}>
               Why Choose
               <br />
               Us?
             </h2>
-                  <div className="absolute bottom-12 left-4 w-[300px] h-[220px] md:w-[500px] md:h-[340px] opacity-90 z-0">
-        <Image
-          src="/about/Group-1.svg"
-          alt=""
-          fill
-          className="object-contain object-left"
-        />
-      </div>
+       <div className="p-18 absolute bottom-0 left-0 sm:left-3 md:left-4 w-[280px] h-[200px] sm:w-[350px] sm:h-[250px] md:w-[450px] md:h-[320px] lg:w-[700px] lg:h-[500px] z-0">
+               <Image
+                 src="/about/Group-1.svg"
+                 alt=""
+                 fill
+                 className="object-contain object-bottom"
+               />
+             </div>
 
             {/* Decorative Thread/Line Asset */}
         {/*  <div className="mt-8 lg:mt-10 max-w-[600px] mx-auto">
@@ -57,7 +73,7 @@ export default function WhyChooseUsSection() {
                   <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
                   
                   {/* Feature Text */}
-                  <p className="text-lg md:text-xl leading-relaxed">
+                  <p className={` ${poppins.variable} text-lg md:text-3xl leading-relaxed`}>
                     {feature.text}
                   </p>
                 </li>
@@ -67,5 +83,11 @@ export default function WhyChooseUsSection() {
         </div>
       </div>
     </div>
+    <img
+        src="/effects/blue.png"
+        alt="black transition"
+        className='w-[200%] block relative -top-8 z-0'
+      />
+    </> 
   );
 }

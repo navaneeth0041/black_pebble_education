@@ -15,6 +15,7 @@ const poppins = Poppins({
 
 export default function HeroSection() {
   return (
+    <>
     <div className="bg-[#343434] lg:min-h-[30vh] text-white py-8 md:py-16 lg:py-20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="text-center lg:text-left">
@@ -29,5 +30,11 @@ export default function HeroSection() {
       <div className="absolute bottom-0 left-0 w-full h-[30px] bg-repeat-x bg-[url('/')]"></div> 
       {/* Someone need to add the vector here */}
     </div>
+    <img
+        src="/effects/black.png"
+        alt="black transition"
+        className='w-full block relative -top-8 z-20'
+      />
+    </> 
   );
 }
