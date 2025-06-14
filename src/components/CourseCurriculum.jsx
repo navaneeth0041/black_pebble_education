@@ -1,47 +1,61 @@
 "use client";
 import React from "react";
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
+
+const mochiyPopOne = Mochiy_Pop_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const poppins = Poppins({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function CourseCurriculum() {
   const modules = [
     {
       id: 1,
-      title: "Value of Money",
+      title: "| Value of Money",
       description: "Understanding how money is earned, saved and spent - and why it matters.",
-      bgColor: "bg-yellow-400",
+      bgColor: "bg-[#F7C342]",
       icon: "/Course_Design/1/Cash.svg" // Replace with your actual icon filename
     },
     {
       id: 2,
-      title: "Relationship with Money", 
+      title: "| Relationship with Money", 
       description: "Developing a healthy attitude towards money.",
-      bgColor: "bg-teal-400",
+      bgColor: "bg-[#39BB9C]",
       icon: "/Course_Design/1/coin_bulb.svg" // Replace with your actual icon filename
     },
     {
       id: 3,
-      title: "Budgeting",
+      title: "| Budgeting",
       description: "Allocating money for needs and wants - and also saving.",
-      bgColor: "bg-blue-400",
+      bgColor: "bg-[#4598CA]",
       icon: "/Course_Design/1/Calender.svg" // Replace with your actual icon filename
     },
     {
       id: 4,
-      title: "Peer Pressure",
+      title: "| Peer Pressure",
       description: "Developing resilience against peer demands - being financially strong.",
-      bgColor: "bg-red-400",
+      bgColor: "bg-[#4598CA]",
       icon: "/Course_Design/1/Tossing_coing.svg" // Replace with your actual icon filename
     }
   ];
 
   return (
-    <div className="bg-gray-50 py-12 md:py-16 lg:py-20">
+    <>
+    <div className="bg-white py-12 md:py-16 lg:py-20 pt-40 -mt-5 lg:-mt-30 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-block bg-teal-100 text-teal-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+          <div className={`  ${poppins.className} inline-block bg-[#E3FFF5] text-[#39BB9C] px-4 py-2 rounded-full text-sm font-medium mb-4`}>
             Course Curriculum
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
+          <h2 className={` ${mochiyPopOne.className}text-3xl md:text-4xl lg:text-5xl font-bold text-[#39BB9C]`}>
             What Your Child Will Learn
           </h2>
         </div>
@@ -70,7 +84,7 @@ export default function CourseCurriculum() {
                     {module.title}
                   </span>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
+                <p className={`text-[#39BB9C] leading-relaxed ${poppins.className}`}>
                   {module.description}
                 </p>
               </div>
@@ -79,5 +93,11 @@ export default function CourseCurriculum() {
         </div>
       </div>
     </div>
+    <img
+        src="/effects/white.png"
+        alt="black transition"
+        className='w-full block relative -top-8 z-20'
+      />
+    </>
   );
 }

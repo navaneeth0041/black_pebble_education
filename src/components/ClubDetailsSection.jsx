@@ -89,6 +89,11 @@ const ClubDetailsSection = () => {
           </div>
         </div>
       </section>
+      <img
+        src="/effects/lightaqua.svg"
+        alt="black transition"
+        className='w-full block relative -top-8 z-20'
+      />
     </>
   );
 };

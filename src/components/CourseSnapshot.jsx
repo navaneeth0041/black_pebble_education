@@ -2,7 +2,8 @@ import React from 'react';
 
 export default function CourseSnapshot() {
   return (
-    <div className="bg-gradient-to-br from-teal-100 to-emerald-50 p-8 min-h-screen">
+    <>
+    <div className="bg-[#E3FFF5] p-8 min-h-screen pt-25 -mt-5 lg:-mt-25">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-4 mb-8">
@@ -85,5 +86,11 @@ export default function CourseSnapshot() {
         </div>
       </div>
     </div>
+    <img
+        src="/effects/lightaqua.svg"
+        alt="black transition"
+        className='w-full block relative -top-8 z-20'
+      />
+    </>
   );
 }
