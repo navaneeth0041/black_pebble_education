@@ -19,6 +19,7 @@ const poppins = Poppins({
 
 const SelfHelpKits = () => {
   return (
+    <>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-[#343434] min-h-[572px] relative overflow-hidden">
@@ -42,9 +43,14 @@ At Your Own Pace!
       {/* Someone need to add the vector here */}
     </div>
       </section>
+      <img
+        src="/effects/black.png"
+        alt="black transition"
+        className='w-full block relative -top-8 z-20'
+      />
 
       {/* What's Inside Section */}
-    <section className="flex flex-col items-center gap-8 py-16 px-8">
+    <section className="flex flex-col items-center gap-8 py-16 px-8 pt-40 -mt-5 lg:-mt-30">
       <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
         What's Inside a Self-Help Kit?
       </h2>
@@ -121,10 +127,16 @@ At Your Own Pace!
         </div>
       </div>
     </section>
+    <img
+        src="/effects/white.png"
+        alt="black transition"
+        className='w-full block relative -top-8 z-20'
+      />
+
 
 
       {/* Who is This For Section */}
-<section className="bg-[#E1FFF4] py-24">
+<section className="bg-[#E1FFF4] py-24 pt-40 -mt-5 lg:-mt-30">
   <div className="flex items-center justify-center gap-16 px-24">
     <div className="flex flex-col items-start gap-5 max-w-md">
       <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-[48px] font-normal leading-[149%] tracking-[-0.912px]">
@@ -172,10 +184,15 @@ At Your Own Pace!
     </div>
   </div>
 </section>
+<img
+        src="/effects/selfkitgreen.png"
+        alt="black transition"
+        className='w-full block relative -top-8 z-20'
+      />
 
 
       {/* Why Self-Help Kits Work Section */}
-      <section className="bg-[#343434] py-24">
+      <section className="bg-[#343434] py-24 pt-40 -mt-5 lg:-mt-35">
         <div className="flex items-center justify-between gap-24 px-32 max-w-7xl mx-auto">
           <div className="flex flex-col items-start gap-5 max-w-lg">
             <h2 className="text-white font-['Mochiy_Pop_One'] text-[40px] font-normal leading-[149%] tracking-[-0.76px]">
@@ -226,9 +243,14 @@ At Your Own Pace!
           </div>
         </div>
       </section>
+      <img
+        src="/effects/black.png"
+        alt="black transition"
+        className='w-full block relative -top-8 z-20'
+      />
 
       {/* 7 Smart Money Concepts Section */}
-<section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-24 relative">
+<section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-24 relative pt-40 -mt-5 lg:-mt-35">
         {/* Circular Thread Background */}
         <img 
           src="/self_help_kit/4/Circle_thread.svg" 
@@ -353,6 +375,12 @@ At Your Own Pace!
         </div>
       </section>
     </div>
+    <img
+        src="/effects/selfkitprefooter.png"
+        alt="black transition"
+        className='w-full block relative -top-8 z-20'
+      />
+      </>
   );
 };
 
