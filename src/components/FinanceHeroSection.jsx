@@ -19,20 +19,15 @@ export default function FinanceHeroSection() {
     <div className="min-h-[70vh] lg:min-h-screen bg-[#343434] flex items-center justify-start sm:p-6 md:p-8 lg:pl-28 overflow-x-hidden">
       <div className="w-full max-w-[1212px] relative">
         
-        {/* Navigation placeholder - replace with your Navigation component */}
-        {/* <Navigation variant="inline" /> */}
-        
         <div className="mb-12 sm:mb-10 md:mb-12">
           <div className="relative mb-6 sm:mb-8">
             
-            {/* Main Heading - Left aligned and larger */}
         <h1 className={`${PopOne.className} text-4xl sm:text-5xl md:text-6xl lg:text-[80px] xl:text-[90px] leading-tight sm:leading-tight md:leading-[136%] tracking-[-1.235px] text-left text-white mb-2 sm:mb-4 max-w-6xl`}>
   <span className="block relative whitespace-nowrap">
     Finance Discussions for <span className="relative inline-block">
       Young
-      {/* Icon positioned absolutely under "Young" */}
       <img
-        src="./Finance_clubs/Group.svg" // Your actual icon path
+        src="./Finance_clubs/Group.svg" 
         alt="Calculator Icon"
         className="hidden lg:block absolute left-1/100 transform -translate-x-1/2 top-[180px] w-60 h-60 object-contain rotate-[-11deg]"
       />
