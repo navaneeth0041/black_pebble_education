@@ -16,8 +16,6 @@ export default function About(){
       	<MeetTheFounderSection />
 		<PreFooter
         mainTitle="Join Our mission to make finance fun and fearless for kids"
-        // subText1="We've got you covered. Our Counselor will help you."
-        // subText2="We'll arrange a call with our Counselor to assess your child's readiness and recommend courses that suit them. Let's get started!"
         buttonText="Book a Counseling Session"
       	/>
         <Footer />

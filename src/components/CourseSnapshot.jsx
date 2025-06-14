@@ -4,16 +4,13 @@ export default function CourseSnapshot() {
   return (
     <div className="bg-gradient-to-br from-teal-100 to-emerald-50 py-20 px-6 lg:px-16">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="flex justify-center mb-12">
           <h1 className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] bg-clip-text text-transparent font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
             Course Snapshot
           </h1>
         </div>
 
-        {/* Container with proper spacing for decorative icons */}
         <div className="relative w-full">
-          {/* Calendar Icon - Positioned similar to Club Details */}
           <div className="absolute -left-8 -top-12 z-0 sm:-left-16 sm:-top-8 lg:-left-28 lg:-top-35">
             <img
               src="/Finance_clubs/1/Group.svg"
@@ -22,12 +19,10 @@ export default function CourseSnapshot() {
             />
           </div>
 
-          {/* Main Card */}
           <div 
             className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[23px] p-6 sm:p-8 md:p-12 lg:p-16 w-full shadow-lg relative overflow-visible z-10"
             style={{ minHeight: '500px' }}
           >
-            {/* Decorative coins */}
             <div className="absolute -right-16 bottom-2 z-0 sm:-right-24 sm:bottom-3 lg:-right-40 lg:bottom-5">
               <img
                 src="/Finance_clubs/1/Clip path group.svg"
@@ -37,9 +32,7 @@ export default function CourseSnapshot() {
             </div>
 
             <div className="relative z-10">
-              {/* Top Section - Pricing and Course Format */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mb-8">
-                {/* Left Column - Pricing */}
                 <div className="space-y-6 sm:space-y-8 lg:space-y-12">
                   <div>
                     <h2 className="text-white font-poppins text-[24px] font-semibold mb-6" style={{
@@ -68,7 +61,6 @@ export default function CourseSnapshot() {
                   </div>
                 </div>
                 
-                {/* Right Column - Course Format */}
                 <div className="space-y-6 sm:space-y-8 lg:space-y-12">
                   <div>
                     <h2 className="text-white font-poppins text-[24px] font-semibold mb-8" style={{
@@ -103,10 +95,7 @@ export default function CourseSnapshot() {
                 </div>
               </div>
 
-              {/* Divider */}
               <div className="border-t border-white/30 my-6 sm:my-8"></div>
-
-              {/* Bottom Section - Location and Session Duration */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:divide-x md:divide-white/30">
                 <div className="flex flex-col gap-4 pb-6 md:pb-0 border-b border-white/30 md:border-b-0 md:pr-6">
                   <h3 className="text-white font-poppins text-[22px] font-semibold" style={{

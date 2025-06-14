@@ -23,28 +23,28 @@ export default function CourseCurriculum() {
       title: "| Value of Money",
       description: "Understanding how money is earned, saved and spent - and why it matters.",
       bgColor: "bg-[#F7C342]",
-      icon: "/Course_Design/1/Cash.svg" // Replace with your actual icon filename
+      icon: "/Course_Design/1/Cash.svg"
     },
     {
       id: 2,
       title: "| Relationship with Money", 
       description: "Developing a healthy attitude towards money.",
       bgColor: "bg-[#39BB9C]",
-      icon: "/Course_Design/1/coin_bulb.svg" // Replace with your actual icon filename
+      icon: "/Course_Design/1/coin_bulb.svg" 
     },
     {
       id: 3,
       title: "| Budgeting",
       description: "Allocating money for needs and wants - and also saving.",
       bgColor: "bg-[#4598CA]",
-      icon: "/Course_Design/1/Calender.svg" // Replace with your actual icon filename
+      icon: "/Course_Design/1/Calender.svg" 
     },
     {
       id: 4,
       title: "| Peer Pressure",
       description: "Developing resilience against peer demands - being financially strong.",
       bgColor: "bg-[#4598CA]",
-      icon: "/Course_Design/1/Tossing_coing.svg" // Replace with your actual icon filename
+      icon: "/Course_Design/1/Tossing_coing.svg"
     }
   ];
 
@@ -69,11 +69,9 @@ export default function CourseCurriculum() {
           </div>
         </div>
 
-        {/* Modules List */}
         <div className="max-w-4xl mx-auto space-y-8">
           {modules.map((module) => (
             <div key={module.id} className="flex flex-col md:flex-row gap-6 items-start">
-              {/* Icon Box with Text and Icon */}
               <div className={`${module.bgColor} w-full md:w-64 h-40 md:h-36 rounded-xl flex flex-col items-center justify-center flex-shrink-0 p-4`}>
                 <img 
                   src={module.icon} 
@@ -85,7 +83,6 @@ export default function CourseCurriculum() {
                 </div>
               </div>
               
-              {/* Content */}
               <div className="flex-1 pt-0 md:pt-2">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-2 mb-2">
                   <span className="text-gray-500 font-medium text-base md:text-lg">Module {module.id}</span>

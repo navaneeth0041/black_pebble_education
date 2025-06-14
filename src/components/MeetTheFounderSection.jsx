@@ -26,7 +26,7 @@ export default function MeetTheFounderSection() {
 
   return (
     <>
-      <div className="bg-[#343434] text-[#09BE9D] min-h-screen -mt-5 lg:-mt-33 pt-20 py-12 z-30 relative overflow-hidden">
+      <div className="bg-[#343434] text-[#09BE9D] min-h-screen -mt-5 lg:-mt-35 pt-40 py-12 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Top Section - Title and Photo */}
