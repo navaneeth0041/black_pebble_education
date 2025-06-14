@@ -1,6 +1,20 @@
 "use client";
 
 import React from "react";
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
+
+
+const mochiyPopOne = Mochiy_Pop_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const poppins = Poppins({
+  weight: '500',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function ValueOfMoneyHero() {
   const buttons = [
@@ -22,7 +36,7 @@ export default function ValueOfMoneyHero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-8 sm:mb-6">
-              <h1 className="font-['Mochiy_Pop_One'] text-[42px] xs:text-[48px] sm:text-[52px] md:text-[65px] lg:text-[80px] xl:text-[95px] leading-[1.1] tracking-[-1.5px] font-normal">
+              <h1 className={` ${mochiyPopOne.className} text-[42px] xs:text-[48px] sm:text-[52px] md:text-[65px] lg:text-[80px] xl:text-[95px] leading-[1.1] tracking-[-1.5px] font-normal`}>
                 Value of Money
               </h1>
               <div className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:w-24 xl:h-24 flex-shrink-0 hidden sm:block">
