@@ -1,5 +1,18 @@
 "use client";
 import React from "react";
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
+
+const PopOne = Mochiy_Pop_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const poppins = Poppins({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function MeetTheFounderSection() {
   const achievements = [
@@ -12,13 +25,13 @@ export default function MeetTheFounderSection() {
   ];
 
   return (
-    <div className="bg-[#2f2f2f] text-teal-400 py-12 md:py-16 lg:py-20">
+    <>
+    <div className="bg-[#343434] text-[#09BE9D]  md:py-16 lg:py-30 min-h-screen -mt-5 lg:-mt-33 pt-40 py-12 z-30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
-          {/* Mobile: Photo Frame First, Desktop: Content First */}
           <div className="lg:hidden flex justify-center">
             <div className="bg-white rounded-lg p-6 max-w-sm w-full">
-              <div className="text-teal-400 text-sm font-medium mb-4 text-center">
+              <div className="text-[#09BE9D] text-sm font-medium mb-4 text-center">
                 Founder of Black Pebble Education
               </div>
               <div className="bg-gray-100 h-64 rounded-lg flex items-center justify-center">
@@ -33,11 +46,11 @@ export default function MeetTheFounderSection() {
 
           {/* Left Section - Content */}
           <div className="lg:w-2/3">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+            <h2 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight ${PopOne.variable}`}>
               Meet the Founder
             </h2>
 
-            <div className="space-y-6 text-lg leading-relaxed">
+            <div className={`space-y-6 text-lg leading-relaxed ${poppins.variable}`}>
               <p>
                 My professional journey has been a mix of technology, finance, content, and design. I feel that everything I have learnt over the past decades has culminated in founding Black Pebble Education.
               </p>
@@ -101,5 +114,12 @@ export default function MeetTheFounderSection() {
         </div>
       </div>
     </div>
+    <img
+        src="/effects/black.png"
+        alt="black transition"
+        className='w-full block relative -top-8 z-20'
+      />
+    </> 
+
   );
 }

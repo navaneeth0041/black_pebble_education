@@ -1,33 +1,47 @@
 "use client";
 import React from "react";
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
+
+const mochiyPopOne = Mochiy_Pop_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const poppins = Poppins({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function FinanciallyConfidentKidsHero() {
   const buttons = [
     {
       text: "Book a Counselling Session",
-      className: "bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200",
+      className: "bg-gradient-to-r from-[#08A69A] via-[#0ABE9D] to-[#69C9A1] hover:opacity-90 text-white px-6 py-3 rounded-full font-medium transition-all duration-200",
       onClick: () => console.log("Book counselling clicked")
     },
     {
       text: "Be our Brand Ambassador",
-      className: "bg-transparent border border-white hover:bg-white hover:text-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200",
+      className: "bg-transparent border border-white hover:bg-white hover:text-gray-800 text-white px-6 py-3 rounded-full font-medium transition-all duration-200",
       onClick: () => console.log("Brand ambassador clicked")
     }
   ];
 
   return (
-    <div className="bg-[#2f2f2f] text-white py-8 md:py-16 lg:py-20 relative overflow-hidden">
+    <>
+    <div className="bg-[#343434] text-white py-8 md:py-16 lg:py-20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8">
           {/* Content Section */}
           <div className="text-center lg:text-left lg:flex-1">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className={`text-4xl md:text-5xl lg:text-7xl font-bold leading-tight${mochiyPopOne.variable} `}>
               Building the Future of
               <br />
               <span className="text-white">Financially Confident Kids</span>
             </h1>
             
-            <p className="mt-6 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl">
+            <p className={`mt-6 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl ${poppins.variable} `}>
               We simplify money for young minds - one course at a time!
             </p>
             
@@ -60,5 +74,11 @@ export default function FinanciallyConfidentKidsHero() {
       {/* Decorative bottom border */}
       <div className="absolute bottom-0 left-0 w-full h-[30px] bg-repeat-x bg-[url('/')]"></div>
     </div>
+    <img
+        src="/effects/black.png"
+        alt="black transition"
+        className='w-[200%] block relative -top-7 z-0'
+      />
+    </> 
   );
 }
