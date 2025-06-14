@@ -2,6 +2,20 @@
 import React from "react";
 import Image from "next/image";
 
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
+
+const mochiyPopOne = Mochiy_Pop_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const poppins = Poppins({
+  weight: ['400', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 export default function WhyChooseUsSection() {
   const features = [
     {
@@ -19,45 +33,40 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <div className="bg-blue-400 text-white py-12 md:py-16 lg:py-20 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
-          {/* Left Section - Title and Decorative Element */}
-          <div className="lg:flex-1 flex flex-col items-start">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-              Why Choose
-              <br />
-              Us?
-            </h2>
-                  <div className="absolute bottom-12 left-4 w-[300px] h-[220px] md:w-[500px] md:h-[340px] opacity-90 z-0">
+    <>
+    <div className="bg-[#4598CA] text-white py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] -mt-5 lg:-mt-30">
+      {/* Decorative Thread/Line Asset - Hidden on small screens */}
+      <div className="hidden lg:block absolute bottom-0 left-0 sm:left-3 md:left-4 w-[280px] h-[200px] sm:w-[350px] sm:h-[250px] md:w-[450px] md:h-[320px] lg:w-[700px] lg:h-[500px] z-0">
         <Image
           src="/about/Group-1.svg"
-          alt=""
+          alt="Decorative thread design"
           fill
           className="object-contain object-left"
         />
       </div>
 
-            {/* Decorative Thread/Line Asset */}
-        {/*  <div className="mt-8 lg:mt-10 max-w-[600px] mx-auto">
-            <img 
-              src="/about/Group-1.svg" 
-              alt="Decorative thread design" 
-              className="w-full h-auto object-contain opacity-80"
-            />
-            </div>*/}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div className="flex flex-col lg:flex-row items-start gap-6 sm:gap-8 lg:gap-12 h-full pt-8 sm:pt-12 lg:pt-16">
+          
+          {/* Left Section - Title */}
+          <div className="lg:flex-1 flex flex-col items-start relative z-10">
+            <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight ${mochiyPopOne.className}`}>
+              Why Choose
+              <br />
+              Us?
+            </h2>
           </div>
 
           {/* Right Section - Features List */}
-          <div className="lg:flex-1">
-            <ul className="space-y-6">
+          <div className="lg:flex-1 relative z-10">
+            <ul className="space-y-4 sm:space-y-6">
               {features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
+                <li key={index} className="flex items-start gap-3 sm:gap-4">
                   {/* Bullet Point */}
-                  <div className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></div>
+                  <div className="w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
                   
                   {/* Feature Text */}
-                  <p className="text-lg md:text-xl leading-relaxed">
+                  <p className={`${poppins.className} text-lg sm:text-xl md:text-2xl lg:text-2xl leading-relaxed`}>
                     {feature.text}
                   </p>
                 </li>
@@ -67,5 +76,11 @@ export default function WhyChooseUsSection() {
         </div>
       </div>
     </div>
+    <img
+        src="/effects/blue.png"
+        alt="black transition"
+        className='w-[200%] block relative -top-8 z-0'
+      />
+    </> 
   );
 }

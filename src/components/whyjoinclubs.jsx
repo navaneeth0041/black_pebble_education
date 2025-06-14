@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function WhyJoinClub() {
   return (
-    <div className="relative w-full py-8 md:py-12 lg:py-16 min-h-screen flex items-center">
+    <div className="relative w-full pt-40 py-8 md:py-12 lg:py-16 min-h-screen flex items-center -mt-5 lg:-mt-30">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         {/* Left Content Section */}
         <div className="lg:col-span-1 flex flex-col justify-center space-y-6 lg:space-y-8">

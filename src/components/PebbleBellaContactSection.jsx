@@ -38,7 +38,7 @@ const PebbleBellaContactSection = () => {
 
   return (
     <section
-      className={`w-full min-h-screen relative overflow-hidden ${mochiyPopOne.variable} ${poppins.variable}`}
+      className={`w-full min-h-screen relative overflow-hidden pt-40 -mt-5 lg:-mt-30 ${mochiyPopOne.variable} ${poppins.variable}`}
       style={{
         background: "linear-gradient(135deg, #00D4AA 0%, #00A896 50%, #048A81 100%)"
       }}
