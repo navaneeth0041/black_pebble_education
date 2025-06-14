@@ -3,86 +3,154 @@ import React from 'react';
 const ClubDetailsSection = () => {
   return (
     <>
-      <section className="pt-40 bg-[#E3FFF5] py-24  -mt-5 lg:-mt-30">
-        <div className="flex flex-col items-center gap-8 px-8 lg:px-16">
+      <section className="bg-[#E3FFF5] py-20 px-6 lg:px-16">
+        <div className="flex flex-col items-center gap-6 max-w-6xl mx-auto">
           <h2 className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] bg-clip-text text-transparent font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
             Club Details
           </h2>
-          
-          {/* Container with extra padding to accommodate the decorative icons */}
-          <div className="relative w-full max-w-6xl px-14 py-5 pb-50">
-            <div className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[23px] p-8 w-full shadow-lg relative overflow-visible">
-              
-              {/* Calendar Icon - Positioned within the padded area */}
-              <div className="absolute -top-16 -left-12 w-32 h-32 lg:w-40 lg:h-40">
-                <img 
-                  src="./Finance_clubs/1/Group.svg" 
-                  alt="Calendar" 
-                  className="w-full h-full"
+
+          {/* Container with proper spacing for decorative icons */}
+          <div className="relative w-full">
+            {/* Calendar Icon - Lifted higher vertically */}
+            <div className="absolute -left-8 -top-12 z-0 sm:-left-16 sm:-top-8 lg:-left-28 lg:-top-35">
+              <img
+                src="./Finance_clubs/1/Group.svg"
+                alt="Calendar"
+                className="w-[90px] h-[100px] sm:w-[180px] sm:h-[200px] lg:w-[260px] lg:h-[280px]"
+              />
+            </div>
+
+            {/* Main Card */}
+            <div 
+              className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[23px] p-6 sm:p-8 md:p-12 lg:p-16 w-full shadow-lg relative overflow-visible z-10"
+              style={{ minHeight: '500px' }}
+            >
+              {/* Coins Icon */}
+              <div className="absolute -right-16 bottom-2 z-0 sm:-right-24 sm:bottom-3 lg:-right-40 lg:bottom-5">
+                <img
+                  src="./Finance_clubs/1/Clip path group.svg"
+                  alt="Decorative Coins"
+                  className="w-[140px] h-[130px] sm:w-[200px] sm:h-[190px] lg:w-[320px] lg:h-[300px] transform rotate-12"
                 />
               </div>
-              
-              {/* Coins Icon - Bottom Right, within padded area */}
-              <div className="absolute -bottom-8 -right-8 w-32 h-32 lg:w-40 lg:h-40">
-                <img 
-                  src="./Finance_clubs/1/Clip path group.svg" 
-                  alt="Coins" 
-                  className="w-full h-full"
-                />
-              </div>
-              
-              <div className="flex items-center gap-6 mb-6 flex-wrap lg:flex-nowrap">
-                <div className="flex flex-col items-start gap-3">
-                  <h3 className="text-white font-poppins text-[22px] font-bold">
-                    Offer Price
-                  </h3>
-                  <div className="text-white font-poppins leading-[107%] tracking-[-1.064px]">
-                    <div className="text-[#7EF2D6] text-[47px] font-bold line-through mb-2">
-                      ₹1200
+
+              <div className="relative z-10">
+                {/* Top Section - Pricing and Features */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mb-8">
+                  {/* Left Column - Pricing */}
+                  <div className="space-y-6 sm:space-y-8 lg:space-y-12">
+                    <div>
+                      <h3 className="text-white font-poppins text-[24px] font-semibold mb-6" style={{
+                        fontWeight: 600,
+                        lineHeight: '149%',
+                        letterSpacing: '-0.456px'
+                      }}>
+                        Offer Price
+                      </h3>
+                      <div className="space-y-2">
+                        <div className="text-[#B5FFE5] font-poppins text-[47px] font-semibold line-through" style={{
+                          fontWeight: 600,
+                          lineHeight: '107%',
+                          letterSpacing: '-0.893px'
+                        }}>
+                          ₹1200
+                        </div>
+                        <div className="text-white font-poppins text-[56px] font-semibold" style={{
+                          fontWeight: 600,
+                          lineHeight: '107%',
+                          letterSpacing: '-1.064px'
+                        }}>
+                          ₹100/month
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-[56px] pt-5 font-bold">
-                      ₹100/month
+                  </div>
+                  
+                  {/* Right Column - Features */}
+                  <div className="space-y-6 sm:space-y-8 lg:space-y-12">
+                    <div>
+                      <h3 className="text-white font-poppins text-[24px] font-semibold mb-8" style={{
+                        fontWeight: 600,
+                        lineHeight: '149%',
+                        letterSpacing: '-0.456px'
+                      }}>
+                        What You Get:
+                      </h3>
+                      <ul className="space-y-4">
+                        {[
+                          '12 interactive sessions (1 per month)',
+                          'Patient introduction to financial concepts',
+                          'Fueling financial curiosity in kids'
+                        ].map((item, index) => (
+                          <li key={index} className="flex items-start gap-3">
+                            <span className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></span>
+                            <span className="text-white font-poppins text-[22px] font-semibold" style={{
+                              fontWeight: 600,
+                              lineHeight: '149%',
+                              letterSpacing: '-0.418px'
+                            }}>
+                              {item}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col items-start gap-2 flex-1">
-                  <h3 className="text-white font-poppins text-2xl font-bold">
-                    What You Get:
-                  </h3>
-                  <div className="text-white font-poppins text-lg lg:text-2xl font-bold leading-[149%] space-y-2">
-                    <div>• 12 interactive sessions (1 per month)</div>
-                    <div>• Patient introduction to financial concepts</div>
-                    <div>• Fueling financial curiosity in kids</div>
+
+                {/* Divider */}
+                <div className="border-t border-white/30 my-6 sm:my-8"></div>
+
+                {/* Bottom Section - Details Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 md:divide-x md:divide-white/30">
+                  <div className="flex flex-col gap-4 pb-6 md:pb-0 border-b border-white/30 md:border-b-0 md:pr-6">
+                    <h4 className="text-white font-poppins text-[22px] font-semibold" style={{
+                      fontWeight: 600,
+                      lineHeight: '149%',
+                      letterSpacing: '-0.418px'
+                    }}>
+                      Location
+                    </h4>
+                    <p className="text-white font-poppins text-[22px] font-semibold" style={{
+                      fontWeight: 600,
+                      lineHeight: '149%',
+                      letterSpacing: '-0.418px'
+                    }}>
+                      Online (LIVE sessions) Pan-India Participation
+                    </p>
                   </div>
-                </div>
-              </div>
-              
-              <div className="w-full h-px bg-white mb-6"></div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 divide-x-0 md:divide-x md:divide-white">
-                <div className="flex flex-col gap-2 px-0 md:pr-6">
-                  <h4 className="text-white font-poppins text-[22px] font-bold">
-                    Location
-                  </h4>
-                  <p className="text-white font-poppins text-lg font-bold">
-                    Online (LIVE sessions) Pan-India Participation
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 px-0 md:px-6">
-                  <h4 className="text-white font-poppins text-[22px] font-bold">
-                    Session Duration
-                  </h4>
-                  <p className="text-white font-poppins text-lg font-bold">
-                    1 Hour
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 px-0 md:pl-6">
-                  <h4 className="text-white font-poppins text-[22px] font-bold">
-                    Frequency
-                  </h4>
-                  <p className="text-white font-poppins text-lg font-bold">
-                    Last Friday of Every Month 6 PM - 7 PM IST
-                  </p>
+                  <div className="flex flex-col gap-4 pb-6 md:pb-0 border-b border-white/30 md:border-b-0 md:px-6">
+                    <h4 className="text-white font-poppins text-[22px] font-semibold" style={{
+                      fontWeight: 600,
+                      lineHeight: '149%',
+                      letterSpacing: '-0.418px'
+                    }}>
+                      Session Duration
+                    </h4>
+                    <p className="text-white font-poppins text-[22px] font-semibold" style={{
+                      fontWeight: 600,
+                      lineHeight: '149%',
+                      letterSpacing: '-0.418px'
+                    }}>
+                      1 Hour
+                    </p>
+                  </div>
+                  <div className="flex flex-col gap-4 md:pl-6">
+                    <h4 className="text-white font-poppins text-[22px] font-semibold" style={{
+                      fontWeight: 600,
+                      lineHeight: '149%',
+                      letterSpacing: '-0.418px'
+                    }}>
+                      Frequency
+                    </h4>
+                    <p className="text-white font-poppins text-[22px] font-semibold" style={{
+                      fontWeight: 600,
+                      lineHeight: '149%',
+                      letterSpacing: '-0.418px'
+                    }}>
+                      Last Friday of Every Month 6 PM - 7 PM IST
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -92,7 +160,7 @@ const ClubDetailsSection = () => {
       <img
         src="/effects/lightaqua.svg"
         alt="black transition"
-        className='w-full block relative -top-8 z-20'
+        className="w-full block relative -top-8 z-20"
       />
     </>
   );
