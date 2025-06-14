@@ -156,20 +156,18 @@ const MethodicalApproach = () => {
     <div className="w-full min-h-screen py-16 px-6" style={{ backgroundColor: '#F3FFF9' }}>
       <div className="mx-auto pl-4">
         
-        <div className="text-left mb-12">
-          <h2 
-            className={`${PopOne.className} text-4xl md:text-5xl font-bold text-[#09BE9D] mb-4`} 
-            style={{ fontSize: '4vw', lineHeight: '8vh' }}
-          >
-            Our Methodical Approach
-          </h2>
-          <p 
-            className={`${poppins.className} text-xl text-black font-medium`} 
-            style={{ fontSize: '3vmin', lineHeight: '6vh' }}
-          >
-            THE COURSE DELIVERY VALUE CHAIN
-          </p>
-        </div>
+      <div className="text-left mb-8 sm:mb-10 lg:mb-12 px-4 sm:px-6 lg:px-8">
+      <h2 
+        className={`${PopOne.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#09BE9D] mb-3 sm:mb-4 leading-tight`}
+      >
+        Our Methodical Approach
+      </h2>
+      <p 
+        className={`${poppins.className} text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-black font-medium leading-relaxed`}
+      >
+        THE COURSE DELIVERY VALUE CHAIN
+      </p>
+    </div>
 
         {}
         <div className="relative" style={{ overflow: 'visible' }}>

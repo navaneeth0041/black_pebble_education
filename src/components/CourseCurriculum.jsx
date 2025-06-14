@@ -14,6 +14,8 @@ const poppins = Poppins({
   display: 'swap',
 });
 
+
+
 export default function CourseCurriculum() {
   const modules = [
     {
@@ -52,39 +54,46 @@ export default function CourseCurriculum() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className={`  ${poppins.className} inline-block bg-[#E3FFF5] text-[#39BB9C] px-4 py-2 rounded-full text-sm font-medium mb-4`}>
+          <div className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-4 font-['Poppins']" style={{
+            backgroundColor: '#E3FFF5',
+            color: '#39BB9C',
+            fontSize: '22px',
+            fontWeight: '400',
+            lineHeight: '149%',
+            letterSpacing: '-0.418px'
+          }}>
             Course Curriculum
           </div>
-          <h2 className={` ${mochiyPopOne.className}text-3xl md:text-4xl lg:text-5xl font-bold text-[#39BB9C]`}>
-            What Your Child Will Learn
-          </h2>
+          <div className="text-[#39BB9C] text-[35px] sm:text-[42px] md:text-[49px] font-normal leading-[149%] tracking-[-0.931px] font-['Mochiy_Pop_One'] mb-4">
+          What Your Child Will Learn
+          </div>
         </div>
 
         {/* Modules List */}
-        <div className="max-w-2xl mx-auto space-y-6">
+        <div className="max-w-4xl mx-auto space-y-8">
           {modules.map((module) => (
-            <div key={module.id} className="flex gap-6 items-start">
+            <div key={module.id} className="flex flex-col md:flex-row gap-6 items-start">
               {/* Icon Box with Text and Icon */}
-              <div className={`${module.bgColor} w-48 h-32 rounded-xl flex flex-col items-center justify-center flex-shrink-0 p-2`}>
+              <div className={`${module.bgColor} w-full md:w-64 h-40 md:h-36 rounded-xl flex flex-col items-center justify-center flex-shrink-0 p-4`}>
                 <img 
                   src={module.icon} 
                   alt={module.title}
-                  className="w-20 h-20 mb-1 filter brightness-0 invert"
+                  className="w-16 h-16 md:w-20 md:h-20 mb-2 filter brightness-0 invert"
                 />
-                <div className="text-white font-bold text-center text-xs leading-tight">
+                <div className="text-white text-[16px] md:text-[18px] font-normal text-center leading-[149%] tracking-[-0.342px] font-['Mochiy_Pop_One']">
                   {module.title}
                 </div>
               </div>
               
               {/* Content */}
-              <div className="flex-1 pt-2">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-gray-500 font-medium text-lg">Module {module.id}</span>
-                  <span className="text-teal-500 font-bold text-lg">
+              <div className="flex-1 pt-0 md:pt-2">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-2 mb-2">
+                  <span className="text-gray-500 font-medium text-base md:text-lg">Module {module.id}</span>
+                  <span className="text-[#39BB9C] text-[20px] sm:text-[22px] md:text-[24px] font-semibold leading-[149%] tracking-[-0.456px] font-['Poppins']">
                     {module.title}
                   </span>
                 </div>
-                <p className={`text-[#39BB9C] leading-relaxed ${poppins.className}`}>
+                <p className="text-[#39BB9C] text-[14px] sm:text-[15px] md:text-[16px] font-medium leading-[149%] tracking-[-0.304px] font-['Poppins']">
                   {module.description}
                 </p>
               </div>
