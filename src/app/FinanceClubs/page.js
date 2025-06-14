@@ -7,7 +7,7 @@ import PreFooter from '@/components/prefooter.jsx';
 import ThemesOfDiscussion from '@/components/ThemesOfDiscussion';
 import WhyJoinClub from '@/components/whyjoinclubs';
 
-export default function HomePage() {
+export default function FinanceClubs() {
   return (
     <>
       <Header />

@@ -6,7 +6,7 @@ import CourseCurriculum from '../../components/CourseCurriculum.jsx'
 import CourseSnapshot from '../../components/CourseSnapshot.jsx';
 import PreFooter from '../../components/prefooter.jsx';
 
-export default function HomePage() {
+export default function ValueOfMoney() {
     return (
       <>
         <Header />
