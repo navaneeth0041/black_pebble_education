@@ -5,7 +5,7 @@ import ValueOfMoneyHero from '../../components/ValueOfMoneyHero.jsx';
 import CourseCurriculum from '../../components/CourseCurriculum.jsx'
 import CourseSnapshot from '../../components/CourseSnapshot.jsx';
 import PreFooter from '../../components/prefooter.jsx';
-import TestimonialCard from '@/components/kidslovedit.jsx';
+import TestimonialCard from '@/components/Testimonials.jsx';
 
 
 export default function HomePage() {

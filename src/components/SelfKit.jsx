@@ -3,7 +3,6 @@ import React from "react";
 import { Card, Button } from './ui/components.jsx';
 import { Mochiy_Pop_One, Poppins } from 'next/font/google';
 
-
 const mochiyPopOne = Mochiy_Pop_One({
   weight: '400',
   subsets: ['latin'],
@@ -16,8 +15,30 @@ const poppins = Poppins({
   display: 'swap',
 });
 
-
-const SelfHelpKits = () => {
+const SelfHelpKits = ({ 
+  // Smart Money Concepts Section Props
+  smartMoneyConcepts = {
+    description:"A self-help kit designed to empower children with essential financial skills and knowledge, fostering independence and confidence in managing money.",
+    conceptsCount: 7,
+    title: "Smart Money Concepts Made Simple",
+    backgroundImage: "/self_help_kit/4/Circle_thread.svg",
+    concepts: [
+      { id: 1, title: "What is an Asset?", icon: "/self_help_kit/4/coin1.svg" },
+      { id: 2, title: "What is net worth?", icon: "/self_help_kit/4/coin2.svg" },
+      { id: 3, title: "Difference between income & wealth", icon: "/self_help_kit/4/coin3.svg" },
+      { id: 4, title: "Interest & Compound Interest", icon: "/self_help_kit/4/coin4.svg" },
+      { id: 5, title: "Power of Compounding", icon: "/self_help_kit/4/coin5.svg" },
+      { id: 6, title: "Investments & Returns", icon: "/self_help_kit/4/coin6.svg" },
+      { id: 7, title: "Why do people use debt?", icon: "/self_help_kit/4/coin7.svg" }
+    ],
+    showPricing: true,
+    pricingData: {
+      originalPrice: "₹2499",
+      currentPrice: "₹1799",
+      description: "Invest in your child's growth with 49+ guided resources-"
+    }
+  }
+}) => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -34,7 +55,7 @@ const SelfHelpKits = () => {
 At Your Own Pace!
           </h1>
           <p className={`mt-4 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed ${poppins.className}`}>
-            Engage with an informative & creative self-help kit to explore financial concepts - anytime, anywhere.
+            {smartMoneyConcepts.description}
           </p>
         </div>
       </div>
@@ -122,7 +143,6 @@ At Your Own Pace!
       </div>
     </section>
 
-
       {/* Who is This For Section */}
 <section className="bg-[#E1FFF4] py-24">
   <div className="flex items-center justify-center gap-16 px-24">
@@ -172,7 +192,6 @@ At Your Own Pace!
     </div>
   </div>
 </section>
-
 
       {/* Why Self-Help Kits Work Section */}
       <section className="bg-[#343434] py-24">
@@ -227,131 +246,89 @@ At Your Own Pace!
         </div>
       </section>
 
-      {/* 7 Smart Money Concepts Section */}
-<section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-24 relative">
+      {/* Smart Money Concepts Section - Configurable */}
+      <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-24 relative">
         {/* Circular Thread Background */}
         <img 
-          src="/self_help_kit/4/Circle_thread.svg" 
+          src={smartMoneyConcepts.backgroundImage}
           alt="Circular Thread" 
           className="absolute inset-0 w-150 h-170 mt-150 object-cover opacity-30 pointer-events-none"
         />
+        
         <div className="flex items-center gap-6 px-16 max-w-6xl mx-auto relative z-10">
+          {/* Title Section */}
           <div className="flex items-center gap-2">
             <span className="text-[#08AA9B] font-['Mochiy_Pop_One'] text-[188px] font-normal leading-[149%] tracking-[-3.571px]">
-              7
+              {smartMoneyConcepts.conceptsCount}
             </span>
             <h2 className="text-[#08B09B] font-['Mochiy_Pop_One'] text-[41px] font-normal leading-[137%] tracking-[-0.787px] max-w-xs">
-              Smart Money Concepts Made Simple
+              {smartMoneyConcepts.title}
             </h2>
           </div>
 
+          {/* Concepts Grid */}
           <div className="flex-1 grid grid-cols-2 gap-8 relative">
             {/* Left Column */}
             <div className="flex flex-col gap-8">
-              <Card className="bg-white rounded-3xl p-6 flex items-center justify-center h-36 relative">
-                <img 
-                  src="/self_help_kit/4/coin1.svg" 
-                  alt="Coin 1" 
-                  className="absolute -left-12 top-4 w-20 h-20 transform -rotate-12"
-                />
-                <span className="text-[#09BE9D] font-poppins text-2xl font-bold text-center">
-                  What is an Asset?
-                </span>
-              </Card>
-              <Card className="bg-white rounded-3xl p-6 flex items-center justify-center h-36 relative">
-                <img 
-                  src="/self_help_kit/4/coin2.svg" 
-                  alt="Coin 2" 
-                  className="absolute -left-12 top-4 w-20 h-20 transform -rotate-12"
-                />
-                <span className="text-[#09BE9D] font-poppins text-2xl font-bold text-center">
-                  What is net worth?
-                </span>
-              </Card>
-              <Card className="bg-white rounded-3xl p-6 flex items-center justify-center h-36 relative">
-                <img 
-                  src="/self_help_kit/4/coin3.svg" 
-                  alt="Coin 3" 
-                  className="absolute -left-12 top-4 w-20 h-20 transform -rotate-12"
-                />
-                <span className="text-[#09BE9D] font-poppins text-2xl font-bold text-center">
-                  Difference between income & wealth
-                </span>
-              </Card>
-              <Card className="bg-white rounded-3xl p-6 flex items-center justify-center h-36 relative">
-                <img 
-                  src="/self_help_kit/4/coin4.svg" 
-                  alt="Coin 4" 
-                  className="absolute -left-12 top-4 w-20 h-20 transform -rotate-12"
-                />
-                <span className="text-[#09BE9D] font-poppins text-2xl font-bold text-center">
-                  Interest & Compound Interest
-                </span>
-              </Card>
+              {smartMoneyConcepts.concepts.slice(0, 4).map((concept, index) => (
+                <Card key={concept.id} className="bg-white rounded-3xl p-6 flex items-center justify-center h-36 relative">
+                  <img 
+                    src={concept.icon}
+                    alt={`Coin ${concept.id}`}
+                    className="absolute -left-12 top-4 w-20 h-20 transform -rotate-12"
+                  />
+                  <span className="text-[#09BE9D] font-poppins text-2xl font-bold text-center">
+                    {concept.title}
+                  </span>
+                </Card>
+              ))}
             </div>
 
             {/* Right Column */}
             <div className="flex flex-col gap-8 pt-20">
-              <Card className="bg-white rounded-3xl p-6 flex items-center justify-center h-36 relative">
-                <img 
-                  src="/self_help_kit/4/coin5.svg" 
-                  alt="Coin 5" 
-                  className="absolute -left-12 top-4 w-20 h-20 transform -rotate-12"
-                />
-                <span className="text-[#09BE9D] font-poppins text-2xl font-bold text-center">
-                  Power of Compounding
-                </span>
-              </Card>
-              <Card className="bg-white rounded-3xl p-6 flex items-center justify-center h-36 relative">
-                <img 
-                  src="/self_help_kit/4/coin6.svg" 
-                  alt="Coin 6" 
-                  className="absolute -left-12 top-4 w-20 h-20 transform -rotate-12"
-                />
-                <span className="text-[#09BE9D] font-poppins text-2xl font-bold text-center">
-                  Investments & Returns
-                </span>
-              </Card>
-              <Card className="bg-white rounded-3xl p-6 flex items-center justify-center h-36 relative">
-                <img 
-                  src="/self_help_kit/4/coin7.svg" 
-                  alt="Coin 7" 
-                  className="absolute -left-12 top-4 w-20 h-20 transform -rotate-12"
-                />
-                <span className="text-[#09BE9D] font-poppins text-2xl font-bold text-center">
-                  Why do people use debt?
-                </span>
-              </Card>
+              {smartMoneyConcepts.concepts.slice(4).map((concept, index) => (
+                <Card key={concept.id} className="bg-white rounded-3xl p-6 flex items-center justify-center h-36 relative">
+                  <img 
+                    src={concept.icon}
+                    alt={`Coin ${concept.id}`}
+                    className="absolute -left-12 top-4 w-20 h-20 transform -rotate-12"
+                  />
+                  <span className="text-[#09BE9D] font-poppins text-2xl font-bold text-center">
+                    {concept.title}
+                  </span>
+                </Card>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Pricing CTA */}
-        <div className="flex justify-center mt-16 pb-30">
-          <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[31px] border border-[#D8D7D7] p-12 max-w-4xl">
-            <div className="bg-white/28 rounded-3xl p-8 text-center">
-              <p className="text-white font-poppins text-3xl font-semibold mb-4">
-                Invest in your child's growth with
-                <br />
-                49+ guided resources-
-              </p>
-              <div className="flex items-center justify-center gap-4 mt-8">
-                <span className="text-white font-poppins text-4xl font-bold">
-                  All for just
-                </span>
-                <div className="flex items-center gap-2">
+        {smartMoneyConcepts.showPricing && (
+          <div className="flex justify-center mt-16 pb-30">
+            <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[31px] border border-[#D8D7D7] p-12 max-w-4xl">
+              <div className="bg-white/28 rounded-3xl p-8 text-center">
+                <p className="text-white font-poppins text-3xl font-semibold mb-4">
+                  {smartMoneyConcepts.pricingData.description}
+                </p>
+                <div className="flex items-center justify-center gap-4 mt-8">
                   <span className="text-white font-poppins text-4xl font-bold">
-                    ₹1799
+                    All for just
                   </span>
-                  <span className="text-white/60 font-poppins text-2xl line-through">
-                    ₹2499
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-white font-poppins text-4xl font-bold">
+                      {smartMoneyConcepts.pricingData.currentPrice}
+                    </span>
+                    <span className="text-white/60 font-poppins text-2xl line-through">
+                      {smartMoneyConcepts.pricingData.originalPrice}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Card>
-        </div>
+            </Card>
+          </div>
+        )}
       </section>
+
     </div>
   );
 };

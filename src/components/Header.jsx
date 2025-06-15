@@ -10,37 +10,57 @@ const Header = () => {
   const navigationItems = [
     { 
       label: 'For Kids', 
+      href: '/for-kids',
       hasDropdown: true,
       dropdownItems: [
-        'Value of Money',
-        'Budgeting',
-        'Banking Essentials',
-        'Everyday Banking',
-        'Credit Concepts',
-        'Financial Goals',
-        'Financial Growth',
-        'Financial Wisdom'
+        { label: 'Value of Money', href: '/value-of-money' },
+        { label: 'Budgeting', href: '/budgeting' },
+        { label: 'Banking Essentials', href: '/banking-essentials' },
+        { label: 'Everyday Banking', href: '/everyday-banking' },
+        { label: 'Credit Concepts', href: '/credit-concepts' },
+        { label: 'Financial Goals', href: '/financial-goals' },
+        { label: 'Financial Growth', href: '/financial-growth' },
+        { label: 'Financial Wisdom', href: '/financial-wisdom' }
       ]
     },
     { 
       label: 'For Teens', 
+      href: '/for-teens',
       hasDropdown: true,
-      dropdownItems: ['Teen Option 1', 'Teen Option 2', 'Teen Option 3']
+      dropdownItems: [
+        { label: 'Teen Option 1', href: '/teen-option-1' },
+        { label: 'Teen Option 2', href: '/teen-option-2' },
+        { label: 'Teen Option 3', href: '/teen-option-3' }
+      ]
     },
     { 
       label: 'Self Help Kits', 
+      href: '/SelfHelp-Kit',
       hasDropdown: true,
-      dropdownItems: ['Kit Option 1', 'Kit Option 2', 'Kit Option 3']
+      dropdownItems: [
+        { label: 'Finance Help Kits', href: '/SelfHelp-Kit' },
+        { label: 'Business-Help-Kit 2', href: '/Business-SelfHelp-Kit' },
+      ]
     },
     { 
       label: 'Finance Clubs', 
+      href: '/FinanceClubs',
       hasDropdown: true,
-      dropdownItems: ['Club Option 1', 'Club Option 2', 'Club Option 3']
+      dropdownItems: [
+        { label: 'Club Option 1', href: '/FinanceClubs' },
+        { label: 'Club Option 2', href: '/FinanceClubs-2' },
+        { label: 'Club Option 3', href: '/FinanceClubs-3' }
+      ]
     },
     { 
       label: 'Downloads', 
+      href: '/downloads',
       hasDropdown: true,
-      dropdownItems: ['Download Option 1', 'Download Option 2', 'Download Option 3']
+      dropdownItems: [
+        { label: 'Download Option 1', href: '/download-option-1' },
+        { label: 'Download Option 2', href: '/download-option-2' },
+        { label: 'Download Option 3', href: '/download-option-3' }
+      ]
     },
   ];
 
@@ -108,10 +128,10 @@ const Header = () => {
                           {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                             <a 
                               key={dropdownIndex}
-                              href="#" 
+                              href={dropdownItem.href} 
                               className="flex items-center px-4 py-3 text-gray-200 hover:bg-gray-600/70 hover:text-white transition-colors duration-200 text-sm"
                             >
-                              {dropdownItem}
+                              {dropdownItem.label}
                             </a>
                           ))}
                         </div>
@@ -157,10 +177,10 @@ const Header = () => {
                         {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                           <a 
                             key={dropdownIndex}
-                            href="#" 
+                            href={dropdownItem.href} 
                             className="flex items-center text-gray-300 hover:text-white hover:bg-gray-600/50 px-3 py-2 rounded-md transition-colors duration-200"
                           >
-                            {dropdownItem}
+                            {dropdownItem.label}
                           </a>
                         ))}
                       </div>
