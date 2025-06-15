@@ -1,9 +1,14 @@
 import React from 'react';
 
-const ClubDetailsSection = () => {
+const ClubDetailsSection = ({ 
+  targetAudience = "kids",
+  frequency = "Last Friday of Every Month | 6 PM - 7 PM IST",
+  description = "Patient introduction to financial concepts",
+  curiosityText = "Fuelling financial curiosity in kids"
+}) => {
   return (
     <>
-      <section className="pt-40 bg-[#E3FFF5] py-24  -mt-5 lg:-mt-30">
+      <section className="pt-40 bg-[#E3FFF5] py-24 -mt-5 lg:-mt-30">
         <div className="flex flex-col items-center gap-8 px-8 lg:px-16">
           <h2 className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] bg-clip-text text-transparent font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
             Club Details
@@ -51,8 +56,8 @@ const ClubDetailsSection = () => {
                   </h3>
                   <div className="text-white font-poppins text-lg lg:text-2xl font-bold leading-[149%] space-y-2">
                     <div>• 12 interactive sessions (1 per month)</div>
-                    <div>• Patient introduction to financial concepts</div>
-                    <div>• Fueling financial curiosity in kids</div>
+                    <div>• {description}</div>
+                    <div>• {curiosityText}</div>
                   </div>
                 </div>
               </div>
@@ -81,7 +86,7 @@ const ClubDetailsSection = () => {
                     Frequency
                   </h4>
                   <p className="text-white font-poppins text-lg font-bold">
-                    Last Friday of Every Month 6 PM - 7 PM IST
+                    {frequency}
                   </p>
                 </div>
               </div>

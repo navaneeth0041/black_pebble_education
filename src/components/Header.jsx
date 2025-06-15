@@ -48,7 +48,6 @@ const Header = () => {
       hasDropdown: true,
       dropdownItems: [
         { label: 'Club Option 1', href: '/FinanceClubs' },
-        { label: 'Club Option 2', href: '/FinanceClubs-2' },
         { label: 'Club Option 3', href: '/FinanceClubs-3' }
       ]
     },
