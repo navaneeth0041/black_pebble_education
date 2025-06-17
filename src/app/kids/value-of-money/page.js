@@ -1,9 +1,9 @@
 import Footer from '@/components/footer';
 import Header from '@/components/Header.jsx';
-import ValueOfMoneyHero from '../../components/ValueOfMoneyHero.jsx';
-import CourseCurriculum from '../../components/CourseCurriculum.jsx'
-import CourseSnapshot from '../../components/CourseSnapshot.jsx';
-import PreFooter from '../../components/prefooter.jsx';
+import ValueOfMoneyHero from '../../../components/ValueOfMoneyHero.jsx';
+import CourseCurriculum from '../../../components/CourseCurriculum.jsx'
+import CourseSnapshot from '../../../components/CourseSnapshot.jsx';
+import PreFooter from '../../../components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
 
