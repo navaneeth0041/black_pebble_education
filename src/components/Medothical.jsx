@@ -153,7 +153,7 @@ const MethodicalApproach = () => {
 
   return (
     <>
-    <div className="w-full min-h-screen py-16 px-6" style={{ backgroundColor: '#F3FFF9' }}>
+    <div className="w-full min-h-[80vh] py-16 px-16" style={{ backgroundColor: '#F3FFF9' }}>
       <div className="mx-auto pl-4">
         
       <div className="text-left mb-8 sm:mb-10 lg:mb-12 px-4 sm:px-6 lg:px-8">
@@ -231,9 +231,9 @@ const MethodicalApproach = () => {
             <button
               onClick={scrollLeft}
               disabled={!canScrollLeft}
-              className={`w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-200 border border-gray-200 ${
+              className={`w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-200 border-[#08A69A] border-2 ${
                 canScrollLeft 
-                  ? 'bg-white hover:bg-gray-50 cursor-pointer' 
+                  ? 'bg-white hover:bg-gray-50 cursor-pointer ' 
                   : 'bg-gray-100 cursor-not-allowed opacity-50'
               }`}
               aria-label="Scroll left"
@@ -252,9 +252,9 @@ const MethodicalApproach = () => {
             <button
               onClick={scrollRight}
               disabled={!canScrollRight}
-              className={`w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-200 ${
+              className={`w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-200 border-[#08A69A] border-2 ${
                 canScrollRight 
-                  ? 'bg-[#09BE9D] hover:bg-[#08a085] cursor-pointer' 
+                  ? 'bg-[#08B59C] hover:bg-[#08B59C] cursor-pointer' 
                   : 'bg-gray-300 cursor-not-allowed opacity-50'
               }`}
               aria-label="Scroll right"
@@ -269,12 +269,6 @@ const MethodicalApproach = () => {
                 />
               </svg>
             </button>
-          </div>
-
-          {}
-          <div className="flex justify-center mt-8 space-x-2">
-            <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-            <div className="w-3 h-3 rounded-full bg-[#09BE9D]"></div>
           </div>
         </div>
       </div>

@@ -16,12 +16,12 @@ const poppins = Poppins({
 const FinancialEducationHero = () => {
   return (
     <>
-    <section className="py-24 px-4 -mt-5 lg:-mt-30 pt-35 text-center text-white"
+    <section className="py-28 px-8 -mt-10 lg:-mt-22 xl:-mt-28 pt-40 text-center text-white"
     style={{
         background: 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)'
       }}>
-      <div className="max-w-4xl mx-auto mb-8">
-        <p className={`${poppins.className} text-xl md:text-2xl lg:text-3xl font-light leading-relaxed`}>
+      <div className="max-w-4xl mx-auto mb-8 ">
+        <p className={`${poppins.className} text-xl md:text-2xl lg:text-3xl font-light leading-relaxed py-10`}>
           We ensure your child develops <em className="text-[#FFE4A1] font-semibold not-italic">financial knowledge</em>, <em className="text-[#FFE4A1]  font-semibold not-italic">a financial mindset</em>, and healthy <em className="text-[#FFE4A1]  font-semibold not-italic">financial behavior</em> so that they not only<br />
 
           <span className="font-semibold tracking-wide">KNOW</span> and <span className="font-semibold tracking-wide">GROW</span> money, but also <span className="font-semibold tracking-wide">LOVE MONEY</span>.

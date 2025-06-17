@@ -38,7 +38,7 @@ const PreFooter = ({
   );
 
   return (
-<div className="relative px-4 -mt-5 lg:-mt-35 pt-40 md:px-10 py-25 min-h-[70vh] overflow-hidden" style={{ background: 'linear-gradient(90deg, #088F99 0%, #09BE9D 58%, #7ECCA2 88%)' }}>
+<div className="relative px-4 -mt-5 lg:-mt-22 xl:-mt-28 pt-40 md:px-10 py-25 min-h-[70vh] overflow-hidden" style={{ background: 'linear-gradient(90deg, #088F99 0%, #09BE9D 58%, #7ECCA2 88%)' }}>
 <div className="flex flex-col lg:flex-row items-start justify-between max-w-7xl mx-auto gap-10 relative z-20 text-left">
     
     <div className="flex-1 max-w-lg space-y-5 lg:space-y-6 pl-2 sm:pl-4">

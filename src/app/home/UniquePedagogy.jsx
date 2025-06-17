@@ -8,12 +8,12 @@ const UniquePedagogy = () => {
   const pedagogyCards = [
     {
       title: "Gender-inclusive",
-      image: "/home_page_assets/2/Frame 118.svg",
+      image: "/home_page_assets/2/Frame 299.svg",
       alt: "Child smiling at camera",
     },
     {
       title: "Context-relevant",
-      image: "/home_page_assets/2/Frame 117.svg", 
+      image: "/home_page_assets/2/Frame 300.png", 
       alt: "Children working together on activities",
     },
     {
@@ -23,12 +23,12 @@ const UniquePedagogy = () => {
     },
     {
       title: "Enhances life skills",
-      image: "/home_page_assets/2/Frame 115.svg",
+      image: "/home_page_assets/2/Frame 297.svg",
       alt: "Child playing outdoors",
     },
     {
       title: "Multiple perspectives",
-      image: "/home_page_assets/2/Frame 116.svg",
+      image: "/home_page_assets/2/Frame 296.svg",
       alt: "Child with colorful face paint",
     },
   ];
@@ -68,6 +68,7 @@ const UniquePedagogy = () => {
       setCurrentSlide((prev) => (prev - 1 + pedagogyCards.length) % pedagogyCards.length);
     }
   };
+  
   const getVisibleCards = () => {
     const cards = [];
     for (let i = -2; i <= 2; i++) {
@@ -86,8 +87,8 @@ const UniquePedagogy = () => {
 
   return (
     <>
-    <section className="text-white pt-40 pb-40 overflow-hidden min-h-[80vh] lg:min-h-[90vh] -mt-5 lg:-mt-30" style={{backgroundColor: '#343434'}}>
-      <div className="text-center">
+    <section className="text-white min-h-screen lg:min-h-screen overflow-hidden flex flex-col justify-center items-center px-4 -mt-5 lg:-mt-30 pt-40" style={{backgroundColor: '#343434'}}>
+      <div className="text-center w-full flex flex-col justify-center items-center h-full py-10">
         <div className="flex justify-center mb-8">
           <div className="w-32 h-32 relative">
             <img
@@ -99,26 +100,26 @@ const UniquePedagogy = () => {
         </div>
 
         <h2
-          className="text-3xl md:text-6xl lg:text-7xl font-bold py-2 mb-6"
+          className="text-3xl md:text-6xl lg:text-7xl font-bold py-2 mb-6 text-center"
           style={{ color: '#09be9d', fontFamily: 'Poppins, sans-serif' }}
         >
           <span className="block md:inline">Our Unique</span>
           <span className="block md:inline"> Pedagogy</span>
         </h2>
 
-        <div className="max-w-3xl mx-auto mb-16 py-2 md:py-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-          <p className="text-lg lg:text-xl leading-relaxed" style={{color: '#39BB9C'}}>
+        <div className="w-full mb-16 py-2 md:py-4 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <p className="text-lg lg:text-xl leading-relaxed text-center px-4" style={{color: '#39BB9C'}}>
             Our <span className="font-semibold" style={{color: '#FFE4A1'}}>research-backed</span> and{' '}
             <span className="font-semibold" style={{color: '#FFE4A1'}}>IP-protected</span>{' '}
-            Teaching Methodology is designed for
-            maximum learning and retention. The content of our courses accounts for the
-            diversity and variety in the financial backgrounds of culturally-rich India.
+            Teaching Methodology is designed for<br />
+            maximum learning and retention. The content of our courses<br />
+            accounts for the diversity and variety in the financial backgrounds of culturally-rich India.
           </p>
         </div>
 
-        <div className="relative w-full max-w-[100vw] mx-auto px-4">
+        <div className="relative w-screen mx-auto">
           <div
-            className="relative flex items-center justify-center h-[600px] lg:h-[700px] overflow-hidden"
+            className="relative flex items-center justify-center h-[600px] lg:h-[700px] overflow-visible w-full"
             style={{
               perspective: "2000px",
               perspectiveOrigin: "center center",
@@ -130,26 +131,30 @@ const UniquePedagogy = () => {
             {visibleCards.map((card, arrayIndex) => {
               const { position, index } = card;
               const isCenter = position === 0;
+              const isBehindCenter = position === -1 || position === 1;
 
               let transform = "";
               let zIndex =
                 10 + Math.abs(position === 0 ? 5 : 5 - Math.abs(position));
 
+              // Enhanced transformations with curved effect for behind-center cards
               if (position === -2) {
                 transform =
-                  "translateX(-450px) translateZ(-200px) rotateY(15deg) scale(0.75)";
+                  "translateX(-650px) translateZ(-300px) rotateY(35deg) scale(0.75)";
               } else if (position === -1) {
+                // Left behind card - curve inward more on hidden side, outward on visible side
                 transform =
-                  "translateX(-250px) translateZ(-100px) rotateY(8deg) scale(0.9)";
+                  "translateX(-350px) translateZ(-150px) rotateY(35deg) scale(0.9) scaleX(1.15)";
               } else if (position === 0) {
                 transform =
                   "translateX(0px) translateZ(0px) rotateY(0deg) scale(1.1)";
               } else if (position === 1) {
+                // Right behind card - curve inward more on hidden side, outward on visible side  
                 transform =
-                  "translateX(250px) translateZ(-100px) rotateY(-8deg) scale(0.9)";
+                  "translateX(350px) translateZ(-150px) rotateY(-35deg) scale(0.9) scaleX(1.15)";
               } else if (position === 2) {
                 transform =
-                  "translateX(450px) translateZ(-200px) rotateY(-15deg) scale(0.75)";
+                  "translateX(650px) translateZ(-300px) rotateY(-35deg) scale(0.75)";
               }
 
               return (
@@ -163,8 +168,10 @@ const UniquePedagogy = () => {
                   }}
                 >
                   <div
-                    className="relative w-78 h-[480px] lg:w-88 lg:h-[520px] rounded-2xl overflow-hidden shadow-2xl transition-all duration-700"
+                    className="relative overflow-hidden shadow-2xl transition-all duration-700"
                     style={{
+                      width: isBehindCenter ? '400px' : '312px', // Increased width for behind-center cards
+                      height: isBehindCenter ? '460px' : '420px', // Decreased height
                       backfaceVisibility: "hidden",
                       opacity: isCenter
                         ? 1
@@ -172,9 +179,21 @@ const UniquePedagogy = () => {
                           ? 0.85
                           : 0.7,
                       transformStyle: 'flat',
+                      borderRadius: '24px',
                     }}
                   >
-                    <div className="relative w-full h-full overflow-hidden">
+                    <div 
+                      className="relative w-full h-full overflow-hidden"
+                      style={{
+                        borderRadius: '22px', // Slightly smaller than container to ensure perfect alignment
+                        // Additional curve effect using CSS transform on the container
+                        transform: isBehindCenter ? 
+                          (position === -1 ? 
+                            'perspective(800px) rotateY(-8deg)' : 
+                            'perspective(800px) rotateY(8deg)'
+                          ) : 'none'
+                      }}
+                    >
                       <img
                         src={card.image}
                         alt={card.alt}
@@ -183,6 +202,13 @@ const UniquePedagogy = () => {
                           transform: isCenter ? 'scale(1)' : 'scale(0.98)',
                           objectFit: 'cover',
                           objectPosition: 'center',
+                          borderRadius: '22px', // Match the container border radius
+                          // Additional image distortion for curved effect
+                          ...(isBehindCenter && {
+                            transform: position === -1 ? 
+                              'scale(0.98) perspective(600px) rotateY(5deg)' : 
+                              'scale(0.98) perspective(600px) rotateY(-5deg)'
+                          })
                         }}
                       />
                     </div>

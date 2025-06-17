@@ -50,7 +50,7 @@ export default function CourseCurriculum() {
 
   return (
     <>
-    <div className="bg-white py-12 md:py-16 lg:py-20 pt-40 -mt-5 lg:-mt-30 relative overflow-hidden">
+    <div className="bg-white py-12 md:py-16 lg:py-20 pt-40 -mt-5 lg:-mt-15 relative overflow-hidden min-h-[80vh] lg:min-h-[90vh]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -102,7 +102,7 @@ export default function CourseCurriculum() {
     <img
         src="/effects/white.png"
         alt="black transition"
-        className='w-full block relative -top-8 z-20'
+        className='w-full block relative -top-1 z-20'
       />
     </>
   );
