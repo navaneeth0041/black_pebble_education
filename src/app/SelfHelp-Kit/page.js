@@ -8,12 +8,12 @@ export default function SelfHelpPage() {
 
   return (
     <>
-      <Header />
-      <SelfHelpKits/>
-      <PreFooter
-        mainTitle="Why Business Self-Help Kits?"
-        subText1="Most kids don't learn about business until it's too late. This kit empowers kids to explore, understand, and own their entrepreneurial journey!"
-        buttonText="Call Us to Order Your Business Kit"
+    	<Header />
+    	<SelfHelpKits />
+    	<PreFooter
+        mainTitle="Why Self-Help Kits?"
+        subText1="Most kids don’t learn about money until it’s too late. This kit empowers kids to explore, understand, and own their money journey!."
+        buttonText="Call Us to Order Your Kit"
       />
       <Footer />
     </>

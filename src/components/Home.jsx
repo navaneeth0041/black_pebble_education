@@ -65,7 +65,7 @@ export default function Home1() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4 sm:px-0">
-            <button className={`${poppins.className} bg-teal-500 hover:bg-teal-600 text-white font-semibold px-6 sm:px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-teal-500/25 w-full sm:w-auto text-sm sm:text-base`}>
+            <button className={`${poppins.className} bg-gradient-to-r from-[#08A69A] via-[#0ABE9D] to-[#69C9A1] text-white font-semibold px-6 sm:px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-teal-500/25 w-full sm:w-auto text-sm sm:text-base`}>
                 Book a Counseling Session
             </button>
             <button className={`${poppins.className} bg-transparent border-2 border-white hover:border-gray-400 text-white hover:text-white font-semibold px-6 sm:px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base`}>

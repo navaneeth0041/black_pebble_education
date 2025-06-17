@@ -3,37 +3,34 @@ import React from 'react';
 export default function ClubHighlights() {
   return (
     <>
-    <div className="bg-gray-100 py-12 md:py-16 lg:py-20">
+    <div className="bg-white py-12 md:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Title */}
         <h2 
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-teal-500 mb-8 md:mb-12 lg:mb-16"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-[#39BB9C] mb-8 md:mb-12 lg:mb-16"
           style={{ fontFamily: 'Mochiy Pop One, cursive' }}
         >
           Club Highlights
         </h2>
-
-        {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {[
             {
               title: 'Conversations & Fun Learning',
-              bgColor: '#E1B947',
+              bgColor: '#F7C342',
               icon: './Finance_clubs/book.svg',
             },
             {
               title: 'Expert-led Sessions',
-              bgColor: '#4ECDC4',
+              bgColor: '#39BB9C',
               icon: './Finance_clubs/Group 45.svg',
             },
             {
               title: 'Q & A Forum',
-              bgColor: '#5DADE2',
+              bgColor: '#4598CA',
               icon: './Finance_clubs/Group 47.svg',
             },
             {
               title: 'Non-judgmental & Inclusive Environment',
-              bgColor: '#E74C3C',
+              bgColor: '#EF746C',
               icon: './Finance_clubs/Clip path group.svg',
             },
           ].map((card, idx) => (

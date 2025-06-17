@@ -11,7 +11,6 @@ import FinancialEducationHero from '@/components/FinancialEducationHero.jsx';
 import Testimonials from '@/components/Testimonials.jsx'
 import ImpactPage from '@/components/ImapctStarts.jsx';
 import PreFooter from '@/components/prefooter.jsx';
-import ImpactAssessmentPage from '@/components/ImpactAssesmentPage.jsx';
 
 export default function HomePage() {
   return (
@@ -26,7 +25,6 @@ export default function HomePage() {
       <MoneyClassComparison/>
       <Testimonials/>
       <ImpactPage />
-      <ImpactAssessmentPage/>
       <MethodicalApproach />
       <PreFooter
         mainTitle="Not sure if your child is ready for our courses?"

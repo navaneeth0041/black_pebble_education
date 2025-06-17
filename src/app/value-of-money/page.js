@@ -1,4 +1,3 @@
-// import ValueOfMoney from '../../components/Valueofmoney.jsx';
 import Footer from '@/components/footer';
 import Header from '@/components/Header.jsx';
 import ValueOfMoneyHero from '../../components/ValueOfMoneyHero.jsx';
