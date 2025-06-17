@@ -14,10 +14,10 @@ const poppins = Poppins({
   display: 'swap',
 });
 
-
-
-export default function CourseCurriculum() {
-  const modules = [
+export default function CourseCurriculum({
+  badgeText = "Course Curriculum",
+  mainTitle = "What Your Child Will Learn",
+  modules = [
     {
       id: 1,
       title: "| Value of Money",
@@ -46,8 +46,8 @@ export default function CourseCurriculum() {
       bgColor: "bg-[#4598CA]",
       icon: "/Course_Design/1/Tossing_coing.svg"
     }
-  ];
-
+  ]
+}) {
   return (
     <>
     <div className="bg-white py-12 md:py-16 lg:py-20 pt-40 -mt-5 lg:-mt-15 relative overflow-hidden min-h-[80vh] lg:min-h-[90vh]">
@@ -62,10 +62,10 @@ export default function CourseCurriculum() {
             lineHeight: '149%',
             letterSpacing: '-0.418px'
           }}>
-            Course Curriculum
+            {badgeText}
           </div>
           <div className="text-[#39BB9C] text-[35px] sm:text-[42px] md:text-[49px] font-normal leading-[149%] tracking-[-0.931px] font-['Mochiy_Pop_One'] mb-4">
-          What Your Child Will Learn
+            {mainTitle}
           </div>
         </div>
 

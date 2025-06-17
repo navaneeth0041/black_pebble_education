@@ -4,6 +4,8 @@ import Footer from '../../components/footer.jsx';
 import PreFooter from '../../components/prefooter.jsx';
 
 export default function SelfHelpPage() {
+  // Define your business concepts here  };
+
   return (
     <>
     	<Header />
@@ -13,7 +15,7 @@ export default function SelfHelpPage() {
         subText1="Most kids don’t learn about money until it’s too late. This kit empowers kids to explore, understand, and own their money journey!."
         buttonText="Call Us to Order Your Kit"
       />
-    	<Footer />
+      <Footer />
     </>
   );
 }

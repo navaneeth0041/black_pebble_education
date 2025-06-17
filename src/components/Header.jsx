@@ -1,46 +1,72 @@
 "use client"
 import React, { useState } from 'react';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X, Check } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import BlackLogoWithText from './blacklogo';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const pathname = usePathname();
 
   const navigationItems = [
     { 
       label: 'For Kids', 
+      href: '/for-kids',
       hasDropdown: true,
       dropdownItems: [
-        'Value of Money',
-        'Budgeting',
-        'Banking Essentials',
-        'Everyday Banking',
-        'Credit Concepts',
-        'Financial Goals',
-        'Financial Growth',
-        'Financial Wisdom'
+        { label: 'Value of Money', href: '/kids/value-of-money' },
+        { label: 'Budgeting', href: '/kids/budgeting' },
+        { label: 'Banking Essentials', href: '/kids/banking-essentials' },
+        { label: 'Everyday Banking', href: '/kids/everyday-banking' },
+        { label: 'Credit Concepts', href: '/kids/credit-concepts' },
+        { label: 'Financial Goals', href: '/kids/financial-goals' },
+        { label: 'Financial Growth', href: '/kids/financial-growth' },
+        { label: 'Financial Wisdom', href: '/kids/financial-wisdom' }
       ]
     },
     { 
       label: 'For Teens', 
+      href: '/for-teens',
       hasDropdown: true,
-      dropdownItems: ['Teen Option 1', 'Teen Option 2', 'Teen Option 3']
+      dropdownItems: [
+        { label: 'Value of Money', href: '/for-teens/value-of-money' },
+        { label: 'Banking Essentials', href: '/for-teens/banking-essentials' },
+        { label: 'Credit Concepts', href: '/for-teens/credit-concepts' },
+        { label: 'Financial Freedom', href: '/for-teens/financial-freedom' },
+        { label: 'Financial Excellence', href: '/for-teens/financial-excellence' },
+        { label: 'Risks & Insurance', href: '/for-teens/risks-insurance' },
+        { label: 'Financial Wisdom', href: '/for-teens/financial-wisdom' },
+        { label: 'Buisness Basics', href: '/for-teens/buisness-basics' },
+      ]
     },
     { 
       label: 'Self Help Kits', 
+      href: '/SelfHelp-Kit',
       hasDropdown: true,
-      dropdownItems: ['Kit Option 1', 'Kit Option 2', 'Kit Option 3']
+      dropdownItems: [
+        { label: 'Finance Help Kits', href: '/SelfHelp-Kit' },
+        { label: 'Business-Help-Kit 2', href: '/Business-SelfHelp-Kit' },
+      ]
     },
     { 
       label: 'Finance Clubs', 
+      href: '/FinanceClubs',
       hasDropdown: true,
-      dropdownItems: ['Club Option 1', 'Club Option 2', 'Club Option 3']
+      dropdownItems: [
+        { label: 'Finance Clubs - Kids', href: '/FinanceClubs' },
+        { label: 'Finance Clubs - Teens', href: '/FinanceClubs-Teens' }
+      ]
     },
     { 
       label: 'Downloads', 
+      href: '/downloads',
       hasDropdown: true,
-      dropdownItems: ['Download Option 1', 'Download Option 2', 'Download Option 3']
+      dropdownItems: [
+        { label: 'Download Option 1', href: '/download-option-1' },
+        { label: 'Download Option 2', href: '/download-option-2' },
+        { label: 'Download Option 3', href: '/download-option-3' }
+      ]
     },
   ];
 
@@ -51,6 +77,22 @@ const Header = () => {
 
   const toggleDropdown = (index) => {
     setActiveDropdown(activeDropdown === index ? null : index);
+  };
+
+  const isActivePage = (href) => {
+    return pathname === href;
+  };
+
+  const getTextStyle = (href) => {
+    if (isActivePage(href)) {
+      return {
+        background: 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text'
+      };
+    }
+    return {};
   };
 
   return (
@@ -77,7 +119,7 @@ const Header = () => {
               <BlackLogoWithText logoHeight={50} textHeight={130} />
             </div>
             <div className="hidden lg:block">
-              <BlackLogoWithText logoHeight={100} textHeight={200} />
+              <BlackLogoWithText logoHeight={80} textHeight={200} />
             </div>
           </div>
 
@@ -96,23 +138,41 @@ const Header = () => {
                 {navigationItems.map((item, index) => (
                   <div key={index} className="relative group">
                     <button className="flex items-center text-white px-5 py-2 rounded-full hover:bg-gray-500/70 transition-colors duration-200">
-                      <span className="font-medium text-base whitespace-nowrap">{item.label}</span>
+                      <span 
+                        className="font-medium text-base whitespace-nowrap flex items-center"
+                        style={getTextStyle(item.href)}
+                      >
+                        {item.label}
+                        {isActivePage(item.href) && (
+                          <Check className="ml-2 h-4 w-4" style={getTextStyle(item.href)} />
+                        )}
+                      </span>
                       {item.hasDropdown && (
                         <ChevronDown className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                       )}
                     </button>
                     {/* Dropdown */}
                     {item.hasDropdown && (
-                      <div className="absolute top-full left-0 mt-2 w-56 bg-[#3a4048] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-600">
+                      <div className="absolute top-full left-0 mt-2 w-56 bg-[#343434] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-600">
                         <div className="py-2">
                           {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
-                            <a 
-                              key={dropdownIndex}
-                              href="#" 
-                              className="flex items-center px-4 py-3 text-gray-200 hover:bg-gray-600/70 hover:text-white transition-colors duration-200 text-sm"
-                            >
-                              {dropdownItem}
-                            </a>
+                            <React.Fragment key={dropdownIndex}>
+                              <a 
+                                href={dropdownItem.href} 
+                                className="flex items-center px-4 py-3 text-gray-200 hover:bg-gray-600/70 hover:text-white transition-colors duration-200 text-sm"
+                              >
+                                <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
+                                  {dropdownItem.label}
+                                  {isActivePage(dropdownItem.href) && (
+                                    <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
+                                  )}
+                                </span>
+                              </a>
+                              {/* Line separator - don't show after last item */}
+                              {dropdownIndex < item.dropdownItems.length - 1 && (
+                                <div className="mx-4 border-b border-gray-600/50"></div>
+                              )}
+                            </React.Fragment>
                           ))}
                         </div>
                       </div>
@@ -143,7 +203,15 @@ const Header = () => {
                       onClick={() => item.hasDropdown && toggleDropdown(index)}
                       className="flex items-center justify-between w-full text-left text-white hover:text-gray-300 hover:bg-gray-600/50 px-3 py-3 rounded-md transition-colors duration-200"
                     >
-                      <span className="font-medium whitespace-nowrap">{item.label}</span>
+                      <span 
+                        className="font-medium whitespace-nowrap flex items-center"
+                        style={getTextStyle(item.href)}
+                      >
+                        {item.label}
+                        {isActivePage(item.href) && (
+                          <Check className="ml-2 h-4 w-4" style={getTextStyle(item.href)} />
+                        )}
+                      </span>
                       {item.hasDropdown && (
                         <ChevronDown 
                           className={`h-4 w-4 transition-transform duration-200 ${
@@ -155,13 +223,23 @@ const Header = () => {
                     {item.hasDropdown && activeDropdown === index && (
                       <div className="pl-6 space-y-1 bg-[#2d333a] rounded-lg ml-2 mr-2 py-2">
                         {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
-                          <a 
-                            key={dropdownIndex}
-                            href="#" 
-                            className="flex items-center text-gray-300 hover:text-white hover:bg-gray-600/50 px-3 py-2 rounded-md transition-colors duration-200"
-                          >
-                            {dropdownItem}
-                          </a>
+                          <React.Fragment key={dropdownIndex}>
+                            <a 
+                              href={dropdownItem.href} 
+                              className="flex items-center text-gray-300 hover:text-white hover:bg-gray-600/50 px-3 py-2 rounded-md transition-colors duration-200"
+                            >
+                              <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
+                                {dropdownItem.label}
+                                {isActivePage(dropdownItem.href) && (
+                                  <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
+                                )}
+                              </span>
+                            </a>
+                            {/* Line separator - don't show after last item */}
+                            {dropdownIndex < item.dropdownItems.length - 1 && (
+                              <div className="mx-3 border-b border-gray-600/50"></div>
+                            )}
+                          </React.Fragment>
                         ))}
                       </div>
                     )}

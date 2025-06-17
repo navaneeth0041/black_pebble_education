@@ -1,6 +1,11 @@
 import React from 'react';
 
-const ClubDetailsSection = () => {
+const ClubDetailsSection = ({ 
+  targetAudience = "kids",
+  frequency = "Last Friday of Every Month | 6 PM - 7 PM IST",
+  description = "Patient introduction to financial concepts",
+  curiosityText = "Fuelling financial curiosity in kids"
+}) => {
   return (
     <>
       <section className="bg-[#E3FFF5] py-20 px-6 lg:px-16 pt-40 -mt-5 lg:-mt-30">
