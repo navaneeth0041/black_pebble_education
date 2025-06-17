@@ -28,9 +28,14 @@ const Header = () => {
       href: '/for-teens',
       hasDropdown: true,
       dropdownItems: [
-        { label: 'Teen Option 1', href: '/teen-option-1' },
-        { label: 'Teen Option 2', href: '/teen-option-2' },
-        { label: 'Teen Option 3', href: '/teen-option-3' }
+        { label: 'Value of Money', href: '/for-teens/value-of-money' },
+        { label: 'Banking Essentials', href: '/for-teens/banking-essentials' },
+        { label: 'Credit Concepts', href: '/for-teens/credit-concepts' },
+        { label: 'Financial Freedom', href: '/for-teens/financial-freedom' },
+        { label: 'Financial Excellence', href: '/for-teens/financial-excellence' },
+        { label: 'Risks & Insurance', href: '/for-teens/risks-insurance' },
+        { label: 'Financial Wisdom', href: '/for-teens/financial-wisdom' },
+        { label: 'Buisness Basics', href: '/for-teens/buisness-basics' },
       ]
     },
     { 
