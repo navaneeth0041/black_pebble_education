@@ -12,8 +12,8 @@ export default function financial() {
       <>
         <Header />
         <ValueOfMoneyHero 
-          title="Financial Goals"
-          subtitle="Give your child something to aspire - financially!"
+          title="Financial Growth"
+          subtitle="Money looks good when it grows - not on trees!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
           primaryButtonText="Book a Counselling Session"
@@ -25,15 +25,15 @@ export default function financial() {
         modules={[
           {
             id: 1,
-            title: "| Life Goals",
-            description: "Understanding and determining life goals.",
+            title: "| Investing",
+            description: "Understanding the importance of investing for financial growth.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Saving", 
-            description: "Understanding the importance of saving for financial freedom.",
+            title: "| Expense Tracking", 
+            description: "Learning to track expenses to stay within budget. ",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
@@ -41,8 +41,8 @@ export default function financial() {
       />
         <CourseSnapshot
             title="Course Delivery"
-            originalPrice="₹1499"
-            offerPrice="₹999"
+            originalPrice="₹1799"
+            offerPrice="₹1299"
             courseFormatTitle="What's Included"
             courseFeatures={[
                 'Videos & Conversations',
@@ -55,7 +55,7 @@ export default function financial() {
             locationTitle="Venue"
             locationValue="Online | Offline (Ahmedabad)"
             durationTitle="Session Duration"
-            durationValue="2 Hours"
+            durationValue="2.5 Hours"
             offerPriceTitle="Special Price"
             />
         <Testimonials
@@ -80,9 +80,9 @@ export default function financial() {
             transitionImage="/effects/yellow.png"
           />
       <PreFooter
-        mainTitle="Why Learn About Financial Goals So Early?"
-        subText1="Most kids don’t realize that their life goals come with financial obligations. Make your child understand the importance of savings to attain their goals without financial burden."
-        subText2="This 2-hour session allows your child to pursue their dreams without financial hurdles."
+        mainTitle="Why Learn About Financial Growth So Early?"
+        subText1="Investing early has immeasurable benefits. To invest early, your child has to save. To save, they have to track expenses."
+        subText2="This 2.5-hour session teaches these to equip your child to start their growth journey."
         buttonText="Book a Counselling Session"
       />
       <Footer /> 
