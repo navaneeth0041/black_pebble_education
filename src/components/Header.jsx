@@ -19,10 +19,10 @@ const Header = () => {
         { label: 'Budgeting', href: '/kids/budgeting' },
         { label: 'Banking Essentials', href: '/kids/banking-essentials' },
         { label: 'Everyday Banking', href: '/kids/everyday-banking' },
-        { label: 'Credit Concepts', href: 'kids/credit-concepts' },
-        { label: 'Financial Goals', href: 'kids/financial-goals' },
-        { label: 'Financial Growth', href: 'kids/financial-growth' },
-        { label: 'Financial Wisdom', href: 'kids/financial-wisdom' }
+        { label: 'Credit Concepts', href: '/kids/credit-concepts' },
+        { label: 'Financial Goals', href: '/kids/financial-goals' },
+        { label: 'Financial Growth', href: '/kids/financial-growth' },
+        { label: 'Financial Wisdom', href: '/kids/financial-wisdom' }
       ]
     },
     { 
