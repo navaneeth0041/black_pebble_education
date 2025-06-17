@@ -25,32 +25,18 @@ export default function Budgeting() {
         modules={[
           {
             id: 1,
-            title: "| Value of Money",
-            description: "Understanding how money is earned, saved and spent - and why it matters.",
+            title: "| Needs & Wants",
+            description: "Understanding the difference between needs & wants.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Relationship with Money", 
-            description: "Developing a healthy attitude towards money.",
+            title: "| Keeping a Budget", 
+            description: "Allocating money between needs & wants, and savings.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
-          {
-            id: 3,
-            title: "| Budgeting",
-            description: "Allocating money for needs and wants - and also saving.",
-            bgColor: "bg-[#4598CA]",
-            icon: "/Course_Design/1/Calender.svg" 
-          },
-          {
-            id: 4,
-            title: "| Peer Pressure",
-            description: "Developing resilience against peer demands - being financially strong.",
-            bgColor: "bg-[#4598CA]",
-            icon: "/Course_Design/1/Tossing_coing.svg"
-          }
         ]}
       />
         <CourseSnapshot
@@ -61,7 +47,7 @@ export default function Budgeting() {
             courseFeatures={[
                 'Interactions',
                 'Example',
-                'Quzzes',
+                'Quizzes',
                 'Illustrations',
                 'Infographic Takeaway Notes',
                 'Certificate of Participation'
