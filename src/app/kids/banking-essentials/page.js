@@ -1,19 +1,19 @@
 import Footer from '@/components/footer';
 import Header from '@/components/Header.jsx';
-import ValueOfMoneyHero from '../../components/ValueOfMoneyHero.jsx';
-import CourseCurriculum from '../../components/CourseCurriculum.jsx'
-import CourseSnapshot from '../../components/CourseSnapshot.jsx';
-import PreFooter from '../../components/prefooter.jsx';
+import ValueOfMoneyHero from '../../../components/ValueOfMoneyHero.jsx';
+import CourseCurriculum from '../../../components/CourseCurriculum.jsx'
+import CourseSnapshot from '../../../components/CourseSnapshot.jsx';
+import PreFooter from '../../../components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
 
-export default function Budgeting() {
+export default function Banking() {
     return (
       <>
         <Header />
         <ValueOfMoneyHero 
-          title="Budgeting"
-          subtitle="Make your child learn to be mindful of expenses - Money discipline!"
+          title="Banking Essentials"
+          subtitle="Introduce your child to the heartbeat of finance - Banks!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
           primaryButtonText="Book a Counselling Session"
@@ -25,43 +25,29 @@ export default function Budgeting() {
         modules={[
           {
             id: 1,
-            title: "| Value of Money",
-            description: "Understanding how money is earned, saved and spent - and why it matters.",
+            title: "| Bank",
+            description: "The Concept: Understanding the purpose of banks.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Relationship with Money", 
-            description: "Developing a healthy attitude towards money.",
+            title: "| The Concept: Understanding the purpose of banks.", 
+            description: "Understanding the need and types of bank accounts.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
-          {
-            id: 3,
-            title: "| Budgeting",
-            description: "Allocating money for needs and wants - and also saving.",
-            bgColor: "bg-[#4598CA]",
-            icon: "/Course_Design/1/Calender.svg" 
-          },
-          {
-            id: 4,
-            title: "| Peer Pressure",
-            description: "Developing resilience against peer demands - being financially strong.",
-            bgColor: "bg-[#4598CA]",
-            icon: "/Course_Design/1/Tossing_coing.svg"
-          }
         ]}
       />
         <CourseSnapshot
             title="Course Delivery"
-            originalPrice="₹999"
-            offerPrice="₹1499"
+            originalPrice="₹1299"
+            offerPrice="₹1799"
             courseFormatTitle="What's Included"
             courseFeatures={[
                 'Interactions',
                 'Example',
-                'Quzzes',
+                'Quizzes',
                 'Illustrations',
                 'Infographic Takeaway Notes',
                 'Certificate of Participation'
@@ -69,7 +55,7 @@ export default function Budgeting() {
             locationTitle="Venue"
             locationValue="Online | Offline (Ahmedabad)"
             durationTitle="Session Duration"
-            durationValue="2 Hours"
+            durationValue="2.5 Hours"
             offerPriceTitle="Special Price"
             />
         <Testimonials
@@ -94,9 +80,9 @@ export default function Budgeting() {
             transitionImage="/effects/yellow.png"
           />
       <PreFooter
-        mainTitle="Why Learn Budgeting So Early?"
-        subText1="Some kids are impulsive buyers and throw tantrums until they get what they want. Making them understand that everything costs money can positively change their attitudes."
-        subText2="This 2-hour session makes them differentiate between needs & wants and spend wisely."
+        mainTitle="Why Learn Banking So Early?"
+        subText1="Today’s kids have a minimal to negligible experience in branch banking. This lack of interaction keeps them from learning about the functioning and importance of banks."
+        subText2="This 2.5-hour session provides them with a relatable and practical understanding of banking."
         buttonText="Book a Counselling Session"
       />
       <Footer /> 

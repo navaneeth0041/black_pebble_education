@@ -14,13 +14,13 @@ const Header = () => {
       hasDropdown: true,
       dropdownItems: [
         { label: 'Value of Money', href: '/value-of-money' },
-        { label: 'Budgeting', href: '/budgeting' },
-        { label: 'Banking Essentials', href: '/banking-essentials' },
-        { label: 'Everyday Banking', href: '/everyday-banking' },
-        { label: 'Credit Concepts', href: '/credit-concepts' },
-        { label: 'Financial Goals', href: '/financial-goals' },
-        { label: 'Financial Growth', href: '/financial-growth' },
-        { label: 'Financial Wisdom', href: '/financial-wisdom' }
+        { label: 'Budgeting', href: 'kids/budgeting' },
+        { label: 'Banking Essentials', href: 'kids/banking-essentials' },
+        { label: 'Everyday Banking', href: 'kids/everyday-banking' },
+        { label: 'Credit Concepts', href: 'kids/credit-concepts' },
+        { label: 'Financial Goals', href: 'kids/financial-goals' },
+        { label: 'Financial Growth', href: 'kids/financial-growth' },
+        { label: 'Financial Wisdom', href: 'kids/financial-wisdom' }
       ]
     },
     { 
