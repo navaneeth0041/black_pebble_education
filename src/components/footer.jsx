@@ -13,6 +13,11 @@ const Footer = () => {
     email: "blackpebbleeducation@gmail.com"
   };
 
+  // Helper function to convert text to URL format
+  const convertToUrl = (text) => {
+    return text.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+  };
+
   const footerLinks = {
     importantLinks: {
       title: "Important Links",
@@ -59,8 +64,10 @@ const Footer = () => {
           {/* YouTube Section */}
           <div className="lg:pr-12">
             <a 
-              href="#" 
-              className="inline-flex items-center rounded-lg text-base font-semibold transition-all duration-300 border border-white overflow-hidden"
+              href="https://youtube.com/@blackpebbleeducation" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-lg text-base font-semibold transition-all duration-300 border border-white overflow-hidden hover:bg-white hover:text-[#2B2A2A]"
             >
               {/* YouTube Icon Section */}
               <div className="px-4 py-3 flex-shrink-0">
@@ -71,7 +78,7 @@ const Footer = () => {
               
               {/* Text Section */}
               <div className="px-4 py-3 text-left">
-                <div className="text-white text-base font-medium">{youtubeSection.title}</div>
+                <div className="text-base font-medium">{youtubeSection.title}</div>
                 <div className="text-sm opacity-90">{youtubeSection.subtitle}</div>
               </div>
             </a>
@@ -95,17 +102,23 @@ const Footer = () => {
             {/* Phone */}
             <div className="flex items-center space-x-3">
               <img src="/footer/whatsapp.png" alt="Phone" className="h-4 w-4 flex-shrink-0" />
-              <div className="text-base text-white">
+              <a 
+                href={`tel:${contactInfo.phone}`}
+                className="text-base text-white hover:text-blue-400 transition-colors duration-300"
+              >
                 {contactInfo.phone}
-              </div>
+              </a>
             </div>
             
             {/* Email */}
             <div className="flex items-center space-x-3">
               <img src="/footer/mail.png" alt="Email" className="h-3 w-4 flex-shrink-0" />
-              <div className="text-base text-white underline">
+              <a 
+                href={`mailto:${contactInfo.email}`}
+                className="text-base text-white underline hover:text-blue-400 transition-colors duration-300"
+              >
                 {contactInfo.email}
-              </div>
+              </a>
             </div>
           </div>
 
@@ -120,7 +133,7 @@ const Footer = () => {
                 {footerLinks.importantLinks.items.map((item, index) => (
                   <li key={index}>
                     <a 
-                      href="#" 
+                      href={`/${convertToUrl(item)}`}
                       className="text-base text-white hover:text-blue-400 transition-all duration-300 hover:translate-x-1 inline-block"
                     >
                       {item}
@@ -139,7 +152,7 @@ const Footer = () => {
                 {footerLinks.products.items.map((item, index) => (
                   <li key={index}>
                     <a 
-                      href="#" 
+                      href={`/${convertToUrl(item)}`}
                       className="text-base text-white hover:text-blue-400 transition-all duration-300 hover:translate-x-1 inline-block"
                     >
                       {item}
@@ -158,7 +171,7 @@ const Footer = () => {
                 {footerLinks.legal.items.map((item, index) => (
                   <li key={index}>
                     <a 
-                      href="#" 
+                      href={`/${convertToUrl(item)}`}
                       className="text-base text-white hover:text-blue-400 transition-all duration-300 hover:translate-x-1 inline-block"
                     >
                       {item}
@@ -172,8 +185,8 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-8 pt-4 text-right">
-          <p className="text-sm text-white">
-            {copyright}
+          <p className="text-lg text-white font-medium">
+            <span className="text-2xl font-bold">©</span> Copyright 2025 all rights reserved by BP
           </p>
         </div>
       </div>

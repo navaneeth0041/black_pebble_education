@@ -47,7 +47,7 @@ export default function Testimonials({
   return (
     <>
       <div className="w-full bg-[#FBDD9C] px-12 ">
-        <div className="lg:px-12 mx-auto py-14 px-6 -mt-5 lg:-mt-30 pt-40 min-h-[70vh] lg:min-h-[90vh] relative">
+        <div className="lg:px-12 mx-auto py-14 px-6 -mt-5 lg:-mt-22 xl:-mt-28 pt-30 min-h-[70vh] lg:min-h-[90vh] relative">
 
           {/* Desktop Layout */}
           <div className="hidden lg:grid grid-cols-2 gap-4 lg:gap-8 items-start h-full">
@@ -169,7 +169,7 @@ export default function Testimonials({
       <img
         src="/effects/yellow.png"
         alt="black transition"
-        className='w-[200%] block relative -top-7 z-0'
+        className='w-[200%] block relative -top-7 z-20'
       />
     </>
   );

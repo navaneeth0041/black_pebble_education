@@ -13,7 +13,7 @@ const UniquePedagogy = () => {
     },
     {
       title: "Context-relevant",
-      image: "/home_page_assets/2/Frame 117.png", 
+      image: "/home_page_assets/2/Frame 300.png", 
       alt: "Children working together on activities",
     },
     {
@@ -131,23 +131,27 @@ const UniquePedagogy = () => {
             {visibleCards.map((card, arrayIndex) => {
               const { position, index } = card;
               const isCenter = position === 0;
+              const isBehindCenter = position === -1 || position === 1;
 
               let transform = "";
               let zIndex =
                 10 + Math.abs(position === 0 ? 5 : 5 - Math.abs(position));
 
+              // Enhanced transformations with curved effect for behind-center cards
               if (position === -2) {
                 transform =
                   "translateX(-650px) translateZ(-300px) rotateY(35deg) scale(0.75)";
               } else if (position === -1) {
+                // Left behind card - curve inward more on hidden side, outward on visible side
                 transform =
-                  "translateX(-350px) translateZ(-150px) rotateY(25deg) scale(0.9)";
+                  "translateX(-350px) translateZ(-150px) rotateY(35deg) scale(0.9) scaleX(1.15)";
               } else if (position === 0) {
                 transform =
                   "translateX(0px) translateZ(0px) rotateY(0deg) scale(1.1)";
               } else if (position === 1) {
+                // Right behind card - curve inward more on hidden side, outward on visible side  
                 transform =
-                  "translateX(350px) translateZ(-150px) rotateY(-25deg) scale(0.9)";
+                  "translateX(350px) translateZ(-150px) rotateY(-35deg) scale(0.9) scaleX(1.15)";
               } else if (position === 2) {
                 transform =
                   "translateX(650px) translateZ(-300px) rotateY(-35deg) scale(0.75)";
@@ -164,8 +168,10 @@ const UniquePedagogy = () => {
                   }}
                 >
                   <div
-                    className="relative w-78 h-[480px] lg:w-88 lg:h-[520px] rounded-3xl overflow-hidden shadow-2xl transition-all duration-700 border-2 border-black"
+                    className="relative overflow-hidden shadow-2xl transition-all duration-700"
                     style={{
+                      width: isBehindCenter ? '400px' : '312px', // Increased width for behind-center cards
+                      height: isBehindCenter ? '460px' : '420px', // Decreased height
                       backfaceVisibility: "hidden",
                       opacity: isCenter
                         ? 1
@@ -173,17 +179,36 @@ const UniquePedagogy = () => {
                           ? 0.85
                           : 0.7,
                       transformStyle: 'flat',
+                      borderRadius: '24px',
                     }}
                   >
-                    <div className="relative w-full h-full overflow-hidden rounded-2xl">
+                    <div 
+                      className="relative w-full h-full overflow-hidden"
+                      style={{
+                        borderRadius: '22px', // Slightly smaller than container to ensure perfect alignment
+                        // Additional curve effect using CSS transform on the container
+                        transform: isBehindCenter ? 
+                          (position === -1 ? 
+                            'perspective(800px) rotateY(-8deg)' : 
+                            'perspective(800px) rotateY(8deg)'
+                          ) : 'none'
+                      }}
+                    >
                       <img
                         src={card.image}
                         alt={card.alt}
-                        className="w-full h-full transition-transform duration-300 rounded-2xl"
+                        className="w-full h-full transition-transform duration-300"
                         style={{
                           transform: isCenter ? 'scale(1)' : 'scale(0.98)',
                           objectFit: 'cover',
                           objectPosition: 'center',
+                          borderRadius: '22px', // Match the container border radius
+                          // Additional image distortion for curved effect
+                          ...(isBehindCenter && {
+                            transform: position === -1 ? 
+                              'scale(0.98) perspective(600px) rotateY(5deg)' : 
+                              'scale(0.98) perspective(600px) rotateY(-5deg)'
+                          })
                         }}
                       />
                     </div>

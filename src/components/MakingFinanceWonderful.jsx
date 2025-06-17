@@ -57,7 +57,7 @@ export default function MakingFinanceWonderful() {
       title: "Non-Tech Training",
       description: "Kids & teens deserve a human connection. We don't use generalized apps or tech-based tools for learning. We provide instructor-led personalized training only.",
       bgColor: "bg-[#39BB9C]",
-      iconSrc: "./home_page_assets/1/Group 26.svg",
+      iconSrc: "./home_page_assets/1/Group 26.png",
       iconAlt: "Non-Tech Training Icon"
     },
     {
