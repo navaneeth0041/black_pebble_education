@@ -1,19 +1,39 @@
 import React from 'react';
 
-export default function CourseSnapshot() {
+export default function CourseSnapshot({
+  title = "Course Snapshot",
+  originalPrice = "₹2499",
+  offerPrice = "₹1799",
+  courseFormatTitle = "Course Format",
+  courseFeatures = [
+    'Videos & Conversations',
+    'Real-life Examples',
+    'Quizzes',
+    'Team Project & Role-play',
+    'Infographic Takeaway Notes',
+    'Certificate of Participation'
+  ],
+  locationTitle = "Location",
+  locationValue = "Online | Offline (Ahmedabad)",
+  durationTitle = "Session Duration",
+  durationValue = "2 Hours",
+  offerPriceTitle = "Offer Price",
+  calendarIcon = "/Finance_clubs/1/Group.svg",
+  coinsIcon = "/Finance_clubs/1/Clip path group.svg"
+}) {
   return (
     <div className="bg-gradient-to-br from-teal-100 to-emerald-50 py-20 px-6 lg:px-16">
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-center mb-12">
           <h1 className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] bg-clip-text text-transparent font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
-            Course Snapshot
+            {title}
           </h1>
         </div>
 
         <div className="relative w-full">
           <div className="absolute -left-8 -top-12 z-0 sm:-left-16 sm:-top-8 lg:-left-28 lg:-top-35">
             <img
-              src="/Finance_clubs/1/Group.svg"
+              src={calendarIcon}
               alt="Calendar"
               className="w-[90px] h-[100px] sm:w-[180px] sm:h-[200px] lg:w-[260px] lg:h-[280px]"
             />
@@ -25,7 +45,7 @@ export default function CourseSnapshot() {
           >
             <div className="absolute -right-16 bottom-2 z-0 sm:-right-24 sm:bottom-3 lg:-right-40 lg:bottom-5">
               <img
-                src="/Finance_clubs/1/Clip path group.svg"
+                src={coinsIcon}
                 alt="Decorative Coins"
                 className="w-[140px] h-[130px] sm:w-[200px] sm:h-[190px] lg:w-[320px] lg:h-[300px] transform rotate-12"
               />
@@ -40,7 +60,7 @@ export default function CourseSnapshot() {
                       lineHeight: '149%',
                       letterSpacing: '-0.456px'
                     }}>
-                      Offer Price
+                      {offerPriceTitle}
                     </h2>
                     <div className="space-y-2">
                       <div className="text-[#B5FFE5] font-poppins text-[47px] font-semibold line-through" style={{
@@ -48,14 +68,14 @@ export default function CourseSnapshot() {
                         lineHeight: '107%',
                         letterSpacing: '-0.893px'
                       }}>
-                        ₹2499
+                        {originalPrice}
                       </div>
                       <div className="text-white font-poppins text-[68px] font-semibold" style={{
                         fontWeight: 600,
                         lineHeight: '107%',
                         letterSpacing: '-1.292px'
                       }}>
-                        ₹1799
+                        {offerPrice}
                       </div>
                     </div>
                   </div>
@@ -68,17 +88,10 @@ export default function CourseSnapshot() {
                       lineHeight: '149%',
                       letterSpacing: '-0.456px'
                     }}>
-                      Course Format
+                      {courseFormatTitle}
                     </h2>
                     <ul className="space-y-4">
-                      {[
-                        'Videos & Conversations',
-                        'Real-life Examples',
-                        'Quizzes',
-                        'Team Project & Role-play',
-                        'Infographic Takeaway Notes',
-                        'Certificate of Participation'
-                      ].map((item, index) => (
+                      {courseFeatures.map((item, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <span className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></span>
                           <span className="text-white font-poppins text-[22px] font-semibold" style={{
@@ -103,14 +116,14 @@ export default function CourseSnapshot() {
                     lineHeight: '149%',
                     letterSpacing: '-0.418px'
                   }}>
-                    Location
+                    {locationTitle}
                   </h3>
                   <p className="text-white font-poppins text-[22px] font-semibold" style={{
                     fontWeight: 600,
                     lineHeight: '149%',
                     letterSpacing: '-0.418px'
                   }}>
-                    Online | Offline (Ahmedabad)
+                    {locationValue}
                   </p>
                 </div>
                 <div className="flex flex-col gap-4 md:pl-6">
@@ -119,14 +132,14 @@ export default function CourseSnapshot() {
                     lineHeight: '149%',
                     letterSpacing: '-0.418px'
                   }}>
-                    Session Duration
+                    {durationTitle}
                   </h3>
                   <p className="text-white font-poppins text-[22px] font-semibold" style={{
                     fontWeight: 600,
                     lineHeight: '149%',
                     letterSpacing: '-0.418px'
                   }}>
-                    2 Hours
+                    {durationValue}
                   </p>
                 </div>
               </div>

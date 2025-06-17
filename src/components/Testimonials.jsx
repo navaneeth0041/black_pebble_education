@@ -15,23 +15,24 @@ const poppins = Poppins({
   display: 'swap',
 });
 
-export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const testimonials = [
+export default function Testimonials({ 
+  title1 = "Kids Loved It.",
+  title2 = "Parents Approved.",
+  titleIcon = "/home_page_assets/5/Group.svg",
+  testimonials = [
     {
-      quote:
-        "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
+      quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
       author: "Riya Malhotra, Parent of a 6th Grader",
       image: "/home_page_assets/5/iphone.svg",
     },
     {
-      quote:
-        "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
+      quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
       author: "Carlos R., Parent of a 5th Grader",
       image: "/home_page_assets/5/iphone.svg",
     },
-  ];
+  ]
+}) {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
@@ -56,11 +57,11 @@ export default function Testimonials() {
               {/* Title */}
               <div className="mb-6">
                 <h2 className={`${mochiyPopOne.className} px-10 text-xl lg:text-7xl font-bold text-[#F15B52] mb-3 flex items-center gap-4 leading-tight`}>
-                  Kids Loved It.
-                  <img src="/home_page_assets/5/Group.svg" alt="Phone Icon" className="w-12 h-12 lg:w-25 lg:h-25" />
+                  {title1}
+                  <img src={titleIcon} alt="Phone Icon" className="w-12 h-12 lg:w-25 lg:h-25" />
                 </h2>
                 <h3 className={`${mochiyPopOne.className} px-9 text-xl lg:text-7xl font-bold text-[#F15B52] leading-tight whitespace-nowrap mb-8`}>
-                  Parents Approved.
+                  {title2}
                 </h3>
               </div>
 
@@ -102,11 +103,11 @@ export default function Testimonials() {
             {/* Title */}
             <div className="mb-8">
               <h2 className={`${mochiyPopOne.className} text-3xl font-bold text-[#F15B52] mb-3 flex items-center gap-4 leading-tight`}>
-                Kids Loved It.
-                <img src="/home_page_assets/5/Group.svg" alt="Phone Icon" className="w-8 h-8" />
+                {title1}
+                <img src={titleIcon} alt="Phone Icon" className="w-8 h-8" />
               </h2>
               <h3 className={`${mochiyPopOne.className} text-3xl font-bold text-[#F15B52] leading-tight mb-8`}>
-                Parents Approved.
+                {title2}
               </h3>
             </div>
 
