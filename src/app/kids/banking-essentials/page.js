@@ -47,7 +47,7 @@ export default function Banking() {
             courseFeatures={[
                 'Interactions',
                 'Example',
-                'Quzzes',
+                'Quizzes',
                 'Illustrations',
                 'Infographic Takeaway Notes',
                 'Certificate of Participation'
