@@ -28,13 +28,13 @@ export default function ThemesOfDiscussion() {
           
           {/* Right Column - Content */}
           <div className="lg:col-start-2 space-y-8 lg:pl-8 xl:pl-12">
-            <h2 
-              className="text-4xl sm:text-5xl md:text-6xl font-bold text-teal-500 leading-tight"
+          <h2 
+              className="text-4xl sm:text-4xl md:text-5xl font-bold text-teal-500 leading-tight -ml-10"
               style={{ fontFamily: 'Mochiy Pop One, cursive' }}
             >
               Themes of Discussion
             </h2>
-            <div className="space-y-6">
+            <div className="py-6 space-y-6">
               {[
                 "Financial Knowledge",
                 "Financial Mindset",
