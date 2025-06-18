@@ -46,8 +46,8 @@ const Header = () => {
       href: '/SelfHelp-Kit',
       hasDropdown: true,
       dropdownItems: [
-        { label: 'Finance Help Kits', href: '/SelfHelp-Kit' },
-        { label: 'Business-Help-Kit 2', href: '/Business-SelfHelp-Kit' },
+        { label: 'Financial Literacy Kit', href: '/SelfHelp-Kit' },
+        { label: 'Business Literacy Kit', href: '/Business-SelfHelp-Kit' },
       ]
     },
     { 
@@ -55,8 +55,8 @@ const Header = () => {
       href: '/FinanceClubs',
       hasDropdown: true,
       dropdownItems: [
-        { label: 'Finance Clubs - Kids', href: '/FinanceClubs' },
-        { label: 'Finance Clubs - Teens', href: '/FinanceClubs-Teens' }
+        { label: 'Kids’ Club', href: '/FinanceClubs' },
+        { label: 'Teens’ Club', href: '/FinanceClubs-Teens' }
       ]
     },
     { 
@@ -64,9 +64,8 @@ const Header = () => {
       href: '/downloads',
       hasDropdown: true,
       dropdownItems: [
-        { label: 'Download Option 1', href: '/download-option-1' },
-        { label: 'Download Option 2', href: '/download-option-2' },
-        { label: 'Download Option 3', href: '/download-option-3' }
+        { label: 'Lunchbox Notes', href: '/#' },
+        { label: 'Spread the Word', href: '/#' }
       ]
     },
   ];
