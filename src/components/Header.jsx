@@ -65,7 +65,7 @@ const Header = () => {
       hasDropdown: true,
       dropdownItems: [
         { label: 'Lunchbox Notes', href: '/#' },
-        { label: 'Spread the Word', href: '/#' }
+        { label: 'Spread the Word', href: '/#' },
       ]
     },
   ];
@@ -132,6 +132,13 @@ const Header = () => {
             <button className="border border-white text-white px-4 py-1.5 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-sm">
               Call us
             </button>
+            {/* Phone number tooltip for mobile */}
+            <div className="absolute top-full right-0 mt-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 whitespace-nowrap">
+              +91-8928557529
+              {/* Arrow pointing up */}
+              <div className="absolute bottom-full right-4 w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-gray-800"></div>
+          </div>
+
           </div>
 
           {/* Desktop Navigation */}
