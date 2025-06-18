@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, Menu, X, Check } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import BlackLogoWithText from './blacklogo';
 
 const Header = () => {
@@ -116,10 +117,14 @@ const Header = () => {
           {/* Logo - centered on mobile, left on desktop */}
           <div className="flex items-center lg:flex-none">
             <div className="lg:hidden">
-              <BlackLogoWithText logoHeight={50} textHeight={130} />
+              <Link href="/">
+                <BlackLogoWithText logoHeight={50} textHeight={130} />
+              </Link>
             </div>
             <div className="hidden lg:block">
-              <BlackLogoWithText logoHeight={80} textHeight={200} />
+              <Link href="/">
+                <BlackLogoWithText logoHeight={80} textHeight={200} />
+              </Link>
             </div>
           </div>
 
