@@ -25,14 +25,14 @@ export default function financial() {
         modules={[
           {
             id: 1,
-            title: "| Investing",
+            title: "Investing",
             description: "Understanding the importance of investing for financial growth.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Expense Tracking", 
+            title: "Expense Tracking", 
             description: "Learning to track expenses to stay within budget. ",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 

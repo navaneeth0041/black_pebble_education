@@ -25,28 +25,28 @@ export default function BankingEssentials() {
         modules={[
           {
             id: 1,
-            title: "| Life Goals",
+            title: "Life Goals",
             description: "Understanding and determining life goals.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Saving", 
+            title: "Saving", 
             description: "Understanding saving as a first step to financial freedom.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
           {
             id: 3,
-            title: "| Investing",
+            title: "Investing",
             description: "Understanding investing as a means for financial growth.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Calender.svg" 
           },
           {
             id: 4,
-            title: "| Expense Tracking",
+            title: "Expense Tracking",
             description: "Tracking expenses to stay within spending limits.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Tossing_coing.svg"

@@ -25,28 +25,28 @@ export default function BankingEssentials() {
         modules={[
           {
             id: 1,
-            title: "| Credit - The Concept",
+            title: "Credit - The Concept",
             description: "Understanding what credit is and why it is needed.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Credit Cards", 
+            title: "Credit Cards", 
             description: "Understanding the purpose and use of credit cards.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
           {
             id: 3,
-            title: "| Credit Score",
+            title: "Credit Score",
             description: "Understanding the need and importance of a credit score.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Calender.svg" 
           },
           {
             id: 4,
-            title: "| Credit Bureaus",
+            title: "Credit Bureaus",
             description: "Understanding the purpose of credit bureaus.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Tossing_coing.svg"

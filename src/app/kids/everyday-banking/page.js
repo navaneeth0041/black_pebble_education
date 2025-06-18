@@ -25,14 +25,14 @@ export default function everyday() {
         modules={[
           {
             id: 1,
-            title: "| Good Loans & Bad Loans",
+            title: "Good Loans & Bad Loans",
             description: "Differentiating between a healthy loan and a debt trap.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Debit Card, KYC & ATM", 
+            title: "Debit Card, KYC & ATM", 
             description: "Learning everyday banking concepts.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 

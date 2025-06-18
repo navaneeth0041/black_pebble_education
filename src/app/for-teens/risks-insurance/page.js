@@ -25,28 +25,28 @@ export default function BankingEssentials() {
         modules={[
           {
             id: 1,
-            title: "| Risks & Insurance - The Concept",
+            title: "Risks & Insurance - The Concept",
             description: "Understanding the concepts of risks and insurance.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Types of Risks", 
+            title: "Types of Risks", 
             description: "Understanding the nature and types of possible risks.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
           {
             id: 3,
-            title: "| Types of Insurance",
+            title: "Types of Insurance",
             description: "Understanding the nature and types of available insurance",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Calender.svg" 
           },
           {
             id: 4,
-            title: "| Terms & Terminologies",
+            title: "Terms & Terminologies",
             description: "Learning the terms and terminologies of insurance industry.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Tossing_coing.svg"

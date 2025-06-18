@@ -25,28 +25,28 @@ export default function BankingEssentials() {
         modules={[
           {
             id: 1,
-            title: "| Value of Money",
+            title: "Value of Money",
             description: "Understanding how money is earned, saved, and spent - and why it matters.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Banking Essentials", 
+            title: "Banking Essentials", 
             description: "Understanding banking, accounts, KYC, ATM, and debit cards.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
           {
             id: 3,
-            title: "| Credit Concepts",
+            title: "Credit Concepts",
             description: "Understanding credit, credit cards, credit score, and credit bureaus.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Calender.svg" 
           },
           {
             id: 4,
-            title: "| Financial Freedom",
+            title: "Financial Freedom",
             description: "Understanding life goals, saving, investing, and expense tracking.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Tossing_coing.svg"

@@ -25,14 +25,14 @@ export default function financial() {
         modules={[
           {
             id: 1,
-            title: "| Life Goals",
+            title: "Life Goals",
             description: "Understanding and determining life goals.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Saving", 
+            title: "Saving", 
             description: "Understanding the importance of saving for financial freedom.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
