@@ -25,28 +25,28 @@ export default function BankingEssentials() {
         modules={[
           {
             id: 1,
-            title: "| Japanese Money Habits",
+            title: "Japanese Money Habits",
             description: "Learning everyday practices of money management.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| East-Asian Wealth Practices", 
+            title: "East-Asian Wealth Practices", 
             description: "Learning financial growth methods - the East-Asian way.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
           {
             id: 3,
-            title: "| Golden Rules of Wealth",
+            title: "Golden Rules of Wealth",
             description: " Understanding timeless rules of amassing wealth.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Calender.svg" 
           },
           {
             id: 4,
-            title: "| Gratitude for Money",
+            title: "Gratitude for Money",
             description: "Understanding the importance of thanking and respecting money.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Tossing_coing.svg"

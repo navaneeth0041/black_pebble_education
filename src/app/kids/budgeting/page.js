@@ -25,14 +25,14 @@ export default function Budgeting() {
         modules={[
           {
             id: 1,
-            title: "| Needs & Wants",
+            title: "Needs & Wants",
             description: "Understanding the difference between needs & wants.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Keeping a Budget", 
+            title: "Keeping a Budget", 
             description: "Allocating money between needs & wants, and savings.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 

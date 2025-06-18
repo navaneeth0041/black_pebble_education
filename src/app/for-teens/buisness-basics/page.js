@@ -25,28 +25,28 @@ export default function BankingEssentials() {
         modules={[
           {
             id: 1,
-            title: "| Business Plan",
+            title: "Business Plan",
             description: " Understanding the purpose and nature of a business plan.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Business Risk", 
+            title: "Business Risk", 
             description: "Understanding potential business risks and their impact.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
           {
             id: 3,
-            title: "| Business Life Cycle",
+            title: "Business Life Cycle",
             description: "Understanding the different phases of business growth cycle.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Calender.svg" 
           },
           {
             id: 4,
-            title: "| Business Formation",
+            title: "Business Formation",
             description: "Understanding possible options of business formation.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Tossing_coing.svg"

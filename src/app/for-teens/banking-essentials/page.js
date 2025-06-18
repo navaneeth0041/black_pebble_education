@@ -25,28 +25,28 @@ export default function BankingEssentials() {
         modules={[
           {
             id: 1,
-            title: "| Bank - The Concept",
+            title: "Bank - The Concept",
             description: "Understanding what a bank is and why it is important.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Bank Accounts", 
+            title: "Bank Accounts", 
             description: "Understanding the purpose and types of bank accounts.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
           {
             id: 3,
-            title: "| Good Loans & Bad Loans",
+            title: "Good Loans & Bad Loans",
             description: "Not all loans are bad - understand the difference.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Calender.svg" 
           },
           {
             id: 4,
-            title: "| KYC, ATMs & Debit Cards",
+            title: "KYC, ATMs & Debit Cards",
             description: "Understanding the essentials of everyday banking.",
             bgColor: "bg-[#4598CA]",
             icon: "/Course_Design/1/Tossing_coing.svg"

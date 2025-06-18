@@ -25,14 +25,14 @@ export default function financial() {
         modules={[
           {
             id: 1,
-            title: "| Financial Habits",
+            title: "Financial Habits",
             description: "Developing healthy financial habits for financial wellness.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Financial Mindset", 
+            title: "Financial Mindset", 
             description: "Cultivating a healthy financial mindset for financial growth.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 

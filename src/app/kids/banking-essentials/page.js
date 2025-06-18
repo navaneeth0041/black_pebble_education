@@ -25,14 +25,14 @@ export default function Banking() {
         modules={[
           {
             id: 1,
-            title: "| Bank",
+            title: "Bank",
             description: "The Concept: Understanding the purpose of banks.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| The Concept: Understanding the purpose of banks.", 
+            title: "The Concept: Understanding the purpose of banks.", 
             description: "Understanding the need and types of bank accounts.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 

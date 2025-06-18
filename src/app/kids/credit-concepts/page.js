@@ -25,14 +25,14 @@ export default function everyday() {
         modules={[
           {
             id: 1,
-            title: "| Credit",
+            title: "Credit",
             description: "The Concept: Understanding credit and its importance.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },
           {
             id: 2,
-            title: "| Credit Cards", 
+            title: "Credit Cards", 
             description: "Understanding the purpose and use of credit cards.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
