@@ -286,131 +286,131 @@ const SelfHelpKits = ({
 
 
 
-    <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-16 md:py-24 relative overflow-hidden">
-      {/* Circular Thread Background in bottom-left */}
-      <img
-        src={smartMoneyConcepts.backgroundImage}
-        alt="Circular Thread"
-        className="absolute bottom-20 left-2 w-52 sm:w-64 md:w-96 h-auto object-cover pointer-events-none"
-      />
+  <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-16 md:py-24 relative overflow-hidden">
+    {/* Circular Thread Background in bottom-left */}
+    <img
+      src={smartMoneyConcepts.backgroundImage}
+      alt="Circular Thread"
+      className="absolute bottom-20 left-2 w-52 sm:w-64 md:w-96 h-auto object-cover pointer-events-none"
+    />
 
-      <div className="flex f  lex-col md:flex-row items-center md:items-start gap-12 md:gap-20 px-6 md:px-12 lg:px-16 max-w-7xl mx-auto relative z-10">
-        {/* Title Section */}
-        <div className="flex items-center gap-4 md:gap-6 flex-shrink-0">
-          <span className="text-[#08AA9B] font-['Mochiy_Pop_One'] text-[100px] sm:text-[140px] md:text-[180px] font-normal leading-none tracking-[-1.5px] md:tracking-[-3.4px]">
-            {smartMoneyConcepts.conceptsCount}
-          </span>
-          <h2 className="text-[#08B09B] font-['Mochiy_Pop_One'] text-[28px] sm:text-[32px] md:text-[38px] font-normal leading-tight max-w-[300px] tracking-[-0.5px] md:tracking-[-0.72px]">
-            {smartMoneyConcepts.title}
-          </h2>
-        </div>
-
-        {/* Concepts Grid */}
-        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 relative md:ml-12">
-          <div className="flex flex-col gap-6">
-            {smartMoneyConcepts.concepts.slice(0, 4).map((concept) => (
-              <Card key={concept.id} className="bg-white rounded-3xl p-4 sm:p-6 flex items-center justify-center h-28 sm:h-32 relative border border-gray-100">
-                <img
-                  src={concept.icon}
-                  alt={`Icon ${concept.id}`}
-                  className="absolute -left-6 sm:-left-8 top-0 w-12 sm:w-16 h-12 sm:h-16 transform -rotate-12"
-                />
-                <span className="text-[#09BE9D] font-['Poppins'] font-semibold text-base sm:text-lg text-center leading-tight">
-                  {concept.title}
-                </span>
-              </Card>
-            ))}
-          </div>
-
-          <div className="flex flex-col gap-6 pt-8 sm:pt-16">
-            {smartMoneyConcepts.concepts.slice(4).map((concept) => (
-              <Card key={concept.id} className="bg-white rounded-3xl p-4 sm:p-6 flex items-center justify-center h-28 sm:h-32 relative border border-gray-100">
-                <img
-                  src={concept.icon}
-                  alt={`Icon ${concept.id}`}
-                  className="absolute -left-6 sm:-left-8 top-0 w-12 sm:w-16 h-12 sm:h-16 transform -rotate-12"
-                />
-                <span className="text-[#09BE9D] font-['Poppins'] font-semibold text-base sm:text-lg text-center leading-tight">
-                  {concept.title}
-                </span>
-              </Card>
-            ))}
-          </div>
-        </div>
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-20 px-6 md:px-12 lg:px-16 max-w-7xl mx-auto relative z-10">
+      {/* Title Section */}
+      <div className="flex items-center gap-4 md:gap-6 flex-shrink-0">
+        <span className="text-[#08AA9B] font-['Mochiy_Pop_One'] text-[100px] sm:text-[140px] md:text-[180px] font-normal leading-none tracking-[-1.5px] md:tracking-[-3.4px]">
+          {smartMoneyConcepts.conceptsCount}
+        </span>
+        <h2 className="text-[#08B09B] font-['Mochiy_Pop_One'] text-[28px] sm:text-[32px] md:text-[38px] font-normal leading-tight max-w-[300px] tracking-[-0.5px] md:tracking-[-0.72px]">
+          {smartMoneyConcepts.title}
+        </h2>
       </div>
 
-      {/* Pricing CTA */}
+      {/* Concepts Grid */}
+      <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 relative md:ml-12">
+        <div className="flex flex-col gap-6">
+          {smartMoneyConcepts.concepts.slice(0, 4).map((concept) => (
+            <Card key={concept.id} className="bg-white rounded-3xl p-4 sm:p-6 flex items-center justify-center h-28 sm:h-32 relative border border-gray-100">
+              <img
+                src={concept.icon}
+                alt={`Icon ${concept.id}`}
+                className="absolute -left-6 sm:-left-8 top-0 w-12 sm:w-16 h-12 sm:h-16 transform -rotate-12"
+              />
+              <span className="text-[#09BE9D] font-['Poppins'] font-semibold text-base sm:text-lg text-center leading-tight">
+                {concept.title}
+              </span>
+            </Card>
+          ))}
+        </div>
+
+        <div className="flex flex-col gap-6 pt-8 sm:pt-16">
+          {smartMoneyConcepts.concepts.slice(4).map((concept) => (
+            <Card key={concept.id} className="bg-white rounded-3xl p-4 sm:p-6 flex items-center justify-center h-28 sm:h-32 relative border border-gray-100">
+              <img
+                src={concept.icon}
+                alt={`Icon ${concept.id}`}
+                className="absolute -left-6 sm:-left-8 top-0 w-12 sm:w-16 h-12 sm:h-16 transform -rotate-12"
+              />
+              <span className="text-[#09BE9D] font-['Poppins'] font-semibold text-base sm:text-lg text-center leading-tight">
+                {concept.title}
+              </span>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+
     {/* Pricing CTA */}
-    {smartMoneyConcepts.showPricing && (
-      <div className="mt-16 md:mt-20 pb-16 md:pb-20 relative flex justify-center px-4">
-        <div className="w-full max-w-4xl bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-4 sm:p-8 relative">
-          
-          {/* Description Box */}
-          <div className="flex justify-center">
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center relative w-full max-w-sm">
-              <p className="text-white font-['Poppins'] font-medium text-lg sm:text-2xl mb-4 break-words">
-                {smartMoneyConcepts.pricingData.description}
-              </p>
-            </div>
+  {/* Pricing CTA */}
+  {smartMoneyConcepts.showPricing && (
+    <div className="mt-16 md:mt-20 pb-16 md:pb-20 relative flex justify-center px-4">
+      <div className="w-full max-w-4xl bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-4 sm:p-8 relative">
+        
+        {/* Description Box */}
+        <div className="flex justify-center">
+          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center relative w-full max-w-sm">
+            <p className="text-white font-['Poppins'] font-medium text-lg sm:text-2xl mb-4 break-words">
+              {smartMoneyConcepts.pricingData.description}
+            </p>
           </div>
-
-          {/* Pricing Rows */}
-          <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-center">
-            {/* Row 1 (Always): All for just */}
-            <span className="text-white font-['Poppins'] font-semibold text-xl sm:text-3xl">
-              All for just
-            </span>
-
-            {/* Row 2 (mobile-only): current + original */}
-            <div className="flex md:hidden items-center justify-center gap-3 mt-2">
-              {/* Current Price */}
-              <div className="relative">
-                <img
-                  src="/self_help_kit/4/Vector 32.svg"
-                  alt="Price Box"
-                  className="w-24 h-auto"
-                />
-                <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-lg text-white">
-                  {smartMoneyConcepts.pricingData.currentPrice}
-                </span>
-              </div>
-              {/* Original */}
-              <span className="text-white/70 font-['Poppins'] text-base line-through">
-                {smartMoneyConcepts.pricingData.originalPrice}
-              </span>
-            </div>
-
-            {/* Row 2 (desktop-only): all in one line */}
-            <div className="hidden md:flex items-center gap-4">
-              {/* Current Price */}
-              <div className="relative">
-                <img
-                  src="/self_help_kit/4/Vector 32.svg"
-                  alt="Price Box"
-                  className="w-32 h-auto"
-                />
-                <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-2xl text-white">
-                  {smartMoneyConcepts.pricingData.currentPrice}
-                </span>
-              </div>
-              {/* Original */}
-              <span className="text-white/70 font-['Poppins'] text-lg line-through">
-                {smartMoneyConcepts.pricingData.originalPrice}
-              </span>
-            </div>
-          </div>
-
-          {/* Coins */}
-          <img
-            src="/Finance_clubs/1/whitecoins.svg"
-            alt="White Coins"
-            className="absolute -right-4 bottom-2 w-20 sm:w-36 h-auto"
-          />
         </div>
-      </div>
-    )}
 
-    </section>
+        {/* Pricing Rows */}
+        <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-center">
+          {/* Row 1 (Always): All for just */}
+          <span className="text-white font-['Poppins'] font-semibold text-xl sm:text-3xl">
+            All for just
+          </span>
+
+          {/* Row 2 (mobile-only): current + original */}
+          <div className="flex md:hidden items-center justify-center gap-3 mt-2">
+            {/* Current Price */}
+            <div className="relative">
+              <img
+                src="/self_help_kit/4/Vector 32.svg"
+                alt="Price Box"
+                className="w-24 h-auto"
+              />
+              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-lg text-white">
+                {smartMoneyConcepts.pricingData.currentPrice}
+              </span>
+            </div>
+            {/* Original */}
+            <span className="text-white/70 font-['Poppins'] text-base line-through">
+              {smartMoneyConcepts.pricingData.originalPrice}
+            </span>
+          </div>
+
+          {/* Row 2 (desktop-only): all in one line */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Current Price */}
+            <div className="relative">
+              <img
+                src="/self_help_kit/4/Vector 32.svg"
+                alt="Price Box"
+                className="w-32 h-auto"
+              />
+              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-2xl text-white">
+                {smartMoneyConcepts.pricingData.currentPrice}
+              </span>
+            </div>
+            {/* Original */}
+            <span className="text-white/70 font-['Poppins'] text-lg line-through">
+              {smartMoneyConcepts.pricingData.originalPrice}
+            </span>
+          </div>
+        </div>
+
+        {/* Coins */}
+        <img
+          src="/Finance_clubs/1/whitecoins.svg"
+          alt="White Coins"
+          className="absolute -right-4 bottom-2 w-20 sm:w-36 h-auto"
+        />
+      </div>
+    </div>
+  )}
+
+  </section>
 
 
 
