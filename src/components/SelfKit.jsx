@@ -163,53 +163,64 @@ const SelfHelpKits = ({
     </section>
 
       {/* Who is This For Section */}
-<section className="bg-[#E1FFF4] py-24">
-  <div className="flex items-center justify-center gap-16 px-24">
-    <div className="flex flex-col items-start gap-5 max-w-md">
-      <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-[48px] font-normal leading-[149%] tracking-[-0.912px]">
+<section className="relative bg-[#E1FFF4] py-16 sm:py-24 overflow-hidden">
+  <img
+    src="/self_help_kit/3/thread.svg"
+    alt="Thread Illustration"
+    className="absolute top-0 left-20 sm:left-32 md:left-48 lg:left-60 w-68 sm:w-78 lg:w-112 opacity-90 pointer-events-none select-none"
+  />
+
+  {/* Main Content */}
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 px-6 sm:px-12 lg:px-24 z-10 relative">
+    {/* Left Side */}
+    <div className="flex flex-col items-start gap-4 sm:gap-5 max-w-md text-left">
+      <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-3xl sm:text-4xl lg:text-[48px] font-normal leading-snug tracking-tight">
         Who is This For?
       </h2>
-      <p className="text-[#39BB9C] font-poppins text-2xl font-medium leading-[149%] tracking-[-0.456px]">
-        Perfect for children who enjoy independent learning, and parents
-        seeking structured yet flexible tools.
+      <p className="text-[#39BB9C] font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug tracking-tight">
+        Perfect for children who enjoy independent learning, and parents seeking structured yet flexible tools.
       </p>
     </div>
-    <div className="flex items-center gap-6">
-      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-6 w-80 h-56 flex items-center justify-between">
+
+    {/* Right Side - Cards */}
+<div className="flex flex-col md:flex-row items-center justify-center gap-6">
+      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[52px] p-6 w-72 sm:w-80 h-56 flex items-center justify-between">
         <div className="flex flex-col justify-center">
-          <span className="text-white font-poppins text-4xl font-medium leading-[149%] tracking-[-0.019em]">
+          <span className="text-white font-poppins text-3xl sm:text-4xl font-medium leading-snug tracking-tight">
             10+
             <br />
             year old's
           </span>
         </div>
-<div className="flex items-center justify-center w-30 h-30">
-  <img
-    src="/self_help_kit/1/boy.svg"
-    alt="Money Icon"
-    className="w-20 h-50"
-  />
-</div>      </Card>
+        <div className="flex items-center justify-center w-24 h-24">
+          <img
+            src="/self_help_kit/1/boy.svg"
+            alt="Boy Icon"
+            className="w-20 h-auto"
+          />
+        </div>
+      </Card>
 
-      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-6 w-80 h-56 flex items-center justify-between">
+      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[52px] p-6 w-72 sm:w-80 h-56 flex items-center justify-between">
         <div className="flex flex-col justify-center">
-          <span className="text-white font-poppins text-3xl font-medium leading-[149%] tracking-[-0.019em]">
+          <span className="text-white font-poppins text-2xl sm:text-3xl font-medium leading-snug tracking-tight">
             Money
             <br />
             Enthusiasts
           </span>
         </div>
-<div className="flex items-center justify-center w-30 h-30">
-  <img
-    src="/self_help_kit/1/bulb_coin.svg"
-    alt="Money Icon"
-    className="w-20 h-50"
-  />
-</div>
+        <div className="flex items-center justify-center w-24 h-24">
+          <img
+            src="/self_help_kit/1/bulb_coin.svg"
+            alt="Money Icon"
+            className="w-20 h-auto"
+          />
+        </div>
       </Card>
     </div>
   </div>
 </section>
+
 
       {/* Why Self-Help Kits Work Section */}
 <section className="bg-[#343434] py-24">
