@@ -302,7 +302,8 @@ const SelfHelpKits = ({
                   alt={`Coin ${concept.id}`}
                   className="absolute -left-8 top-2 w-16 h-16 transform -rotate-12"
                 />
-                <span className="text-[#09BE9D] font-poppins text-lg font-semibold text-center leading-tight">
+                <span className="text-[#09BE9D] font-semibold text-lg text-center leading-tight">
+
                   {concept.title}
                 </span>
               </Card>
@@ -318,7 +319,7 @@ const SelfHelpKits = ({
                   alt={`Coin ${concept.id}`}
                   className="absolute -left-8 top-2 w-16 h-16 transform -rotate-12"
                 />
-                <span className="text-[#09BE9D] font-poppins text-lg font-semibold text-center leading-tight">
+                <span className="text-[#09BE9D] font-semibold text-lg text-center leading-tight">
                   {concept.title}
                 </span>
               </Card>
@@ -329,7 +330,7 @@ const SelfHelpKits = ({
 
       {/* Pricing CTA - Updated to match image 3 style */}
       {smartMoneyConcepts.showPricing && (
-        <div className="flex justify-center mt-20">
+        <div className="flex justify-center mt-20 pb-20">
           <div className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-8 max-w-4xl mx-4 relative">
             {/* Decorative rings */}
             <div className="absolute -right-4 top-4 flex flex-col gap-2">
@@ -340,18 +341,19 @@ const SelfHelpKits = ({
             </div>
             
             <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 text-center">
-              <p className="text-white font-poppins text-xl font-medium mb-4">
+              <p className="text-white font-medium text-xl mb-4">
                 {smartMoneyConcepts.pricingData.description}
               </p>
               <div className="flex items-center justify-center gap-4">
-                <span className="text-white font-poppins text-2xl font-semibold">
+                <span className="text-white font-semibold text-2xl">
                   All for just
                 </span>
                 <div className="flex items-center gap-2">
-                  <span className="bg-red-500 text-white font-poppins text-2xl font-bold px-3 py-1 rounded">
+                  <span className="bg-red-500 text-white font-bold text-2xl px-3 py-1 rounded">
                     {smartMoneyConcepts.pricingData.currentPrice}
                   </span>
-                  <span className="text-white/70 font-poppins text-lg line-through">
+                  <span className="text-white/70 text-lg line-through">
+
                     {smartMoneyConcepts.pricingData.originalPrice}
                   </span>
                 </div>
