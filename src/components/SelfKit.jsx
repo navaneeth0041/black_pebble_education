@@ -42,30 +42,49 @@ const SelfHelpKits = ({
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="bg-[#343434] min-h-[572px] relative overflow-hidden">
-        {/* Navigation */}
-        {/*<Navigation variant="inline" />*/}
-
-        {/* Hero Content */}
-         <div className="bg-[#343434] lg:min-h-[30vh] text-white py-8 md:py-16 lg:py-20 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div className="text-center lg:text-left">
-          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight ${mochiyPopOne.className}`}>
-            Learn. Play. Grow — 
-At Your Own Pace!
-          </h1>
-          <p className={`mt-4 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed ${poppins.className}`}>
-            {smartMoneyConcepts.description}
-          </p>
+<section className="bg-[#343434] text-white h-[70vh] relative overflow-hidden flex items-center">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div className="text-center lg:text-left">
+      {/* Use flex with items-start to align icon with top of text */}
+      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-8 mb-8 sm:mb-6">
+        <h1 className={`${mochiyPopOne.className} text-[42px] xs:text-[48px] sm:text-[52px] md:text-[65px] lg:text-[80px] xl:text-[95px] leading-[1.1] tracking-[-1.5px] font-normal flex-shrink-0`}>
+          Learn. Play. Grow —<br />
+          <span className="text-white">At Your Own Pace!</span>
+        </h1>
+        {/* Icon aligned with the second line of text */}
+        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 flex-shrink-0 hidden sm:block lg:mt-12 xl:mt-16">
+          <img
+            src="/self_help_kit/1/graph.svg"
+            alt="Graph image"
+            className="w-full h-full object-contain"
+          />
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-[30px] bg-repeat-x bg-[url('/')]"></div> 
-      {/* Someone need to add the vector here */}
+      
+      <p className="mt-4 mb-8 sm:mb-6 text-[16px] xs:text-[17px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[26px] leading-[1.4] tracking-[-0.3px] text-gray-300 text-center lg:text-left font-medium font-poppins">
+        Engage with an informative & creative self-help kit to explore financial concepts – anytime, anywhere.
+      </p>
+      
+      <div className="mt-2 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+        <button 
+          className="bg-gradient-to-r from-[#08A69A] via-[#0ABE9D] to-[#69C9A1] hover:bg-teal-600 text-white w-full sm:w-auto text-xs sm:text-sm md:text-base px-5 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-full font-medium transition-all duration-200"
+        >
+          Book a Counselling Session
+        </button>
+      </div>
     </div>
-      </section>
+  </div>
+  
+{/*<img 
+  src="/effects/black.png" 
+  alt="black transition" 
+  className="w-full block absolute bottom-0 left-0 z-20" 
+/>*/}
+</section>
+
 
       {/* What's Inside Section */}
-    <section className="flex flex-col items-center gap-8 py-16 px-8">
+    <section className="flex flex-col items-center gap-8 py-16 px-8 pt-40 -mt-5 lg:-mt-15">
       <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
         What's Inside a Self-Help Kit?
       </h2>
@@ -164,14 +183,13 @@ At Your Own Pace!
             year old's
           </span>
         </div>
-        <div className="flex items-center justify-center w-16 h-16">
-          <img
-            src="/self_help_kit/1/boy.svg"
-            alt="Student Icon"
-            className="w-10 h-10"
-          />
-        </div>
-      </Card>
+<div className="flex items-center justify-center w-30 h-30">
+  <img
+    src="/self_help_kit/1/boy.svg"
+    alt="Money Icon"
+    className="w-20 h-50"
+  />
+</div>      </Card>
 
       <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-6 w-80 h-56 flex items-center justify-between">
         <div className="flex flex-col justify-center">
@@ -181,154 +199,168 @@ At Your Own Pace!
             Enthusiasts
           </span>
         </div>
-        <div className="flex items-center justify-center w-16 h-16">
-          <img
-            src="/self_help_kit/1/bulb_coin.svg"
-            alt="Money Icon"
-            className="w-10 h-10"
-          />
-        </div>
+<div className="flex items-center justify-center w-30 h-30">
+  <img
+    src="/self_help_kit/1/bulb_coin.svg"
+    alt="Money Icon"
+    className="w-20 h-50"
+  />
+</div>
       </Card>
     </div>
   </div>
 </section>
 
       {/* Why Self-Help Kits Work Section */}
-      <section className="bg-[#343434] py-24">
-        <div className="flex items-center justify-between gap-24 px-32 max-w-7xl mx-auto">
-          <div className="flex flex-col items-start gap-5 max-w-lg">
-            <h2 className="text-white font-['Mochiy_Pop_One'] text-[40px] font-normal leading-[149%] tracking-[-0.76px]">
-              Why Self-Help Kits Work?
-            </h2>
-            <p className="text-white font-poppins text-2xl font-medium leading-[149%] tracking-[-0.456px] max-w-xs">
-              Benefits of using self help kits
-            </p>
-          </div>
-
-          {/* Money Icon */}
-<div className="flex items-center justify-center">
-  <img 
-    src="/self_help_kit/3/money.svg" 
-    alt="Money icon" 
-    width="120" 
-    height="120"
-    className="w-30 h-30" // Tailwind equivalent of 120px
-  />
-</div>
-          <div className="flex flex-col justify-center gap-2">
-            <div className="flex items-center gap-4">
-              <div className="flex flex-col gap-9">
-                {[1, 2, 3, 4, 5].map((item) => (
-                  <svg
-                    key={item}
-                    width="23"
-                    height="20"
-                    viewBox="0 0 23 20"
-                    fill="none"
-                  >
-                    <path
-                      d="M2.5 9.98975C4.66667 14.8231 9.8 22.6897 13 15.4897L20.5 0.989746"
-                      stroke="#39BB9C"
-                      strokeWidth="4"
-                    />
-                  </svg>
-                ))}
-              </div>
-              <div className="text-white font-poppins text-2xl font-bold leading-[149%] tracking-[-0.456px] space-y-6">
-                <div>Builds financial confidence</div>
-                <div>Encourages independent thinking</div>
-                <div>Easy-to-follow structure</div>
-                <div>No screen time needed</div>
-                <div>Parent-guided or self-led</div>
-              </div>
-            </div>
-          </div>
+<section className="bg-[#343434] py-24">
+  <div className="flex items-center justify-between gap-12 px-32 max-w-7xl mx-auto">
+    {/* Left side - Title and subtitle with inline icon */}
+    <div className="flex flex-col items-start gap-5 max-w-lg">
+      <h2 className="text-white font-['Mochiy_Pop_One'] text-[40px] font-normal leading-[149%] tracking-[-0.76px]">
+        Why Self-Help Kits Work?
+      </h2>
+      {/* Subtitle with inline icon */}
+      <div className="flex items-start gap-4">
+        <div className="flex flex-col">
+          <span className="text-white font-poppins text-2xl font-medium leading-[149%] tracking-[-0.456px]">
+            Benefits of using self
+          </span>
+          <span className="text-white font-poppins text-2xl font-medium leading-[149%] tracking-[-0.456px]">
+            help kits
+          </span>
         </div>
-      </section>
+        <img 
+          src="/self_help_kit/3/money.svg" 
+          alt="Money icon" 
+          width="120" 
+          height="120"
+          className="w-30 h-35 -mt-15 ml-10"
+        />
+      </div>
+    </div>
+
+    {/* Right side - Benefits list */}
+    <div className="flex flex-col justify-center">
+      <div className="flex items-start gap-6">
+        <div className="flex flex-col gap-9 pt-1">
+          {[1, 2, 3, 4, 5].map((item) => (
+            <svg
+              key={item}
+              width="23"
+              height="20"
+              viewBox="0 0 23 20"
+              fill="none"
+            >
+              <path
+                d="M2.5 9.98975C4.66667 14.8231 9.8 22.6897 13 15.4897L20.5 0.989746"
+                stroke="#39BB9C"
+                strokeWidth="4"
+              />
+            </svg>
+          ))}
+        </div>
+        <div className="text-white font-poppins text-2xl font-bold leading-[149%] tracking-[-0.456px] space-y-6">
+          <div>Builds financial confidence</div>
+          <div>Encourages independent thinking</div>
+          <div>Easy-to-follow structure</div>
+          <div>No screen time needed</div>
+          <div>Parent-guided or self-led</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Smart Money Concepts Section - Configurable */}
-      <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-24 relative">
-        {/* Circular Thread Background */}
-        <img 
-          src={smartMoneyConcepts.backgroundImage}
-          alt="Circular Thread" 
-          className="absolute inset-0 w-150 h-170 mt-150 object-cover opacity-30 pointer-events-none"
-        />
-        
-        <div className="flex items-center gap-6 px-16 max-w-6xl mx-auto relative z-10">
-          {/* Title Section */}
-          <div className="flex items-center gap-2">
-            <span className="text-[#08AA9B] font-['Mochiy_Pop_One'] text-[188px] font-normal leading-[149%] tracking-[-3.571px]">
-              {smartMoneyConcepts.conceptsCount}
-            </span>
-            <h2 className="text-[#08B09B] font-['Mochiy_Pop_One'] text-[41px] font-normal leading-[137%] tracking-[-0.787px] max-w-xs">
-              {smartMoneyConcepts.title}
-            </h2>
+    <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-24 relative overflow-hidden">
+      {/* Circular Thread Background */}
+      <img 
+        src={smartMoneyConcepts.backgroundImage}
+        alt="Circular Thread" 
+        className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
+      />
+      
+      <div className="flex items-start gap-20 px-16 max-w-7xl mx-auto relative z-10">
+        {/* Title Section */}
+        <div className="flex items-center gap-6 flex-shrink-0">
+          <span className="text-[#08AA9B] font-['Mochiy_Pop_One'] text-[180px] font-normal leading-none tracking-[-3.4px]">
+            {smartMoneyConcepts.conceptsCount}
+          </span>
+          <h2 className="text-[#08B09B] font-['Mochiy_Pop_One'] text-[38px] font-normal leading-tight max-w-[300px] tracking-[-0.72px]">
+            {smartMoneyConcepts.title}
+          </h2>
+        </div>
+
+        {/* Concepts Grid with more spacing */}
+        <div className="flex-1 grid grid-cols-2 gap-8 relative ml-12">
+          {/* Left Column */}
+          <div className="flex flex-col gap-6">
+            {smartMoneyConcepts.concepts.slice(0, 4).map((concept, index) => (
+              <Card key={concept.id} className="bg-white rounded-3xl p-6 flex items-center justify-center h-32 relative border border-gray-100">
+                <img 
+                  src={concept.icon}
+                  alt={`Coin ${concept.id}`}
+                  className="absolute -left-8 top-2 w-16 h-16 transform -rotate-12"
+                />
+                <span className="text-[#09BE9D] font-poppins text-lg font-semibold text-center leading-tight">
+                  {concept.title}
+                </span>
+              </Card>
+            ))}
           </div>
 
-          {/* Concepts Grid */}
-          <div className="flex-1 grid grid-cols-2 gap-8 relative">
-            {/* Left Column */}
-            <div className="flex flex-col gap-8">
-              {smartMoneyConcepts.concepts.slice(0, 4).map((concept, index) => (
-                <Card key={concept.id} className="bg-white rounded-3xl p-6 flex items-center justify-center h-36 relative">
-                  <img 
-                    src={concept.icon}
-                    alt={`Coin ${concept.id}`}
-                    className="absolute -left-12 top-4 w-20 h-20 transform -rotate-12"
-                  />
-                  <span className="text-[#09BE9D] font-poppins text-2xl font-bold text-center">
-                    {concept.title}
-                  </span>
-                </Card>
-              ))}
-            </div>
+          {/* Right Column */}
+          <div className="flex flex-col gap-6 pt-16">
+            {smartMoneyConcepts.concepts.slice(4).map((concept, index) => (
+              <Card key={concept.id} className="bg-white rounded-3xl p-6 flex items-center justify-center h-32 relative border border-gray-100">
+                <img 
+                  src={concept.icon}
+                  alt={`Coin ${concept.id}`}
+                  className="absolute -left-8 top-2 w-16 h-16 transform -rotate-12"
+                />
+                <span className="text-[#09BE9D] font-poppins text-lg font-semibold text-center leading-tight">
+                  {concept.title}
+                </span>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
 
-            {/* Right Column */}
-            <div className="flex flex-col gap-8 pt-20">
-              {smartMoneyConcepts.concepts.slice(4).map((concept, index) => (
-                <Card key={concept.id} className="bg-white rounded-3xl p-6 flex items-center justify-center h-36 relative">
-                  <img 
-                    src={concept.icon}
-                    alt={`Coin ${concept.id}`}
-                    className="absolute -left-12 top-4 w-20 h-20 transform -rotate-12"
-                  />
-                  <span className="text-[#09BE9D] font-poppins text-2xl font-bold text-center">
-                    {concept.title}
+      {/* Pricing CTA - Updated to match image 3 style */}
+      {smartMoneyConcepts.showPricing && (
+        <div className="flex justify-center mt-20">
+          <div className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-8 max-w-4xl mx-4 relative">
+            {/* Decorative rings */}
+            <div className="absolute -right-4 top-4 flex flex-col gap-2">
+              <div className="w-12 h-3 border-2 border-white/50 rounded-full transform rotate-12"></div>
+              <div className="w-10 h-3 border-2 border-white/40 rounded-full transform rotate-12"></div>
+              <div className="w-8 h-3 border-2 border-white/30 rounded-full transform rotate-12"></div>
+              <div className="w-6 h-3 border-2 border-white/20 rounded-full transform rotate-12"></div>
+            </div>
+            
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 text-center">
+              <p className="text-white font-poppins text-xl font-medium mb-4">
+                {smartMoneyConcepts.pricingData.description}
+              </p>
+              <div className="flex items-center justify-center gap-4">
+                <span className="text-white font-poppins text-2xl font-semibold">
+                  All for just
+                </span>
+                <div className="flex items-center gap-2">
+                  <span className="bg-red-500 text-white font-poppins text-2xl font-bold px-3 py-1 rounded">
+                    {smartMoneyConcepts.pricingData.currentPrice}
                   </span>
-                </Card>
-              ))}
+                  <span className="text-white/70 font-poppins text-lg line-through">
+                    {smartMoneyConcepts.pricingData.originalPrice}
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Pricing CTA */}
-        {smartMoneyConcepts.showPricing && (
-          <div className="flex justify-center mt-16 pb-30">
-            <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[31px] border border-[#D8D7D7] p-12 max-w-4xl">
-              <div className="bg-white/28 rounded-3xl p-8 text-center">
-                <p className="text-white font-poppins text-3xl font-semibold mb-4">
-                  {smartMoneyConcepts.pricingData.description}
-                </p>
-                <div className="flex items-center justify-center gap-4 mt-8">
-                  <span className="text-white font-poppins text-4xl font-bold">
-                    All for just
-                  </span>
-                  <div className="flex items-center gap-2">
-                    <span className="text-white font-poppins text-4xl font-bold">
-                      {smartMoneyConcepts.pricingData.currentPrice}
-                    </span>
-                    <span className="text-white/60 font-poppins text-2xl line-through">
-                      {smartMoneyConcepts.pricingData.originalPrice}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </div>
-        )}
-      </section>
-
+      )}
+    </section>
     </div>
   );
 };
