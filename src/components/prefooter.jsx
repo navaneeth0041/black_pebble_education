@@ -17,6 +17,7 @@ const PreFooter = ({
     />
   );
 
+  
   const BottomRightDecorativeSvg = () => (
     <Image
       src="/about/Clip path group-1.svg"
