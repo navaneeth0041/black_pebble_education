@@ -65,11 +65,11 @@ const CoinIcon = ({ className }) => (
 
   return (
     <>
-    <div className="min-h-screen  -mt-10 lg:-mt-20 xl:-mt-26 pt-40 bg-[#F3FFF9] flex items-center justify-center p-4 md:p-8">
-      <div className="max-w-6xl w-full">
+    <div className="min-h-screen  -mt-10 lg:-mt-20 xl:-mt-26 pt-60 pb-40 bg-[#F3FFF9] flex items-center justify-center p-4 md:p-8">
+      <div className="max-w-6xl w-full mt-8 md:mt-24 mb-8 md:mb-24">
         {/* Header Section */}
         {/* Header Section */}
-        <div className="text-center mb-8 md:mb-12">
+        <div className="text-center mb-16 md:mb-20">
           <div className="flex justify-center items-center gap-4 md:gap-6 mb-6">
             <CoinIcon className="" />
             <h1 className={`font-bold text-[#08A59A] leading-tight ${PopOne.className} text-3xl md:text-5xl lg:text-5xl`}>
@@ -81,7 +81,7 @@ const CoinIcon = ({ className }) => (
         </div>
 
         {/* Comparison Header Row */}
-        <div className="p-4 md:p-6">
+        <div className="p-4 md:p-6 mb-8 md:mb-12">
           <div className="grid grid-cols-3 gap-4 md:gap-8">
             <div></div>
             <div className="text-center">
@@ -109,7 +109,7 @@ const CoinIcon = ({ className }) => (
           {comparisonData.map((item, index) => (
             <div
               key={index}
-              className="bg-white backdrop-blur-sm rounded-2xl p-4 md:p-6  transition-shadow duration-300"
+              className="bg-white backdrop-blur-sm rounded-2xl p-6 md:p-8  transition-shadow duration-300"
             >
               <div className="grid grid-cols-3 gap-4 md:gap-8 items-center">
                 <div>
