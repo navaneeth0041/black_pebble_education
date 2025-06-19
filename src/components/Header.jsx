@@ -97,13 +97,13 @@ const Header = () => {
 
   return (
     <header className="w-full bg-[#343434]">
-      <div className="mx-auto px-10 py-6 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
         <div className="flex items-center justify-between h-12 lg:h-14">
-          {/* Mobile: Toggle button on left */}
-          <div className="lg:hidden">
+          {/* Mobile: Toggle button on left with proper spacing */}
+          <div className="lg:hidden flex-shrink-0">
             <button
               onClick={toggleMobileMenu}
-              className="text-white hover:text-gray-300 transition-colors duration-200"
+              className="text-white hover:text-gray-300 transition-colors duration-200 p-2"
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -113,32 +113,31 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Logo - centered on mobile, left on desktop */}
-          <div className="flex items-center lg:flex-none">
+          {/* Logo - centered on mobile with proper spacing, left on desktop */}
+          <div className="flex-1 flex justify-center lg:flex-none lg:justify-start">
             <div className="lg:hidden">
-              <Link href="/">
-                <BlackLogoWithText logoHeight={50} textHeight={130} />
+              <Link href="/" className="block">
+                <BlackLogoWithText logoHeight={40} textHeight={100} />
               </Link>
             </div>
             <div className="hidden lg:block">
-              <Link href="/">
+              <Link href="/" className="block">
                 <BlackLogoWithText logoHeight={80} textHeight={200} />
               </Link>
             </div>
           </div>
 
-          {/* Mobile: Call us button on right */}
-          <div className="lg:hidden">
-            <button className="border border-white text-white px-4 py-1.5 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-sm">
+          {/* Mobile: Call us button on right with proper spacing */}
+          <div className="lg:hidden flex-shrink-0 relative group">
+            <button className="border border-white text-white px-3 py-1.5 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-xs sm:text-sm">
               Call us
             </button>
             {/* Phone number tooltip for mobile */}
-            <div className="absolute top-full right-0 mt-2 px-3 py-2 bg-gray-800 text-white text-sm rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 whitespace-nowrap">
+            <div className="absolute top-full right-0 mt-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 whitespace-nowrap">
               +91-8928557529
               {/* Arrow pointing up */}
               <div className="absolute bottom-full right-4 w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-gray-800"></div>
-          </div>
-
+            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -208,7 +207,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50" style={{ top: '60px' }}>
+          <div className="lg:hidden fixed inset-0 z-50" style={{ top: '68px' }}>
             {/* Backdrop */}
             <div className="absolute inset-0 bg-black/50" onClick={toggleMobileMenu}></div>
             
