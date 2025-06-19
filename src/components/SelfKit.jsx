@@ -223,37 +223,37 @@ const SelfHelpKits = ({
 
 
       {/* Why Self-Help Kits Work Section */}
-<section className="bg-[#343434] py-24">
-  <div className="flex items-center justify-between gap-12 px-32 max-w-7xl mx-auto">
-    {/* Left side - Title and subtitle with inline icon */}
+<section className="bg-[#343434] py-16 sm:py-20 lg:py-24">
+  <div className="flex flex-col lg:flex-row items-center justify-between gap-12 px-4 sm:px-8 lg:px-32 max-w-7xl mx-auto">
+
+    {/* Left side - Title and subtitle */}
     <div className="flex flex-col items-start gap-5 max-w-lg">
-      <h2 className="text-white font-['Mochiy_Pop_One'] text-[40px] font-normal leading-[149%] tracking-[-0.76px]">
+      <h2 className="text-white font-['Mochiy_Pop_One'] text-3xl sm:text-4xl lg:text-[40px] font-normal leading-snug tracking-tight">
         Why Self-Help Kits Work?
       </h2>
-      {/* Subtitle with inline icon */}
-      <div className="flex items-start gap-4">
+
+      {/* Subtitle with image */}
+      <div className="flex items-center justify-between w-full gap-2 sm:gap-4">
         <div className="flex flex-col">
-          <span className="text-white font-poppins text-2xl font-medium leading-[149%] tracking-[-0.456px]">
+          <span className="text-white font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug">
             Benefits of using self
           </span>
-          <span className="text-white font-poppins text-2xl font-medium leading-[149%] tracking-[-0.456px]">
+          <span className="text-white font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug">
             help kits
           </span>
         </div>
         <img 
           src="/self_help_kit/3/money.svg" 
           alt="Money icon" 
-          width="120" 
-          height="120"
-          className="w-30 h-35 -mt-15 ml-10"
+          className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto"
         />
       </div>
     </div>
 
     {/* Right side - Benefits list */}
-    <div className="flex flex-col justify-center">
-      <div className="flex items-start gap-6">
-        <div className="flex flex-col gap-9 pt-1">
+    <div className="flex flex-col items-center justify-center gap-6 w-full lg:w-auto">
+      <div className="flex items-start gap-4 sm:gap-6">
+        <div className="flex flex-col gap-6 pt-1">
           {[1, 2, 3, 4, 5].map((item) => (
             <svg
               key={item}
@@ -261,6 +261,7 @@ const SelfHelpKits = ({
               height="20"
               viewBox="0 0 23 20"
               fill="none"
+              className="min-w-[23px]"
             >
               <path
                 d="M2.5 9.98975C4.66667 14.8231 9.8 22.6897 13 15.4897L20.5 0.989746"
@@ -270,7 +271,7 @@ const SelfHelpKits = ({
             </svg>
           ))}
         </div>
-        <div className="text-white font-poppins text-2xl font-bold leading-[149%] tracking-[-0.456px] space-y-6">
+        <div className="text-white font-poppins text-base sm:text-lg lg:text-2xl font-bold leading-relaxed tracking-tight space-y-4">
           <div>Builds financial confidence</div>
           <div>Encourages independent thinking</div>
           <div>Easy-to-follow structure</div>
@@ -279,8 +280,11 @@ const SelfHelpKits = ({
         </div>
       </div>
     </div>
+
   </div>
 </section>
+
+
 
       {/* Smart Money Concepts Section - Configurable */}
     <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-24 relative overflow-hidden">
