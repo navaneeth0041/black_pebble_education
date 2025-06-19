@@ -40,6 +40,7 @@ const SelfHelpKits = ({
   }
 }) => {
   return (
+    <>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
 <section className="bg-[#343434] text-white h-[70vh] relative overflow-hidden flex items-center">
@@ -74,17 +75,16 @@ const SelfHelpKits = ({
       </div>
     </div>
   </div>
-  
-{/*<img 
+</section>
+<img 
   src="/effects/black.png" 
   alt="black transition" 
-  className="w-full block absolute bottom-0 left-0 z-20" 
-/>*/}
-</section>
+  className="w-full block z-20 relative -top-8" 
+/>
 
 
       {/* What's Inside Section */}
-    <section className="flex flex-col items-center gap-8 py-16 px-8 pt-40 -mt-5 lg:-mt-15">
+    <section className="flex flex-col items-center gap-8 py-16 px-8 pt-40 -mt-5 lg:-mt-30">
       <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
         What's Inside a Self-Help Kit?
       </h2>
@@ -161,17 +161,22 @@ const SelfHelpKits = ({
         </div>
       </div>
     </section>
+    <img 
+  src="/effects/white.png" 
+  alt="black transition" 
+  className="w-full block z-20 relative" 
+/>
 
       {/* Who is This For Section */}
-<section className="relative bg-[#E1FFF4] py-16 sm:py-24 overflow-hidden">
+<section className="relative bg-[#E1FFF4] sm:py-24 overflow-hidden pt-40 -mt-5 lg:-mt-28">
   <img
     src="/self_help_kit/3/thread.svg"
     alt="Thread Illustration"
-    className="absolute top-0 left-20 sm:left-32 md:left-48 lg:left-60 w-68 sm:w-78 lg:w-112 opacity-90 pointer-events-none select-none"
+    className="absolute top-0 left-20 sm:left-32 md:left-48 lg:left-60 w-68 sm:w-78 lg:w-112 opacity-90 pointer-events-none select-none pt-12" 
   />
 
   {/* Main Content */}
-  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 px-6 sm:px-12 lg:px-24 z-10 relative">
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 px-6 sm:px-12 lg:px-24 z-10 pt-20 relative">
     {/* Left Side */}
     <div className="flex flex-col items-start gap-4 sm:gap-5 max-w-md text-left">
       <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-3xl sm:text-4xl lg:text-[48px] font-normal leading-snug tracking-tight">
@@ -220,10 +225,15 @@ const SelfHelpKits = ({
     </div>
   </div>
 </section>
+<img 
+  src="/effects/lightaqua.svg" 
+  alt="black transition" 
+  className="w-full block -top-8 z-0 relative" 
+/>
 
 
       {/* Why Self-Help Kits Work Section */}
-<section className="bg-[#343434] py-16 sm:py-20 lg:py-24">
+<section className="bg-[#343434] py-16 sm:py-20 lg:py-24 -mt-5 lg:-mt-30">
   <div className="flex flex-col lg:flex-row items-center justify-between gap-12 px-4 sm:px-8 lg:px-32 max-w-7xl mx-auto">
 
     {/* Left side - Title and subtitle */}
@@ -283,10 +293,15 @@ const SelfHelpKits = ({
 
   </div>
 </section>
+<img 
+  src="/effects/black.png" 
+  alt="black transition" 
+  className="w-full block -top-8 z-20 relative" 
+/>
 
 
 
-  <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-16 md:py-24 relative overflow-hidden">
+  <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-16 md:py-24 relative overflow-hidden -mt-5 lg:-mt-30">
     {/* Circular Thread Background in bottom-left */}
     <img
       src={smartMoneyConcepts.backgroundImage}
@@ -411,11 +426,14 @@ const SelfHelpKits = ({
   )}
 
   </section>
-
-
-
-
-    </div>
+  </div>
+  <img 
+  src="/effects/littlegreen.png" 
+  alt="black transition" 
+  className="w-full block -top-8 z-20 relative" 
+/>
+</>
+  
   );
 };
 
