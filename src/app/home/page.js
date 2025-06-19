@@ -23,7 +23,7 @@ export default function HomePage() {
       <FinancialLiteracyPage/>
       <FinancialEducationHero/>
       <MoneyClassComparison/>
-      <Testimonials/>
+      {/* <Testimonials/> */}
       <ImpactPage />
       <MethodicalApproach />
       <PreFooter

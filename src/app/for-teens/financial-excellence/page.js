@@ -72,7 +72,7 @@ export default function BankingEssentials() {
             durationValue="9 Hours (Weekly Classes)"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -92,7 +92,7 @@ export default function BankingEssentials() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Enroll for the Financial Excellence Program?"
         subText1="Some kids are ahead of the curve. Their learning abilities and curiosity allow them to imbibe new and complex information easily than others."

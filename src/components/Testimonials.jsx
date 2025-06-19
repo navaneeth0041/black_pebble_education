@@ -47,7 +47,7 @@ export default function Testimonials({
   return (
     <>
       <div className="w-full bg-[#FBDD9C] px-12 ">
-        <div className="lg:px-12 mx-auto py-14 px-6 -mt-5 lg:-mt-22 xl:-mt-28 pt-30 min-h-[70vh] lg:min-h-[90vh] relative">
+        <div className="lg:px-12 mx-auto py-14 px-6 -mt-5 lg:-mt-22 xl:-mt-30 pt-30 min-h-[70vh] lg:min-h-screen relative">
 
           {/* Desktop Layout */}
           <div className="hidden lg:grid grid-cols-2 gap-4 lg:gap-8 items-start h-full">

@@ -58,7 +58,7 @@ export default function everyday() {
             durationValue="2 Hours"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -78,7 +78,7 @@ export default function everyday() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn About Credit So Early?"
         subText1="Today's kids wholeheartedly use credit cards without fully understanding the underlying principle of credit. You don’t want them to handle credit irresponsibly or get into a debt trap. "

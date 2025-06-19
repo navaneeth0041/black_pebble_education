@@ -58,7 +58,7 @@ export default function financial() {
             durationValue="2.5 Hours"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -78,7 +78,7 @@ export default function financial() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn About Financial Wisdom So Early?"
         subText1="Financial habits create a financial mindset that nurtures financial behavior. Cultivating the right habits at an early age is important for developing a financially responsible adult. "

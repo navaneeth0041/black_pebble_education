@@ -72,7 +72,7 @@ export default function BankingEssentials() {
             durationValue="3 Hours"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -92,7 +92,7 @@ export default function BankingEssentials() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn Financial Freedom So Early?"
         subText1="Thinking about financial freedom in one's retirement is a tad too late. Most of us want to enjoy the benefits of financial security as soon as possible. Teach your child to do so early! "

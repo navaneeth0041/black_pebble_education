@@ -72,7 +72,7 @@ export default function BankingEssentials() {
             durationValue="3 Hours"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -92,7 +92,7 @@ export default function BankingEssentials() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn About Business So Early?"
         subText1="We have a generation of very enterprising young people! Kids today are confident and have the passion to start their ventures and be professionally independent."

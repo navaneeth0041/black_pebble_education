@@ -72,7 +72,7 @@ export default function BankingEssentials() {
             durationValue="2 Hours"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -92,7 +92,7 @@ export default function BankingEssentials() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn Banking So Early?"
         subText1="Today's kids have a minimal to negligible experience in branch banking. This lack of interaction keeps them from learning about the functioning and importance of banks."

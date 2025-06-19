@@ -72,7 +72,7 @@ export default function BankingEssentials() {
             durationValue="2 Hours"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -92,7 +92,7 @@ export default function BankingEssentials() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn About Risks & Insurance So Early?"
         subText1="The world and economies are becoming extremely dynamic and uncertain. Risks reside at every turn and in every corner. Being aware of risk mitigation has never been so important."

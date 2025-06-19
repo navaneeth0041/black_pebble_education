@@ -58,7 +58,7 @@ export default function Budgeting() {
             durationValue="2 Hours"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -78,7 +78,7 @@ export default function Budgeting() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn Budgeting So Early?"
         subText1="Some kids are impulsive buyers and throw tantrums until they get what they want. Making them understand that everything costs money can positively change their attitudes."

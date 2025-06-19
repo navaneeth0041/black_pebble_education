@@ -58,7 +58,7 @@ export default function financial() {
             durationValue="2.5 Hours"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -78,7 +78,7 @@ export default function financial() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn About Financial Growth So Early?"
         subText1="Investing early has immeasurable benefits. To invest early, your child has to save. To save, they have to track expenses."

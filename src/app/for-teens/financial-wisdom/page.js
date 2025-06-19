@@ -72,7 +72,7 @@ export default function BankingEssentials() {
             durationValue="3 Hours"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -92,7 +92,7 @@ export default function BankingEssentials() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn Financial Wisdom So Early?"
         subText1="Financial wisdom is an aspirational benchmark for kids. Learning about the Japanese habits allows kids to pursue them consciously and follow the path of ethical wealth generation."
