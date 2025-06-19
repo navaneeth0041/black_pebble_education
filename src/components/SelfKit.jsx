@@ -283,10 +283,10 @@ const SelfHelpKits = ({
       <div className="flex items-start gap-20 px-16 max-w-7xl mx-auto relative z-10">
         {/* Title Section */}
         <div className="flex items-center gap-6 flex-shrink-0">
-          <span className="text-[#08AA9B] font-bold text-[180px] leading-none">
+          <span className="text-[#08AA9B] font-['Mochiy_Pop_One'] text-[180px] font-normal leading-none tracking-[-3.4px]">
             {smartMoneyConcepts.conceptsCount}
           </span>
-          <h2 className="text-[#08B09B] font-bold text-[38px] leading-tight max-w-[300px]">
+          <h2 className="text-[#08B09B] font-['Mochiy_Pop_One'] text-[38px] font-normal leading-tight max-w-[300px] tracking-[-0.72px]">
             {smartMoneyConcepts.title}
           </h2>
         </div>
@@ -303,6 +303,7 @@ const SelfHelpKits = ({
                   className="absolute -left-8 top-2 w-16 h-16 transform -rotate-12"
                 />
                 <span className="text-[#09BE9D] font-semibold text-lg text-center leading-tight">
+
                   {concept.title}
                 </span>
               </Card>
@@ -352,6 +353,7 @@ const SelfHelpKits = ({
                     {smartMoneyConcepts.pricingData.currentPrice}
                   </span>
                   <span className="text-white/70 text-lg line-through">
+
                     {smartMoneyConcepts.pricingData.originalPrice}
                   </span>
                 </div>
@@ -361,7 +363,6 @@ const SelfHelpKits = ({
         </div>
       )}
     </section>
-
     </div>
   );
 };
