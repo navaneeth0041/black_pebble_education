@@ -58,7 +58,7 @@ export default function everyday() {
             durationValue="2.5 Hours"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -78,7 +78,7 @@ export default function everyday() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn Everyday Banking So Early?"
         subText1="Learning the concepts of everyday banking is non-negotiable. This knowledge can be attained only through professional coaching and mentoring."

@@ -54,7 +54,7 @@ export default function HomePage() {
         ]}
       />
         <CourseSnapshot />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -74,7 +74,7 @@ export default function HomePage() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn the Value of Money So Early?"
         subText1="Some kids grow up without the concept of pocket money.They believe money is an infinite resource.This can result in indulgence or unchecked expenses,causing financial mishaps."

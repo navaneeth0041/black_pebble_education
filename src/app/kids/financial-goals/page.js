@@ -58,7 +58,7 @@ export default function financial() {
             durationValue="2 Hours"
             offerPriceTitle="Special Price"
             />
-        <Testimonials
+        {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
@@ -78,7 +78,7 @@ export default function financial() {
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          />
+          /> */}
       <PreFooter
         mainTitle="Why Learn About Financial Goals So Early?"
         subText1="Most kids don’t realize that their life goals come with financial obligations. Make your child understand the importance of savings to attain their goals without financial burden."
