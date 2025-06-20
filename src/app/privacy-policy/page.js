@@ -226,9 +226,9 @@ const PrivacyPolicy = () => {
                       <p className="text-blue-700 mb-4 leading-relaxed">
                         We collect, process, and retain information about you when you visit our website. You may choose to provide us with your name, phone number, and address, or other information to access protected information on the website or so that we can connect with you after your visit, based on your consent.
                       </p>
-                      <p className="text-blue-700 leading-relaxed">
-                        When you visit our website, we may track, collect, and aggregate information indicating, among other things, which pages of our Site were visited, the order in which they were visited, when they were visited, and which hyperlinks were "clicked."
-                      </p>
+      <p className="text-blue-700 leading-relaxed">
+        When you visit our website, we may track, collect, and aggregate information indicating, among other things, which pages of our Site were visited, the order in which they were visited, when they were visited, and which hyperlinks were &ldquo;clicked.&rdquo;
+      </p>
                     </div>
 
                     <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-lg">
@@ -272,9 +272,9 @@ const PrivacyPolicy = () => {
 
                     <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-5 rounded-2xl border border-amber-200">
                       <h5 className="font-bold text-amber-800 mb-2">Your Choice</h5>
-                      <p className="text-amber-700 leading-relaxed">
-                        We will honor your request if you inform us that you do not want to receive any information that you have not specifically requested.
-                      </p>
+      <p className="text-amber-700 leading-relaxed">
+        We will honor your request if you inform us that you do not want to receive any information that you have not specifically requested.
+      </p>
                     </div>
                   </div>
                 </section>
@@ -368,16 +368,16 @@ const PrivacyPolicy = () => {
                       <p className="text-orange-700 mb-4 leading-relaxed">
                         We reserve the right to make changes to this Privacy Policy at any time. Any such modifications will become effective immediately upon posting to the Platform.
                       </p>
-                      <p className="text-orange-700 leading-relaxed">
-                        Your continued use of the Platform and/or the Services constitutes your agreement to such modifications.
-                      </p>
+      <p className="text-orange-700 leading-relaxed">
+        Your continued use of the Platform and/or the Services constitutes your agreement to such modifications.
+      </p>
                     </div>
 
                     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-5 rounded-2xl border border-blue-200">
                       <h5 className="font-bold text-blue-800 mb-3">Your Responsibility</h5>
-                      <p className="text-blue-700 leading-relaxed">
-                        You agree to review the current version of the Privacy Policy periodically as posted on the Platform. If you do not agree with the terms of this Privacy Policy, please do not use the Platform and/or the Services.
-                      </p>
+      <p className="text-blue-700 leading-relaxed">
+        You agree to review the current version of the Privacy Policy periodically as posted on the Platform. If you do not agree with the terms of this Privacy Policy, please do not use the Platform and/or the Services.
+      </p>
                     </div>
                   </div>
                 </section>
@@ -385,9 +385,9 @@ const PrivacyPolicy = () => {
                 {/* Enhanced Contact Information */}
                 <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-8 rounded-2xl text-white shadow-xl">
                   <h3 className="text-2xl font-bold mb-4">Have Privacy Questions?</h3>
-                  <p className="text-slate-300 mb-6 leading-relaxed">
-                    If you have any questions about this Privacy Policy or how we handle your personal information, we're here to help.
-                  </p>
+      <p className="text-slate-300 mb-6 leading-relaxed">
+        If you have any questions about this Privacy Policy or how we handle your personal information, we&rsquo;re here to help.
+      </p>
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="flex items-center space-x-3">
                       <div className="p-2 rounded-lg bg-white/10">
@@ -427,9 +427,9 @@ const PrivacyPolicy = () => {
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     <span className="text-sm">This Privacy Policy is effective as of June 2025</span>
                   </div>
-                  <p className="text-sm text-slate-400">
-                    Please check this page periodically for updates • All rights reserved
-                  </p>
+      <p className="text-sm text-slate-400">
+        Please check this page periodically for updates &bull; All rights reserved
+      </p>
                 </div>
               </div>
             </div>
