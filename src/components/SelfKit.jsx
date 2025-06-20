@@ -40,6 +40,7 @@ const SelfHelpKits = ({
   }
 }) => {
   return (
+    <>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
 <section className="bg-[#343434] text-white h-[70vh] relative overflow-hidden flex items-center">
@@ -74,17 +75,16 @@ const SelfHelpKits = ({
       </div>
     </div>
   </div>
-  
-{/*<img 
+</section>
+<img 
   src="/effects/black.png" 
   alt="black transition" 
-  className="w-full block absolute bottom-0 left-0 z-20" 
-/>*/}
-</section>
+  className="w-full block z-20 relative -top-8" 
+/>
 
 
       {/* What's Inside Section */}
-    <section className="flex flex-col items-center gap-8 py-16 px-8 pt-40 -mt-5 lg:-mt-15">
+    <section className="flex flex-col items-center gap-8 py-16 px-8 pt-40 -mt-5 lg:-mt-30">
       <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
         What's Inside a Self-Help Kit?
       </h2>
@@ -161,209 +161,276 @@ const SelfHelpKits = ({
         </div>
       </div>
     </section>
+    <img 
+  src="/effects/white.png" 
+  alt="black transition" 
+  className="w-full block z-20 relative" 
+/>
 
       {/* Who is This For Section */}
-<section className="bg-[#E1FFF4] py-24">
-  <div className="flex items-center justify-center gap-16 px-24">
-    <div className="flex flex-col items-start gap-5 max-w-md">
-      <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-[48px] font-normal leading-[149%] tracking-[-0.912px]">
+<section className="relative bg-[#E1FFF4] sm:py-24 overflow-hidden pt-40 -mt-5 lg:-mt-28">
+  <img
+    src="/self_help_kit/3/thread.svg"
+    alt="Thread Illustration"
+    className="absolute top-0 left-20 sm:left-32 md:left-48 lg:left-60 w-68 sm:w-78 lg:w-112 opacity-90 pointer-events-none select-none pt-12" 
+  />
+
+  {/* Main Content */}
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 px-6 sm:px-12 lg:px-24 z-10 pt-20 relative">
+    {/* Left Side */}
+    <div className="flex flex-col items-start gap-4 sm:gap-5 max-w-md text-left">
+      <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-3xl sm:text-4xl lg:text-[48px] font-normal leading-snug tracking-tight">
         Who is This For?
       </h2>
-      <p className="text-[#39BB9C] font-poppins text-2xl font-medium leading-[149%] tracking-[-0.456px]">
-        Perfect for children who enjoy independent learning, and parents
-        seeking structured yet flexible tools.
+      <p className="text-[#39BB9C] font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug tracking-tight">
+        Perfect for children who enjoy independent learning, and parents seeking structured yet flexible tools.
       </p>
     </div>
-    <div className="flex items-center gap-6">
-      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-6 w-80 h-56 flex items-center justify-between">
+
+    {/* Right Side - Cards */}
+<div className="flex flex-col md:flex-row items-center justify-center gap-6">
+      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[52px] p-6 w-72 sm:w-80 h-56 flex items-center justify-between">
         <div className="flex flex-col justify-center">
-          <span className="text-white font-poppins text-4xl font-medium leading-[149%] tracking-[-0.019em]">
+          <span className="text-white font-poppins text-3xl sm:text-4xl font-medium leading-snug tracking-tight">
             10+
             <br />
             year old's
           </span>
         </div>
-<div className="flex items-center justify-center w-30 h-30">
-  <img
-    src="/self_help_kit/1/boy.svg"
-    alt="Money Icon"
-    className="w-20 h-50"
-  />
-</div>      </Card>
+        <div className="flex items-center justify-center w-24 h-24">
+          <img
+            src="/self_help_kit/1/boy.svg"
+            alt="Boy Icon"
+            className="w-20 h-auto"
+          />
+        </div>
+      </Card>
 
-      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-6 w-80 h-56 flex items-center justify-between">
+      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[52px] p-6 w-72 sm:w-80 h-56 flex items-center justify-between">
         <div className="flex flex-col justify-center">
-          <span className="text-white font-poppins text-3xl font-medium leading-[149%] tracking-[-0.019em]">
+          <span className="text-white font-poppins text-2xl sm:text-3xl font-medium leading-snug tracking-tight">
             Money
             <br />
             Enthusiasts
           </span>
         </div>
-<div className="flex items-center justify-center w-30 h-30">
-  <img
-    src="/self_help_kit/1/bulb_coin.svg"
-    alt="Money Icon"
-    className="w-20 h-50"
-  />
-</div>
+        <div className="flex items-center justify-center w-24 h-24">
+          <img
+            src="/self_help_kit/1/bulb_coin.svg"
+            alt="Money Icon"
+            className="w-20 h-auto"
+          />
+        </div>
       </Card>
     </div>
   </div>
 </section>
+<img 
+  src="/effects/lightaqua.svg" 
+  alt="black transition" 
+  className="w-full block -top-8 z-0 relative" 
+/>
+
 
       {/* Why Self-Help Kits Work Section */}
-<section className="bg-[#343434] py-24">
-  <div className="flex items-center justify-between gap-12 px-32 max-w-7xl mx-auto">
-    {/* Left side - Title and subtitle with inline icon */}
-    <div className="flex flex-col items-start gap-5 max-w-lg">
-      <h2 className="text-white font-['Mochiy_Pop_One'] text-[40px] font-normal leading-[149%] tracking-[-0.76px]">
-        Why Self-Help Kits Work?
-      </h2>
-      {/* Subtitle with inline icon */}
-      <div className="flex items-start gap-4">
-        <div className="flex flex-col">
-          <span className="text-white font-poppins text-2xl font-medium leading-[149%] tracking-[-0.456px]">
-            Benefits of using self
-          </span>
-          <span className="text-white font-poppins text-2xl font-medium leading-[149%] tracking-[-0.456px]">
-            help kits
-          </span>
+<section className="bg-[#343434] py-16 sm:py-20 lg:py-24 -mt-5 lg:-mt-30">
+ <div className="flex flex-col lg:flex-row items-center justify-between gap-12 px-4 sm:px-8 lg:px-32 max-w-7xl mx-auto">
+{/* Left side - Title and subtitle */}
+<div className="flex flex-col items-start gap-5 max-w-lg">
+<h2 className="text-white font-['Mochiy_Pop_One'] text-3xl sm:text-4xl lg:text-[40px] font-normal leading-snug tracking-tight">
+ Why Self-Help Kits Work?
+</h2>
+{/* Subtitle with image */}
+<div className="flex items-center gap-2">
+<div className="flex flex-col">
+<span className="text-white font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug">
+ Benefits of using self
+</span>
+<span className="text-white font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug">
+ help kits
+</span>
+</div>
+<img
+src="/self_help_kit/3/money.svg"
+alt="Money icon"
+className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
+/>
+</div>
+</div>
+{/* Right side - Benefits list */}
+<div className="flex flex-col items-center justify-center gap-6 w-full lg:w-auto">
+<div className="flex items-start gap-4 sm:gap-6">
+<div className="flex flex-col gap-6 pt-1">
+{[1, 2, 3, 4, 5].map((item) => (
+<svg
+key={item}
+width="23"
+height="20"
+viewBox="0 0 23 20"
+fill="none"
+className="min-w-[23px]"
+>
+<path
+d="M2.5 9.98975C4.66667 14.8231 9.8 22.6897 13 15.4897L20.5 0.989746"
+stroke="#39BB9C"
+strokeWidth="4"
+/>
+</svg>
+ ))}
+</div>
+<div className="text-white font-poppins text-base sm:text-lg lg:text-2xl font-bold leading-relaxed tracking-tight space-y-4">
+<div>Builds financial confidence</div>
+<div>Encourages independent thinking</div>
+<div>Easy-to-follow structure</div>
+<div>No screen time needed</div>
+<div>Parent-guided or self-led</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<img 
+  src="/effects/black.png" 
+  alt="black transition" 
+  className="w-full block -top-8 z-20 relative" 
+/>
+
+
+
+  <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-16 md:py-24 relative overflow-hidden -mt-5 lg:-mt-30">
+    {/* Circular Thread Background in bottom-left */}
+    <img
+      src={smartMoneyConcepts.backgroundImage}
+      alt="Circular Thread"
+      className="absolute bottom-20 left-2 w-52 sm:w-64 md:w-96 h-auto object-cover pointer-events-none"
+    />
+
+    <div className="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-20 px-6 md:px-12 lg:px-16 max-w-7xl mx-auto relative z-10">
+      {/* Title Section */}
+      <div className="flex items-center gap-4 md:gap-6 flex-shrink-0">
+        <span className="text-[#08AA9B] font-['Mochiy_Pop_One'] text-[100px] sm:text-[140px] md:text-[180px] font-normal leading-none tracking-[-1.5px] md:tracking-[-3.4px]">
+          {smartMoneyConcepts.conceptsCount}
+        </span>
+        <h2 className="text-[#08B09B] font-['Mochiy_Pop_One'] text-[28px] sm:text-[32px] md:text-[38px] font-normal leading-tight max-w-[300px] tracking-[-0.5px] md:tracking-[-0.72px]">
+          {smartMoneyConcepts.title}
+        </h2>
+      </div>
+
+      {/* Concepts Grid */}
+      <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 relative md:ml-12">
+        <div className="flex flex-col gap-6">
+          {smartMoneyConcepts.concepts.slice(0, 4).map((concept) => (
+            <Card key={concept.id} className="bg-white rounded-3xl p-4 sm:p-6 flex items-center justify-center h-28 sm:h-32 relative border border-gray-100">
+              <img
+                src={concept.icon}
+                alt={`Icon ${concept.id}`}
+                className="absolute -left-6 sm:-left-8 top-0 w-12 sm:w-16 h-12 sm:h-16 transform -rotate-12"
+              />
+              <span className="text-[#09BE9D] font-['Poppins'] font-semibold text-base sm:text-lg text-center leading-tight">
+                {concept.title}
+              </span>
+            </Card>
+          ))}
         </div>
-        <img 
-          src="/self_help_kit/3/money.svg" 
-          alt="Money icon" 
-          width="120" 
-          height="120"
-          className="w-30 h-35 -mt-15 ml-10"
+
+        <div className="flex flex-col gap-6 pt-8 sm:pt-16">
+          {smartMoneyConcepts.concepts.slice(4).map((concept) => (
+            <Card key={concept.id} className="bg-white rounded-3xl p-4 sm:p-6 flex items-center justify-center h-28 sm:h-32 relative border border-gray-100">
+              <img
+                src={concept.icon}
+                alt={`Icon ${concept.id}`}
+                className="absolute -left-6 sm:-left-8 top-0 w-12 sm:w-16 h-12 sm:h-16 transform -rotate-12"
+              />
+              <span className="text-[#09BE9D] font-['Poppins'] font-semibold text-base sm:text-lg text-center leading-tight">
+                {concept.title}
+              </span>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* Pricing CTA */}
+  {/* Pricing CTA */}
+  {/* Pricing CTA */}
+  {smartMoneyConcepts.showPricing && (
+    <div className="mt-16 md:mt-20 pb-16 md:pb-20 relative flex justify-center px-4">
+      <div className="w-full max-w-4xl bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-6 sm:p-8 md:p-10 relative">
+        
+        {/* Description Box - Expanded */}
+        <div className="flex justify-center mb-6 md:mb-8">
+          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 sm:p-8 md:p-10 text-center relative w-full max-w-none mx-4">
+            <p className="text-white font-['Poppins'] font-medium text-lg sm:text-xl md:text-2xl break-words">
+              {smartMoneyConcepts.pricingData.description}
+            </p>
+          </div>
+        </div>
+
+        {/* Pricing Rows - Expanded */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center px-4 py-4 md:py-6">
+          {/* Row 1 (Always): All for just */}
+          <span className="text-white font-['Poppins'] font-semibold text-2xl sm:text-3xl md:text-4xl">
+            All for just
+          </span>
+
+          {/* Row 2 (mobile-only): current + original */}
+          <div className="flex md:hidden items-center justify-center gap-4 mt-2">
+            {/* Current Price */}
+            <div className="relative">
+              <img
+                src="/self_help_kit/4/Vector 32.svg"
+                alt="Price Box"
+                className="w-28 h-auto"
+              />
+              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-xl text-white">
+                {smartMoneyConcepts.pricingData.currentPrice}
+              </span>
+            </div>
+            {/* Original */}
+            <span className="text-white/70 font-['Poppins'] text-lg line-through">
+              {smartMoneyConcepts.pricingData.originalPrice}
+            </span>
+          </div>
+
+          {/* Row 2 (desktop-only): all in one line */}
+          <div className="hidden md:flex items-center gap-6">
+            {/* Current Price */}
+            <div className="relative">
+              <img
+                src="/self_help_kit/4/Vector 32.svg"
+                alt="Price Box"
+                className="w-36 h-auto"
+              />
+              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-2xl md:text-3xl text-white">
+                {smartMoneyConcepts.pricingData.currentPrice}
+              </span>
+            </div>
+            {/* Original */}
+            <span className="text-white/70 font-['Poppins'] text-xl md:text-2xl line-through">
+              {smartMoneyConcepts.pricingData.originalPrice}
+            </span>
+          </div>
+        </div>
+
+        {/* Coins */}
+        <img
+          src="/Finance_clubs/1/whitecoins.svg"
+          alt="White Coins"
+          className="absolute -right-4 bottom-2 w-20 sm:w-36 h-auto"
         />
       </div>
     </div>
+  )}
 
-    {/* Right side - Benefits list */}
-    <div className="flex flex-col justify-center">
-      <div className="flex items-start gap-6">
-        <div className="flex flex-col gap-9 pt-1">
-          {[1, 2, 3, 4, 5].map((item) => (
-            <svg
-              key={item}
-              width="23"
-              height="20"
-              viewBox="0 0 23 20"
-              fill="none"
-            >
-              <path
-                d="M2.5 9.98975C4.66667 14.8231 9.8 22.6897 13 15.4897L20.5 0.989746"
-                stroke="#39BB9C"
-                strokeWidth="4"
-              />
-            </svg>
-          ))}
-        </div>
-        <div className="text-white font-poppins text-2xl font-bold leading-[149%] tracking-[-0.456px] space-y-6">
-          <div>Builds financial confidence</div>
-          <div>Encourages independent thinking</div>
-          <div>Easy-to-follow structure</div>
-          <div>No screen time needed</div>
-          <div>Parent-guided or self-led</div>
-        </div>
-      </div>
-    </div>
+  </section>
   </div>
-</section>
-
-      {/* Smart Money Concepts Section - Configurable */}
-    <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-24 relative overflow-hidden">
-      {/* Circular Thread Background */}
-      <img 
-        src={smartMoneyConcepts.backgroundImage}
-        alt="Circular Thread" 
-        className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
-      />
-      
-      <div className="flex items-start gap-20 px-16 max-w-7xl mx-auto relative z-10">
-        {/* Title Section */}
-        <div className="flex items-center gap-6 flex-shrink-0">
-          <span className="text-[#08AA9B] font-['Mochiy_Pop_One'] text-[180px] font-normal leading-none tracking-[-3.4px]">
-            {smartMoneyConcepts.conceptsCount}
-          </span>
-          <h2 className="text-[#08B09B] font-['Mochiy_Pop_One'] text-[38px] font-normal leading-tight max-w-[300px] tracking-[-0.72px]">
-            {smartMoneyConcepts.title}
-          </h2>
-        </div>
-
-        {/* Concepts Grid with more spacing */}
-        <div className="flex-1 grid grid-cols-2 gap-8 relative ml-12">
-          {/* Left Column */}
-          <div className="flex flex-col gap-6">
-            {smartMoneyConcepts.concepts.slice(0, 4).map((concept, index) => (
-              <Card key={concept.id} className="bg-white rounded-3xl p-6 flex items-center justify-center h-32 relative border border-gray-100">
-                <img 
-                  src={concept.icon}
-                  alt={`Coin ${concept.id}`}
-                  className="absolute -left-8 top-2 w-16 h-16 transform -rotate-12"
-                />
-                <span className="text-[#09BE9D] font-semibold text-lg text-center leading-tight">
-
-                  {concept.title}
-                </span>
-              </Card>
-            ))}
-          </div>
-
-          {/* Right Column */}
-          <div className="flex flex-col gap-6 pt-16">
-            {smartMoneyConcepts.concepts.slice(4).map((concept, index) => (
-              <Card key={concept.id} className="bg-white rounded-3xl p-6 flex items-center justify-center h-32 relative border border-gray-100">
-                <img 
-                  src={concept.icon}
-                  alt={`Coin ${concept.id}`}
-                  className="absolute -left-8 top-2 w-16 h-16 transform -rotate-12"
-                />
-                <span className="text-[#09BE9D] font-semibold text-lg text-center leading-tight">
-                  {concept.title}
-                </span>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Pricing CTA - Updated to match image 3 style */}
-      {smartMoneyConcepts.showPricing && (
-        <div className="flex justify-center mt-20 pb-20">
-          <div className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-8 max-w-4xl mx-4 relative">
-            {/* Decorative rings */}
-            <div className="absolute -right-4 top-4 flex flex-col gap-2">
-              <div className="w-12 h-3 border-2 border-white/50 rounded-full transform rotate-12"></div>
-              <div className="w-10 h-3 border-2 border-white/40 rounded-full transform rotate-12"></div>
-              <div className="w-8 h-3 border-2 border-white/30 rounded-full transform rotate-12"></div>
-              <div className="w-6 h-3 border-2 border-white/20 rounded-full transform rotate-12"></div>
-            </div>
-            
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 text-center">
-              <p className="text-white font-medium text-xl mb-4">
-                {smartMoneyConcepts.pricingData.description}
-              </p>
-              <div className="flex items-center justify-center gap-4">
-                <span className="text-white font-semibold text-2xl">
-                  All for just
-                </span>
-                <div className="flex items-center gap-2">
-                  <span className="bg-red-500 text-white font-bold text-2xl px-3 py-1 rounded">
-                    {smartMoneyConcepts.pricingData.currentPrice}
-                  </span>
-                  <span className="text-white/70 text-lg line-through">
-
-                    {smartMoneyConcepts.pricingData.originalPrice}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </section>
-    </div>
+  <img 
+  src="/effects/littlegreen.png" 
+  alt="black transition" 
+  className="w-full block -top-8 z-20 relative" 
+/>
+</>
+  
   );
 };
 

@@ -21,12 +21,12 @@ export default function FinanceHeroSection({
   return (
     <>
     <div className="min-h-[70vh] bg-[#343434] flex items-center justify-start sm:p-6 md:p-8 lg:pl-28 overflow-x-hidden">
-      <div className="w-full max-w-[1212px] relative">
+      <div className="max-w-7xl relative mx-auto px-2 sm:px-8 ">
         
         <div className="mb-12 sm:mb-10 md:mb-12">
           <div className="relative mb-6 sm:mb-8">
             
-        <h1 className={`${PopOne.className} text-4xl sm:text-5xl md:text-6xl lg:text-[80px] xl:text-[90px] leading-tight sm:leading-tight md:leading-[136%] tracking-[-1.235px] text-left text-white mb-2 sm:mb-4 max-w-6xl`}>
+        <h1 className={`${PopOne.className} text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight sm:leading-tight md:leading-[136%] tracking-[-1.235px] text-left text-white mb-2 sm:mb-4 max-w-6xl`}>
   <span className="block relative whitespace-nowrap">
     Finance Discussions for <span className="relative inline-block">
       Young

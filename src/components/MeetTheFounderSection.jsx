@@ -38,7 +38,7 @@ export default function MeetTheFounderSection() {
                 Meet the Founder
               </h2>
 
-              <div className={`space-y-6 text-base lg:text-lg leading-relaxed ${poppins.className}`}>
+              <div className={`space-y-6 text-base lg:text-2xl leading-relaxed ${poppins.className}`}>
                 <p>
                   My professional journey has been a mix of technology, finance, content, and design. I feel that everything I have learnt over the past decades has culminated in founding Black Pebble Education.
                 </p>
@@ -55,27 +55,22 @@ export default function MeetTheFounderSection() {
 
             {/* Right - Photo Frame */}
             <div className="flex-shrink-0 lg:ml-auto lg:mr-16">
-              <div className="bg-white rounded-lg p-6 w-80 h-96 transform -rotate-12 shadow-lg">
-                <div className={`text-[#09BE9D] text-sm font-medium mb-4 text-center ${poppins.className}`}>
-                  Founder of Black Pebble Education
-                </div>
-                <div className="bg-gray-200 h-72 rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="bg-white rounded-lg p-6 w-80 h-96 transform -rotate-8 shadow-lg">
                   <img 
                     src="/about/frame.svg" 
                     alt="Founder of Black Pebble Education" 
                     className="w-full h-full object-cover rounded-lg"
                   />
-                </div>
               </div>
             </div>
           </div>
 
           {/* Bottom Section - Professional Journey */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-start">
             
             {/* Left - Journey Title */}
-            <div className="flex-shrink-0 lg:w-80">
-              <h3 className={`text-2xl md:text-3xl lg:text-4xl font-bold leading-tight ${mochiyPopOne.className}`}>
+            <div className="flex-shrink-0 lg:w-140">
+              <h3 className={`text-3xl font-bold leading-tight ${mochiyPopOne.className}`}>
                 For the curious parents, here's<br />
                 my professional journey :
               </h3>
@@ -88,7 +83,7 @@ export default function MeetTheFounderSection() {
                 {achievements.map((achievement, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-[#09BE9D] rounded-full mt-3 flex-shrink-0"></div>
-                    <span className={`text-base lg:text-lg leading-relaxed ${poppins.className}`}>
+                    <span className={`text-base lg:text-2xl leading-relaxed ${poppins.className}`}>
                       {achievement}
                     </span>
                   </li>
@@ -96,7 +91,7 @@ export default function MeetTheFounderSection() {
               </ul>
 
               {/* Commitment Statement */}
-              <p className={`text-base lg:text-lg leading-relaxed pt-4 ${poppins.className}`}>
+              <p className={`text-base lg:text-2xl leading-relaxed pt-4 ${poppins.className}`}>
                 When you choose Black Pebble Education, be assured, you're subscribing to utmost professionalism and unmatched commitment.
               </p>
             </div>
