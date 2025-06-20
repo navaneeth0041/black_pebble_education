@@ -234,64 +234,60 @@ const SelfHelpKits = ({
 
       {/* Why Self-Help Kits Work Section */}
 <section className="bg-[#343434] py-16 sm:py-20 lg:py-24 -mt-5 lg:-mt-30">
-  <div className="flex flex-col lg:flex-row items-center justify-between gap-12 px-4 sm:px-8 lg:px-32 max-w-7xl mx-auto">
-
-    {/* Left side - Title and subtitle */}
-    <div className="flex flex-col items-start gap-5 max-w-lg">
-      <h2 className="text-white font-['Mochiy_Pop_One'] text-3xl sm:text-4xl lg:text-[40px] font-normal leading-snug tracking-tight">
-        Why Self-Help Kits Work?
-      </h2>
-
-      {/* Subtitle with image */}
-      <div className="flex items-center justify-between w-full gap-2 sm:gap-4">
-        <div className="flex flex-col">
-          <span className="text-white font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug">
-            Benefits of using self
-          </span>
-          <span className="text-white font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug">
-            help kits
-          </span>
-        </div>
-        <img 
-          src="/self_help_kit/3/money.svg" 
-          alt="Money icon" 
-          className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto"
-        />
-      </div>
-    </div>
-
-    {/* Right side - Benefits list */}
-    <div className="flex flex-col items-center justify-center gap-6 w-full lg:w-auto">
-      <div className="flex items-start gap-4 sm:gap-6">
-        <div className="flex flex-col gap-6 pt-1">
-          {[1, 2, 3, 4, 5].map((item) => (
-            <svg
-              key={item}
-              width="23"
-              height="20"
-              viewBox="0 0 23 20"
-              fill="none"
-              className="min-w-[23px]"
-            >
-              <path
-                d="M2.5 9.98975C4.66667 14.8231 9.8 22.6897 13 15.4897L20.5 0.989746"
-                stroke="#39BB9C"
-                strokeWidth="4"
-              />
-            </svg>
-          ))}
-        </div>
-        <div className="text-white font-poppins text-base sm:text-lg lg:text-2xl font-bold leading-relaxed tracking-tight space-y-4">
-          <div>Builds financial confidence</div>
-          <div>Encourages independent thinking</div>
-          <div>Easy-to-follow structure</div>
-          <div>No screen time needed</div>
-          <div>Parent-guided or self-led</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
+ <div className="flex flex-col lg:flex-row items-center justify-between gap-12 px-4 sm:px-8 lg:px-32 max-w-7xl mx-auto">
+{/* Left side - Title and subtitle */}
+<div className="flex flex-col items-start gap-5 max-w-lg">
+<h2 className="text-white font-['Mochiy_Pop_One'] text-3xl sm:text-4xl lg:text-[40px] font-normal leading-snug tracking-tight">
+ Why Self-Help Kits Work?
+</h2>
+{/* Subtitle with image */}
+<div className="flex items-center gap-2">
+<div className="flex flex-col">
+<span className="text-white font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug">
+ Benefits of using self
+</span>
+<span className="text-white font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug">
+ help kits
+</span>
+</div>
+<img
+src="/self_help_kit/3/money.svg"
+alt="Money icon"
+className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
+/>
+</div>
+</div>
+{/* Right side - Benefits list */}
+<div className="flex flex-col items-center justify-center gap-6 w-full lg:w-auto">
+<div className="flex items-start gap-4 sm:gap-6">
+<div className="flex flex-col gap-6 pt-1">
+{[1, 2, 3, 4, 5].map((item) => (
+<svg
+key={item}
+width="23"
+height="20"
+viewBox="0 0 23 20"
+fill="none"
+className="min-w-[23px]"
+>
+<path
+d="M2.5 9.98975C4.66667 14.8231 9.8 22.6897 13 15.4897L20.5 0.989746"
+stroke="#39BB9C"
+strokeWidth="4"
+/>
+</svg>
+ ))}
+</div>
+<div className="text-white font-poppins text-base sm:text-lg lg:text-2xl font-bold leading-relaxed tracking-tight space-y-4">
+<div>Builds financial confidence</div>
+<div>Encourages independent thinking</div>
+<div>Easy-to-follow structure</div>
+<div>No screen time needed</div>
+<div>Parent-guided or self-led</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <img 
   src="/effects/black.png" 
@@ -356,60 +352,61 @@ const SelfHelpKits = ({
 
     {/* Pricing CTA */}
   {/* Pricing CTA */}
+  {/* Pricing CTA */}
   {smartMoneyConcepts.showPricing && (
     <div className="mt-16 md:mt-20 pb-16 md:pb-20 relative flex justify-center px-4">
-      <div className="w-full max-w-4xl bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-4 sm:p-8 relative">
+      <div className="w-full max-w-4xl bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-2xl p-6 sm:p-8 md:p-10 relative">
         
-        {/* Description Box */}
-        <div className="flex justify-center">
-          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center relative w-full max-w-sm">
-            <p className="text-white font-['Poppins'] font-medium text-lg sm:text-2xl mb-4 break-words">
+        {/* Description Box - Expanded */}
+        <div className="flex justify-center mb-6 md:mb-8">
+          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 sm:p-8 md:p-10 text-center relative w-full max-w-none mx-4">
+            <p className="text-white font-['Poppins'] font-medium text-lg sm:text-xl md:text-2xl break-words">
               {smartMoneyConcepts.pricingData.description}
             </p>
           </div>
         </div>
 
-        {/* Pricing Rows */}
-        <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-center">
+        {/* Pricing Rows - Expanded */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center px-4 py-4 md:py-6">
           {/* Row 1 (Always): All for just */}
-          <span className="text-white font-['Poppins'] font-semibold text-xl sm:text-3xl">
+          <span className="text-white font-['Poppins'] font-semibold text-2xl sm:text-3xl md:text-4xl">
             All for just
           </span>
 
           {/* Row 2 (mobile-only): current + original */}
-          <div className="flex md:hidden items-center justify-center gap-3 mt-2">
+          <div className="flex md:hidden items-center justify-center gap-4 mt-2">
             {/* Current Price */}
             <div className="relative">
               <img
                 src="/self_help_kit/4/Vector 32.svg"
                 alt="Price Box"
-                className="w-24 h-auto"
+                className="w-28 h-auto"
               />
-              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-lg text-white">
-                {smartMoneyConcepts.pricingData.currentPrice}
-              </span>
-            </div>
-            {/* Original */}
-            <span className="text-white/70 font-['Poppins'] text-base line-through">
-              {smartMoneyConcepts.pricingData.originalPrice}
-            </span>
-          </div>
-
-          {/* Row 2 (desktop-only): all in one line */}
-          <div className="hidden md:flex items-center gap-4">
-            {/* Current Price */}
-            <div className="relative">
-              <img
-                src="/self_help_kit/4/Vector 32.svg"
-                alt="Price Box"
-                className="w-32 h-auto"
-              />
-              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-2xl text-white">
+              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-xl text-white">
                 {smartMoneyConcepts.pricingData.currentPrice}
               </span>
             </div>
             {/* Original */}
             <span className="text-white/70 font-['Poppins'] text-lg line-through">
+              {smartMoneyConcepts.pricingData.originalPrice}
+            </span>
+          </div>
+
+          {/* Row 2 (desktop-only): all in one line */}
+          <div className="hidden md:flex items-center gap-6">
+            {/* Current Price */}
+            <div className="relative">
+              <img
+                src="/self_help_kit/4/Vector 32.svg"
+                alt="Price Box"
+                className="w-36 h-auto"
+              />
+              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-2xl md:text-3xl text-white">
+                {smartMoneyConcepts.pricingData.currentPrice}
+              </span>
+            </div>
+            {/* Original */}
+            <span className="text-white/70 font-['Poppins'] text-xl md:text-2xl line-through">
               {smartMoneyConcepts.pricingData.originalPrice}
             </span>
           </div>

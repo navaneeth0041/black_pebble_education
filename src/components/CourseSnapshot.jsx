@@ -3,7 +3,7 @@ import React from 'react';
 export default function CourseSnapshot() {
   return (
     <>
-    <div className="bg-gradient-to-br from-teal-100 to-emerald-50 py-20 px-6 lg:px-16 min-h-[90vh] lg:min-h-screen -mt-5 lg:-mt-18 xl:-mt-26 pt-30 ">
+    <div className="bg-gradient-to-br from-teal-100 to-emerald-50 py-20 px-6 lg:px-16 min-h-[90vh] lg:min-h-screen -mt-5 lg:-mt-18 xl:-mt-22 pt-30 ">
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-center mb-12">
           <h1 className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] bg-clip-text text-transparent font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">

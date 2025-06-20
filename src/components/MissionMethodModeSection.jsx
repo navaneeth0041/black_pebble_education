@@ -35,7 +35,7 @@ export default function MissionMethodModeSection() {
           {/* Text Content Section - Top on mobile, Right on desktop */}
           <div className="w-full lg:w-3/5 order-1 lg:order-2 px-4 sm:px-6 md:px-8 lg:pl-10 xl:pl-14 2xl:pl-20 lg:pr-6 xl:pr-10 flex items-center">
             <div className="space-y-5 sm:space-y-6 md:space-y-7 lg:space-y-8 xl:space-y-10 max-w-none lg:max-w-3xl xl:max-w-4xl">
-              <h2 className={`${PopOne.className} text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#39BB9C] leading-tight`}>
+              <h2 className={`${PopOne.className} text-2xl xs:text-3xl sm:text-4xl md:text-4xl xl:text-6xl font-bold text-[#39BB9C] leading-tight`}>
                 <span className="block sm:inline">Our Mission, Method &</span>
                 <br className="hidden sm:block" />
                 <span className="block sm:inline">Mode</span>
