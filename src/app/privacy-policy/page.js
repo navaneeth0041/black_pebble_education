@@ -201,7 +201,7 @@ const PrivacyPolicy = () => {
                   <div className="bg-gradient-to-r from-emerald-50 to-teal-50 p-6 rounded-2xl border border-emerald-200">
                     <h4 className="font-bold text-emerald-800 mb-3">Scope of Application</h4>
                     <p className="text-emerald-700 leading-relaxed">
-                      This policy applies to all BLACK PEBBLE EDUCATION's personnel, operating units, and wholly owned subsidiaries worldwide.
+                      This policy applies to all BLACK PEBBLE EDUCATION&rsquo;s personnel, operating units, and wholly owned subsidiaries worldwide.
                     </p>
                   </div>
                 </section>
@@ -324,7 +324,7 @@ const PrivacyPolicy = () => {
                         </ul>
                       </div>
                       <div className="bg-gradient-to-r from-rose-50 to-pink-50 p-5 rounded-2xl border border-rose-200">
-                        <h5 className="font-bold text-rose-800 mb-3">What We Don't Do</h5>
+                        <h5 className="font-bold text-rose-800 mb-3">What We Don&rsquo;t Do</h5>
                         <ul className="space-y-2 text-sm text-rose-700">
                           <li className="flex items-center space-x-2">
                             <div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div>
