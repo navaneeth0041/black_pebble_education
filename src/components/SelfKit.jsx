@@ -123,7 +123,7 @@ const SelfHelpKits = ({
             className="w-16 h-12 mb-4"
           />
           <span className="text-white font-poppins text-lg font-semibold text-center">
-            31 Concept Notes
+            21 Concept Notes
           </span>
         </div>
         

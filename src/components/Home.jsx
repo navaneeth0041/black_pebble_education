@@ -45,11 +45,11 @@ export default function Home1() {
               <span className={`${PopOne.className}`} style={{ color: '#BBE6FF' }}>CEOs</span>
               <span className="text-white">, </span>
               <div className="block sm:inline">
-                <span className={`${PopOne.className}`} style={{ color: '#A5FFCE' }}>INVESTORS</span>
+                <span className={`${PopOne.className}`} style={{ color: '#A5FFCE' }}>Investors</span>
                 <span className="text-white"> & </span>
               </div>
               <div className="block sm:inline">
-                <span className={`${PopOne.className}`} style={{ color: '#A5FFCE' }}>ENTREPRENEURS</span>
+                <span className={`${PopOne.className}`} style={{ color: '#A5FFCE' }}>Entrepreneurs</span>
               </div>
             </div>
           </div>

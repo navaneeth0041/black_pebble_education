@@ -55,8 +55,8 @@ const Header = () => {
       href: '/FinanceClubs',
       hasDropdown: true,
       dropdownItems: [
-        { label: 'Kids’ Club', href: '/FinanceClubs' },
-        { label: 'Teens’ Club', href: '/FinanceClubs-Teens' }
+        { label: 'Kid\'s Club', href: '/FinanceClubs' },
+        { label: 'Teen\'s Club', href: '/FinanceClubs-Teens' }
       ]
     },
     { 
@@ -64,8 +64,8 @@ const Header = () => {
       href: '/downloads',
       hasDropdown: true,
       dropdownItems: [
-        { label: 'Lunchbox Notes', href: '/#' },
-        { label: 'Spread the Word', href: '/#' },
+        { label: 'Lunchbox Notes', href: './downloads/Lunchbox Notes.pdf', download: true, type: 'pdf' },
+        { label: 'Spread the Word', href: './downloads/WhatsApp Video 2025-06-20 at 16.52.05.mp4', download: true, type: 'video' },
       ]
     },
   ];
@@ -83,6 +83,19 @@ const Header = () => {
     return pathname === href;
   };
 
+  const isMainNavActive = (item) => {
+    if (!item.hasDropdown) {
+      return pathname === item.href;
+    }
+    
+    if (pathname === item.href) {
+      const isInDropdown = item.dropdownItems.some(dropdownItem => dropdownItem.href === pathname);
+      return !isInDropdown;
+    }
+    
+    return false;
+  };
+
   const getTextStyle = (href) => {
     if (isActivePage(href)) {
       return {
@@ -93,6 +106,30 @@ const Header = () => {
       };
     }
     return {};
+  };
+
+  const getMainNavTextStyle = (item) => {
+    if (isMainNavActive(item)) {
+      return {
+        background: 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text'
+      };
+    }
+    return {};
+  };
+
+  const handleDownloadClick = (href, fileName) => {
+    window.open(href, '_blank', 'noopener,noreferrer');
+    
+    const link = document.createElement('a');
+    link.href = href;
+    link.download = fileName || '';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -150,11 +187,11 @@ const Header = () => {
                     <button className="flex items-center text-white px-5 py-2 rounded-full hover:bg-gray-500/70 transition-colors duration-200">
                       <span 
                         className="font-medium text-base whitespace-nowrap flex items-center"
-                        style={getTextStyle(item.href)}
+                        style={getMainNavTextStyle(item)}
                       >
                         {item.label}
-                        {isActivePage(item.href) && (
-                          <Check className="ml-2 h-4 w-4" style={getTextStyle(item.href)} />
+                        {isMainNavActive(item) && (
+                          <Check className="ml-2 h-4 w-4" style={getMainNavTextStyle(item)} />
                         )}
                       </span>
                       {item.hasDropdown && (
@@ -167,17 +204,31 @@ const Header = () => {
                         <div className="py-2">
                           {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                             <React.Fragment key={dropdownIndex}>
-                              <a 
-                                href={dropdownItem.href} 
-                                className="flex items-center px-4 py-3 text-gray-200 hover:bg-gray-600/70 hover:text-white transition-colors duration-200 text-sm"
-                              >
-                                <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
-                                  {dropdownItem.label}
-                                  {isActivePage(dropdownItem.href) && (
-                                    <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
-                                  )}
-                                </span>
-                              </a>
+                              {dropdownItem.download ? (
+                                <button 
+                                  onClick={() => handleDownloadClick(dropdownItem.href, dropdownItem.label)}
+                                  className="flex items-center w-full text-left px-4 py-3 text-gray-200 hover:bg-gray-600/70 hover:text-white transition-colors duration-200 text-sm"
+                                >
+                                  <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
+                                    {dropdownItem.label}
+                                    {isActivePage(dropdownItem.href) && (
+                                      <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
+                                    )}
+                                  </span>
+                                </button>
+                              ) : (
+                                <a 
+                                  href={dropdownItem.href} 
+                                  className="flex items-center px-4 py-3 text-gray-200 hover:bg-gray-600/70 hover:text-white transition-colors duration-200 text-sm"
+                                >
+                                  <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
+                                    {dropdownItem.label}
+                                    {isActivePage(dropdownItem.href) && (
+                                      <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
+                                    )}
+                                  </span>
+                                </a>
+                              )}
                               {/* Line separator - don't show after last item */}
                               {dropdownIndex < item.dropdownItems.length - 1 && (
                                 <div className="mx-4 border-b border-gray-600/50"></div>
@@ -222,11 +273,11 @@ const Header = () => {
                     >
                       <span 
                         className="font-medium whitespace-nowrap flex items-center"
-                        style={getTextStyle(item.href)}
+                        style={getMainNavTextStyle(item)}
                       >
                         {item.label}
-                        {isActivePage(item.href) && (
-                          <Check className="ml-2 h-4 w-4" style={getTextStyle(item.href)} />
+                        {isMainNavActive(item) && (
+                          <Check className="ml-2 h-4 w-4" style={getMainNavTextStyle(item)} />
                         )}
                       </span>
                       {item.hasDropdown && (
@@ -241,17 +292,31 @@ const Header = () => {
                       <div className="pl-6 space-y-1 bg-[#2d333a] rounded-lg ml-2 mr-2 py-2">
                         {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
                           <React.Fragment key={dropdownIndex}>
-                            <a 
-                              href={dropdownItem.href} 
-                              className="flex items-center text-gray-300 hover:text-white hover:bg-gray-600/50 px-3 py-2 rounded-md transition-colors duration-200"
-                            >
-                              <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
-                                {dropdownItem.label}
-                                {isActivePage(dropdownItem.href) && (
-                                  <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
-                                )}
-                              </span>
-                            </a>
+                            {dropdownItem.download ? (
+                              <button 
+                                onClick={() => handleDownloadClick(dropdownItem.href, dropdownItem.label)}
+                                className="flex items-center w-full text-left text-gray-300 hover:text-white hover:bg-gray-600/50 px-3 py-2 rounded-md transition-colors duration-200"
+                              >
+                                <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
+                                  {dropdownItem.label}
+                                  {isActivePage(dropdownItem.href) && (
+                                    <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
+                                  )}
+                                </span>
+                              </button>
+                            ) : (
+                              <a 
+                                href={dropdownItem.href} 
+                                className="flex items-center text-gray-300 hover:text-white hover:bg-gray-600/50 px-3 py-2 rounded-md transition-colors duration-200"
+                              >
+                                <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
+                                  {dropdownItem.label}
+                                  {isActivePage(dropdownItem.href) && (
+                                    <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
+                                  )}
+                                </span>
+                              </a>
+                            )}
                             {/* Line separator - don't show after last item */}
                             {dropdownIndex < item.dropdownItems.length - 1 && (
                               <div className="mx-3 border-b border-gray-600/50"></div>

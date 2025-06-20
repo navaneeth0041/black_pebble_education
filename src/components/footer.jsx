@@ -49,7 +49,7 @@ const Footer = () => {
     subtitle: "Subscribe for oodles of informative videos"
   };
 
-  const copyright = "©copyright 2025 all rights reserved by BP";
+  const copyright = "Copyright © 2025 Black Pebble Education- All Rights Reserved";
 
   return (
     <footer className="bg-[#2B2A2A] text-white">
@@ -186,7 +186,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 pt-4 text-right">
           <p className="text-lg text-white font-medium">
-            <span className="text-2xl font-bold">©</span> Copyright 2025 all rights reserved by BP
+            <span className="text-l font-bold">Copyright © 2025 Black Pebble Education- All Rights Reserved</span> 
           </p>
         </div>
       </div>
