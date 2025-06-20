@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import BlackLogoWithText from './blacklogo';
@@ -104,7 +105,22 @@ const Footer = () => {
               <img src="/footer/whatsapp.png" alt="Phone" className="h-4 w-4 flex-shrink-0" />
               <a 
                 href={`tel:${contactInfo.phone}`}
-                className="text-base text-white hover:text-blue-400 transition-colors duration-300"
+                className="text-base text-white transition-all duration-300"
+                style={{
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                  e.target.style.webkitBackgroundClip = 'text';
+                  e.target.style.webkitTextFillColor = 'transparent';
+                  e.target.style.backgroundClip = 'text';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = '';
+                  e.target.style.webkitBackgroundClip = '';
+                  e.target.style.webkitTextFillColor = '';
+                  e.target.style.backgroundClip = '';
+                }}
               >
                 {contactInfo.phone}
               </a>
@@ -115,7 +131,22 @@ const Footer = () => {
               <img src="/footer/mail.png" alt="Email" className="h-3 w-4 flex-shrink-0" />
               <a 
                 href={`mailto:${contactInfo.email}`}
-                className="text-base text-white underline hover:text-blue-400 transition-colors duration-300"
+                className="text-base text-white underline transition-all duration-300"
+                style={{
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                  e.target.style.webkitBackgroundClip = 'text';
+                  e.target.style.webkitTextFillColor = 'transparent';
+                  e.target.style.backgroundClip = 'text';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = '';
+                  e.target.style.webkitBackgroundClip = '';
+                  e.target.style.webkitTextFillColor = '';
+                  e.target.style.backgroundClip = '';
+                }}
               >
                 {contactInfo.email}
               </a>
@@ -134,7 +165,22 @@ const Footer = () => {
                   <li key={index}>
                     <a 
                       href={`/${convertToUrl(item)}`}
-                      className="text-base text-white hover:text-blue-400 transition-all duration-300 hover:translate-x-1 inline-block"
+                      className="text-base text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                      style={{
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                        e.target.style.webkitBackgroundClip = 'text';
+                        e.target.style.webkitTextFillColor = 'transparent';
+                        e.target.style.backgroundClip = 'text';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.background = '';
+                        e.target.style.webkitBackgroundClip = '';
+                        e.target.style.webkitTextFillColor = '';
+                        e.target.style.backgroundClip = '';
+                      }}
                     >
                       {item}
                     </a>
@@ -153,7 +199,22 @@ const Footer = () => {
                   <li key={index}>
                     <a 
                       href={`/${convertToUrl(item)}`}
-                      className="text-base text-white hover:text-blue-400 transition-all duration-300 hover:translate-x-1 inline-block"
+                      className="text-base text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                      style={{
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                        e.target.style.webkitBackgroundClip = 'text';
+                        e.target.style.webkitTextFillColor = 'transparent';
+                        e.target.style.backgroundClip = 'text';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.background = '';
+                        e.target.style.webkitBackgroundClip = '';
+                        e.target.style.webkitTextFillColor = '';
+                        e.target.style.backgroundClip = '';
+                      }}
                     >
                       {item}
                     </a>
@@ -172,7 +233,22 @@ const Footer = () => {
                   <li key={index}>
                     <a 
                       href={`/${convertToUrl(item)}`}
-                      className="text-base text-white hover:text-blue-400 transition-all duration-300 hover:translate-x-1 inline-block"
+                      className="text-base text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                      style={{
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                        e.target.style.webkitBackgroundClip = 'text';
+                        e.target.style.webkitTextFillColor = 'transparent';
+                        e.target.style.backgroundClip = 'text';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.background = '';
+                        e.target.style.webkitBackgroundClip = '';
+                        e.target.style.webkitTextFillColor = '';
+                        e.target.style.backgroundClip = '';
+                      }}
                     >
                       {item}
                     </a>
