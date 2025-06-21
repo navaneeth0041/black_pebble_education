@@ -1,15 +1,11 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, Scale, Shield, FileText, AlertCircle, CreditCard, Users, MessageSquare, Globe, Gavel } from 'lucide-react';
-import { Poppins } from 'next/font/google';
 
 // Mock Poppins font import - replace with your actual font import
-const poppins = Poppins({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
+const poppins = {
+  className: 'font-sans' // Replace with your actual Poppins font class
+};
 
 const TermsOfUse = () => {
   const [visibleSections, setVisibleSections] = useState(new Set());
@@ -58,7 +54,7 @@ const TermsOfUse = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [sections]);
 
   const getSectionClassName = (sectionId) => {
     const baseClass = "scroll-mt-8 transition-all duration-700 ease-out";
@@ -343,7 +339,7 @@ const TermsOfUse = () => {
                 </div>
                 
                 <div className="bg-gray-700/50 p-6 rounded-xl border-l-4 border-gray-500 text-gray-300">
-                  <p>BLACK PEBBLE EDUCATION provides educational content and services on an "as is" basis. We make no warranties or representations about the accuracy, reliability, completeness, or timeliness of the content, services, software, text, graphics, and links.</p>
+                  <p>BLACK PEBBLE EDUCATION provides educational content and services on an &quot;as is&quot; basis. We make no warranties or representations about the accuracy, reliability, completeness, or timeliness of the content, services, software, text, graphics, and links.</p>
                 </div>
               </section>
 
