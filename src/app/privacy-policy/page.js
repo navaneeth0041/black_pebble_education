@@ -1,439 +1,216 @@
 "use client"
-import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Shield, Eye, Database, Users, Lock, FileText, AlertTriangle, Globe, Phone, Mail, MapPin } from 'lucide-react';
+import React from 'react';
+import { ArrowLeft } from 'lucide-react';
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const PrivacyPolicy = () => {
-  const [activeSection, setActiveSection] = useState('introduction');
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(sectionId);
-    }
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['introduction', 'purpose', 'applicability', 'collection', 'disclosure', 'changes'];
-      const scrollPosition = window.scrollY + 200;
-
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(sectionId);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const sections = [
-    { id: 'introduction', title: 'Introduction', icon: FileText },
-    { id: 'purpose', title: 'Purpose', icon: Eye },
-    { id: 'applicability', title: 'Applicability', icon: Globe },
-    { id: 'collection', title: 'Collection and Use of Information', icon: Database },
-    { id: 'disclosure', title: 'Information Disclosure', icon: Users },
-    { id: 'changes', title: 'Changes to the Policy', icon: AlertTriangle }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-      {/* Modern Header */}
-      <div className="bg-white/80 backdrop-blur-lg border-b border-slate-200/60 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <button 
-                onClick={() => window.history.back()}
-                className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-800 transition-all duration-300 hover:scale-105"
-              >
-                <ArrowLeft className="h-5 w-5" />
-              </button>
-              <div className="flex items-center space-x-3">
-                <div className="p-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600">
-                  <Shield className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 bg-clip-text text-transparent">
-                    Privacy Policy
-                  </h1>
-                  <p className="text-sm text-slate-500">Black Pebble Education</p>
-                </div>
-              </div>
-            </div>
-            <div className="hidden md:flex items-center space-x-2 text-sm text-slate-500">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span>Last updated: June 2025</span>
-            </div>
-          </div>
+    <div className={`${poppins.className} min-h-screen bg-[#343434] text-white`}>
+      {/* Simple Header */}
+      <div className="border-b border-gray-700 p-4">
+        <div className="max-w-4xl mx-auto flex items-center space-x-4">
+          <button 
+            onClick={() => window.history.back()}
+            className="p-2 rounded bg-gray-800 hover:bg-gray-700 text-white transition-colors"
+          >
+            <ArrowLeft className="h-5 w-5" />
+          </button>
+          <h1 className="text-2xl font-bold">Privacy Policy</h1>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Enhanced Sidebar */}
-          <div className="lg:w-1/4">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-slate-200/60 p-6 sticky top-24">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="p-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600">
-                  <Eye className="h-5 w-5 text-white" />
-                </div>
-                <h2 className="text-lg font-bold text-slate-800">Contents</h2>
-              </div>
-              
-              <nav className="space-y-1">
-                {sections.map((section) => {
-                  const IconComponent = section.icon;
-                  const isActive = activeSection === section.id;
-                  return (
-                    <button
-                      key={section.id}
-                      onClick={() => scrollToSection(section.id)}
-                      className={`flex items-center space-x-3 w-full text-left px-4 py-3 text-sm rounded-xl transition-all duration-300 ${
-                        isActive 
-                          ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg scale-105' 
-                          : 'text-slate-600 hover:text-blue-700 hover:bg-blue-50/80'
-                      }`}
-                    >
-                      <IconComponent className={`h-4 w-4 flex-shrink-0 ${isActive ? 'text-white' : 'text-slate-400'}`} />
-                      <span className="font-medium">{section.title}</span>
-                    </button>
-                  );
-                })}
-              </nav>
-              
-              {/* Enhanced Quick Facts */}
-              <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100">
-                <h3 className="font-bold text-slate-800 mb-3 flex items-center">
-                  <Lock className="h-4 w-4 mr-2 text-blue-600" />
-                  Quick Facts
-                </h3>
-                <ul className="text-xs text-slate-600 space-y-2">
-                  <li className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                    <span>Your data is protected</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></div>
-                    <span>Educational use only</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 bg-purple-500 rounded-full"></div>
-                    <span>No third-party selling</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                    <span>You control your data</span>
-                  </li>
-                </ul>
-              </div>
+      {/* Main Content */}
+      <div className="max-w-4xl mx-auto p-6">
+        <div className="space-y-8 text-sm leading-relaxed">
+          
+          {/* Effective Date */}
+          <div>
+            <p className="text-gray-400 mb-4">Effective Date: 21-10-2024</p>
+          </div>
+
+          {/* Introduction */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">Introduction</h2>
+            <p className="text-gray-300 mb-4">
+              At Practical Doctors, we are committed to protecting your privacy and ensuring the security of your personal information.
+            </p>
+            <p className="text-gray-300">
+              This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you interact with our website and services.
+            </p>
+          </div>
+
+          {/* Information We Collect */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">Information We Collect</h2>
+            <p className="text-gray-300 mb-4">
+              We may collect information about you in various ways, whether you visit our website or other platforms, use our services. The following categories of information may be collected:
+            </p>
+            
+            <h3 className="text-base font-bold mb-3 text-white">Information You Provide</h3>
+            <p className="text-gray-300 mb-3">
+              We collect personal information that you provide when using our services, including:
+            </p>
+            <ul className="text-gray-300 ml-6 space-y-1">
+              <li>• Name</li>
+              <li>• Email address</li>
+              <li>• Phone number</li>
+              <li>• Address</li>
+              <li>• Payment information</li>
+              <li>• Professional, medical and relevant health information</li>
+              <li>• Any other details you voluntarily provide, such as feedback or user-generated content</li>
+            </ul>
+
+            <h3 className="text-base font-bold mb-3 mt-6 text-white">Usage and Analytics Information</h3>
+            <p className="text-gray-300 mb-3">
+              When you interact with our services, we collect about your device and usage patterns, including:
+            </p>
+            <ul className="text-gray-300 ml-6 space-y-1">
+              <li>• Internet Protocol (IP) address</li>
+              <li>• Browser type and version</li>
+              <li>• Operating system</li>
+              <li>• Referring and exit pages</li>
+              <li>• Date and time stamps</li>
+              <li>• Clickstream data on specific pages and user interactions (e.g., videos, scrolling)</li>
+            </ul>
+
+            <h3 className="text-base font-bold mb-3 mt-6 text-white">Cookies and Similar Technologies</h3>
+            <p className="text-gray-300">
+              We use cookies and similar technologies to enhance your experience, analyze usage, and serve tailored marketing content. Cookies are small data files stored on your device. You can control cookie preferences through your browser settings, but disabling cookies may affect website functionality.
+            </p>
+          </div>
+
+          {/* How We Use Your Information */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">How We Use Your Information</h2>
+            <p className="text-gray-300 mb-3">
+              We use the information collected for various purposes, including:
+            </p>
+            <ul className="text-gray-300 ml-6 space-y-1">
+              <li>• To provide and manage our services</li>
+              <li>• To communicate with you about our services, updates, and promotional content</li>
+              <li>• To improve our services based on user feedback and usage patterns</li>
+              <li>• To prevent fraud and ensure compliance with legal obligations</li>
+              <li>• To analyze trends and optimize our platform's performance</li>
+            </ul>
+
+            <p className="text-gray-300 mt-4">
+              If you are located in the European Union, we collect and process your information based on:
+            </p>
+            <ul className="text-gray-300 ml-6 space-y-1">
+              <li>• Necessity for service provision</li>
+              <li>• Legitimate interests that do not override your rights</li>
+              <li>• Your consent for specific purposes</li>
+            </ul>
+
+            <p className="text-gray-300 mt-4">
+              You may withdraw consent at any time, although this will not affect prior processing.
+            </p>
+          </div>
+
+          {/* Information Sharing */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">Information Sharing</h2>
+            <p className="text-gray-300 mb-3">
+              We do not sell or rent your personal information to third parties. Your information may be shared in the following scenarios:
+            </p>
+            <ul className="text-gray-300 ml-6 space-y-1">
+              <li>• With your consent</li>
+              <li>• With service providers who assist in our operations (e.g., billing, analytics)</li>
+              <li>• To comply with legal requirements or to protect our rights</li>
+            </ul>
+
+            <h3 className="text-base font-bold mb-3 mt-6 text-white">Online Analytics and Tailored Marketing</h3>
+            <p className="text-gray-300 mb-3">
+              We partner with third parties, such as Google Analytics to help us understand how users interact with our website.
+            </p>
+            <p className="text-gray-300">
+              These services may collect information directly from you and use it to evaluate your actual patterns. You can opt out of Google Analytics by installing the Google Analytics Opt-Out Browser Add-on.
+            </p>
+          </div>
+
+          {/* Access to Your Information */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">Access to Your Information</h2>
+            <p className="text-gray-300">
+              You may request access to or correction of your personal information by contacting us. For EU residents, you have additional rights regarding the processing of your information.
+            </p>
+          </div>
+
+          {/* Retention of Information */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">Retention of Information</h2>
+            <p className="text-gray-300">
+              We retain your personal information for as long as your account is active or necessary for providing services. If you wish to cancel your account or request that we no longer use your information to provide services, please contact us. Following account cancellation, we will retain your information only as required by law.
+            </p>
+          </div>
+
+          {/* Security Measures */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">Security Measures</h2>
+            <p className="text-gray-300">
+              We implement reasonable physical, electronic, and managerial safeguards to protect your information from unauthorized access. While we strive to maintain the security of your data, no method of transmission over the internet or primary source solutions can be guaranteed to be 100% secure.
+            </p>
+          </div>
+
+          {/* Email Communications */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">Email Communications</h2>
+            <p className="text-gray-300">
+              You can choose to opt out of receiving promotional communications from us by following the unsubscribe instructions included in our emails or by contacting us directly.
+            </p>
+          </div>
+
+          {/* Third-Party Links */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">Third-Party Links</h2>
+            <p className="text-gray-300">
+              Our website may contain links to third-party sites. We are not responsible for their privacy practices or content. Additionally, third-party advertisers may collect information automatically when you interact with their ads on our site.
+            </p>
+          </div>
+
+          {/* Data Transfer */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">Data Transfer</h2>
+            <p className="text-gray-300">
+              Your information may be transferred to, and stored at, locations outside of your country. By providing your information, you consent to this transfer.
+            </p>
+          </div>
+
+          {/* Individual Data Subject Rights */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">Individual Data Subject Rights</h2>
+            <p className="text-gray-300">
+              Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected information from a child, we will take steps to delete that information.
+            </p>
+          </div>
+
+          {/* Changes to This Policy */}
+          <div>
+            <h2 className="text-lg font-bold mb-4 text-white">Changes to This Policy</h2>
+            <p className="text-gray-300 mb-4">
+              If there are any questions or concerns about this Privacy Policy, please contact us via email at info@practicaldoctors.com
+            </p>
+            <p className="text-gray-300">
+              We reserve the right to update this Privacy Policy periodically to reflect changes in our practices. Please review this page regularly for updates. Your continued use of our services after any modifications indicates your acceptance of the revised policy.
+            </p>
+          </div>
+
+          {/* Contact Information */}
+          <div className="border-t border-gray-700 pt-6 mt-8">
+            <h2 className="text-lg font-bold mb-4 text-white">Contact Information</h2>
+            <div className="text-gray-300 space-y-2">
+              <p>Email: blackpebbleeducation@gmail.com</p>
+              <p>Phone: +91-8928557529</p>
+              <p>Address: 8th Floor, A Block, WESTGATE BUSINESS BAY, Discrete Chalet 19, Sarkhej - Gandhinagar Hwy, Makarba, Ahmedabad, Gujarat 380051</p>
             </div>
           </div>
 
-          {/* Enhanced Main Content */}
-          <div className="lg:w-3/4">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-slate-200/60 overflow-hidden">
-              <div className="p-8 space-y-12">
-                {/* Introduction Section */}
-                <section id="introduction" className="scroll-mt-8">
-                  <div className="flex items-center space-x-4 mb-8">
-                    <div className="p-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 shadow-lg">
-                      <FileText className="h-7 w-7 text-white" />
-                    </div>
-                    <div>
-                      <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                        Purpose & Overview
-                      </h2>
-                      <p className="text-slate-500 mt-1">Understanding our privacy commitment</p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 rounded-2xl text-white shadow-lg">
-                    <h3 className="text-xl font-bold mb-3">Policy Objective</h3>
-                    <p className="text-blue-100 leading-relaxed">
-                      The purpose of this policy is to highlight various obligations, best practices, and processes that support compliance with data privacy regulations applicable to BLACK PEBBLE EDUCATION in its role as both a data controller and a processor.
-                    </p>
-                  </div>
-                </section>
-
-                {/* Purpose Section */}
-                <section id="purpose" className="scroll-mt-8">
-                  <div className="flex items-center space-x-4 mb-8">
-                    <div className="p-3 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg">
-                      <Eye className="h-7 w-7 text-white" />
-                    </div>
-                    <div>
-                      <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                        Purpose
-                      </h2>
-                      <p className="text-slate-500 mt-1">Why this policy exists</p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-2xl border border-indigo-200">
-                    <p className="text-slate-700 leading-relaxed">
-                      This policy establishes comprehensive guidelines for data protection, ensuring we maintain the highest standards of privacy and security while providing exceptional educational services to our community.
-                    </p>
-                  </div>
-                </section>
-
-                {/* Applicability Section */}
-                <section id="applicability" className="scroll-mt-8">
-                  <div className="flex items-center space-x-4 mb-8">
-                    <div className="p-3 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg">
-                      <Globe className="h-7 w-7 text-white" />
-                    </div>
-                    <div>
-                      <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                        Applicability
-                      </h2>
-                      <p className="text-slate-500 mt-1">Who this policy covers</p>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-emerald-50 to-teal-50 p-6 rounded-2xl border border-emerald-200">
-                    <h4 className="font-bold text-emerald-800 mb-3">Scope of Application</h4>
-                    <p className="text-emerald-700 leading-relaxed">
-                      This policy applies to all BLACK PEBBLE EDUCATION&rsquo;s personnel, operating units, and wholly owned subsidiaries worldwide.
-                    </p>
-                  </div>
-                </section>
-
-                {/* Collection and Use Section */}
-                <section id="collection" className="scroll-mt-8">
-                  <div className="flex items-center space-x-4 mb-8">
-                    <div className="p-3 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 shadow-lg">
-                      <Database className="h-7 w-7 text-white" />
-                    </div>
-                    <div>
-                      <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                        Collection and Use of Information
-                      </h2>
-                      <p className="text-slate-500 mt-1">How we handle your data</p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-6">
-                    <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-2xl border border-blue-200">
-                      <h4 className="font-bold text-blue-800 mb-4">Information We Collect</h4>
-                      <p className="text-blue-700 mb-4 leading-relaxed">
-                        We collect, process, and retain information about you when you visit our website. You may choose to provide us with your name, phone number, and address, or other information to access protected information on the website or so that we can connect with you after your visit, based on your consent.
-                      </p>
-      <p className="text-blue-700 leading-relaxed">
-        When you visit our website, we may track, collect, and aggregate information indicating, among other things, which pages of our Site were visited, the order in which they were visited, when they were visited, and which hyperlinks were &ldquo;clicked.&rdquo;
-      </p>
-                    </div>
-
-                    <div className="bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 shadow-lg">
-                      <h4 className="font-bold text-slate-800 mb-6">How We Use Your Information</h4>
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div className="space-y-4">
-                          {[
-                            { title: 'Course Information', desc: 'Respond to queries, understand training needs, trends, and resource planning', color: 'blue' },
-                            { title: 'Training Communications', desc: 'Keep you posted on training schedules and requirements', color: 'indigo' },
-                            { title: 'Content Customization', desc: 'Create and personalize training content', color: 'purple' }
-                          ].map((item, index) => (
-                            <div key={index} className="flex items-start space-x-3">
-                              <div className={`p-2 rounded-lg bg-gradient-to-r from-${item.color}-500 to-${item.color}-600 shadow-md`}>
-                                <div className="w-2 h-2 bg-white rounded-full"></div>
-                              </div>
-                              <div>
-                                <h5 className="font-bold text-slate-800">{item.title}</h5>
-                                <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                        <div className="space-y-4">
-                          {[
-                            { title: 'Third-party Services', desc: 'Share essential information with service providers', color: 'emerald' },
-                            { title: 'Contact You', desc: 'Respond to requests and provide relevant information', color: 'teal' }
-                          ].map((item, index) => (
-                            <div key={index} className="flex items-start space-x-3">
-                              <div className={`p-2 rounded-lg bg-gradient-to-r from-${item.color}-500 to-${item.color}-600 shadow-md`}>
-                                <div className="w-2 h-2 bg-white rounded-full"></div>
-                              </div>
-                              <div>
-                                <h5 className="font-bold text-slate-800">{item.title}</h5>
-                                <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-5 rounded-2xl border border-amber-200">
-                      <h5 className="font-bold text-amber-800 mb-2">Your Choice</h5>
-      <p className="text-amber-700 leading-relaxed">
-        We will honor your request if you inform us that you do not want to receive any information that you have not specifically requested.
-      </p>
-                    </div>
-                  </div>
-                </section>
-
-                {/* Information Disclosure Section */}
-                <section id="disclosure" className="scroll-mt-8">
-                  <div className="flex items-center space-x-4 mb-8">
-                    <div className="p-3 rounded-2xl bg-gradient-to-r from-teal-600 to-cyan-600 shadow-lg">
-                      <Users className="h-7 w-7 text-white" />
-                    </div>
-                    <div>
-                      <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                        Information Disclosure
-                      </h2>
-                      <p className="text-slate-500 mt-1">How we share your information</p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-6">
-                    <div className="bg-gradient-to-r from-emerald-600 to-teal-600 p-6 rounded-2xl text-white shadow-lg">
-                      <h4 className="font-bold mb-3">Our Commitment</h4>
-                      <p className="text-emerald-100 leading-relaxed">
-                        We do not share, sell, rent, or trade personal information collected through our website with third parties for any purpose other than that outlined in this Privacy policy.
-                      </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-5 rounded-2xl border border-blue-200">
-                        <h5 className="font-bold text-blue-800 mb-3">When We Share Information</h5>
-                        <ul className="space-y-2 text-sm text-blue-700">
-                          <li className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                            <span>With third-party service providers</span>
-                          </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                            <span>Only for training-related services</span>
-                          </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                            <span>As requested and instructed by us</span>
-                          </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                            <span>Subject to privacy policy terms</span>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="bg-gradient-to-r from-rose-50 to-pink-50 p-5 rounded-2xl border border-rose-200">
-                        <h5 className="font-bold text-rose-800 mb-3">What We Don&rsquo;t Do</h5>
-                        <ul className="space-y-2 text-sm text-rose-700">
-                          <li className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div>
-                            <span>Sell your information</span>
-                          </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div>
-                            <span>Share for marketing purposes</span>
-                          </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div>
-                            <span>Trade with other companies</span>
-                          </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-rose-500 rounded-full"></div>
-                            <span>Use beyond outlined purposes</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-
-                {/* Changes to Policy Section */}
-                <section id="changes" className="scroll-mt-8">
-                  <div className="flex items-center space-x-4 mb-8">
-                    <div className="p-3 rounded-2xl bg-gradient-to-r from-amber-600 to-orange-600 shadow-lg">
-                      <AlertTriangle className="h-7 w-7 text-white" />
-                    </div>
-                    <div>
-                      <h2 className="text-3xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                        Changes to the Policy
-                      </h2>
-                      <p className="text-slate-500 mt-1">How we update this policy</p>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-6">
-                    <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-2xl border border-orange-200">
-                      <h4 className="font-bold text-orange-800 mb-4">Policy Updates</h4>
-                      <p className="text-orange-700 mb-4 leading-relaxed">
-                        We reserve the right to make changes to this Privacy Policy at any time. Any such modifications will become effective immediately upon posting to the Platform.
-                      </p>
-      <p className="text-orange-700 leading-relaxed">
-        Your continued use of the Platform and/or the Services constitutes your agreement to such modifications.
-      </p>
-                    </div>
-
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-5 rounded-2xl border border-blue-200">
-                      <h5 className="font-bold text-blue-800 mb-3">Your Responsibility</h5>
-      <p className="text-blue-700 leading-relaxed">
-        You agree to review the current version of the Privacy Policy periodically as posted on the Platform. If you do not agree with the terms of this Privacy Policy, please do not use the Platform and/or the Services.
-      </p>
-                    </div>
-                  </div>
-                </section>
-
-                {/* Enhanced Contact Information */}
-                <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-8 rounded-2xl text-white shadow-xl">
-                  <h3 className="text-2xl font-bold mb-4">Have Privacy Questions?</h3>
-      <p className="text-slate-300 mb-6 leading-relaxed">
-        If you have any questions about this Privacy Policy or how we handle your personal information, we&rsquo;re here to help.
-      </p>
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-lg bg-white/10">
-                        <Mail className="h-5 w-5 text-blue-400" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-white">Email</p>
-                        <p className="text-sm text-slate-300">blackpebbleeducation@gmail.com</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 rounded-lg bg-white/10">
-                        <Phone className="h-5 w-5 text-green-400" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-white">Phone</p>
-                        <p className="text-sm text-slate-300">+91-8928557529</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                      <div className="p-2 rounded-lg bg-white/10 mt-1">
-                        <MapPin className="h-5 w-5 text-red-400" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-white">Address</p>
-                        <p className="text-sm text-slate-300 leading-relaxed">
-                          8th Floor, A Block, WESTGATE BUSINESS BAY, Discrete Chalet 19, Sarkhej - Gandhinagar Hwy, Makarba, Ahmedabad, Gujarat 380051
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Enhanced Footer */}
-                <div className="text-center py-6 border-t border-slate-200">
-                  <div className="inline-flex items-center space-x-2 text-slate-500 mb-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm">This Privacy Policy is effective as of June 2025</span>
-                  </div>
-      <p className="text-sm text-slate-400">
-        Please check this page periodically for updates &bull; All rights reserved
-      </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
