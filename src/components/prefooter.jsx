@@ -45,7 +45,7 @@ const PreFooter = ({
     <div className="flex-1 max-w-lg space-y-5 lg:space-y-6 pl-2 sm:pl-4">
       <h1
         className="text-white text-3xl md:text-4xl lg:text-5xl font-medium leading-[134%] tracking-[-0.912px]"
-        style={{ fontFamily: 'Poppins, sans-serif' }}
+        style={{ fontFamily: 'Mochiy Pop One, sans-serif' }}
       >
         {mainTitle}
       </h1>

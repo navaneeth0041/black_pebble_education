@@ -44,11 +44,11 @@ const SelfHelpKits = ({
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
 <section className="bg-[#343434] text-white h-[70vh] relative overflow-hidden flex items-center">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 w-full">
     <div className="text-center lg:text-left">
       {/* Use flex with items-start to align icon with top of text */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-8 mb-8 sm:mb-6">
-        <h1 className={`${mochiyPopOne.className} text-[42px] xs:text-[48px] sm:text-[52px] md:text-[65px] lg:text-[80px] xl:text-[95px] leading-[1.1] tracking-[-1.5px] font-normal flex-shrink-0`}>
+        <h1 className={`${mochiyPopOne.className} text-2xl sm:text-4xl md:text-4xl lg:text-6xl leading-snug tracking-tight text-left text-white mb-2 sm:mb-4 max-w-5xl`}>
           Learn. Play. Grow —<br />
           <span className="text-white">At Your Own Pace!</span>
         </h1>
@@ -89,17 +89,16 @@ const SelfHelpKits = ({
         What's Inside a Self-Help Kit?
       </h2>
       
-      {/* Video Preview */}
-      <div className="relative w-full max-w-4xl h-96 bg-[#EBEBEB] border-3 border-[#BBB] rounded-2xl flex items-center justify-center overflow-hidden">
+      {/* <div className="relative w-full max-w-4xl h-96 bg-[#EBEBEB] border-3 border-[#BBB] rounded-2xl flex items-center justify-center overflow-hidden"> */}
         {/* Video thumbnail image */}
-        <img 
+        {/* <img 
           src="/self_help_kit/frame.svg" 
           alt="Self-help kit video preview" 
           className="absolute inset-0 w-full h-full object-cover"
-        />
+        /> */}
         
         {/* Play button overlay */}
-        <button className="relative bg-white/34 rounded-[37px] flex items-center gap-3 px-6 py-4 hover:bg-white/40 transition-colors z-10">
+        {/* <button className="relative bg-white/34 rounded-[37px] flex items-center gap-3 px-6 py-4 hover:bg-white/40 transition-colors z-10">
           <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path
@@ -111,8 +110,8 @@ const SelfHelpKits = ({
           <span className="text-white font-inter text-base font-medium">
             Play Video
           </span>
-        </button>
-      </div>
+        </button> */}
+      {/* </div> */}
       
       {/* Feature Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-4xl">
