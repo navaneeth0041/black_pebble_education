@@ -96,7 +96,7 @@ const PrivacyPolicy = () => {
               <li>• To communicate with you about our services, updates, and promotional content</li>
               <li>• To improve our services based on user feedback and usage patterns</li>
               <li>• To prevent fraud and ensure compliance with legal obligations</li>
-              <li>• To analyze trends and optimize our platform's performance</li>
+              <li>• To analyze trends and optimize our platform&apos;s performance</li>
             </ul>
 
             <p className="text-gray-300 mt-4">
