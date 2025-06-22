@@ -17,7 +17,7 @@ const poppins = Poppins({
 export default function MissionMethodModeSection() {
   return (
     <>
-      <div className="py-12 sm:py-16 md:py-20 lg:py-28 xl:py-36 -mt-3 sm:-mt-6 md:-mt-10 lg:-mt-20 xl:-mt-28">
+      <div className="py-12 sm:py-16 md:py-20 lg:py-28 xl:py-36 -mt-5 lg:-mt-18 z-60 min-h-[80vh] lg:min-h-screen">
         <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-0">
           
           {/* Image Section - Bottom on mobile, Left on desktop */}
@@ -66,7 +66,7 @@ export default function MissionMethodModeSection() {
       <img
         src="/effects/white.png"
         alt="white transition"
-        className="w-full block relative -top-7 z-20"
+        className="w-full block relative -top-8 z-55"
       />
     </>
   );

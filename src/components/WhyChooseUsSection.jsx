@@ -34,7 +34,7 @@ export default function WhyChooseUsSection() {
 
   return (
     <>
-    <div className="bg-[#4598CA] text-white py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] -mt-5 lg:-mt-30">
+    <div className="bg-[#4598CA] text-white py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] -mt-5 lg:-mt-30 z-50">
       {/* Decorative Thread/Line Asset - Hidden on small screens */}
       <div className="hidden lg:block absolute bottom-0 left-0 sm:left-3 md:left-4 w-[280px] h-[200px] sm:w-[350px] sm:h-[250px] md:w-[450px] md:h-[320px] lg:w-[700px] lg:h-[500px] z-0">
         <Image
@@ -79,7 +79,7 @@ export default function WhyChooseUsSection() {
     <img
         src="/effects/blue.png"
         alt="black transition"
-        className='w-[200%] block relative -top-12 z-20'
+        className='w-[200%] block relative -top-7 z-50'
       />
     </> 
   );

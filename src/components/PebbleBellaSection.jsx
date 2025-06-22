@@ -45,7 +45,7 @@ const PebbleBellaSection = () => {
 
   return (
     <>
-    <section className={`w-full pt-40 -mt-5 lg:-mt-30 min-h-[60vh] lg:min-h-screen bg-white py-8 md:py-16 lg:py-30 ${mochiyPopOne.variable} ${poppins.variable}`}>
+    <section className={`w-full pt-40 -mt-5 lg:-mt-30 min-h-screen z-30 bg-white py-8 md:py-16 lg:py-30 ${mochiyPopOne.variable} ${poppins.variable}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-18">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
@@ -102,7 +102,7 @@ const PebbleBellaSection = () => {
     <img
         src="/effects/white.png"
         alt="black transition"
-        className='w-full block relative -top-8 z-20'
+        className='w-full block relative -top-8 z-30'
       />
     </> 
   );
