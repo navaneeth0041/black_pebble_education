@@ -81,29 +81,30 @@ const CoinIcon = ({ className }) => (
         </div>
 
         {/* Comparison Header Row */}
-        <div className="p-4 md:p-6 mb-8 md:mb-12">
-          <div className="grid grid-cols-3 gap-4 md:gap-8">
-            <div></div>
-            <div className="text-center">
-              <h2 className="text-lg md:hidden font-bold text-[#39BB9C] mb-1">BPE</h2>
-              <h2 className="hidden md:block text-lg md:text-xl font-bold text-[#39BB9C] mb-1">
-                Black Pebble
-              </h2>
-              <h2 className="hidden md:block text-lg md:text-xl font-bold text-[#39BB9C] mb-1">
-                Education
-              </h2>
-            </div>
-            <div className="text-center">
-              <h2 className="text-lg md:hidden font-bold text-black-600 mb-1">OFP</h2>
-              <h2 className="hidden md:block text-lg md:text-xl font-bold text-black-600 mb-1">
-                Other Finance
-              </h2>
-              <h2 className="hidden md:block text-lg md:text-xl font-bold text-black-600 mb-1">
-                Programs
-              </h2>
-            </div>
-          </div>
-        </div>
+<div className="p-4 md:p-6 mb-8 md:mb-12">
+  <div className="grid grid-cols-3 gap-4 md:gap-8">
+    <div></div>
+    <div className="text-center">
+      <h2 className={`text-lg md:hidden font-bold text-[#39BB9C] mb-1 ${poppins.className}`}>BPE</h2>
+      <h2 className={`hidden md:block text-lg md:text-xl font-bold text-[#39BB9C] mb-1 ${poppins.className}`}>
+        Black Pebble
+      </h2>
+      <h2 className={`hidden md:block text-lg md:text-xl font-bold text-[#39BB9C] mb-1 ${poppins.className}`}>
+        Education
+      </h2>
+    </div>
+    <div className="text-center">
+      <h2 className={`text-lg md:hidden font-bold text-black-600 mb-1 ${poppins.className}`}>OFP</h2>
+      <h2 className={`hidden md:block text-lg md:text-xl font-bold text-black-600 mb-1 ${poppins.className}`}>
+        Other Finance
+      </h2>
+      <h2 className={`hidden md:block text-lg md:text-xl font-bold text-black-600 mb-1 ${poppins.className}`}>
+        Programs
+      </h2>
+    </div>
+  </div>
+</div>
+
         {/* Feature Rows */}
         <div className="space-y-3 md:space-y-4">
           {comparisonData.map((item, index) => (
@@ -113,7 +114,7 @@ const CoinIcon = ({ className }) => (
             >
               <div className="grid grid-cols-3 gap-4 md:gap-8 items-center">
                 <div>
-                  <h3 className="text-base md:text-lg font-semibold text-gray-800 leading-relaxed">
+<h3 className={`text-base md:text-lg font-semibold text-gray-800 leading-relaxed ${poppins.className}`}>
                     {item.feature}
                   </h3>
                 </div>
