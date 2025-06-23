@@ -54,15 +54,17 @@ export default function MeetTheFounderSection() {
             </div>
 
             {/* Right - Photo Frame */}
-            <div className="flex-shrink-0 lg:ml-auto lg:mr-16">
-              <div className="sw-full h-96 transform -rotate-8 shadow-lg">
-                  <img 
-                    src="/about/frame.jpg" 
-                    alt="Founder of Black Pebble Education" 
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-              </div>
-            </div>
+            {/* Right - Photo Frame */}
+<div className="flex-shrink-0 lg:ml-auto lg:mr-16">
+  <div className="w-[300px] h-[400px] lg:w-[400px] lg:h-[550px] shadow-lg">
+    <img 
+      src="/about/frame.jpg" 
+      alt="Founder of Black Pebble Education" 
+      className="w-full h-full object-cover rounded-2xl"
+    />
+  </div>
+</div>
+
           </div>
 
           {/* Bottom Section - Professional Journey */}
