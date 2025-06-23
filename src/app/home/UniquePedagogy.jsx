@@ -101,7 +101,7 @@ const UniquePedagogy = () => {
 
         <h2
           className="text-3xl md:text-6xl lg:text-7xl font-bold py-2 mb-6 text-center"
-          style={{ color: '#09be9d', fontFamily: 'Poppins, sans-serif' }}
+          style={{ color: '#09be9d', fontFamily: 'Mochiy Pop One, sans-serif' }}
         >
           <span className="block md:inline">Our Unique</span>
           <span className="block md:inline"> Pedagogy</span>
