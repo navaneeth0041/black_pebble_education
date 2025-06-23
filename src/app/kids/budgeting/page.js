@@ -41,8 +41,8 @@ export default function Budgeting() {
       />
         <CourseSnapshot
             title="Course Delivery"
-            originalPrice="₹999"
-            offerPrice="₹1499"
+            originalPrice="₹1499"
+            offerPrice="₹999"
             courseFormatTitle="What's Included"
             courseFeatures={[
                 'Interactions',

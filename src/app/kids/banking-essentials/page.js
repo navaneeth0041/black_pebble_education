@@ -41,8 +41,8 @@ export default function Banking() {
       />
         <CourseSnapshot
             title="Course Delivery"
-            originalPrice="₹1299"
-            offerPrice="₹1799"
+            originalPrice="₹1799"
+            offerPrice="₹1299"
             courseFormatTitle="What's Included"
             courseFeatures={[
                 'Interactions',
