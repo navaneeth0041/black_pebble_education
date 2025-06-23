@@ -14,9 +14,14 @@ const Footer = () => {
     email: "blackpebbleeducation@gmail.com"
   };
 
-  // Helper function to convert text to URL format
-  const convertToUrl = (text) => {
-    return text.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+  const getCustomUrl = (item) => {
+    const urlMap = {
+      "Kids' Courses": "/kids/value-of-money",
+      "Teens' Courses": "/for-teens/value-of-money",
+      "Self-help Kits": "/SelfHelp-Kit"
+    };
+    
+    return urlMap[item] || `/${item.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`;
   };
 
   const footerLinks = {
@@ -164,7 +169,7 @@ const Footer = () => {
                 {footerLinks.importantLinks.items.map((item, index) => (
                   <li key={index}>
                     <a 
-                      href={`/${convertToUrl(item)}`}
+                      href={getCustomUrl(item)}
                       className="text-base text-white transition-all duration-300 hover:translate-x-1 inline-block"
                       style={{
                         transition: 'all 0.3s ease'
@@ -198,7 +203,7 @@ const Footer = () => {
                 {footerLinks.products.items.map((item, index) => (
                   <li key={index}>
                     <a 
-                      href={`/${convertToUrl(item)}`}
+                      href={getCustomUrl(item)}
                       className="text-base text-white transition-all duration-300 hover:translate-x-1 inline-block"
                       style={{
                         transition: 'all 0.3s ease'
@@ -232,7 +237,7 @@ const Footer = () => {
                 {footerLinks.legal.items.map((item, index) => (
                   <li key={index}>
                     <a 
-                      href={`/${convertToUrl(item)}`}
+                      href={getCustomUrl(item)}
                       className="text-base text-white transition-all duration-300 hover:translate-x-1 inline-block"
                       style={{
                         transition: 'all 0.3s ease'
