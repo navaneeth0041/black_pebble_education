@@ -18,7 +18,9 @@ const Footer = () => {
     const urlMap = {
       "Kids' Courses": "/kids/value-of-money",
       "Teens' Courses": "/for-teens/value-of-money",
-      "Self-help Kits": "/SelfHelp-Kit"
+      "Self-help Kits": "/SelfHelp-Kit",
+      "Be our Brand Ambassador" : "/brand-ambassador"
+
     };
     
     return urlMap[item] || `/${item.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`;
@@ -70,7 +72,7 @@ const Footer = () => {
           {/* YouTube Section */}
           <div className="lg:self-start lg:ml-auto">
             <a 
-              href="https://youtube.com/@blackpebbleeducation" 
+              href=" https://YouTube.com/@BlackPebbleEdu" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center rounded-lg text-base font-semibold transition-all duration-300 border border-white overflow-hidden hover:bg-white hover:text-[#2B2A2A]"
