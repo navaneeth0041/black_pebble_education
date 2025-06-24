@@ -54,24 +54,24 @@ export default function HomePage() {
         ]}
       />
 <CourseSnapshot
-            title="Course Delivery"
-            originalPrice="₹1499"
-            offerPrice="₹999"
-            courseFormatTitle="What's Included"
-            courseFeatures={[
-                'Interactions',
-                'Examples',
-                'Quizzes',
-                'Illustrations',
-                'Infographic Takeaway Notes',
-                'Certificate of Participation'
-            ]}
-            locationTitle="Venue"
-            locationValue="Online | Offline (Ahmedabad)"
-            durationTitle="Session Duration"
-            durationValue="2 Hours"
-            offerPriceTitle="Special Price"
-            />
+  title="Course Delivery"
+  originalPrice="₹1499"
+  offerPrice="₹999"
+  courseFormatTitle="What's Included"
+  courseFeatures={[
+    'Interactions',
+    'Examples',
+    'Quizzes',
+    'Illustrations',
+    'Infographic Takeaway Notes',
+    'Certificate of Participation'
+  ]}
+  locationTitle="Venue"
+  locationValue="Online | Offline (Ahmedabad)"
+  durationTitle="Session Duration"
+  durationValue="2 Hours"
+  offerPriceTitle="Special Price"
+/>
 
                     {/* <Testimonials
             title1="Kids Loved It."
