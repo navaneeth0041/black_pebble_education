@@ -25,32 +25,18 @@ export default function HomePage() {
         modules={[
           {
             id: 1,
-            title: "Value of Money",
-            description: "Understanding how money is earned, saved and spent - and why it matters.",
-            bgColor: "bg-[#F7C342]",
-            icon: "/Course_Design/1/Cash.svg"
-          },
-          {
-            id: 2,
-            title: "Relationship with Money", 
-            description: "Developing a healthy attitude towards money.",
+            title: "What is Money?",
+            description: "Understanding the nature of money.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
           {
-            id: 3,
-            title: "Budgeting",
-            description: "Allocating money for needs and wants - and also saving.",
-            bgColor: "bg-[#4598CA]",
-            icon: "/Course_Design/1/Calender.svg" 
+            id: 1,
+            title: "Value of Money",
+            description: " Understanding the worth of money for everyday things.",
+            bgColor: "bg-[#F7C342]",
+            icon: "/Course_Design/1/Cash.svg"
           },
-          {
-            id: 4,
-            title: "Peer Pressure",
-            description: "Developing resilience against peer demands - being financially strong.",
-            bgColor: "bg-[#4598CA]",
-            icon: "/Course_Design/1/Tossing_coing.svg"
-          }
         ]}
       />
 <CourseSnapshot
