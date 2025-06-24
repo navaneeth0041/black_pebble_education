@@ -76,27 +76,25 @@ export default function BankingEssentials() {
             durationValue="2 Hours"
             offerPriceTitle="Special Price"
             />
-        {/* <Testimonials
-            title1="Kids Loved It."
-            title2="Parents Approved."
-            titleIcon="/home_page_assets/5/Group.svg"
-            testimonials={[
-              {
-                quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
-                author: "Riya Malhotra, Parent of a 6th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-              {
-                quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
-                author: "Carlos R., Parent of a 5th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-            ]}
-            backgroundColor="#FBDD9C"
-            commentBackgroundColor="#EF746C"
-            titleColor="#F15B52"
-            transitionImage="/effects/yellow.png"
-          /> */}
+        <Testimonials
+                    title1="Kids Loved It."
+                    title2="Parents Approved."
+                    titleIcon="/home_page_assets/5/Group.svg"
+                    testimonials={[
+                      {
+                        quote: "Risks & Insurance taught my 14-year-old about protecting savings and the importance of insurance. She now talks about risk mitigation like a mini-actuary—completely changed how she views financial safety.",
+                        author: "Neha Kulkarni, Parent of a 9th Grader",
+                      },
+                      {
+                        quote: "Our son learned the difference between term insurance and health insurance at 13. He helped us compare policies and found better coverage for our family—far beyond my expectations!",
+                        author: "Rajeev Agarwal, Parent of a 9th Grader",
+                      },
+                    ]}
+                    backgroundColor="#FBDD9C"
+                    commentBackgroundColor="#EF746C"
+                    titleColor="#F15B52"
+                    transitionImage="/effects/yellow.png"
+                  />
       <PreFooter
         mainTitle="Why Learn About Risks & Insurance So Early?"
         subText1="The world and economies are becoming extremely dynamic and uncertain. Risks reside at every turn and in every corner. Being aware of risk mitigation has never been so important."
