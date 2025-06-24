@@ -76,27 +76,25 @@ export default function BankingEssentials() {
             durationValue="3 Hours"
             offerPriceTitle="Special Price"
             />
-        {/* <Testimonials
-            title1="Kids Loved It."
-            title2="Parents Approved."
-            titleIcon="/home_page_assets/5/Group.svg"
-            testimonials={[
-              {
-                quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
-                author: "Riya Malhotra, Parent of a 6th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-              {
-                quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
-                author: "Carlos R., Parent of a 5th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-            ]}
-            backgroundColor="#FBDD9C"
-            commentBackgroundColor="#EF746C"
-            titleColor="#F15B52"
-            transitionImage="/effects/yellow.png"
-          /> */}
+        <Testimonials
+                    title1="Kids Loved It."
+                    title2="Parents Approved."
+                    titleIcon="/home_page_assets/5/Group.svg"
+                    testimonials={[
+                      {
+                        quote: "My 16-year-old synthesized years of lessons into a digital 'money guide' for her friends. She’s mentoring younger cousins now—truly embodying financial wisdom at an early age.",
+                        author: "Meena Chopra, Parent of an 11th Grader",
+                      },
+                      {
+                        quote: "Financial Wisdom encouraged my son to create a budget app prototype for teens. His passion for spreading knowledge to peers shows just how impactful this course can be!",
+                        author: "Sunil Gupta, Parent of an 11th Grader",
+                      },
+                    ]}
+                    backgroundColor="#FBDD9C"
+                    commentBackgroundColor="#EF746C"
+                    titleColor="#F15B52"
+                    transitionImage="/effects/yellow.png"
+                  />
       <PreFooter
         mainTitle="Why Learn Financial Wisdom So Early?"
         subText1="Financial wisdom is an aspirational benchmark for kids. Learning about the Japanese habits allows kids to pursue them consciously and follow the path of ethical wealth generation."
