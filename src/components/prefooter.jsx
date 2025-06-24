@@ -24,7 +24,7 @@ const PreFooter = ({
       alt="Bottom right decorative element"
       width={120}
       height={200}
-      className="opacity-60"
+      className="opacity-60 w-[60px] h-[80px] sm:w-[80px] sm:h-[120px] md:w-[100px] md:h-[160px] lg:w-[120px] lg:h-[200px]"
     />
   );
 
@@ -98,7 +98,7 @@ const PreFooter = ({
         <TopDecorativeSvg />
       </div>
 
-      <div className="absolute z-0 top-80 right-1">
+      <div className="absolute z-0 top-60 sm:top-72 md:top-80 right-0 sm:right-1">
         <BottomRightDecorativeSvg />
       </div>
     </div>
