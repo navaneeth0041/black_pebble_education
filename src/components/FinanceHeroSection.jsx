@@ -23,25 +23,24 @@ export default function FinanceHeroSection({
 }) {
   return (
     <>
-      <div className="min-h-[70vh] bg-[#343434] flex items-center justify-start sm:p-4 md:p-6 lg:pl-8 overflow-hidden">
-        <div className="w-full lg:w-[90%] pl-2 sm:pl-4 md:pl-6 lg:pl-10">
-          <div className="mb-12 sm:mb-10 md:mb-12">
-            <div className="relative mb-6 sm:mb-8">
-              <h1 className={`${PopOne.className} text-2xl sm:text-4xl md:text-4xl lg:text-6xl leading-snug tracking-tight text-left text-white mb-2 sm:mb-4 max-w-5xl`}>
-                <span className="block relative whitespace-nowrap">
-                  Finance Discussions for <span className="relative inline-block">
-                    {mindType}
-                    <img
-                      src="./Finance_clubs/Group.svg"
-                      alt="Calculator Icon"
-                      className="hidden lg:block absolute left-58/100 transform -translate-x-1/2 top-[140px] w-60 h-60 object-contain rotate-[-11deg]"
-                    />
-                  </span>
-                </span>
-                <span className="block">Minds ({ageRange})</span>
+      <section className="bg-[#343434] text-white h-[70vh] relative overflow-hidden flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 w-full">
+          <div className="text-center lg:text-left">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-8 mb-8 sm:mb-6">
+              <h1 className={`${PopOne.className} text-2xl sm:text-4xl md:text-4xl lg:text-7xl leading-snug tracking-tight text-left text-white mb-2 sm:mb-4 max-w-5xl`}>
+                Finance Discussions for<br />
+                <span className="text-white">{mindType} Minds ({ageRange})</span>
               </h1>
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32 flex-shrink-0 hidden sm:block lg:mt-12 xl:mt-16">
+                <img
+                  src="./Finance_clubs/Group.svg"
+                  alt="Calculator Icon"
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
-            <p className={`${poppins.className} text-white text-base sm:text-lg md:text-xl font-medium leading-[150%] tracking-[-0.342px] text-left mb-8 sm:mb-10 max-w-2xl`}>
+            
+            <p className="mt-4 mb-8 sm:mb-6 text-[16px] xs:text-[17px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[24px] leading-[1.4] tracking-[-0.3px] text-gray-300 text-center lg:text-left font-medium font-poppins">
               {subtitle}
             </p>
           </div>
@@ -60,7 +59,7 @@ export default function FinanceHeroSection({
             </button>
           </div>
         </div>
-      </div>
+      </section>
 
       <img
         src="/effects/black.png"
