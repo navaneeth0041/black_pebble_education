@@ -15,7 +15,6 @@ const poppins = Poppins({
   display: 'swap',
 });
 
-
 const WhyPebbleBellaSection = () => {
   const benefits = [
     {
@@ -52,11 +51,12 @@ const WhyPebbleBellaSection = () => {
           className="object-contain object-left"
         />
       </div>
-
+      
       <div className="px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-start">
           {/* Left: Heading - Moved right and up */}
           <div className="pt-4 md:pt-8 lg:pt-12 xl:pt-16 px-8 sm:px-12 md:px-16 lg:px-24 ml-4 sm:ml-8 md:ml-12">
+            {/* Main heading uses Mochiy font */}
             <h2
               className={`text-left text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#08B39C] leading-tight ${mochiyPopOne.className}`}
             >
@@ -64,7 +64,7 @@ const WhyPebbleBellaSection = () => {
               Pebble Bella
             </h2>
           </div>
-
+          
           {/* Right: Benefits - Bigger text and spacing */}
           <div className="space-y-12 md:space-y-16 lg:space-y-20 py-8 pr-12">
             {benefits.map((benefit, index) => (
@@ -79,13 +79,16 @@ const WhyPebbleBellaSection = () => {
                     className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] md:w-[75px] md:h-[75px] lg:w-[150px] lg:h-[150px]"
                   />
                 </div>
+                
                 {/* Text - Bigger and more responsive */}
                 <div className="flex-1">
+                  {/* Benefit titles use Mochiy font for headings */}
                   <h3
-                    className={`text-[#08B39C] font-extrabold text-[1.4rem] sm:text-[1.6rem] md:text-[1.9rem] lg:text-3xl mb-3 md:mb-4 lg:mb-5 leading-snug ${poppins.className}`}
+                    className={`text-[#08B39C] font-bold text-[1.4rem] sm:text-[1.6rem] md:text-[1.9rem] lg:text-3xl mb-3 md:mb-4 lg:mb-5 leading-snug ${mochiyPopOne.className}`}
                   >
                     {benefit.title}
                   </h3>
+                  {/* Benefit descriptions use Poppins for normal text */}
                   <p
                     className={`text-[#08B39C] text-[1.1rem] sm:text-[1.2rem] md:text-[1.35rem] lg:text-3xl leading-relaxed ${poppins.className}`}
                   >

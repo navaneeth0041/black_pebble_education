@@ -50,7 +50,8 @@ const PebbleBellaSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="order-2 lg:order-1">
-            <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-8 lg:mb-12 leading-tight ${mochiyPopOne.className}`}>
+            {/* Updated heading to match the size of WhyPebbleBellaSection */}
+            <h2 className={`text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 lg:mb-12 leading-tight ${mochiyPopOne.className}`}>
               <span className="text-[#7AD3BE] opacity-60">Who We Want as</span><br />
               <span className="text-[#39BB9C]">Pebble Bella</span>
             </h2>
@@ -71,9 +72,11 @@ const PebbleBellaSection = () => {
                   
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className={`text-[#39BB9C] font-bold text-lg md:text-xl mb-2 leading-tight ${poppins.className}`}>
+                    {/* Title uses Mochiy font for headings */}
+                    <h3 className={`text-[#39BB9C] font-bold text-lg md:text-xl mb-2 leading-tight ${mochiyPopOne.className}`}>
                       {quality.title}
                     </h3>
+                    {/* Description uses Poppins for normal text */}
                     <p className={`text-[#39BB9C] text-sm md:text-base leading-relaxed ${poppins.className}`}>
                       {quality.description}
                     </p>
@@ -82,7 +85,7 @@ const PebbleBellaSection = () => {
               ))}
             </div>
           </div>
-
+          
           {/* Right Image */}
           <div className="order-1 lg:order-2">
             <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
