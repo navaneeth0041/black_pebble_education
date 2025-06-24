@@ -2,6 +2,7 @@
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Poppins } from 'next/font/google';
+import BlackLogoWithText from '../../components/blacklogo';
 
 const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
@@ -13,25 +14,32 @@ const PrivacyPolicy = () => {
   return (
     <div className={`${poppins.className} min-h-screen bg-[#343434] text-white`}>
       {/* Simple Header */}
-      <div className="border-b border-gray-700 p-4">
-        <div className="max-w-4xl mx-auto flex items-center space-x-4">
-          <button 
-            onClick={() => window.history.back()}
-            className="p-2 rounded bg-gray-800 hover:bg-gray-700 text-white transition-colors"
-          >
-            <ArrowLeft className="h-5 w-5" />
-          </button>
-          <h1 className="text-2xl font-bold">Privacy Policy</h1>
+      <div className="border-b border-gray-700 py-2 px-4">
+        <div className="max-w-4xl mx-auto flex items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <button 
+              onClick={() => window.history.back()}
+              className="p-2 rounded bg-gray-800 hover:bg-gray-700 text-white transition-colors"
+            >
+              <ArrowLeft className="h-5 w-5" />
+            </button>
+            <h1 className="text-2xl font-bold">Privacy Policy</h1>
+          </div>
+          
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <BlackLogoWithText logoHeight={60} textHeight={120} />
+          </div>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto p-6">
-        <div className="space-y-8 text-sm leading-relaxed">
+      <div className="max-w-4xl mx-auto px-4 pt-2 pb-6">
+        <div className="space-y-4 text-sm leading-relaxed">
           
           {/* Effective Date */}
           <div>
-            <p className="text-gray-400 mb-4">Effective Date: 21-10-2024</p>
+            <p className="text-gray-400 mb-4">Effective Date: 24-06-2025</p>
           </div>
 
           {/* Introduction */}
