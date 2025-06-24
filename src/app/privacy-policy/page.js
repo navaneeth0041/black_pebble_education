@@ -1,8 +1,14 @@
 "use client"
 import React from 'react';
 import { ArrowLeft } from 'lucide-react';
-import { Poppins } from 'next/font/google';
+import { Mochiy_Pop_One, Poppins } from 'next/font/google';
 import BlackLogoWithText from '../../components/blacklogo';
+
+const mochiyPopOne = Mochiy_Pop_One({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
@@ -23,7 +29,7 @@ const PrivacyPolicy = () => {
             >
               <ArrowLeft className="h-5 w-5" />
             </button>
-            <h1 className="text-2xl font-bold">Privacy Policy</h1>
+            <h1 className={`${mochiyPopOne.className} text-2xl font-bold`}>Privacy Policy</h1>
           </div>
           
           {/* Logo */}
@@ -44,7 +50,7 @@ const PrivacyPolicy = () => {
 
           {/* Introduction */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">Introduction</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Introduction</h2>
             <p className="text-gray-300 mb-4">
               At Practical Doctors, we are committed to protecting your privacy and ensuring the security of your personal information.
             </p>
@@ -55,12 +61,12 @@ const PrivacyPolicy = () => {
 
           {/* Information We Collect */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">Information We Collect</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Information We Collect</h2>
             <p className="text-gray-300 mb-4">
               We may collect information about you in various ways, whether you visit our website or other platforms, use our services. The following categories of information may be collected:
             </p>
             
-            <h3 className="text-base font-bold mb-3 text-white">Information You Provide</h3>
+            <h3 className={`${mochiyPopOne.className} text-base font-bold mb-3 text-white`}>Information You Provide</h3>
             <p className="text-gray-300 mb-3">
               We collect personal information that you provide when using our services, including:
             </p>
@@ -74,7 +80,7 @@ const PrivacyPolicy = () => {
               <li>• Any other details you voluntarily provide, such as feedback or user-generated content</li>
             </ul>
 
-            <h3 className="text-base font-bold mb-3 mt-6 text-white">Usage and Analytics Information</h3>
+            <h3 className={`${mochiyPopOne.className} text-base font-bold mb-3 mt-6 text-white`}>Usage and Analytics Information</h3>
             <p className="text-gray-300 mb-3">
               When you interact with our services, we collect about your device and usage patterns, including:
             </p>
@@ -87,7 +93,7 @@ const PrivacyPolicy = () => {
               <li>• Clickstream data on specific pages and user interactions (e.g., videos, scrolling)</li>
             </ul>
 
-            <h3 className="text-base font-bold mb-3 mt-6 text-white">Cookies and Similar Technologies</h3>
+            <h3 className={`${mochiyPopOne.className} text-base font-bold mb-3 mt-6 text-white`}>Cookies and Similar Technologies</h3>
             <p className="text-gray-300">
               We use cookies and similar technologies to enhance your experience, analyze usage, and serve tailored marketing content. Cookies are small data files stored on your device. You can control cookie preferences through your browser settings, but disabling cookies may affect website functionality.
             </p>
@@ -95,7 +101,7 @@ const PrivacyPolicy = () => {
 
           {/* How We Use Your Information */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">How We Use Your Information</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>How We Use Your Information</h2>
             <p className="text-gray-300 mb-3">
               We use the information collected for various purposes, including:
             </p>
@@ -123,7 +129,7 @@ const PrivacyPolicy = () => {
 
           {/* Information Sharing */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">Information Sharing</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Information Sharing</h2>
             <p className="text-gray-300 mb-3">
               We do not sell or rent your personal information to third parties. Your information may be shared in the following scenarios:
             </p>
@@ -133,7 +139,7 @@ const PrivacyPolicy = () => {
               <li>• To comply with legal requirements or to protect our rights</li>
             </ul>
 
-            <h3 className="text-base font-bold mb-3 mt-6 text-white">Online Analytics and Tailored Marketing</h3>
+            <h3 className={`${mochiyPopOne.className} text-base font-bold mb-3 mt-6 text-white`}>Online Analytics and Tailored Marketing</h3>
             <p className="text-gray-300 mb-3">
               We partner with third parties, such as Google Analytics to help us understand how users interact with our website.
             </p>
@@ -144,7 +150,7 @@ const PrivacyPolicy = () => {
 
           {/* Access to Your Information */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">Access to Your Information</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Access to Your Information</h2>
             <p className="text-gray-300">
               You may request access to or correction of your personal information by contacting us. For EU residents, you have additional rights regarding the processing of your information.
             </p>
@@ -152,7 +158,7 @@ const PrivacyPolicy = () => {
 
           {/* Retention of Information */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">Retention of Information</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Retention of Information</h2>
             <p className="text-gray-300">
               We retain your personal information for as long as your account is active or necessary for providing services. If you wish to cancel your account or request that we no longer use your information to provide services, please contact us. Following account cancellation, we will retain your information only as required by law.
             </p>
@@ -160,7 +166,7 @@ const PrivacyPolicy = () => {
 
           {/* Security Measures */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">Security Measures</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Security Measures</h2>
             <p className="text-gray-300">
               We implement reasonable physical, electronic, and managerial safeguards to protect your information from unauthorized access. While we strive to maintain the security of your data, no method of transmission over the internet or primary source solutions can be guaranteed to be 100% secure.
             </p>
@@ -168,7 +174,7 @@ const PrivacyPolicy = () => {
 
           {/* Email Communications */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">Email Communications</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Email Communications</h2>
             <p className="text-gray-300">
               You can choose to opt out of receiving promotional communications from us by following the unsubscribe instructions included in our emails or by contacting us directly.
             </p>
@@ -176,7 +182,7 @@ const PrivacyPolicy = () => {
 
           {/* Third-Party Links */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">Third-Party Links</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Third-Party Links</h2>
             <p className="text-gray-300">
               Our website may contain links to third-party sites. We are not responsible for their privacy practices or content. Additionally, third-party advertisers may collect information automatically when you interact with their ads on our site.
             </p>
@@ -184,7 +190,7 @@ const PrivacyPolicy = () => {
 
           {/* Data Transfer */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">Data Transfer</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Data Transfer</h2>
             <p className="text-gray-300">
               Your information may be transferred to, and stored at, locations outside of your country. By providing your information, you consent to this transfer.
             </p>
@@ -192,7 +198,7 @@ const PrivacyPolicy = () => {
 
           {/* Individual Data Subject Rights */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">Individual Data Subject Rights</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Individual Data Subject Rights</h2>
             <p className="text-gray-300">
               Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected information from a child, we will take steps to delete that information.
             </p>
@@ -200,7 +206,7 @@ const PrivacyPolicy = () => {
 
           {/* Changes to This Policy */}
           <div>
-            <h2 className="text-lg font-bold mb-4 text-white">Changes to This Policy</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Changes to This Policy</h2>
             <p className="text-gray-300 mb-4">
               If there are any questions or concerns about this Privacy Policy, please contact us via email at info@practicaldoctors.com
             </p>
@@ -211,7 +217,7 @@ const PrivacyPolicy = () => {
 
           {/* Contact Information */}
           <div className="border-t border-gray-700 pt-6 mt-8">
-            <h2 className="text-lg font-bold mb-4 text-white">Contact Information</h2>
+            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Contact Information</h2>
             <div className="text-gray-300 space-y-2">
               <p>Email: blackpebbleeducation@gmail.com</p>
               <p>Phone: +91-8928557529</p>
