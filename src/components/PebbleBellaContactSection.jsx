@@ -14,6 +14,7 @@ const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
 });
+
 const PebbleBellaContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -21,6 +22,8 @@ const PebbleBellaContactSection = () => {
     whatsapp: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -30,10 +33,73 @@ const PebbleBellaContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission logic here
+    setIsSubmitting(true);
+    setSubmitStatus("");
+
+    try {
+      // Load EmailJS if not already loaded
+      if (!window.emailjs) {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+        document.head.appendChild(script);
+        
+        // Wait for script to load
+        await new Promise((resolve) => {
+          script.onload = resolve;
+        });
+      }
+
+      // Initialize EmailJS with your public key
+      window.emailjs.init('YdXaCHrjhr3KvlDh7'); // Replace with your actual public key
+      
+      // Prepare template parameters
+      const templateParams = {
+        to_email: 'trustmeimsources@gmail.com', // blackpebbleeducation@gmail.com
+        from_name: formData.name,
+        applicant_name: formData.name,
+        applicant_city: formData.city,
+        whatsapp_number: formData.whatsapp || 'Not provided',
+        applicant_message: formData.message || 'No message provided',
+        submission_date: new Date().toLocaleString('en-IN', {
+          timeZone: 'Asia/Kolkata',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        })
+      };
+
+      // Send email using EmailJS
+      const response = await window.emailjs.send(
+        'service_tl1d6vq',    // Replace with your EmailJS service ID
+        'template_un4agob',   // Replace with your EmailJS template ID
+        templateParams
+      );
+      
+      console.log('EmailJS Response:', response);
+      
+      if (response.status === 200) {
+        setSubmitStatus("success");
+        // Reset form
+        setFormData({
+          name: "",
+          city: "",
+          whatsapp: "",
+          message: ""
+        });
+      } else {
+        setSubmitStatus("error");
+        console.error('Email send failed:', response);
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -75,6 +141,23 @@ const PebbleBellaContactSection = () => {
                 Why be a Pebble Bella
               </h1>
               
+              {/* Success/Error Messages */}
+              {submitStatus === "success" && (
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-400 rounded-lg">
+                  <p className={`text-white text-center ${poppins.className}`}>
+                    ✅ Your application has been sent successfully! We'll get back to you soon.
+                  </p>
+                </div>
+              )}
+              
+              {submitStatus === "error" && (
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-400 rounded-lg">
+                  <p className={`text-white text-center ${poppins.className}`}>
+                    ❌ There was an error sending your application. Please try again.
+                  </p>
+                </div>
+              )}
+              
               {/* Contact Form */}
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* First Row - Name, City, WhatsApp */}
@@ -89,7 +172,8 @@ const PebbleBellaContactSection = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full bg-transparent border-b-2 border-white/70 text-white placeholder-white/70 text-base md:text-lg py-3 px-0 focus:outline-none focus:border-white transition-colors"
+                      disabled={isSubmitting}
+                      className="w-full bg-transparent border-b-2 border-white/70 text-white placeholder-white/70 text-base md:text-lg py-3 px-0 focus:outline-none focus:border-white transition-colors disabled:opacity-50"
                       placeholder=""
                     />
                   </div>
@@ -104,7 +188,8 @@ const PebbleBellaContactSection = () => {
                       value={formData.city}
                       onChange={handleInputChange}
                       required
-                      className="w-full bg-transparent border-b-2 border-white/70 text-white placeholder-white/70 text-base md:text-lg py-3 px-0 focus:outline-none focus:border-white transition-colors"
+                      disabled={isSubmitting}
+                      className="w-full bg-transparent border-b-2 border-white/70 text-white placeholder-white/70 text-base md:text-lg py-3 px-0 focus:outline-none focus:border-white transition-colors disabled:opacity-50"
                       placeholder=""
                     />
                   </div>
@@ -118,7 +203,8 @@ const PebbleBellaContactSection = () => {
                       name="whatsapp"
                       value={formData.whatsapp}
                       onChange={handleInputChange}
-                      className="w-full bg-transparent border-b-2 border-white/70 text-white placeholder-white/70 text-base md:text-lg py-3 px-0 focus:outline-none focus:border-white transition-colors"
+                      disabled={isSubmitting}
+                      className="w-full bg-transparent border-b-2 border-white/70 text-white placeholder-white/70 text-base md:text-lg py-3 px-0 focus:outline-none focus:border-white transition-colors disabled:opacity-50"
                       placeholder=""
                     />
                   </div>
@@ -135,7 +221,8 @@ const PebbleBellaContactSection = () => {
                       value={formData.message}
                       onChange={handleInputChange}
                       rows="1"
-                      className="w-full bg-transparent text-white placeholder-white/70 text-base md:text-lg py-2 px-0 focus:outline-none resize-none border-none"
+                      disabled={isSubmitting}
+                      className="w-full bg-transparent text-white placeholder-white/70 text-base md:text-lg py-2 px-0 focus:outline-none resize-none border-none disabled:opacity-50"
                       placeholder=""
                     />
                   </div>
@@ -145,9 +232,10 @@ const PebbleBellaContactSection = () => {
                 <div className="mt-8 md:mt-10 text-left">
                   <button
                     type="submit"
-                    className={`bg-white text-[#00A896] px-10 md:px-12 py-3 md:py-4 rounded-full text-base md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg ${poppins.className}`}
+                    disabled={isSubmitting}
+                    className={`bg-white text-[#00A896] px-10 md:px-12 py-3 md:py-4 rounded-full text-base md:text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed ${poppins.className}`}
                   >
-                    Book a Call
+                    {isSubmitting ? "Sending..." : "Book a Call"}
                   </button>
                 </div>
               </form>

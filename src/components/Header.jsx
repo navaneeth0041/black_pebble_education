@@ -38,7 +38,7 @@ const Header = () => {
         { label: 'Financial Excellence', href: '/for-teens/financial-excellence' },
         { label: 'Risks & Insurance', href: '/for-teens/risks-insurance' },
         { label: 'Financial Wisdom', href: '/for-teens/financial-wisdom' },
-        { label: 'Buisness Basics', href: '/for-teens/buisness-basics' },
+        { label: 'Business Basics', href: '/for-teens/business-basics' },
       ]
     },
     { 

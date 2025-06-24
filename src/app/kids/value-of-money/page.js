@@ -29,14 +29,14 @@ export default function HomePage() {
         modules={[
           {
             id: 1,
-            title: "What is Money?",
+            title: "| What is Money?",
             description: "Understanding the nature of money.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
           {
-            id: 1,
-            title: "Value of Money",
+            id: 2,
+            title: "| Value of Money",
             description: " Understanding the worth of money for everyday things.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"

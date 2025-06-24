@@ -22,8 +22,8 @@ export default function ValueOfMoneyHero({
   iconAlt = "Course Icon",
   primaryButtonText = "Book a Counselling Session",
   secondaryButtonText = "Be our Brand Ambassador",
-  onPrimaryClick = () => console.log("Primary button clicked"),
-  onSecondaryClick = () => console.log("Secondary button clicked")
+  onPrimaryClick = () => window.open("https://docs.google.com/forms/d/e/1FAIpQLSeeCFCunf99pwus2cnid2cGLyWrzv1LvKSDOMmqsLFmVp6yKA/viewform"),
+  onSecondaryClick = () => {window.location='/brand-ambassador'}
 }) {
   return (
     <>

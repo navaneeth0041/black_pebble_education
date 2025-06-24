@@ -85,7 +85,7 @@ export default function CourseCurriculum({
               
               <div className="flex-1 pt-0 md:pt-2">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-2 mb-2">
-                  <span className="text-gray-500 font-medium text-base md:text-lg">Module {module.id}</span>
+                  <span className="text-gray-500 font-semibold font-medium text-base md:text-lg">Module {module.id}</span>
                   <span className="text-[#39BB9C] text-[20px] sm:text-[22px] md:text-[24px] font-semibold leading-[149%] tracking-[-0.456px] font-['Poppins']">
                     {module.title}
                   </span>
