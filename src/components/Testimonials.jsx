@@ -49,7 +49,7 @@ export default function Testimonials({
   return (
     <>
       <div className="w-full bg-[#FBDD9C] px-4 lg:px-12">
-        <div className="mx-auto py-14 px-6 -mt-5 lg:-mt-22 xl:-mt-30 pt-30 min-h-[70vh] lg:min-h-screen relative overflow-visible">
+        <div className="mx-auto py-14 px-6 -mt-5 lg:-mt-22 pt-30 min-h-[90vh] lg:min-h-screen relative overflow-visible">
           
           {/* Desktop Layout */}
           <div className="hidden lg:flex lg:flex-col h-full">
@@ -58,9 +58,13 @@ export default function Testimonials({
             <div className="flex-shrink-0 px-8 xl:px-16 pt-8 xl:pt-16">
               <h2 className={`${mochiyPopOne.className} text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#F15B52] mb-4 flex items-center gap-6 leading-tight`}>
                 {title1}
-                <img src={titleIcon} alt="Phone Icon" className="w-12 h-12 xl:w-16 xl:h-16 2xl:w-20 2xl:h-20" />
+<img 
+  src={titleIcon} 
+  alt="Phone Icon" 
+  className="w-12 h-12 lg:w-20 lg:h-20 xl:w-24 xl:h-24 2xl:w-28 2xl:h-28 rotate-13" 
+/>
               </h2>
-              <h3 className={`${mochiyPopOne.className} text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#F15B52] leading-tight mb-8`}>
+              <h3 className={`${mochiyPopOne.className} text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#F15B52] leading-tight mb-30`}>
                 {title2}
               </h3>
             </div>
