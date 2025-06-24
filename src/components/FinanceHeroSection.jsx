@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Mochiy_Pop_One, Poppins } from 'next/font/google';
 
@@ -16,7 +17,9 @@ const poppins = Poppins({
 export default function FinanceHeroSection({
   ageRange = "6-11 years",
   mindType = "Young",
-  subtitle = "An interactive environment to learn important financial concepts"
+  subtitle = "An interactive environment to learn important financial concepts",
+  onPrimaryClick = () => window.open("https://docs.google.com/forms/d/e/1FAIpQLSeeCFCunf99pwus2cnid2cGLyWrzv1LvKSDOMmqsLFmVp6yKA/viewform"),
+  onSecondaryClick = () => {window.location='/brand-ambassador'}
 }) {
   return (
     <>
@@ -43,10 +46,16 @@ export default function FinanceHeroSection({
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 items-start">
-            <button className={`${poppins.className} bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] hover:from-[#077A83] hover:via-[#08A88B] hover:to-[#6DB892] text-white font-medium px-6 sm:px-8 py-3 rounded-[59px] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-teal-500/25 w-full sm:w-auto text-sm sm:text-base border border-black/20`}>
+            <button
+              onClick={onPrimaryClick}
+              className={`${poppins.className} bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] hover:from-[#077A83] hover:via-[#08A88B] hover:to-[#6DB892] text-white font-medium px-6 sm:px-8 py-3 rounded-[59px] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-teal-500/25 w-full sm:w-auto text-sm sm:text-base border border-black/20`}
+            >
               Book a Counseling Session
             </button>
-            <button className={`${poppins.className} bg-transparent border-2 border-white hover:border-gray-300 hover:bg-white/5 text-white hover:text-white font-medium px-6 sm:px-8 py-3 rounded-[59px] transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base`}>
+            <button
+              onClick={onSecondaryClick}
+              className={`${poppins.className} bg-transparent border-2 border-white hover:border-gray-300 hover:bg-white/5 text-white hover:text-white font-medium px-6 sm:px-8 py-3 rounded-[59px] transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base`}
+            >
               Be our Brand Ambassador
             </button>
           </div>
