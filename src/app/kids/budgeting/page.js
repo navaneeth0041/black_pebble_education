@@ -6,6 +6,10 @@ import CourseSnapshot from '../../../components/CourseSnapshot.jsx';
 import PreFooter from '../../../components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
+export const metadata = {
+  title: "Budgeting Course for Kids | Black Pebble Education",
+  description: "Help impulsive kids learn the difference between needs and wants with this 2-hour budgeting course fostering wise spending.",
+};
 
 export default function Budgeting() {
     return (

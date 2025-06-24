@@ -3,6 +3,11 @@ import Header from '../../components/Header.jsx';
 import Footer from '../../components/footer.jsx';
 import PreFooter from '../../components/prefooter.jsx';
 
+export const metadata = {
+  title: "Self-help Kit on Financial Literacy | Black Pebble Education",
+  description: "Empower kids to explore, understand, and own their money journey with this self-help financial literacy kit.",
+};
+
 export default function SelfHelpPage() {
   // Define your business concepts here  };
 

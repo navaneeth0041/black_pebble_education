@@ -6,6 +6,10 @@ import CourseSnapshot from '../../../components/CourseSnapshot.jsx';
 import PreFooter from '../../../components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
+export const metadata = {
+  title: "Everyday Banking Course for Kids | Black Pebble Education",
+  description: "This 2.5-hour session teaches kids essential day-to-day banking concepts with professional guidance.",
+};
 
 export default function everyday() {
     return (

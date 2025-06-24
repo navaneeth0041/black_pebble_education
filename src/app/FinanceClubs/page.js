@@ -7,6 +7,11 @@ import PreFooter from '@/components/prefooter.jsx';
 import ThemesOfDiscussion from '@/components/ThemesOfDiscussion';
 import WhyJoinClub from '@/components/whyjoinclubs';
 
+export const metadata = {
+  title: "Online Finance Club for Kids | Black Pebble Education",
+  description: "Every child can be financially savvy — we teach them how to be one.",
+};
+
 export default function FinanceClubs() {
   return (
     <>

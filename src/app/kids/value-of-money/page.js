@@ -6,6 +6,10 @@ import CourseSnapshot from '../../../components/CourseSnapshot.jsx';
 import PreFooter from '../../../components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
+export const metadata = {
+  title: "Value of Money Course for Kids | Black Pebble Education",
+  description: "This 2-hour session teaches kids the practical worth of money, helping avoid indulgence and unchecked expenses.",
+};
 
 export default function HomePage() {
     return (

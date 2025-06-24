@@ -7,6 +7,18 @@ import PreFooter from '@/components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
 
+export const metadata = {
+  title: 'Value of Money Course for Teens',
+  description: `Some kids grow up without the concept of pocket money. They believe money is an infinite resource. This can lead to indulgence or unchecked expenses, resulting in financial mishaps.
+This 2-hour session provides them with a relatable and practical understanding of the value of money.`,
+  
+  openGraph: {
+    title: 'Value of Money Course for Teens',
+    description: 'Practical understanding of value of money for teens.',
+    url: 'https://yourdomain.com/for-teens/value-of-money',
+  },
+};
+
 export default function HomePage() {
     return (
       <>
