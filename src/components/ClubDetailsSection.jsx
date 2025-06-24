@@ -27,11 +27,21 @@ const ClubDetailsSection = ({
               className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[23px] p-6 sm:p-8 md:p-12 lg:p-16 w-full shadow-lg relative overflow-visible z-10"
               style={{ minHeight: '500px' }}
             >
-              <div className="absolute -right-16 bottom-2 z-0 sm:-right-24 sm:bottom-3 lg:-right-40 lg:bottom-5">
+              {/* White coins background */}
+              <div className="absolute -right-12 bottom-4 z-0 sm:-right-16 sm:bottom-10 lg:-right-45 lg:bottom-3 rotate-12">
                 <img
-                  src="./Finance_clubs/1/Clip path group.svg"
+                  src="/Finance_clubs/1/whitecoins.svg"
+                  alt="White Coins Background"
+                  className="w-[100px] h-[95px] sm:w-[180px] sm:h-[190px] lg:w-[320px] lg:h-[300px]"
+                />
+              </div>
+
+              {/* Decorative coins - visible overflow but smaller on mobile */}
+              <div className="absolute -right-10 bottom-2 z-10 sm:-right-24 sm:bottom-3 lg:-right-46 lg:bottom-5">
+                <img
+                  src="/Finance_clubs/1/Clip path group.svg"
                   alt="Decorative Coins"
-                  className="w-[140px] h-[130px] sm:w-[200px] sm:h-[190px] lg:w-[320px] lg:h-[300px] transform rotate-12"
+                  className="w-[100px] h-[95px] sm:w-[180px] sm:h-[190px] lg:w-[320px] lg:h-[300px] transform rotate-12"
                 />
               </div>
 
@@ -78,7 +88,7 @@ const ClubDetailsSection = ({
                         {[
                           '12 interactive sessions (1 per month)',
                           'Patient introduction to financial concepts',
-                          'Fueling financial curiosity in kids'
+                          curiosityText
                         ].map((item, index) => (
                           <li key={index} className="flex items-start gap-3">
                             <span className="w-2 h-2 bg-white rounded-full mt-3 flex-shrink-0"></span>
@@ -112,7 +122,7 @@ const ClubDetailsSection = ({
                       lineHeight: '149%',
                       letterSpacing: '-0.418px'
                     }}>
-                      Online (LIVE sessions) Pan-India Participation
+                      Online (LIVE sessions) |  Pan-India Participation
                     </p>
                   </div>
                   <div className="flex flex-col gap-4 pb-6 md:pb-0 border-b border-white/30 md:border-b-0 md:px-6">
@@ -144,7 +154,7 @@ const ClubDetailsSection = ({
                       lineHeight: '149%',
                       letterSpacing: '-0.418px'
                     }}>
-                      Last Friday of Every Month 6 PM - 7 PM IST
+                      Last Friday of Every Month | 6 PM - 7 PM IST
                     </p>
                   </div>
                 </div>

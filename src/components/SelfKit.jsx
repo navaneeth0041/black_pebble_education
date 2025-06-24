@@ -48,7 +48,7 @@ const SelfHelpKits = ({
     <div className="text-center lg:text-left">
       {/* Use flex with items-start to align icon with top of text */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-8 mb-8 sm:mb-6">
-        <h1 className={`${mochiyPopOne.className} text-2xl sm:text-4xl md:text-4xl lg:text-6xl leading-snug tracking-tight text-left text-white mb-2 sm:mb-4 max-w-5xl`}>
+        <h1 className={`${mochiyPopOne.className} text-2xl sm:text-4xl md:text-4xl lg:text-7xl leading-snug tracking-tight text-left text-white mb-2 sm:mb-4 max-w-5xl`}>
           Learn. Play. Grow —<br />
           <span className="text-white">At Your Own Pace!</span>
         </h1>
@@ -62,15 +62,15 @@ const SelfHelpKits = ({
         </div>
       </div>
       
-      <p className="mt-4 mb-8 sm:mb-6 text-[16px] xs:text-[17px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[26px] leading-[1.4] tracking-[-0.3px] text-gray-300 text-center lg:text-left font-medium font-poppins">
-        Engage with an informative & creative self-help kit to explore financial concepts – anytime, anywhere.
+      <p className="mt-4 mb-8 sm:mb-6 text-[16px] xs:text-[17px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[24px] leading-[1.4] tracking-[-0.3px] text-gray-300 text-center lg:text-left font-medium font-poppins">
+        {smartMoneyConcepts.description}
       </p>
       
       <div className="mt-2 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
         <button 
           className="bg-gradient-to-r from-[#08A69A] via-[#0ABE9D] to-[#69C9A1] hover:bg-teal-600 text-white w-full sm:w-auto text-xs sm:text-sm md:text-base px-5 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-full font-medium transition-all duration-200"
         >
-          Book a Counselling Session
+          Call Us to Order Your Kit
         </button>
       </div>
     </div>
@@ -258,33 +258,34 @@ className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
 </div>
 {/* Right side - Benefits list */}
 <div className="flex flex-col items-center justify-center gap-6 w-full lg:w-auto">
-<div className="flex items-start gap-4 sm:gap-6">
-<div className="flex flex-col gap-6 pt-1">
-{[1, 2, 3, 4, 5].map((item) => (
-<svg
-key={item}
-width="23"
-height="20"
-viewBox="0 0 23 20"
-fill="none"
-className="min-w-[23px]"
->
-<path
-d="M2.5 9.98975C4.66667 14.8231 9.8 22.6897 13 15.4897L20.5 0.989746"
-stroke="#39BB9C"
-strokeWidth="4"
-/>
-</svg>
- ))}
-</div>
-<div className="text-white font-poppins text-base sm:text-lg lg:text-2xl font-bold leading-relaxed tracking-tight space-y-4">
-<div>Builds financial confidence</div>
-<div>Encourages independent thinking</div>
-<div>Easy-to-follow structure</div>
-<div>No screen time needed</div>
-<div>Parent-guided or self-led</div>
-</div>
-</div>
+  <div className="flex flex-col gap-4 sm:gap-6">
+    {[
+      "Builds financial confidence",
+      "Encourages independent thinking",
+      "Easy-to-follow structure",
+      "No screen time needed",
+      "Parent-guided or self-led"
+    ].map((text, idx) => (
+      <div key={idx} className="flex items-center gap-3">
+        <svg
+          width="23"
+          height="20"
+          viewBox="0 0 23 20"
+          fill="none"
+          className="min-w-[23px]"
+        >
+          <path
+            d="M2.5 9.98975C4.66667 14.8231 9.8 22.6897 13 15.4897L20.5 0.989746"
+            stroke="#39BB9C"
+            strokeWidth="4"
+          />
+        </svg>
+        <span className="text-white font-poppins text-base sm:text-lg lg:text-2xl font-bold leading-relaxed tracking-tight">
+          {text}
+        </span>
+      </div>
+    ))}
+  </div>
 </div>
 </div>
 </section>

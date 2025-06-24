@@ -38,7 +38,7 @@ export default function SelfHelpPage() {
       <SelfHelpKits smartMoneyConcepts={businessConcepts} />
       <PreFooter
         mainTitle="Why Business Self-Help Kits?"
-        subText1="Most kids don't learn about business until it's too late. This kit empowers kids to explore, understand, and own their entrepreneurial journey!"
+        subText1="Some kids naturally show a tendency towards a business mindset at a young age, but they don’t get an opportunity to nurture it. This kit empowers kids to explore, understand, and own their business learning journey!"
         buttonText="Call Us to Order Your Business Kit"
       />
       <Footer />
