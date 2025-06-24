@@ -46,7 +46,7 @@ export default function everyday() {
         <CourseSnapshot
             title="Course Delivery"
             originalPrice="₹1499"
-            offerPrice="999"
+            offerPrice="₹999"
             courseFormatTitle="What's Included"
             courseFeatures={[
                 'Videos & Conversations',
