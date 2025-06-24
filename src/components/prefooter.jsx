@@ -5,7 +5,11 @@ const PreFooter = ({
   mainTitle,
   subText1,
   subText2,
-  buttonText
+  buttonText,
+  button1Text,
+  button1Action,
+  button2Text,
+  button2Action
 }) => {
   const TopDecorativeSvg = () => (
     <Image
@@ -38,6 +42,10 @@ const PreFooter = ({
     />
   );
 
+  // Check if we should render two buttons or single button
+  const hasTwoButtons = button1Text && button2Text;
+  const hasSingleButton = buttonText || (!hasTwoButtons && (button1Text || button2Text));
+
   return (
 <div className="relative px-4 -mt-5 lg:-mt-23 pt-40 md:px-10 py-25 min-h-[70vh] overflow-hidden" style={{ background: 'linear-gradient(90deg, #088F99 0%, #09BE9D 58%, #7ECCA2 88%)' }}>
 <div className="flex flex-col lg:flex-row items-start justify-between max-w-7xl mx-auto gap-10 relative z-30 text-left">
@@ -68,12 +76,33 @@ const PreFooter = ({
         </p>
       )}
       
-      {buttonText && (
+      {/* Two Buttons Layout */}
+      {hasTwoButtons && (
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button
+            className="bg-white text-[#009079] text-base font-medium leading-[149%] tracking-[-0.304px] border-none rounded-full px-7 py-3 cursor-pointer transition-all duration-300 hover:bg-gray-100 hover:-translate-y-1"
+            style={{ fontFamily: 'Poppins' }}
+            onClick={button1Action}
+          >
+            {button1Text}
+          </button>
+          <button
+            className="bg-white text-[#009079] text-base font-medium leading-[149%] tracking-[-0.304px] border-none rounded-full px-7 py-3 cursor-pointer transition-all duration-300 hover:bg-gray-100 hover:-translate-y-1"
+            style={{ fontFamily: 'Poppins' }}
+            onClick={button2Action}
+          >
+            {button2Text}
+          </button>
+        </div>
+      )}
+
+      {/* Single Button Layout (backward compatibility) */}
+      {hasSingleButton && !hasTwoButtons && (
         <button
           className="bg-white text-[#009079] text-base font-medium leading-[149%] tracking-[-0.304px] border-none rounded-full px-7 py-3 cursor-pointer transition-all duration-300 hover:bg-gray-100 hover:-translate-y-1"
           style={{ fontFamily: 'Poppins' }}
         >
-          {buttonText}
+          {buttonText || button1Text || button2Text}
         </button>
       )}
     </div>

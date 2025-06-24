@@ -10,7 +10,7 @@ const mochiyPopOne = Mochiy_Pop_One({
 });
 
 const poppins = Poppins({
-  weight: '500',
+  weight: ['500','600', '700', '800'],
   subsets: ['latin'],
   display: 'swap',
 });
@@ -82,12 +82,12 @@ const WhyPebbleBellaSection = () => {
                 {/* Text - Bigger and more responsive */}
                 <div className="flex-1">
                   <h3
-                    className={`text-[#08B39C] font-semibold text-[1.4rem] sm:text-[1.6rem] md:text-[1.9rem] lg:text-3xl mb-3 md:mb-4 lg:mb-5 leading-snug ${poppins.className}`}
+                    className={`text-[#08B39C] font-extrabold text-[1.4rem] sm:text-[1.6rem] md:text-[1.9rem] lg:text-3xl mb-3 md:mb-4 lg:mb-5 leading-snug ${poppins.className}`}
                   >
                     {benefit.title}
                   </h3>
                   <p
-                    className={`text-[#08B39C] text-[1.1rem] sm:text-[1.2rem] md:text-[1.35rem] lg:text-3xl font-semibold leading-relaxed ${poppins.className}`}
+                    className={`text-[#08B39C] text-[1.1rem] sm:text-[1.2rem] md:text-[1.35rem] lg:text-3xl leading-relaxed ${poppins.className}`}
                   >
                     {benefit.description}
                   </p>

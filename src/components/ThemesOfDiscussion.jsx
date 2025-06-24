@@ -7,7 +7,7 @@ export default function ThemesOfDiscussion() {
       {/* Image Left - Absolutely Positioned */}
       <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 h-[400px] xl:h-[450px] w-[45%] z-0">
         <img 
-          src="./Finance_clubs/Course Introduction (2) 2.svg" 
+          src="./Finance_clubs/theme101.svg" 
           alt="Financial Discussion" 
           className="h-full w-full object-cover rounded-r-lg"
         />

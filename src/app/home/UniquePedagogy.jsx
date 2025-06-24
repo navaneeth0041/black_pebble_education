@@ -8,7 +8,7 @@ const UniquePedagogy = () => {
   const pedagogyCards = [
     {
       title: "Gender-inclusive",
-      image: "/home_page_assets/2/Frame 299.svg",
+      image: "/home_page_assets/2/Frame 299.png",
       alt: "Child smiling at camera",
     },
     {
@@ -18,17 +18,22 @@ const UniquePedagogy = () => {
     },
     {
       title: "Culture-sensitive",
-      image: "/home_page_assets/2/Frame 215.svg",
+      image: "/home_page_assets/2/Frame 298.png",
       alt: "Hands working on craft project", 
     },
     {
       title: "Enhances life skills",
-      image: "/home_page_assets/2/Frame 297.svg",
+      image: "/home_page_assets/2/Frame 297.png",
       alt: "Child playing outdoors",
     },
     {
       title: "Multiple perspectives",
-      image: "/home_page_assets/2/Frame 296.svg",
+      image: "/home_page_assets/2/Frame 296.png",
+      alt: "Child with colorful face paint",
+    },
+    {
+      title: "Improves retention",
+      image: "/home_page_assets/2/Frame 312.png",
       alt: "Child with colorful face paint",
     },
   ];

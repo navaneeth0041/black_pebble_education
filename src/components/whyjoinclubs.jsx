@@ -38,7 +38,7 @@ export default function WhyJoinClub() {
       {/* Right Image Section - Flush Right */}
       <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 h-[400px] xl:h-[450px]">
         <img 
-          src="./images/Money.svg" 
+          src="./images/Money.png" 
           alt="People discussing financial planning around a piggy bank"
           className="h-full object-cover rounded-l-lg"
         />

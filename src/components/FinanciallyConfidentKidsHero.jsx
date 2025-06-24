@@ -42,8 +42,7 @@ export default function FinanciallyConfidentKidsHero() {
             </h1>
             
             <p className={`mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 ${poppins.className}`}>
-              We simplify money for young minds - one course at a time!
-            </p>
+At Black Pebble Education, we simplify money for young minds - one course at a time!            </p>
             
             {/* Buttons */}
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start max-w-md mx-auto lg:mx-0">

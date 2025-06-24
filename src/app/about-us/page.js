@@ -15,8 +15,10 @@ export default function About(){
       	<WhyChooseUsSection />
       	<MeetTheFounderSection />
 		<PreFooter
-        mainTitle="Join Our mission to make finance fun and fearless for kids"
-        buttonText="Book a Counseling Session"
+        mainTitle="From the Founder’s Desk"
+		subText1="Join our mission to make finance fun and fearless for kids"
+        button1Text="Book a Counseling Session"
+		button2Text="Be our Brand Amabassador"
       	/>
         <Footer />
 		</>

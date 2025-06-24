@@ -25,7 +25,7 @@ export default function MissionMethodModeSection() {
   <div className="w-full px-4 sm:px-6 md:px-8 lg:px-0 lg:pr-6 xl:pr-10 lg:mt-10 xl:mt-14">
 
               <img
-                src="/about/Parent_child.svg"
+                src="/about/mission.png"
                 alt="Father and child learning about money together"
                 className="h-full w-full object-cover max-h-[40vh] xs:max-h-[45vh] sm:max-h-[50vh] md:max-h-[55vh] lg:max-h-[65vh] xl:max-h-[70vh] min-h-[200px] xs:min-h-[220px] sm:min-h-[250px] md:min-h-[280px] lg:min-h-[350px] xl:min-h-[400px] rounded-xl lg:rounded-r-2xl lg:rounded-l-none shadow-lg lg:shadow-xl"
               />
