@@ -62,27 +62,25 @@ export default function financial() {
             durationValue="2.5 Hours"
             offerPriceTitle="Special Price"
             />
-        {/* <Testimonials
-            title1="Kids Loved It."
-            title2="Parents Approved."
-            titleIcon="/home_page_assets/5/Group.svg"
-            testimonials={[
-              {
-                quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
-                author: "Riya Malhotra, Parent of a 6th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-              {
-                quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
-                author: "Carlos R., Parent of a 5th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-            ]}
-            backgroundColor="#FBDD9C"
-            commentBackgroundColor="#EF746C"
-            titleColor="#F15B52"
-            transitionImage="/effects/yellow.png"
-          /> */}
+        <Testimonials
+                    title1="Kids Loved It."
+                    title2="Parents Approved."
+                    titleIcon="/home_page_assets/5/Group.svg"
+                    testimonials={[
+                      {
+                        quote: "In the Financial Growth module, my 9-year-old discovered how savings can grow over time. He opened a mock “investment jar” at home and watched his money multiply with simple interest—he was so excited to see that chart!",
+                        author: "Shalini Rao, Parent of a 4th Grader",
+                      },
+                      {
+                        quote: "Financial Growth taught our daughter about compounding in the coolest way possible. Now she’s saving part of her allowance in a “growth jar,” telling us she’s “investing for the future.” Her confidence skyrocketed",
+                        author: "Pankaj Deshmukh, Parent of a 4th Grader",
+                      },
+                    ]}
+                    backgroundColor="#FBDD9C"
+                    commentBackgroundColor="#EF746C"
+                    titleColor="#F15B52"
+                    transitionImage="/effects/yellow.png"
+                  />
       <PreFooter
         mainTitle="Why Learn About Financial Growth So Early?"
         subText1="Investing early has immeasurable benefits. To invest early, your child has to save. To save, they have to track expenses."

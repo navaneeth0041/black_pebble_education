@@ -62,27 +62,25 @@ export default function financial() {
             durationValue="2.5 Hours"
             offerPriceTitle="Special Price"
             />
-        {/* <Testimonials
-            title1="Kids Loved It."
-            title2="Parents Approved."
-            titleIcon="/home_page_assets/5/Group.svg"
-            testimonials={[
-              {
-                quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
-                author: "Riya Malhotra, Parent of a 6th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-              {
-                quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
-                author: "Carlos R., Parent of a 5th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-            ]}
-            backgroundColor="#FBDD9C"
-            commentBackgroundColor="#EF746C"
-            titleColor="#F15B52"
-            transitionImage="/effects/yellow.png"
-          /> */}
+        <Testimonials
+                    title1="Kids Loved It."
+                    title2="Parents Approved."
+                    titleIcon="/home_page_assets/5/Group.svg"
+                    testimonials={[
+                      {
+                        quote: "Financial Wisdom gave my 10-year-old a big-picture view: budgets, banks, goals, all tied together. He now asks, “What’s the wise thing to do with my money?” before making any decision—proof that the curriculum truly stuck.",
+                        author: "Anuradha Nair, Parent of a 5th Grader",
+                      },
+                      {
+                        quote: "After the Financial Wisdom class, our son explained to his grandparents why they shouldn’t borrow high-interest loans. It was incredible to see a 10-year-old speak so confidently about such a grown-up topic!",
+                        author: "Rajesh Kumar, Parent of a 5th Grader",
+                      },
+                    ]}
+                    backgroundColor="#FBDD9C"
+                    commentBackgroundColor="#EF746C"
+                    titleColor="#F15B52"
+                    transitionImage="/effects/yellow.png"
+                  />
       <PreFooter
         mainTitle="Why Learn About Financial Wisdom So Early?"
         subText1="Financial habits create a financial mindset that nurtures financial behavior. Cultivating the right habits at an early age is important for developing a financially responsible adult. "
