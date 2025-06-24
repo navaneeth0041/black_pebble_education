@@ -58,27 +58,25 @@ export default function HomePage() {
             durationValue="2 Hours"
             offerPriceTitle="Special Price"
             />
-                    {/* <Testimonials
+            <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
             titleIcon="/home_page_assets/5/Group.svg"
             testimonials={[
               {
-                quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
-                author: "Riya Malhotra, Parent of a 6th Grader",
-                image: "/home_page_assets/5/iphone.svg",
+                quote: "After just a couple of lessons on 'Value of Money’, my 8-year-old started asking thoughtful questions about why we pay for things. She now checks price tags and compares options before asking for a toy—something I never expected so soon!",
+                author: "Priya Rao, Parent of an 8-Year-Old",
               },
               {
-                quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
-                author: "Carlos R., Parent of a 5th Grader",
-                image: "/home_page_assets/5/iphone.svg",
+                quote: "My daughter came home saying, ‘Mom, I understand why money is special!’ She used her pocket money more carefully, saving up for something she really wanted. This course made abstract ideas real—and fun.",
+                author: "Amit Desai, Parent of a 4th Grader",
               },
             ]}
             backgroundColor="#FBDD9C"
             commentBackgroundColor="#EF746C"
             titleColor="#F15B52"
             transitionImage="/effects/yellow.png"
-          /> */}
+          />
       <PreFooter
         mainTitle="Why Learn the Value of Money So Early?"
         subText1="Some kids grow up without the concept of pocket money.They believe money is an infinite resource.This can result in indulgence or unchecked expenses,causing financial mishaps."

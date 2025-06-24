@@ -58,27 +58,25 @@ export default function everyday() {
             durationValue="2.5 Hours"
             offerPriceTitle="Special Price"
             />
-        {/* <Testimonials
-            title1="Kids Loved It."
-            title2="Parents Approved."
-            titleIcon="/home_page_assets/5/Group.svg"
-            testimonials={[
-              {
-                quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
-                author: "Riya Malhotra, Parent of a 6th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-              {
-                quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
-                author: "Carlos R., Parent of a 5th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-            ]}
-            backgroundColor="#FBDD9C"
-            commentBackgroundColor="#EF746C"
-            titleColor="#F15B52"
-            transitionImage="/effects/yellow.png"
-          /> */}
+        <Testimonials
+                    title1="Kids Loved It."
+                    title2="Parents Approved."
+                    titleIcon="/home_page_assets/5/Group.svg"
+                    testimonials={[
+                      {
+                        quote: "The Everyday Banking module changed everything! My 10-year-old now knows how to deposit cash, read statements, and even asks about fees. He’s proud to show off his “banking know-how” to relatives.",
+                        author: "Smita Verma, Parent of a 5th Grader",
+                      },
+                      {
+                        quote: "Everyday Banking made practical skills click for our daughter. She now helps us tally our small business sales on weekends—something she was motivated to do after taking the course.",
+                        author: "Rahul Chopra, Parent of a 5th Grader",
+                      },
+                    ]}
+                    backgroundColor="#FBDD9C"
+                    commentBackgroundColor="#EF746C"
+                    titleColor="#F15B52"
+                    transitionImage="/effects/yellow.png"
+                  />
       <PreFooter
         mainTitle="Why Learn Everyday Banking So Early?"
         subText1="Learning the concepts of everyday banking is non-negotiable. This knowledge can be attained only through professional coaching and mentoring."

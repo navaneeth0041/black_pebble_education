@@ -58,27 +58,25 @@ export default function Budgeting() {
             durationValue="2 Hours"
             offerPriceTitle="Special Price"
             />
-        {/* <Testimonials
-            title1="Kids Loved It."
-            title2="Parents Approved."
-            titleIcon="/home_page_assets/5/Group.svg"
-            testimonials={[
-              {
-                quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
-                author: "Riya Malhotra, Parent of a 6th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-              {
-                quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
-                author: "Carlos R., Parent of a 5th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-            ]}
-            backgroundColor="#FBDD9C"
-            commentBackgroundColor="#EF746C"
-            titleColor="#F15B52"
-            transitionImage="/effects/yellow.png"
-          /> */}
+                    <Testimonials
+                    title1="Kids Loved It."
+                    title2="Parents Approved."
+                    titleIcon="/home_page_assets/5/Group.svg"
+                    testimonials={[
+                      {
+                        quote: "I was thrilled when my 10-year-old organized a little 'family budget meeting' after learning from the Budgeting modules. She now tracks her allowance in a notebook and even created simple pie-chart drawings to decide how much to save.",
+                        author: "Shivani Patel, Parent of a 5th Grader",
+                      },
+                      {
+                        quote: "Budgeting used to be a foreign concept to my son—now he helps me plan our weekly grocery budget! He proudly says, ‘I know how much we can spend,’ and that level of responsibility blew me away.",
+                        author: "Rohan Mehta, Parent of a 5th Grader",
+                      },
+                    ]}
+                    backgroundColor="#FBDD9C"
+                    commentBackgroundColor="#EF746C"
+                    titleColor="#F15B52"
+                    transitionImage="/effects/yellow.png"
+                  />
       <PreFooter
         mainTitle="Why Learn Budgeting So Early?"
         subText1="Some kids are impulsive buyers and throw tantrums until they get what they want. Making them understand that everything costs money can positively change their attitudes."

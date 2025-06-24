@@ -58,27 +58,25 @@ export default function Banking() {
             durationValue="2.5 Hours"
             offerPriceTitle="Special Price"
             />
-        {/* <Testimonials
-            title1="Kids Loved It."
-            title2="Parents Approved."
-            titleIcon="/home_page_assets/5/Group.svg"
-            testimonials={[
-              {
-                quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
-                author: "Riya Malhotra, Parent of a 6th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-              {
-                quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
-                author: "Carlos R., Parent of a 5th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-            ]}
-            backgroundColor="#FBDD9C"
-            commentBackgroundColor="#EF746C"
-            titleColor="#F15B52"
-            transitionImage="/effects/yellow.png"
-          /> */}
+        <Testimonials
+                            title1="Kids Loved It."
+                            title2="Parents Approved."
+                            titleIcon="/home_page_assets/5/Group.svg"
+                            testimonials={[
+                              {
+                                quote: "After Banking Essentials, my 9-year-old opened a savings account (with our help) and understood how interest works. He now checks his mini-statements and asks intelligent questions about deposits—something I never thought possible at his age!",
+                                author: "Kavita Singh, Parent of a 4th Grader",
+                              },
+                              {
+                                quote: "My daughter used to think a bank was just where you keep money. After this course, she teaches her friends about ATMs, debit cards, and KYC. Her confidence in navigating basic banking is amazing",
+                                author: "Neeraj Khanna, Parent of a 3rd Grader",
+                              },
+                            ]}
+                            backgroundColor="#FBDD9C"
+                            commentBackgroundColor="#EF746C"
+                            titleColor="#F15B52"
+                            transitionImage="/effects/yellow.png"
+                          />
       <PreFooter
         mainTitle="Why Learn Banking So Early?"
         subText1="Today’s kids have a minimal to negligible experience in branch banking. This lack of interaction keeps them from learning about the functioning and importance of banks."
