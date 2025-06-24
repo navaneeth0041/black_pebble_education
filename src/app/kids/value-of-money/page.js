@@ -72,7 +72,6 @@ export default function HomePage() {
             durationValue="2 Hours"
             offerPriceTitle="Special Price"
             />
-
                     {/* <Testimonials
             title1="Kids Loved It."
             title2="Parents Approved."
