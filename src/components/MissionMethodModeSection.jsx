@@ -66,7 +66,7 @@ export default function MissionMethodModeSection() {
       <img
         src="/effects/white.png"
         alt="white transition"
-        className="w-full block relative -top-8 z-55"
+        className="w-full block relative -top-7 z-55"
       />
     </>
   );

@@ -84,7 +84,7 @@ const SelfHelpKits = ({
 
 
       {/* What's Inside Section */}
-    <section className="flex flex-col items-center gap-8 py-16 px-8 pt-40 -mt-5 lg:-mt-30">
+    <section className="flex flex-col items-center gap-8 py-16 px-8 pt-40 -mt-5 lg:-mt-18">
       <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
         What's Inside a Self-Help Kit?
       </h2>
@@ -163,11 +163,11 @@ const SelfHelpKits = ({
     <img 
   src="/effects/white.png" 
   alt="black transition" 
-  className="w-full block z-20 relative" 
+  className="w-full block -top-7 z-20 relative" 
 />
 
       {/* Who is This For Section */}
-<section className="relative bg-[#E1FFF4] sm:py-24 overflow-hidden pt-40 -mt-5 lg:-mt-28">
+<section className="relative bg-[#E1FFF4] sm:py-24 overflow-hidden pt-40 -mt-5 lg:-mt-22">
   <img
     src="/self_help_kit/3/thread.svg"
     alt="Thread Illustration"
@@ -296,7 +296,7 @@ strokeWidth="4"
 
 
 
-  <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-16 md:py-24 relative overflow-hidden -mt-5 lg:-mt-30">
+  <section className="bg-gradient-to-b from-[#E5FFF7] to-[#D5FFE8] py-16 md:py-24 relative overflow-hidden -mt-5 lg:-mt-22">
     {/* Circular Thread Background in bottom-left */}
     <img
       src={smartMoneyConcepts.backgroundImage}

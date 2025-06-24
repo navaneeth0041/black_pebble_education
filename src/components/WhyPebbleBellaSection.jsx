@@ -41,7 +41,7 @@ const WhyPebbleBellaSection = () => {
   return (
     <>
     <section
-      className={`min-h-[60vh] md:min-h-screen bg-[#E1FFF4] py-16 pt-40 -mt-5 lg:-mt-30 z-20 relative overflow-hidden ${mochiyPopOne.variable} ${poppins.variable}`}
+      className={`min-h-[60vh] md:min-h-screen bg-[#E1FFF4] py-16 pt-40 -mt-5 lg:-mt-23 z-20 relative overflow-hidden ${mochiyPopOne.variable} ${poppins.variable}`}
     >
       {/* Decorative String - Touching bottom of screen */}
       <div className=" absolute bottom-0 left-0 sm:left-3 md:left-4 w-[280px] h-[200px] sm:w-[350px] sm:h-[250px] md:w-[450px] md:h-[320px] lg:w-[700px] lg:h-[500px] z-0">

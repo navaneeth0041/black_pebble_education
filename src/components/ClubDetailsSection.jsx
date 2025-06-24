@@ -8,7 +8,7 @@ const ClubDetailsSection = ({
 }) => {
   return (
     <>
-      <section className="bg-[#E3FFF5] py-20 px-6 lg:px-16 pt-40 -mt-5 lg:-mt-30">
+      <section className="bg-[#E3FFF5] py-20 px-6 lg:px-16 pt-40 -mt-5 lg:-mt-22">
         <div className="flex flex-col items-center gap-6 max-w-6xl mx-auto">
           <h2 className="bg-[#E3FFF5] bg-clip-text text-transparent font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
             Club Details

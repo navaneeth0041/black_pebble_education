@@ -59,7 +59,7 @@ export default function ThemesOfDiscussion() {
     <img
         src="/effects/white.png"
         alt="black transition"
-        className='w-[200%] block relative -top-7 z-0'
+        className='w-[200%] block relative -top-6 z-0'
       />
     </>
   );

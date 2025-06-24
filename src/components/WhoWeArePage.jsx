@@ -50,7 +50,7 @@ export default function WhoWeArePage() {
 
             {/* Second paragraph */}
             <p 
-              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#088F99] leading-relaxed"
+              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#088F99] font-semibold leading-relaxed"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               We're on a mission to make money simple, fun, and meaningful for kids and teens. Our age-tailored courses are designed to spark curiosity, build confidence, and turn everyday financial interactions into learning opportunities.
@@ -58,7 +58,7 @@ export default function WhoWeArePage() {
 
             {/* Third paragraph */}
             <p 
-              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#088F99] leading-relaxed"
+              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-[#088F99] font-semibold leading-relaxed"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               Whether your child is just starting out or ready to take bold steps towards financial independence, we're ready to guide them on that journey.

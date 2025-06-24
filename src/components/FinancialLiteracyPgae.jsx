@@ -16,7 +16,7 @@ const poppins = Poppins({
 export default function FinancialLiteracyPage() {
   return (
     <>
-      <div className="bg-white max-h-[90vh] lg:max-h-[70vh]">
+      <div className="bg-white max-h-[90vh]">
         <div className="px-4 sm:px-6 lg:px-12">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row justify-between py-10 gap-8 lg:gap-16 min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-8rem)]">
