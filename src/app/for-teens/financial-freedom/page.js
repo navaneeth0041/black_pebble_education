@@ -76,27 +76,25 @@ export default function BankingEssentials() {
             durationValue="3 Hours"
             offerPriceTitle="Special Price"
             />
-        {/* <Testimonials
-            title1="Kids Loved It."
-            title2="Parents Approved."
-            titleIcon="/home_page_assets/5/Group.svg"
-            testimonials={[
-              {
-                quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
-                author: "Riya Malhotra, Parent of a 6th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-              {
-                quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
-                author: "Carlos R., Parent of a 5th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-            ]}
-            backgroundColor="#FBDD9C"
-            commentBackgroundColor="#EF746C"
-            titleColor="#F15B52"
-            transitionImage="/effects/yellow.png"
-          /> */}
+        <Testimonials
+                    title1="Kids Loved It."
+                    title2="Parents Approved."
+                    titleIcon="/home_page_assets/5/Group.svg"
+                    testimonials={[
+                      {
+                        quote: "The Financial Freedom course inspired my 16-year-old to start a small side hustle selling handmade bookmarks. He tracks profits, expenses, and knows exactly when he’s “financially free” for his project.",
+                        author: "Sunita Menon, Parent of a 11th Grader",
+                      },
+                      {
+                        quote: "My daughter came up with a 'lean budget' to fund her summer internship. She’s learned that financial freedom is a mindset—planning, saving, and knowing when to say no.",
+                        author: "Vikram Nair, Parent of a 11th Grader",
+                      },
+                    ]}
+                    backgroundColor="#FBDD9C"
+                    commentBackgroundColor="#EF746C"
+                    titleColor="#F15B52"
+                    transitionImage="/effects/yellow.png"
+                  />
       <PreFooter
         mainTitle="Why Learn Financial Freedom So Early?"
         subText1="Thinking about financial freedom in one's retirement is a tad too late. Most of us want to enjoy the benefits of financial security as soon as possible. Teach your child to do so early! "

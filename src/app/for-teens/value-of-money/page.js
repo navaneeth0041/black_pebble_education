@@ -66,27 +66,25 @@ export default function HomePage() {
         ]}
       />
         <CourseSnapshot />
-        {/* <Testimonials
-            title1="Kids Loved It."
-            title2="Parents Approved."
-            titleIcon="/home_page_assets/5/Group.svg"
-            testimonials={[
-              {
-                quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
-                author: "Riya Malhotra, Parent of a 6th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-              {
-                quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
-                author: "Carlos R., Parent of a 5th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-            ]}
-            backgroundColor="#FBDD9C"
-            commentBackgroundColor="#EF746C"
-            titleColor="#F15B52"
-            transitionImage="/effects/yellow.png"
-          /> */}
+        <Testimonials
+                    title1="Kids Loved It."
+                    title2="Parents Approved."
+                    titleIcon="/home_page_assets/5/Group.svg"
+                    testimonials={[
+                      {
+                        quote: "My 14-year-old used to think money was just 'something adults worry about’. After this module, she saved up for her first laptop—tracking spending and prioritizing what mattered most.",
+                        author: "Nisha Verma, Parent of a 9th Grader",
+                      },
+                      {
+                        quote: "The Value of Money course gave my son a fresh perspective. He now donates a portion of his savings to charity and explains to us why generosity is part of true financial value.",
+                        author: "Arjun Mehta, Parent of a 9th Grader",
+                      },
+                    ]}
+                    backgroundColor="#FBDD9C"
+                    commentBackgroundColor="#EF746C"
+                    titleColor="#F15B52"
+                    transitionImage="/effects/yellow.png"
+                  />
       <PreFooter
         mainTitle="Why Learn the Value of Money So Early?"
         subText1="Some kids grow up without the concept of pocket money.They believe money is an infinite resource.This can result in indulgence or unchecked expenses,causing financial mishaps."

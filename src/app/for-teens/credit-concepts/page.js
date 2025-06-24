@@ -76,27 +76,25 @@ export default function BankingEssentials() {
             durationValue="2 Hours"
             offerPriceTitle="Special Price"
             />
-        {/* <Testimonials
-            title1="Kids Loved It."
-            title2="Parents Approved."
-            titleIcon="/home_page_assets/5/Group.svg"
-            testimonials={[
-              {
-                quote: "I couldn't believe how quickly my 11-year-old started talking about budgeting and saving after just a few sessions. She even helped plan our family grocery list to stay under budget! The program made finance fun and relatable — she's now thinking like a mini-CEO.",
-                author: "Riya Malhotra, Parent of a 6th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-              {
-                quote: "My son never liked math, but now he's calculating expenses on his own. This program sparked something amazing in him! He's become so confident with numbers and even started his own little savings jar.",
-                author: "Carlos R., Parent of a 5th Grader",
-                image: "/home_page_assets/5/iphone.svg",
-              },
-            ]}
-            backgroundColor="#FBDD9C"
-            commentBackgroundColor="#EF746C"
-            titleColor="#F15B52"
-            transitionImage="/effects/yellow.png"
-          /> */}
+        <Testimonials
+                    title1="Kids Loved It."
+                    title2="Parents Approved."
+                    titleIcon="/home_page_assets/5/Group.svg"
+                    testimonials={[
+                      {
+                        quote: "Credit Concepts demystified credit for my 13-year-old. He now understands interest rates and the importance of a credit score. He’s already planning for his college fund—and knows what to avoid!",
+                        author: "Priyanka Sharma, Parent of an 8th Grader",
+                      },
+                      {
+                        quote: "My daughter’s attitude toward borrowing completely changed. After completing this module, she knows how to read a credit card statement and warns her friends about the dangers of overspending. Proud parent moment!",
+                        author: "Rohit Kapoor, Parent of an 8th Grader",
+                      },
+                    ]}
+                    backgroundColor="#FBDD9C"
+                    commentBackgroundColor="#EF746C"
+                    titleColor="#F15B52"
+                    transitionImage="/effects/yellow.png"
+                  />
       <PreFooter
         mainTitle="Why Learn About Credit So Early?"
         subText1="Today's kids wholeheartedly use credit cards without fully understanding the underlying principle of credit. You don’t want them to handle credit irresponsibly or get into a debt trap."
