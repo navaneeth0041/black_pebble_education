@@ -18,7 +18,7 @@ export const metadata = {
   },
   description:
     "Empowering kids and teens with fun, age-tailored financial literacy education.",
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL("https://black-pebble-education.vercel.app/"),
   openGraph: {
     siteName: "Black Pebble Education",
     locale: "en_US",
