@@ -6,6 +6,10 @@ import CourseSnapshot from '@/components/CourseSnapshot.jsx';
 import PreFooter from '@/components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
+export const metadata = {
+  title: "Financial Wisdom Course for Teens | Black Pebble Education",
+  description: "Explore Japanese money habits adapted for India in this 3-hour session to help teens develop ethical financial wisdom.",
+};
 
 export default function BankingEssentials() {
     return (

@@ -6,6 +6,10 @@ import CourseSnapshot from '../../../components/CourseSnapshot.jsx';
 import PreFooter from '../../../components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
+export const metadata = {
+  title: "Banking Essentials Course for Kids | Black Pebble Education",
+  description: "Introduce kids to banking functions with this 2.5-hour practical session for better financial understanding.",
+};
 
 export default function Banking() {
     return (

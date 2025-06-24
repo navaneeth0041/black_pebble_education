@@ -6,6 +6,10 @@ import CourseSnapshot from '@/components/CourseSnapshot.jsx';
 import PreFooter from '@/components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
+export const metadata = {
+  title: "Business Basics Course for Teens | Black Pebble Education",
+  description: "Empower enterprising teens in this 3-hour course guiding them to start their ventures and gain professional independence.",
+};
 
 export default function BankingEssentials() {
     return (

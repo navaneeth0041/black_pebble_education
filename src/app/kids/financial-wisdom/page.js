@@ -6,6 +6,10 @@ import CourseSnapshot from '../../../components/CourseSnapshot.jsx';
 import PreFooter from '../../../components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
+export const metadata = {
+  title: "Financial Wisdom Course for Kids | Black Pebble Education",
+  description: "Shape kids’ financial habits and mindset for responsible adult behavior with this 2.5-hour session.",
+};
 
 export default function financial() {
     return (

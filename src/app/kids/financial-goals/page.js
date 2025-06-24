@@ -6,6 +6,10 @@ import CourseSnapshot from '../../../components/CourseSnapshot.jsx';
 import PreFooter from '../../../components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
+export const metadata = {
+  title: "Financial Goals Course for Kids | Black Pebble Education",
+  description: "Help kids understand the importance of savings and pursue dreams without financial hurdles in this 2-hour course.",
+};
 
 export default function financial() {
     return (
