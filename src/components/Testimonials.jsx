@@ -79,32 +79,58 @@ export default function Testimonials({
                     marginLeft: '25%'
                   }}
                 >
-                  {testimonials.map((testimonial, index) => (
-  <div
-    key={index}
-    className={`flex-shrink-0 w-[420px] xl:w-[490px] 2xl:w-[550px] mr-6 transition-opacity duration-300 ${
-      index === currentIndex ? 'opacity-100' : 'opacity-75'
-    }`}
-    style={{
-      pointerEvents: index === currentIndex ? 'auto' : 'none'
-    }}
-  >
-    <div className="bg-white p-6 xl:p-8 2xl:p-10 rounded-4xl shadow-lg h-64 xl:h-80 2xl:h-96 flex flex-col">
-      {/* Star Rating - Centered and Bigger */}
-      <div className="flex gap-1 mb-4 justify-center">
-        {[...Array(5)].map((_, i) => (
-          <span key={i} className="text-[#FFD700] text-2xl xl:text-3xl 2xl:text-4xl">★</span>
-        ))}
+                  {testimonials.map((testimonial, index) => {
+  // Determine card size and opacity
+  let cardClass = "flex-shrink-0 mr-6 transition-all duration-300 flex items-center"; // Added flex and items-center
+  let cardWidth = "w-[420px] xl:w-[490px] 2xl:w-[550px]";
+  let opacity = "opacity-75 scale-90";
+  let cardHeight = "h-64 xl:h-80 2xl:h-96"; // Default height
+
+  if (index === currentIndex) {
+    cardWidth = "w-[420px] xl:w-[490px] 2xl:w-[550px]";
+    opacity = "opacity-100 scale-100 z-10";
+    cardHeight = "h-64 xl:h-80 2xl:h-96"; // Full height for current
+  } else if (
+    index === (currentIndex + 1) % testimonials.length ||
+    index === (currentIndex - 1 + testimonials.length) % testimonials.length
+  ) {
+    // Next or previous card
+    cardWidth = "w-[420px] xl:w-[490px] 2xl:w-[550px]";
+    opacity = "opacity-60 scale-90 z-0";
+    cardHeight = "h-54 xl:h-70 2xl:h-86"; // Reduced height, even smaller
+  } else {
+    // All other cards (gone)
+    cardWidth = "w-[320px] xl:w-[350px] 2xl:w-[400px]";
+    opacity = "opacity-40 scale-75 z-0";
+    cardHeight = "h-24 xl:h-28 2xl:h-32"; // Even smaller height
+  }
+  return (
+    <div
+      key={index}
+      className={`${cardClass} ${cardWidth} ${opacity}`}
+      style={{
+        pointerEvents: index === currentIndex ? 'auto' : 'none',
+        alignItems: 'center', // Vertically center the card content
+        display: 'flex'
+      }}
+    >
+      <div className={`bg-white p-6 xl:p-8 2xl:p-10 rounded-4xl shadow-lg flex flex-col ${cardHeight} justify-center`}>
+        {/* Star Rating - Centered and Bigger */}
+        <div className="flex gap-1 mb-4 justify-center">
+          {[...Array(5)].map((_, i) => (
+            <span key={i} className="text-[#FFD700] text-2xl xl:text-3xl 2xl:text-4xl">★</span>
+          ))}
+        </div>
+        <p className={`${poppins.className} text-base xl:text-lg 2xl:text-xl mb-4 leading-relaxed text-[#F15B52] flex-1 overflow-hidden`}>
+          "{testimonial.quote}"
+        </p>
+        <p className={`${poppins.className} font-semibold text-sm xl:text-base 2xl:text-lg text-[#F15B52] mt-auto`}>
+          — {testimonial.author}
+        </p>
       </div>
-      <p className={`${poppins.className} text-base xl:text-lg 2xl:text-xl mb-4 leading-relaxed text-[#F15B52] flex-1 overflow-hidden`}>
-        "{testimonial.quote}"
-      </p>
-      <p className={`${poppins.className} font-semibold text-sm xl:text-base 2xl:text-lg text-[#F15B52] mt-auto`}>
-        — {testimonial.author}
-      </p>
     </div>
-  </div>
-))}
+  );
+})}
                 </div>
               </div>
             </div>
