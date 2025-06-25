@@ -75,8 +75,8 @@ export default function Testimonials({
                 <div 
                   className="flex transition-transform duration-300 ease-in-out"
                   style={{ 
-                    transform: `translateX(-${currentIndex * 70}%)`,
-                    marginLeft: '25%'
+                    transform: `translateX(-${currentIndex * 50}%)`,
+                    marginLeft: '28%'
                   }}
                 >
                   {testimonials.map((testimonial, index) => {
