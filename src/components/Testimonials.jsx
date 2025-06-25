@@ -82,7 +82,7 @@ export default function Testimonials({
                   {testimonials.map((testimonial, index) => (
   <div
     key={index}
-    className={`flex-shrink-0 w-[450px] xl:w-[520px] 2xl:w-[600px] mr-6 transition-opacity duration-300 ${
+    className={`flex-shrink-0 w-[420px] xl:w-[490px] 2xl:w-[550px] mr-6 transition-opacity duration-300 ${
       index === currentIndex ? 'opacity-100' : 'opacity-75'
     }`}
     style={{
