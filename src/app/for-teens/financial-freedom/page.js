@@ -61,7 +61,7 @@ export default function BankingEssentials() {
             title="Course Delivery"
             originalPrice="₹2999"
             offerPrice="₹2499"
-            courseFormatTitle="What's Included"
+            courseFormatTitle="Course Inclusions"
             courseFeatures={[
                 'Videos & Conversations',
                 'Real-life Examples',
@@ -70,7 +70,7 @@ export default function BankingEssentials() {
                 'Infographic Takeaway Notes',
                 'Certificate of Participation'
             ]}
-            locationTitle="Venue"
+            locationTitle="Location"
             locationValue="Online | Offline (Ahmedabad)"
             durationTitle="Session Duration"
             durationValue="3 Hours"
