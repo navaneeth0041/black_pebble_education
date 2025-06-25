@@ -19,8 +19,8 @@ const Footer = () => {
       "Kids' Courses": "/kids/value-of-money",
       "Teens' Courses": "/for-teens/value-of-money",
       "Self-help Kits": "/SelfHelp-Kit",
-      "Be our Brand Ambassador" : "/brand-ambassador"
-
+      "Be our Brand Ambassador" : "/brand-ambassador",
+      "Book a Counseling Session": "https://docs.google.com/forms/d/e/1FAIpQLSeeCFCunf99pwus2cnid2cGLyWrzv1LvKSDOMmqsLFmVp6yKA/viewform"
     };
     
     return urlMap[item] || `/${item.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`;
@@ -57,7 +57,7 @@ const Footer = () => {
     subtitle: "Subscribe for oodles of informative videos"
   };
 
-  const copyright = "Copyright © 2025 Black Pebble Education- All Rights Reserved";
+  const copyright = "Copyright Â© 2025 Black Pebble Education- All Rights Reserved";
 
   return (
     <footer className="bg-[#2B2A2A] text-white">
@@ -172,6 +172,8 @@ const Footer = () => {
                   <li key={index}>
                     <a 
                       href={getCustomUrl(item)}
+                      target={item === "Book a Counseling Session" ? "_blank" : "_self"}
+                      rel={item === "Book a Counseling Session" ? "noopener noreferrer" : ""}
                       className="text-base text-white transition-all duration-300 hover:translate-x-1 inline-block"
                       style={{
                         transition: 'all 0.3s ease'
@@ -269,7 +271,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 pt-4 text-right">
           <p className="text-lg text-white font-medium">
-            <span className="text-l font-bold">Copyright © 2025 Black Pebble Education- All Rights Reserved</span> 
+            <span className="text-l font-bold">Copyright Â© 2025 Black Pebble Education- All Rights Reserved</span> 
           </p>
         </div>
       </div>
