@@ -48,14 +48,14 @@ export default function Testimonials({
 
   return (
     <>
-      <div className="w-full bg-[#FBDD9C] px-4 lg:px-12">
-        <div className="mx-auto py-8 px-6 -mt-5 lg:-mt-25 pt-16 min-h-[60vh] lg:min-h-[70vh] relative overflow-visible">
+      <div className="w-full bg-[#FBDD9C]">
+        <div className="mx-auto py-8 -mt-5 lg:-mt-25 pt-16 min-h-[60vh] lg:min-h-[70vh] relative overflow-visible">
           
           {/* Desktop Layout */}
           <div className="hidden lg:flex lg:flex-col h-full">
             
             {/* Top Section - Title */}
-            <div className="flex-shrink-0 px-8 xl:px-16 pt-4 xl:pt-8">
+            <div className="flex-shrink-0  pt-4 xl:pt-8 pl-4 lg:pl-25">
               <h2 className={`${mochiyPopOne.className} text-4xl xl:text-5xl 2xl:text-6xl font-bold text-[#F15B52] mb-3 flex items-center gap-4 leading-tight`}>
                 {title1}
                 <img 
@@ -80,24 +80,31 @@ export default function Testimonials({
                   }}
                 >
                   {testimonials.map((testimonial, index) => (
-                    <div key={index} className="flex-shrink-0 w-[450px] xl:w-[520px] 2xl:w-[600px] mr-6">
-                      <div className="bg-white p-6 xl:p-8 2xl:p-10 rounded-2xl shadow-lg h-64 xl:h-80 2xl:h-96 flex flex-col">
-                        {/* Star Rating - Centered and Bigger */}
-                        <div className="flex gap-1 mb-4 justify-center">
-                          {[...Array(5)].map((_, i) => (
-                            <span key={i} className="text-[#FFD700] text-2xl xl:text-3xl 2xl:text-4xl">★</span>
-                          ))}
-                        </div>
-                        
-                        <p className={`${poppins.className} text-base xl:text-lg 2xl:text-xl mb-4 leading-relaxed text-[#F15B52] flex-1 overflow-hidden`}>
-                          "{testimonial.quote}"
-                        </p>
-                        <p className={`${poppins.className} font-semibold text-sm xl:text-base 2xl:text-lg text-[#F15B52] mt-auto`}>
-                          — {testimonial.author}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+  <div
+    key={index}
+    className={`flex-shrink-0 w-[450px] xl:w-[520px] 2xl:w-[600px] mr-6 transition-opacity duration-300 ${
+      index === currentIndex ? 'opacity-100' : 'opacity-75'
+    }`}
+    style={{
+      pointerEvents: index === currentIndex ? 'auto' : 'none'
+    }}
+  >
+    <div className="bg-white p-6 xl:p-8 2xl:p-10 rounded-4xl shadow-lg h-64 xl:h-80 2xl:h-96 flex flex-col">
+      {/* Star Rating - Centered and Bigger */}
+      <div className="flex gap-1 mb-4 justify-center">
+        {[...Array(5)].map((_, i) => (
+          <span key={i} className="text-[#FFD700] text-2xl xl:text-3xl 2xl:text-4xl">★</span>
+        ))}
+      </div>
+      <p className={`${poppins.className} text-base xl:text-lg 2xl:text-xl mb-4 leading-relaxed text-[#F15B52] flex-1 overflow-hidden`}>
+        "{testimonial.quote}"
+      </p>
+      <p className={`${poppins.className} font-semibold text-sm xl:text-base 2xl:text-lg text-[#F15B52] mt-auto`}>
+        — {testimonial.author}
+      </p>
+    </div>
+  </div>
+))}
                 </div>
               </div>
             </div>
