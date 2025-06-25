@@ -70,11 +70,9 @@ export default function BankingEssentials() {
                 'Infographic Takeaway Notes',
                 'Certificate of Participation'
             ]}
-            locationTitle="Location"
             locationValue="Online | Offline (Ahmedabad)"
             durationTitle="Session Duration"
             durationValue="3 Hours"
-            offerPriceTitle="Special Price"
             />
         <Testimonials
                     title1="Kids Loved It."

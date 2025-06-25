@@ -65,7 +65,7 @@ export default function HomePage() {
           }
         ]}
       />
-        <CourseSnapshot offerPriceTitle="Special Price"/>
+        <CourseSnapshot courseFormatTitle="Course Inclusions"/>
         <Testimonials
                     title1="Kids Loved It."
                     title2="Parents Approved."

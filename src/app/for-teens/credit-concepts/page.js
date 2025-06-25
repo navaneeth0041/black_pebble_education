@@ -61,7 +61,7 @@ export default function BankingEssentials() {
             title="Course Delivery"
             originalPrice="₹2499"
             offerPrice="₹1799"
-            courseFormatTitle="What's Included"
+            courseFormatTitle="Course Inclusions"
             courseFeatures={[
                 'Videos & Conversations',
                 'Real-life Examples',
@@ -70,11 +70,9 @@ export default function BankingEssentials() {
                 'Infographic Takeaway Notes',
                 'Certificate of Participation'
             ]}
-            locationTitle="Venue"
             locationValue="Online | Offline (Ahmedabad)"
             durationTitle="Session Duration"
             durationValue="2 Hours"
-            offerPriceTitle="Special Price"
             />
         <Testimonials
                     title1="Kids Loved It."

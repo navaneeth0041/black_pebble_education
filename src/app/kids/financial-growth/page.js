@@ -47,7 +47,7 @@ export default function financial() {
             title="Course Delivery"
             originalPrice="₹1799"
             offerPrice="₹1299"
-            courseFormatTitle="What's Included"
+            courseFormatTitle="Course Inclusions"
             courseFeatures={[
                 'Videos & Conversations',
                 'Real-life Examples',
@@ -56,11 +56,9 @@ export default function financial() {
                 'Infographic Takeaway Notes',
                 'Certificate of Participation'
             ]}
-            locationTitle="Venue"
             locationValue="Online | Offline (Ahmedabad)"
             durationTitle="Session Duration"
             durationValue="2.5 Hours"
-            offerPriceTitle="Special Price"
             />
         <Testimonials
                     title1="Kids Loved It."
