@@ -27,7 +27,7 @@ export default function MissionMethodModeSection() {
               <img
                 src="/about/mission.png"
                 alt="Father and child learning about money together"
-                className="h-full w-full object-cover max-h-[40vh] xs:max-h-[45vh] sm:max-h-[50vh] md:max-h-[55vh] lg:max-h-[65vh] xl:max-h-[70vh] min-h-[200px] xs:min-h-[220px] sm:min-h-[250px] md:min-h-[280px] lg:min-h-[350px] xl:min-h-[400px] rounded-xl lg:rounded-r-2xl lg:rounded-l-none shadow-lg lg:shadow-xl"
+                className="h-full w-full object-cover max-h-[50vh] xs:max-h-[55vh] sm:max-h-[60vh] md:max-h-[70vh] lg:max-h-[80vh] xl:max-h-[90vh] min-h-[250px] xs:min-h-[280px] sm:min-h-[300px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[500px] rounded-xl lg:rounded-r-2xl lg:rounded-l-none shadow-lg lg:shadow-xl"
               />
             </div>
           </div>
@@ -42,22 +42,20 @@ export default function MissionMethodModeSection() {
               </h2>
               
               <div className={`space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-7 text-[#39BB9C] ${poppins.className}`}>
-                <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl leading-relaxed font-medium">
+                <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl leading-relaxed font-semibold">
                   Our mission is to cultivate a generation that is financially savvy and confident.
                 </p>
-                
-                <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl leading-relaxed font-medium">
+                <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl leading-relaxed font-semibold">
                   We break down complex money concepts into simple, relatable ideas that resonate with children. We provide age-appropriate resources that make financial education fun and accessible.
                 </p>
-                
-                <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl leading-relaxed font-medium">
+                <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl leading-relaxed font-semibold">
                   We incorporate stories, videos, and real-life scenarios to help young learners understand the importance of budgeting, saving, investing, and other financial concepts.
                 </p>
-                
-                <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl leading-relaxed font-medium">
+                <p className="text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl leading-relaxed font-semibold">
                   Our goal is to inspire curiosity and foster a positive attitude towards money, empowering children to take control of their financial futures.
                 </p>
               </div>
+
             </div>
           </div>
         </div>
