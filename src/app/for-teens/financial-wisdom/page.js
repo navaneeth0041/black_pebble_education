@@ -52,7 +52,7 @@ export default function BankingEssentials() {
             id: 4,
             title: "Gratitude for Money",
             description: "Understanding the importance of thanking and respecting money.",
-            bgColor: "bg-[#4598CA]",
+            bgColor: "bg-[#EF746C]",
             icon: "/Course_Design/1/Tossing_coing.svg"
           }
         ]}

@@ -52,7 +52,7 @@ export default function BankingEssentials() {
             id: 4,
             title: "Terms & Terminologies",
             description: "Learning the terms and terminologies of insurance industry.",
-            bgColor: "bg-[#4598CA]",
+            bgColor: "bg-[#EF746C]",
             icon: "/Course_Design/1/Tossing_coing.svg"
           }
         ]}

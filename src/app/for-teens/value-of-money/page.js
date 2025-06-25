@@ -60,12 +60,12 @@ export default function HomePage() {
             id: 4,
             title: "Peer Pressure",
             description: "Developing resilience against peer demands - being financially strong.",
-            bgColor: "bg-[#4598CA]",
+            bgColor: "bg-[#EF746C]",
             icon: "/Course_Design/1/Tossing_coing.svg"
           }
         ]}
       />
-        <CourseSnapshot />
+        <CourseSnapshot offerPriceTitle="Special Price"/>
         <Testimonials
                     title1="Kids Loved It."
                     title2="Parents Approved."

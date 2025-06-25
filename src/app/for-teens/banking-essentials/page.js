@@ -53,7 +53,7 @@ export default function BankingEssentials() {
             id: 4,
             title: "KYC, ATMs & Debit Cards",
             description: "Understanding the essentials of everyday banking.",
-            bgColor: "bg-[#4598CA]",
+            bgColor: "bg-[#EF746C]",
             icon: "/Course_Design/1/Tossing_coing.svg"
           }
         ]}

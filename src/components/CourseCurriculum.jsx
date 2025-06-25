@@ -43,7 +43,7 @@ export default function CourseCurriculum({
       id: 4,
       title: "| Peer Pressure",
       description: "Developing resilience against peer demands - being financially strong.",
-      bgColor: "bg-[#4598CA]",
+      bgColor: "bg-[#EF746C]",
       icon: "/Course_Design/1/Tossing_coing.svg"
     }
   ]

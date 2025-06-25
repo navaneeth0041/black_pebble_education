@@ -49,28 +49,28 @@ export default function Testimonials({
   return (
     <>
       <div className="w-full bg-[#FBDD9C] px-4 lg:px-12">
-        <div className="mx-auto py-14 px-6 -mt-5 lg:-mt-22 pt-30 min-h-[90vh] lg:min-h-screen relative overflow-visible">
+        <div className="mx-auto py-8 px-6 -mt-5 lg:-mt-25 pt-16 min-h-[60vh] lg:min-h-[70vh] relative overflow-visible">
           
           {/* Desktop Layout */}
           <div className="hidden lg:flex lg:flex-col h-full">
             
             {/* Top Section - Title */}
-            <div className="flex-shrink-0 px-8 xl:px-16 pt-8 xl:pt-16">
-              <h2 className={`${mochiyPopOne.className} text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#F15B52] mb-4 flex items-center gap-6 leading-tight`}>
+            <div className="flex-shrink-0 px-8 xl:px-16 pt-4 xl:pt-8">
+              <h2 className={`${mochiyPopOne.className} text-4xl xl:text-5xl 2xl:text-6xl font-bold text-[#F15B52] mb-3 flex items-center gap-4 leading-tight`}>
                 {title1}
-<img 
-  src={titleIcon} 
-  alt="Phone Icon" 
-  className="w-12 h-12 lg:w-20 lg:h-20 xl:w-24 xl:h-24 2xl:w-28 2xl:h-28 rotate-13" 
-/>
+                <img 
+                  src={titleIcon} 
+                  alt="Phone Icon" 
+                  className="w-10 h-10 lg:w-16 lg:h-16 xl:w-18 xl:h-18 2xl:w-20 2xl:h-20 rotate-13" 
+                />
               </h2>
-              <h3 className={`${mochiyPopOne.className} text-5xl xl:text-6xl 2xl:text-7xl font-bold text-[#F15B52] leading-tight mb-30`}>
+              <h3 className={`${mochiyPopOne.className} text-4xl xl:text-5xl 2xl:text-6xl font-bold text-[#F15B52] leading-tight mb-8`}>
                 {title2}
               </h3>
             </div>
 
             {/* Middle Section - Testimonial Cards Carousel */}
-            <div className="flex-1 flex items-start px-8 xl:px-16 overflow-hidden mb-12">
+            <div className="flex-1 flex items-start px-8 xl:px-16 overflow-hidden mb-8">
               <div className="relative w-full">
                 <div 
                   className="flex transition-transform duration-300 ease-in-out"
@@ -81,18 +81,18 @@ export default function Testimonials({
                 >
                   {testimonials.map((testimonial, index) => (
                     <div key={index} className="flex-shrink-0 w-[450px] xl:w-[520px] 2xl:w-[600px] mr-6">
-                      <div className="bg-white p-8 xl:p-10 2xl:p-12 rounded-2xl shadow-lg h-96 xl:h-[450px] 2xl:h-[500px] flex flex-col">
+                      <div className="bg-white p-6 xl:p-8 2xl:p-10 rounded-2xl shadow-lg h-64 xl:h-80 2xl:h-96 flex flex-col">
                         {/* Star Rating - Centered and Bigger */}
-                        <div className="flex gap-2 mb-6 justify-center">
+                        <div className="flex gap-1 mb-4 justify-center">
                           {[...Array(5)].map((_, i) => (
-                            <span key={i} className="text-[#FFD700] text-4xl xl:text-5xl 2xl:text-6xl">★</span>
+                            <span key={i} className="text-[#FFD700] text-2xl xl:text-3xl 2xl:text-4xl">★</span>
                           ))}
                         </div>
                         
-                        <p className={`${poppins.className} text-lg xl:text-xl 2xl:text-2xl mb-6 leading-relaxed text-[#F15B52] flex-1 overflow-hidden`}>
+                        <p className={`${poppins.className} text-base xl:text-lg 2xl:text-xl mb-4 leading-relaxed text-[#F15B52] flex-1 overflow-hidden`}>
                           "{testimonial.quote}"
                         </p>
-                        <p className={`${poppins.className} font-semibold text-base xl:text-lg 2xl:text-xl text-[#F15B52] mt-auto`}>
+                        <p className={`${poppins.className} font-semibold text-sm xl:text-base 2xl:text-lg text-[#F15B52] mt-auto`}>
                           — {testimonial.author}
                         </p>
                       </div>
@@ -103,19 +103,19 @@ export default function Testimonials({
             </div>
 
             {/* Bottom Section - Navigation Arrows */}
-            <div className="flex justify-center pb-16">
+            <div className="flex justify-center pb-8">
               <div className="flex gap-4">
                 <button
                   onClick={handlePrev}
-                  className="p-4 rounded-full bg-white text-gray-600 shadow-xl hover:shadow-2xl transition-all hover:bg-gray-50 border border-gray-200"
+                  className="p-3 rounded-full bg-white text-gray-600 shadow-xl hover:shadow-2xl transition-all hover:bg-gray-50 border border-gray-200"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="p-4 rounded-full bg-white text-gray-600 shadow-xl hover:shadow-2xl transition-all hover:bg-gray-50 border border-gray-200"
+                  className="p-3 rounded-full bg-white text-gray-600 shadow-xl hover:shadow-2xl transition-all hover:bg-gray-50 border border-gray-200"
                 >
-                  <ChevronRight className="w-6 h-6" />
+                  <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
             </div>
@@ -125,8 +125,8 @@ export default function Testimonials({
           <div className="lg:hidden flex flex-col">
             
             {/* Title */}
-            <div className="mb-8 text-center">
-              <h2 className={`${mochiyPopOne.className} text-3xl sm:text-4xl font-bold text-[#F15B52] mb-3 flex items-center justify-center gap-4 leading-tight`}>
+            <div className="mb-6 text-center">
+              <h2 className={`${mochiyPopOne.className} text-3xl sm:text-4xl font-bold text-[#F15B52] mb-2 flex items-center justify-center gap-4 leading-tight`}>
                 {title1}
                 <img src={titleIcon} alt="Phone Icon" className="w-8 h-8 sm:w-10 sm:h-10" />
               </h2>
@@ -136,15 +136,15 @@ export default function Testimonials({
             </div>
             
             {/* Testimonial Card */}
-            <div className="bg-white p-6 sm:p-8 rounded-2xl mb-8 shadow-lg">
+            <div className="bg-white p-5 sm:p-6 rounded-2xl mb-6 shadow-lg">
               {/* Star Rating */}
-              <div className="flex gap-1 mb-4 justify-center">
+              <div className="flex gap-1 mb-3 justify-center">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-[#FFD700] text-lg">★</span>
                 ))}
               </div>
               
-              <p className={`${poppins.className} text-sm sm:text-base mb-4 leading-relaxed text-gray-700 text-center`}>
+              <p className={`${poppins.className} text-sm sm:text-base mb-3 leading-relaxed text-gray-700 text-center`}>
                 "{currentTestimonial.quote}"
               </p>
               <p className={`${poppins.className} font-semibold text-xs sm:text-sm text-[#F15B52] text-center`}>
@@ -158,13 +158,13 @@ export default function Testimonials({
                 onClick={handlePrev}
                 className="p-3 rounded-full bg-white text-gray-600 shadow-lg hover:shadow-xl transition-all"
               >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={handleNext}
                 className="p-3 rounded-full bg-white text-gray-600 shadow-lg hover:shadow-xl transition-all"
               >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-5 h-5" />
               </button>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function Testimonials({
       <img
         src="/effects/yellow.png"
         alt="yellow transition"
-        className='w-[200%] block relative -top-7 z-20'
+        className='w-[200%] block relative -top-9 z-20'
       />
     </>
   );
