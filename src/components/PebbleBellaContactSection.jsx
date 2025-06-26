@@ -56,7 +56,7 @@ const PebbleBellaContactSection = () => {
       
       // Prepare template parameters
       const templateParams = {
-        to_email: 'trustmeimsources@gmail.com', // blackpebbleeducation@gmail.com
+        to_email: 'blackpebbleeducation@gmail.com', // blackpebbleeducation@gmail.com
         from_name: formData.name,
         applicant_name: formData.name,
         applicant_city: formData.city,
@@ -196,18 +196,20 @@ const PebbleBellaContactSection = () => {
 
                   <div>
                     <label className={`block text-white text-base md:text-lg mb-3 ${poppins.className}`}>
-                      Whatsapp Number
+                      WhatsApp Number*
                     </label>
                     <input
                       type="tel"
                       name="whatsapp"
                       value={formData.whatsapp}
                       onChange={handleInputChange}
+                      required
                       disabled={isSubmitting}
                       className="w-full bg-transparent border-b-2 border-white/70 text-white placeholder-white/70 text-base md:text-lg py-3 px-0 focus:outline-none focus:border-white transition-colors disabled:opacity-50"
                       placeholder=""
                     />
                   </div>
+
                 </div>
 
                 {/* Second Row - Message with proper spacing */}

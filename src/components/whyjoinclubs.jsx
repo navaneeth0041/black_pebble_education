@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function WhyJoinClub() {
+export default function WhyJoinClub({ imageSrc = "./images/childlap.png" }) {
   return (
     <div className="w-full py-16 md:py-20 lg:py-24 min-h-screen flex items-center relative">
       <div className="flex flex-col lg:flex-row items-start justify-start w-full max-w-7xl mx-auto px-4 sm:px-6">
@@ -35,11 +35,11 @@ export default function WhyJoinClub() {
         </div>
       </div>
 
-      {/* Right Image Section - Flush Right */}
+      {/* Right Image Section */}
       <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 h-[400px] xl:h-[450px]">
-        <img 
-          src="./images/childlap.png" 
-          alt="People discussing financial planning around a piggy bank"
+        <img
+          src={imageSrc}
+          alt="Why join the club"
           className="h-full object-cover rounded-l-lg"
         />
       </div>

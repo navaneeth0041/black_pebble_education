@@ -21,7 +21,7 @@ export default function FinanceClubs() {
         mindType="Growing"
         subtitle="An interactive environment to learn important financial concepts"
       />
-      <WhyJoinClub/>
+      <WhyJoinClub imageSrc="./images/teen.png" />
       <ClubHighlightsSection/>
       <ThemesOfDiscussion/>
       <ClubDetailsSection 

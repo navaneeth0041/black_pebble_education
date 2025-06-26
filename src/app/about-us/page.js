@@ -21,7 +21,7 @@ export default function About(){
       	<MeetTheFounderSection />
 		<PreFooter
         mainTitle="From the Founder’s Desk"
-		subText1="Join our mission to make finance fun and fearless for kids"
+		subText1="Join our mission to make finance fun and fearless for kids."
         button1Text="Book a Counseling Session"
 		button2Text="Be our Brand Amabassador"
       	/>
