@@ -90,7 +90,7 @@ const PebbleBellaSection = () => {
           <div className="order-1 lg:order-2">
             <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/brandamm.png"
+                src="/images/momchild.png"
                 alt="Family learning together - father and daughter with piggy bank"
                 fill
                 className="object-cover"

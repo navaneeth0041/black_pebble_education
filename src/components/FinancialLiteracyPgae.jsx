@@ -8,25 +8,25 @@ export default function FinancialLiteracyPage() {
   const contentData = [
     {
       subtitle: "Poor Financial Knowledge",
-      image: "./home_page_assets/3/27photo.svg",
+      image: "./home_page_assets/3/27photo.png",
       statisticImage: "./home_page_assets/3/Frame 164.svg",
       alt: "Family learning about finances"
     },
     {
       subtitle: "Financial Insecurity", 
-      image: "./home_page_assets/3/69photo.svg", // You'll need to update these paths to your actual images
+      image: "./home_page_assets/3/69photo.png", // You'll need to update these paths to your actual images
       statisticImage: "./home_page_assets/3/69.png", // You'll need different statistic images for each
       alt: "Person counting money and coins"
     },
     {
       subtitle: "Financial Setbacks",
-      image: "./home_page_assets/3/47photo.svg", // You'll need to update these paths
+      image: "./home_page_assets/3/47photo.png", // You'll need to update these paths
       statisticImage: "./home_page_assets/3/47.svg", // You'll need different statistic images for each
       alt: "Mother and daughter learning together"
     },
     {
       subtitle: "Financial Frauds",
-      image: "./home_page_assets/3/24photo.svg", // You'll need to update these paths
+      image: "./home_page_assets/3/24photo.png", // You'll need to update these paths
       statisticImage: "./home_page_assets/3/24.png", // You'll need different statistic images for each
       alt: "Children studying and learning"
     }

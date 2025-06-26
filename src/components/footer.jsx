@@ -57,7 +57,7 @@ const Footer = () => {
     subtitle: "Subscribe for oodles of informative videos"
   };
 
-  const copyright = "Copyright Â© 2025 Black Pebble Education- All Rights Reserved";
+  const copyright = "Copyright © 2025 Black Pebble Education- All Rights Reserved";
 
   return (
     <footer className="bg-[#2B2A2A] text-white">
@@ -270,8 +270,34 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-8 pt-4 text-right">
-          <p className="text-lg text-white font-medium">
-            <span className="text-l font-bold">Copyright Â© 2025 Black Pebble Education- All Rights Reserved</span> 
+          <p className="text-lg text-white">
+            <span>Copyright © 2025 Black Pebble Education- All Rights Reserved</span> 
+          </p>
+            <p className="text-md text-white mt-2">
+            Powered by{' '}
+            <a 
+              href="https://500x.tech/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="transition-all duration-300"
+              style={{
+                transition: 'all 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                e.target.style.webkitBackgroundClip = 'text';
+                e.target.style.webkitTextFillColor = 'transparent';
+                e.target.style.backgroundClip = 'text';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = '';
+                e.target.style.webkitBackgroundClip = '';
+                e.target.style.webkitTextFillColor = '';
+                e.target.style.backgroundClip = '';
+              }}
+            >
+              500x
+            </a>
           </p>
         </div>
       </div>
