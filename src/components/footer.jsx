@@ -79,7 +79,7 @@ const Footer = () => {
             >
               {/* YouTube Icon Section */}
               <div className="px-4 py-3 flex-shrink-0">
-                <img src="/footer/youtube.png" alt="YouTube" className="h-8 w-8" />
+                <img src="/footer/youtube.png" alt="YouTube" className="h-12 w-12" />
               </div>
               
               <div className="w-px h-10 bg-white"></div>
