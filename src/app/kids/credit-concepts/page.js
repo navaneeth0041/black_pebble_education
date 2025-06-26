@@ -20,7 +20,7 @@ export default function everyday() {
           subtitle="Introduce your child to the often-misused concept - Credit!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -83,7 +83,7 @@ export default function everyday() {
         mainTitle="Why Learn About Credit So Early?"
         subText1="Today's kids wholeheartedly use credit cards without fully understanding the underlying principle of credit. You don’t want them to handle credit irresponsibly or get into a debt trap. "
         subText2="This 2-hour session provides them with a relatable and practical understanding of credit."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

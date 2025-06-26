@@ -20,7 +20,7 @@ export default function ValueOfMoneyHero({
   subtitle = "Introduce your child to the right money mindset - Respect for money!",
   iconSrc = "/Course_Design/Clip path group.svg",
   iconAlt = "Course Icon",
-  primaryButtonText = "Book a Counselling Session",
+  primaryButtonText = "Book a Counseling Session",
   secondaryButtonText = "Be our Brand Ambassador",
   onPrimaryClick = () => window.open("https://docs.google.com/forms/d/e/1FAIpQLSeeCFCunf99pwus2cnid2cGLyWrzv1LvKSDOMmqsLFmVp6yKA/viewform"),
   onSecondaryClick = () => {window.location='/brand-ambassador'}

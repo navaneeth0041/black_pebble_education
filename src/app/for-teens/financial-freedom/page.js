@@ -20,7 +20,7 @@ export default function BankingEssentials() {
           subtitle="Give your child the recipe for financial freedom - Soon!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -97,7 +97,7 @@ export default function BankingEssentials() {
         mainTitle="Why Learn Financial Freedom So Early?"
         subText1="Thinking about financial freedom in one's retirement is a tad too late. Most of us want to enjoy the benefits of financial security as soon as possible. Teach your child to do so early! "
         subText2="This 3-hour session gives them an understanding of all the ingredients of financial freedom."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

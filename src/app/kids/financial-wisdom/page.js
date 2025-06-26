@@ -20,7 +20,7 @@ export default function financial() {
           subtitle="It’s never too early to be wise - financially!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -83,7 +83,7 @@ export default function financial() {
         mainTitle="Why Learn About Financial Wisdom So Early?"
         subText1="Financial habits create a financial mindset that nurtures financial behavior. Cultivating the right habits at an early age is important for developing a financially responsible adult. "
         subText2="This 2.5-hour session shapes and molds your child for correct financial mannerisms."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

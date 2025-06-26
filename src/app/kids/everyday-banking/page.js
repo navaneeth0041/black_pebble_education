@@ -20,7 +20,7 @@ export default function everyday() {
           subtitle="Introduce your child to the nuances of banking - in a fun way!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -50,7 +50,7 @@ export default function everyday() {
             courseFormatTitle="Course Inclusions"
             courseFeatures={[
                 'Interactions',
-                'Example',
+                'Examples',
                 'Quzzes',
                 'Illustrations',
                 'Infographic Takeaway Notes',
@@ -83,7 +83,7 @@ export default function everyday() {
         mainTitle="Why Learn Everyday Banking So Early?"
         subText1="Learning the concepts of everyday banking is non-negotiable. This knowledge can be attained only through professional coaching and mentoring."
         subText2="This 2.5-hour session gives your child a complete understanding of day-to-day banking."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

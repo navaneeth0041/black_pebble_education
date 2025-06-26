@@ -360,21 +360,21 @@ className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
         {/* Description Box - Expanded */}
         <div className="flex justify-center mb-6 md:mb-8">
           <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 sm:p-8 md:p-10 text-center relative w-full max-w-none mx-4">
-            <p className="text-white font-['Poppins'] font-medium text-lg sm:text-xl md:text-2xl break-words">
+            <p className="text-white font-['Poppins'] font-medium text-lg sm:text-2xl md:text-4xl break-words">
               {smartMoneyConcepts.pricingData.description}
             </p>
           </div>
         </div>
 
         {/* Pricing Rows - Expanded */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-center px-4 py-4 md:py-6">
+        <div className="flex flex-col md:flex-row items-center justify-center text-center px-4 py-4 md:py-6">
           {/* Row 1 (Always): All for just */}
           <span className="text-white font-['Poppins'] font-semibold text-2xl sm:text-3xl md:text-4xl">
             All for just
           </span>
 
           {/* Row 2 (mobile-only): current + original */}
-          <div className="flex md:hidden items-center justify-center gap-4 mt-2">
+          <div className="flex md:hidden items-center justify-center">
             {/* Current Price */}
             <div className="relative">
               <img
@@ -393,7 +393,7 @@ className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
           </div>
 
           {/* Row 2 (desktop-only): all in one line */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center ">
             {/* Current Price */}
             <div className="relative">
               <img
@@ -401,12 +401,12 @@ className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
                 alt="Price Box"
                 className="w-36 h-auto"
               />
-              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-2xl md:text-3xl text-white">
+              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-extrabold text-3xl md:text-5xl text-white">
                 {smartMoneyConcepts.pricingData.currentPrice}
               </span>
             </div>
             {/* Original */}
-            <span className="text-white/70 font-['Poppins'] text-xl md:text-2xl line-through">
+            <span className="text-white/70 font-['Poppins'] text-2xl sm:text-3xl md:text-4xl line-through">
               {smartMoneyConcepts.pricingData.originalPrice}
             </span>
           </div>

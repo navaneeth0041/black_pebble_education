@@ -93,21 +93,22 @@ export default function FinancialLiteracyPage() {
                     />
                     
                     {/* Dynamic Statistic Image - Mobile */}
+                    {/* Dynamic Statistic Image - Mobile - POSITIONED LOWER */}
                     <div className="block lg:hidden absolute left-1/2 -bottom-8 sm:-bottom-10 md:-bottom-12 pb-12 sm:pb-16 md:pb-20 transform -translate-x-1/2 z-20">
                       <img
                         src={currentContent.statisticImage}
                         alt={`${currentContent.statistic} ${currentContent.description}`}
-                        className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-contain transition-all duration-500 ease-in-out"
+                        className="w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 object-contain transition-all duration-500 ease-in-out"
                       />
                     </div>
                   </div>
                   
-                  {/* Dynamic Statistic Image - Desktop */}
-                  <div className="hidden lg:block absolute lg:-bottom-12 xl:-bottom-16 lg:-left-3 xl:-left-5 z-20">
+                  {/* Dynamic Statistic Image - Desktop - POSITIONED LOWER */}
+                  <div className="hidden lg:block absolute lg:-bottom-16 xl:-bottom-20 lg:-left-8 xl:-left-10 z-20">
                     <img
                       src={currentContent.statisticImage}
                       alt={`${currentContent.statistic} ${currentContent.description}`}
-                      className="w-48 h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 2xl:w-80 2xl:h-80 object-contain transition-all duration-500 ease-in-out"
+                      className="w-65 h-65 lg:w-68 lg:h-68 xl:w-75 xl:h-75 2xl:w-[24rem] 2xl:h-[24rem] object-contain transition-all duration-500 ease-in-out"
                     />
                   </div>
                 </div>

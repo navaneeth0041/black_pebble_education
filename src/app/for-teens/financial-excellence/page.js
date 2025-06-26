@@ -20,7 +20,7 @@ export default function BankingEssentials() {
           subtitle="Give your child full exposure to financial literacy in 4 weeks!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -97,7 +97,7 @@ export default function BankingEssentials() {
         mainTitle="Why Enroll for the Financial Excellence Program?"
         subText1="Some kids are ahead of the curve. Their learning abilities and curiosity allow them to imbibe new and complex information easily than others."
         subText2="This 9-hour course gives them a complete understanding of important financial concepts."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

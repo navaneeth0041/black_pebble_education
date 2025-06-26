@@ -20,7 +20,7 @@ export default function BankingEssentials() {
           subtitle="Let your child be an entrepreneur - Teenpreneur!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -97,7 +97,7 @@ export default function BankingEssentials() {
         mainTitle="Why Learn About Business So Early?"
         subText1="We have a generation of very enterprising young people! Kids today are confident and have the passion to start their ventures and be professionally independent."
         subText2="This 3-hour session gives them a full guide to get started on their entrepreneurial journey."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

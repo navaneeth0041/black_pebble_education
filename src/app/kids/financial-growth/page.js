@@ -20,7 +20,7 @@ export default function financial() {
           subtitle="Money looks good when it grows - not on trees!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -83,7 +83,7 @@ export default function financial() {
         mainTitle="Why Learn About Financial Growth So Early?"
         subText1="Investing early has immeasurable benefits. To invest early, your child has to save. To save, they have to track expenses."
         subText2="This 2.5-hour session teaches these to equip your child to start their growth journey."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

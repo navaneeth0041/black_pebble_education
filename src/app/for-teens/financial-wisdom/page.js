@@ -20,7 +20,7 @@ export default function BankingEssentials() {
           subtitle="Be financially wise - The Japanese Way!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -97,7 +97,7 @@ export default function BankingEssentials() {
         mainTitle="Why Learn Financial Wisdom So Early?"
         subText1="Financial wisdom is an aspirational benchmark for kids. Learning about the Japanese habits allows kids to pursue them consciously and follow the path of ethical wealth generation."
         subText2="This 3-hour session gives them a peek into blending Japanese money habits in an Indian context."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

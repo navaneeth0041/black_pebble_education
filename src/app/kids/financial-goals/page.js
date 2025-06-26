@@ -20,7 +20,7 @@ export default function financial() {
           subtitle="Give your child something to aspire - financially!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -85,7 +85,7 @@ export default function financial() {
         mainTitle="Why Learn About Financial Goals So Early?"
         subText1="Most kids don’t realize that their life goals come with financial obligations. Make your child understand the importance of savings to attain their goals without financial burden."
         subText2="This 2-hour session allows your child to pursue their dreams without financial hurdles."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

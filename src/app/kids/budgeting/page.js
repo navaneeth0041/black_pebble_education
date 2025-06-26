@@ -20,7 +20,7 @@ export default function Budgeting() {
           subtitle="Make your child learn to be mindful of expenses - Money discipline!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -50,7 +50,7 @@ export default function Budgeting() {
             courseFormatTitle="Course Inclusions"
             courseFeatures={[
                 'Interactions',
-                'Example',
+                'Examples',
                 'Quizzes',
                 'Illustrations',
                 'Infographic Takeaway Notes',
@@ -83,7 +83,7 @@ export default function Budgeting() {
         mainTitle="Why Learn Budgeting So Early?"
         subText1="Some kids are impulsive buyers and throw tantrums until they get what they want. Making them understand that everything costs money can positively change their attitudes."
         subText2="This 2-hour session makes them differentiate between needs & wants and spend wisely."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

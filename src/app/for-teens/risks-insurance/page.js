@@ -20,7 +20,7 @@ export default function BankingEssentials() {
           subtitle="Let your child learn to navigate risks - the smart way!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -97,7 +97,7 @@ export default function BankingEssentials() {
         mainTitle="Why Learn About Risks & Insurance So Early?"
         subText1="The world and economies are becoming extremely dynamic and uncertain. Risks reside at every turn and in every corner. Being aware of risk mitigation has never been so important."
         subText2="This 2-hour session gives your child a peek into possible risks and available insurance."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

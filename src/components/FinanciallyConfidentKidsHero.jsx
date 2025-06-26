@@ -17,7 +17,7 @@ const poppins = Poppins({
 export default function FinanciallyConfidentKidsHero() {
   const buttons = [
     {
-      text: "Book a Counselling Session",
+      text: "Book a Counseling Session",
       className: "bg-gradient-to-r from-[#08A69A] via-[#0ABE9D] to-[#69C9A1] hover:opacity-90 text-white px-4 lg:px-5 py-2 lg:py-2.5 rounded-full font-medium transition-all duration-200 text-sm whitespace-nowrap",
       onClick: () => console.log("Book counselling clicked")
     },

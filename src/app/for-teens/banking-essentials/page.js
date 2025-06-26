@@ -21,7 +21,7 @@ export default function BankingEssentials() {
           subtitle="Introduce your child to the heartbeat of finance - Banks!"
           iconSrc="/Course_Design/Clip path group.svg"
           iconAlt="Piggy Bank"
-          primaryButtonText="Book a Counselling Session"
+          primaryButtonText="Book a Counseling Session"
           secondaryButtonText="Be our Brand Ambassador"
         />
         <CourseCurriculum 
@@ -98,7 +98,7 @@ export default function BankingEssentials() {
         mainTitle="Why Learn Banking So Early?"
         subText1="Today's kids have a minimal to negligible experience in branch banking. This lack of interaction keeps them from learning about the functioning and importance of banks."
         subText2="This 2-hour session provides them with a relatable and practical understanding of banking."
-        buttonText="Book a Counselling Session"
+        buttonText="Book a Counseling Session"
       />
       <Footer /> 
       </>

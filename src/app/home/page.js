@@ -12,10 +12,6 @@ import Testimonials from '@/components/Testimonials.jsx'
 import ImpactPage from '@/components/ImapctStarts.jsx';
 import PreFooter from '@/components/prefooter.jsx';
 
-export const metadata = {
-  title: "Financial Education for Kids & Teens | Black Pebble Education",
-  description: "We are advocates of financial literacy for the young! We’re on a mission to make money simple, fun, and meaningful for kids and teens with age-tailored courses designed to spark curiosity and build confidence.",
-};
 
 export default function HomePage() {
   return (
