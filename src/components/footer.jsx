@@ -117,7 +117,7 @@ const Footer = () => {
                   transition: 'all 0.3s ease'
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                  e.target.style.background = 'linear-gradient(107deg, #  08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
                   e.target.style.webkitBackgroundClip = 'text';
                   e.target.style.webkitTextFillColor = 'transparent';
                   e.target.style.backgroundClip = 'text';

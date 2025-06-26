@@ -36,7 +36,8 @@ const SelfHelpKits = ({
       originalPrice: "₹2499",
       currentPrice: "₹1799",
       description: "Invest in your child's growth with 49+ guided resources-"
-    }
+    },
+    enthusiastText: "Money Enthusiasts",  
   }
 }) => {
   return (
@@ -208,9 +209,7 @@ const SelfHelpKits = ({
       <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[52px] p-6 w-72 sm:w-80 h-56 flex items-center justify-between">
         <div className="flex flex-col justify-center">
           <span className="text-white font-poppins text-2xl sm:text-3xl font-medium leading-snug tracking-tight">
-            Money
-            <br />
-            Enthusiasts
+            {smartMoneyConcepts?.enthusiastText || "Money Enthusiasts"}
           </span>
         </div>
         <div className="flex items-center justify-center w-24 h-24">
@@ -324,7 +323,7 @@ className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
               <img
                 src={concept.icon}
                 alt={`Icon ${concept.id}`}
-                className="absolute -left-6 sm:-left-8 top-0 w-12 sm:w-16 h-12 sm:h-16 transform -rotate-12"
+                className="absolute -left-6 sm:-left-8 top-0 w-18 sm:w-16 h-12 sm:h-16 transform -rotate-12"
               />
               <span className="text-[#09BE9D] font-['Poppins'] font-semibold text-base sm:text-lg text-center leading-tight">
                 {concept.title}
