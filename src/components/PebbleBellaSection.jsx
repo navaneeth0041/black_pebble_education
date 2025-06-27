@@ -51,7 +51,7 @@ const PebbleBellaSection = () => {
           {/* Left Content */}
           <div className="order-2 lg:order-1">
             {/* Updated heading to match the size of WhyPebbleBellaSection */}
-            <h2 className={`text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-8 lg:mb-12 leading-tight ${mochiyPopOne.className}`}>
+            <h2 className={`text-5xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-8 lg:mb-12 leading-tight ${mochiyPopOne.className}`}>
               <span className="text-[#7AD3BE] opacity-60">Who We Want as</span><br />
               <span className="text-[#39BB9C]">Pebble Bella</span>
             </h2>

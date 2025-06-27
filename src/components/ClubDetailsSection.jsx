@@ -62,7 +62,7 @@ const ClubDetailsSection = ({
                           lineHeight: '107%',
                           letterSpacing: '-0.893px'
                         }}>
-                          ₹1200
+                          ₹250
                         </div>
                         <div className="text-white font-poppins text-[56px] font-semibold" style={{
                           fontWeight: 600,
@@ -117,7 +117,7 @@ const ClubDetailsSection = ({
                     }}>
                       Location
                     </h4>
-                    <p className="text-white font-poppins text-[22px] font-semibold" style={{
+                    <p className="text-white font-poppins text-[22px] font-medium" style={{
                       fontWeight: 600,
                       lineHeight: '149%',
                       letterSpacing: '-0.418px'

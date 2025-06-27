@@ -58,7 +58,7 @@ const WhyPebbleBellaSection = () => {
           <div className="pt-4 md:pt-8 lg:pt-12 xl:pt-16 px-8 sm:px-12 md:px-16 lg:px-24 ml-4 sm:ml-8 md:ml-12">
             {/* Main heading uses Mochiy font */}
             <h2
-              className={`text-left text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#08B39C] leading-tight ${mochiyPopOne.className}`}
+              className={`text-left text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text6xl font-bold text-[#08B39C] leading-tight ${mochiyPopOne.className}`}
             >
               Why be a <br />
               Pebble Bella
@@ -84,13 +84,13 @@ const WhyPebbleBellaSection = () => {
                 <div className="flex-1">
                   {/* Benefit titles use Mochiy font for headings */}
                   <h3
-                    className={`text-[#08B39C] font-bold text-[1.4rem] sm:text-[1.6rem] md:text-[1.9rem] lg:text-3xl mb-3 md:mb-4 lg:mb-5 leading-snug ${mochiyPopOne.className}`}
+                    className={`text-[#08B39C] font-bold text-lg sm:text-lg md:text-2xl lg:text-3xl mb-3 md:mb-4 lg:mb-5 leading-snug ${mochiyPopOne.className}`}
                   >
                     {benefit.title}
                   </h3>
                   {/* Benefit descriptions use Poppins for normal text */}
                   <p
-                    className={`text-[#08B39C] text-[1.1rem] sm:text-[1.2rem] md:text-[1.35rem] lg:text-3xl leading-relaxed ${poppins.className}`}
+                    className={`text-[#08B39C] text-[1.1rem] sm:text-[1.2rem] md:text-[1.35rem] lg:text-2xl leading-relaxed ${poppins.className}`}
                   >
                     {benefit.description}
                   </p>

@@ -31,9 +31,7 @@ export default function FinanceClubs() {
         curiosityText="Fuelling financial curiosity in teens"
       />
       <PreFooter
-        mainTitle="Every teen can blossom into a financial expert — we nourish them to be one"
-        // subText1="We've got you covered. Our Counselor will help you."
-        subText2="We'll arrange a call with our Counselor to assess your child's readiness and recommend courses that suit them. Let's get started!"
+        mainTitle="Every teen can blossom into a financial expert — we nourish them to be one."
         buttonText="Book a Counseling Session"
       />
       <Footer />

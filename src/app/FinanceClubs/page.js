@@ -23,8 +23,6 @@ export default function FinanceClubs() {
       <ClubDetailsSection/>
       <PreFooter
         mainTitle="Every child can be financially savvy — we teach them how to be one."
-        // subText1="We've got you covered. Our Counselor will help you."
-        subText2="We'll arrange a call with our Counselor to assess your child's readiness and recommend courses that suit them. Let's get started!"
         buttonText="Book a Counseling Session"
       />
       <Footer />

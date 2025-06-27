@@ -90,7 +90,7 @@ const MethodicalApproach = () => {
       secondaryIcon: null,
       bottomDecoration: null, 
       headline: "Course Delivery",
-      description: "We deliver LIVE session online or offline for the registered course.",
+      description: "We deliver LIVE session online or offline for the registered course",
       bgColor: "bg-[#4ECDC4]",
       iconSize: "w-25 h-25"
     },

@@ -48,7 +48,7 @@ export default function MakingFinanceWonderful() {
   const features = [
     {
       title: "Interactive Sessions",
-      description: "We indulge in conversations. Our experts ensure includes storytelling, group discussion, role-playing activities and young children. No boring textbooks.",
+      description: "We indulge in conversations. Our course content includes brainstorming, critical thinking, role-plays, and group work. No boring definitions. No boring textbooks.",
       bgColor: "bg-[#F7C342]",
       iconSrc: "./home_page_assets/1/Group 25.svg",
       iconAlt: "Interactive Sessions Icon"

@@ -30,7 +30,7 @@ export default function everyday() {
           {
             id: 1,
             title: "Credit",
-            description: "The Concept: Understanding credit and its importance.",
+            description: "Understanding credit and its importance.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
           },

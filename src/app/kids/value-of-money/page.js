@@ -29,14 +29,14 @@ export default function HomePage() {
         modules={[
           {
             id: 1,
-            title: "| What is Money?",
+            title: "What is Money?",
             description: "Understanding the nature of money.",
             bgColor: "bg-[#39BB9C]",
             icon: "/Course_Design/1/coin_bulb.svg" 
           },
           {
             id: 2,
-            title: "| Value of Money",
+            title: "Value of Money",
             description: " Understanding the worth of money for everyday things.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"
@@ -81,8 +81,8 @@ export default function HomePage() {
           />
       <PreFooter
         mainTitle="Why Learn the Value of Money So Early?"
-        subText1="Some kids grow up without the concept of pocket money.They believe money is an infinite resource.This can result in indulgence or unchecked expenses,causing financial mishaps."
-        subText2="This 2-hour session gives them a relatable and practical understanding of money's worth"
+        subText1="Some kids grow up without the concept of pocket money.They believe money is an infinite resource.This can result in indulgence or unchecked expenses, causing financial mishaps."
+        subText2="This 2-hour session gives them a relatable and practical understanding of money's worth."
         buttonText="Book a Counseling Session"
       />
       <Footer /> 

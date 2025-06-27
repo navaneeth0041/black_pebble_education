@@ -68,11 +68,19 @@ const SelfHelpKits = ({
       </p>
       
       <div className="mt-2 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-        <button 
-          className="bg-gradient-to-r from-[#08A69A] via-[#0ABE9D] to-[#69C9A1] hover:bg-teal-600 text-white w-full sm:w-auto text-xs sm:text-sm md:text-base px-5 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-full font-medium transition-all duration-200"
-        >
-          Call Us to Order Your Kit
-        </button>
+        <div className="relative group w-full sm:w-auto">
+          <button 
+            className="bg-gradient-to-r from-[#08A69A] via-[#0ABE9D] to-[#69C9A1] hover:bg-teal-600 text-white w-full sm:w-auto text-xs sm:text-sm md:text-base px-5 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-full font-medium transition-all duration-200"
+          >
+            Call Us to Order Your Kit
+          </button>
+          {/* Phone number tooltip */}
+          <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-5 py-3 bg-gray-800 text-white text-sm rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 whitespace-nowrap min-w-[75%] w-max">
+            +91-8928557529
+            {/* Arrow pointing up */}
+            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-gray-800"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
