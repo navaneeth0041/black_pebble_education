@@ -121,7 +121,7 @@ export default function FinancialLiteracyPage() {
       <img
         src="/effects/white.png"
         alt="white transition"
-        className='w-[200%] block relative -top-4 lg:-top-7 z-0'
+        className='w-[200%] block relative -top-5 lg:-top-7 z-0'
       />
     </>
   );

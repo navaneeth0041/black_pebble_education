@@ -38,7 +38,7 @@ const FinancialEducationHero = () => {
     <img
         src="/effects/darkgreen.png"
         alt="green transition"
-        className='w-[120%] block relative -top-4 lg:-top-6  z-0'
+        className='w-[120%] block relative -top-5 lg:-top-6  z-0'
         style={{ margin: 0, padding: 0, display: 'block' }}
       />
     

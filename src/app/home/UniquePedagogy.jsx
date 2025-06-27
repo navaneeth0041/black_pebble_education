@@ -90,6 +90,23 @@ const UniquePedagogy = () => {
 
   const visibleCards = getVisibleCards();
 
+  // Function to get responsive dimensions
+  const getCardDimensions = (isBehindCenter, isMobile) => {
+    if (isMobile) {
+      // Reduced mobile sizes
+      return {
+        width: isBehindCenter ? '360px' : '280px', // Reduced by 40px and 32px respectively
+        height: isBehindCenter ? '420px' : '380px' // Reduced by 40px each
+      };
+    } else {
+      // Desktop sizes (unchanged)
+      return {
+        width: isBehindCenter ? '400px' : '312px',
+        height: isBehindCenter ? '460px' : '420px'
+      };
+    }
+  };
+
   return (
     <>
     <section className="text-white min-h-screen lg:min-h-screen overflow-hidden flex flex-col justify-center items-center px-4 -mt-5 lg:-mt-30 pt-5 lg:pt-40" style={{backgroundColor: '#343434'}}>
@@ -137,6 +154,8 @@ const UniquePedagogy = () => {
               const { position, index } = card;
               const isCenter = position === 0;
               const isBehindCenter = position === -1 || position === 1;
+              const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024; // lg breakpoint
+              const dimensions = getCardDimensions(isBehindCenter, isMobile);
 
               let transform = "";
               let zIndex =
@@ -144,22 +163,27 @@ const UniquePedagogy = () => {
 
               // Enhanced transformations with curved effect for behind-center cards
               if (position === -2) {
-                transform =
-                  "translateX(-650px) translateZ(-300px) rotateY(35deg) scale(0.75)";
+                transform = isMobile 
+                  ? "translateX(-545px) translateZ(-300px) rotateY(35deg) scale(0.75)"
+                  : "translateX(-650px) translateZ(-300px) rotateY(35deg) scale(0.75)";
               } else if (position === -1) {
                 // Left behind card - curve inward more on hidden side, outward on visible side
-                transform =
-                  "translateX(-350px) translateZ(-150px) rotateY(35deg) scale(0.9) scaleX(1.15)";
+                transform = isMobile
+                  ? "translateX(-305px) translateZ(-150px) rotateY(35deg) scale(0.9) scaleX(1.15)"
+                  : "translateX(-350px) translateZ(-150px) rotateY(35deg) scale(0.9) scaleX(1.15)";
               } else if (position === 0) {
-                transform =
-                  "translateX(0px) translateZ(0px) rotateY(0deg) scale(1.1)";
+                transform = isMobile
+                  ? "translateX(-25px) translateZ(0px) rotateY(0deg) scale(1.1)"
+                  : "translateX(0px) translateZ(0px) rotateY(0deg) scale(1.1)";
               } else if (position === 1) {
                 // Right behind card - curve inward more on hidden side, outward on visible side  
-                transform =
-                  "translateX(350px) translateZ(-150px) rotateY(-35deg) scale(0.9) scaleX(1.15)";
+                transform = isMobile
+                  ? "translateX(255px) translateZ(-150px) rotateY(-35deg) scale(0.9) scaleX(1.15)"
+                  : "translateX(350px) translateZ(-150px) rotateY(-35deg) scale(0.9) scaleX(1.15)";
               } else if (position === 2) {
-                transform =
-                  "translateX(650px) translateZ(-300px) rotateY(-35deg) scale(0.75)";
+                transform = isMobile
+                  ? "translateX(495px) translateZ(-300px) rotateY(-35deg) scale(0.75)"
+                  : "translateX(650px) translateZ(-300px) rotateY(-35deg) scale(0.75)";
               }
 
               return (
@@ -175,8 +199,8 @@ const UniquePedagogy = () => {
                   <div
                     className="relative overflow-hidden shadow-2xl transition-all duration-700"
                     style={{
-                      width: isBehindCenter ? '400px' : '312px', // Increased width for behind-center cards
-                      height: isBehindCenter ? '460px' : '420px', // Decreased height
+                      width: dimensions.width,
+                      height: dimensions.height,
                       backfaceVisibility: "hidden",
                       opacity: isCenter
                         ? 1
