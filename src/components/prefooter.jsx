@@ -94,7 +94,7 @@ const PreFooter = ({
 
           {subText1 && (
             <p
-              className={`${poppins.className} text-white text-lg md:text-xl lg:text-2xl font-medium leading-[134%] tracking-[-0.437px]`}
+              className={`${poppins.className} text-white text-xl md:text-xl lg:text-2xl font-medium leading-[134%] tracking-[-0.437px]`}
             >
               {subText1}
             </p>
@@ -102,7 +102,7 @@ const PreFooter = ({
 
           {subText2 && (
             <p
-              className={`${poppins.className} text-white text-base font-medium leading-[149%] tracking-[-0.304px]`}
+              className={`${poppins.className} text-white text-lg font-medium leading-[149%] tracking-[-0.304px]`}
             >
               {subText2}
             </p>

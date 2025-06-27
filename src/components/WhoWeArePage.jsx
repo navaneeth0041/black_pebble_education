@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function WhoWeArePage() {
   return (
-    <div className="min-h-[60vh] lg:min-h-[90vh] bg-white flex sm:px-5 lg:items-center justify-center p-4 -mt-5 lg:-mt-30 pt-20">
+    <div className="min-h-[60vh] lg:min-h-[90vh] bg-white flex sm:px-5 lg:items-center justify-center p-4 -mt-5 lg:-mt-30 pt-5 lg:pt-20">
       <div className="max-w-7xl w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           

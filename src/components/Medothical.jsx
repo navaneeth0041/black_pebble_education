@@ -32,7 +32,7 @@ const MethodicalApproach = () => {
       headline: "Request for Information",
       description: "You can call us or WhatsApp us for course requests",
       bgColor: "bg-[#39BB9C]",
-      iconSize: "w-32 h-32"
+      iconSize: "w-24 h-24 sm:w-32 sm:h-32"
     },
     {
       numberIcon: "/home_page_assets/7/n02.svg",
@@ -44,7 +44,7 @@ const MethodicalApproach = () => {
       headline: "Counseling Session",
       description: "We schedule a call with our Counselor for a preliminary discussion",
       bgColor: "bg-[#F3C041]",
-      iconSize: "w-24 h-20"
+      iconSize: "w-18 h-15 sm:w-24 sm:h-20"
     },
     {
       numberIcon: "/home_page_assets/7/n03.svg",
@@ -54,8 +54,8 @@ const MethodicalApproach = () => {
       headline: "Learning Score",
       description: "We calculate your child's learning score based on the discussion",
       bgColor: "bg-[#4598CA]",
-      iconSize: "w-14 h-14",
-      secondaryIconSize: "w-15 h-15",
+      iconSize: "w-10 h-10 sm:w-14 sm:h-14",
+      secondaryIconSize: "w-12 h-12 sm:w-15 sm:h-15",
       showLearningScore: true, 
       scoreNumerator: "15", 
       scoreDenominator: "20" 
@@ -70,7 +70,7 @@ const MethodicalApproach = () => {
       headline: "Recommendations",
       description: "We recommend the right personalized course for your child",
       bgColor: "bg-[#EF746C]",
-      iconSize: "w-28 h-12",
+      iconSize: "w-20 h-8 sm:w-28 sm:h-12",
       hasNotchCut: true 
     },
     {
@@ -81,8 +81,8 @@ const MethodicalApproach = () => {
       headline: "Course Registration", 
       description: "We register your child for the recommended course",
       bgColor: "bg-[#2BC4CC]",
-      iconSize: "w-33 h-20",
-      secondaryIconSize: "w-35 h-12"
+      iconSize: "w-24 h-15 sm:w-33 sm:h-20",
+      secondaryIconSize: "w-26 h-9 sm:w-35 sm:h-12"
     },
     {
       numberIcon: "/home_page_assets/7/n06.svg",
@@ -92,7 +92,7 @@ const MethodicalApproach = () => {
       headline: "Course Delivery",
       description: "We deliver LIVE session online or offline for the registered course",
       bgColor: "bg-[#4ECDC4]",
-      iconSize: "w-25 h-25"
+      iconSize: "w-18 h-18 sm:w-25 sm:h-25"
     },
     {
       numberIcon: "/home_page_assets/7/n07.svg",
@@ -102,7 +102,7 @@ const MethodicalApproach = () => {
       headline: "Impact Assessment",
       description: "We evaluate the impact of the course on your child",
       bgColor: "bg-[#45CA93]",
-      iconSize: "w-35 h-35"
+      iconSize: "w-26 h-26 sm:w-35 sm:h-35"
     },
     {
       numberIcon: "/home_page_assets/7/n08.svg",
@@ -112,7 +112,7 @@ const MethodicalApproach = () => {
       headline: "Takeaway Notes",
       description: "We share a summary of the course as Infographic Takeaway Notes",
       bgColor: "bg-[#F5A623]",
-      iconSize: "w-25 h-25"
+      iconSize: "w-18 h-18 sm:w-25 sm:h-25"
     }
   ];
 
@@ -153,17 +153,17 @@ const MethodicalApproach = () => {
 
   return (
     <>
-    <div className="w-full min-h-[80vh] z-20 py-16 px-16" style={{ backgroundColor: '#F3FFF9' }}>
+    <div className="w-full min-h-[80vh] z-20 py-16 lg:px-16" style={{ backgroundColor: '#F3FFF9' }}>
       <div className="mx-auto pl-4">
         
       <div className="text-left mb-8 sm:mb-10 lg:mb-12 px-4 sm:px-6 lg:px-8">
       <h2 
-        className={`${PopOne.className} text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#09BE9D] mb-3 sm:mb-4 leading-tight`}
+        className={`${PopOne.className} text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#09BE9D] mb-3 sm:mb-4 leading-tight`}
       >
         Our Methodical Approach
       </h2>
       <p 
-        className={`${poppins.className} text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-black font-medium leading-relaxed`}
+        className={`${poppins.className} text-lg sm:text-base md:text-lg lg:text-xl xl:text-2xl text-black font-medium leading-relaxed`}
       >
         THE COURSE DELIVERY VALUE CHAIN
       </p>
@@ -276,7 +276,7 @@ const MethodicalApproach = () => {
     <img
         src="/effects/prefooter.png"
         alt="black transition"
-        className='w-[200%] block relative -top-6 z-20'
+        className='w-[200%] block relative -top-1 lg:-top-6 z-20'
       />
     </> 
   );

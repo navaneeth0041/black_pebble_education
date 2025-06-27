@@ -42,7 +42,7 @@ const ComparisonPage = () => {
     <img 
       src="./home_page_assets/4/icons8-check-48 1.svg" 
       alt="Check" 
-      className="w-10 h-10 md:w-12 md:h-12"
+      className="w-8 h-8 md:w-12 md:h-12"
     />
   );
 
@@ -50,7 +50,7 @@ const ComparisonPage = () => {
     <img 
       src="./home_page_assets/4/icons8-cross-94 6.svg" 
       alt="Cross" 
-      className="w-10 h-10 md:w-12 md:h-12"
+      className="w-8 h-8 md:w-12 md:h-12"
     />
   );
 
@@ -65,14 +65,14 @@ const CoinIcon = ({ className }) => (
 
   return (
     <>
-    <div className="min-h-screen  -mt-10 lg:-mt-20 xl:-mt-26 pt-60 pb-40 bg-[#F3FFF9] flex items-center justify-center p-4 md:p-8">
+    <div className="min-h-screen  -mt-10 lg:-mt-20 xl:-mt-26 pt-20 lg:pt-45 pb-30 bg-[#F3FFF9] flex items-center justify-center p-4 md:p-8">
       <div className="max-w-6xl w-full mt-8 md:mt-24 mb-8 md:mb-24">
         {/* Header Section */}
         {/* Header Section */}
         <div className="text-center mb-16 md:mb-20">
           <div className="flex justify-center items-center gap-4 md:gap-6 mb-6">
             <CoinIcon className="" />
-            <h1 className={`font-bold text-[#08A59A] leading-tight ${PopOne.className} text-3xl md:text-5xl lg:text-5xl`}>
+            <h1 className={`font-bold text-[#08A59A] text-left leading-tight ${PopOne.className} text-3xl md:text-5xl lg:text-5xl`}>
               <span className="block md:inline">Not Just</span>
               <span className="block md:inline"> Another Money</span>
               <span className="block md:inline"> Class</span>
@@ -81,29 +81,39 @@ const CoinIcon = ({ className }) => (
         </div>
 
         {/* Comparison Header Row */}
-<div className="p-4 md:p-6 mb-8 md:mb-12">
-  <div className="grid grid-cols-3 gap-4 md:gap-8">
-    <div></div>
-    <div className="text-center">
-      <h2 className={`text-lg md:hidden font-bold text-[#39BB9C] mb-1 ${poppins.className}`}>BPE</h2>
-      <h2 className={`hidden md:block text-lg md:text-xl font-bold text-[#39BB9C] mb-1 ${poppins.className}`}>
-        Black Pebble
-      </h2>
-      <h2 className={`hidden md:block text-lg md:text-xl font-bold text-[#39BB9C] mb-1 ${poppins.className}`}>
-        Education
-      </h2>
-    </div>
-    <div className="text-center">
-      <h2 className={`text-lg md:hidden font-bold text-black-600 mb-1 ${poppins.className}`}>OFP</h2>
-      <h2 className={`hidden md:block text-lg md:text-xl font-bold text-black-600 mb-1 ${poppins.className}`}>
-        Other Finance
-      </h2>
-      <h2 className={`hidden md:block text-lg md:text-xl font-bold text-black-600 mb-1 ${poppins.className}`}>
-        Programs
-      </h2>
-    </div>
-  </div>
-</div>
+        <div className="p-4 md:p-6 mb-8 md:mb-12">
+          {/* Mobile Header */}
+          <div className="grid grid-cols-5 gap-2 md:hidden">
+            <div className="col-span-3"></div>
+            <div className="text-center">
+              <h2 className={`text-lg font-semibold text-[#39BB9C] mb-1 ${poppins.className}`}>BPE</h2>
+            </div>
+            <div className="text-center">
+              <h2 className={`text-lg font-semibold text-black-600 mb-1 ${poppins.className}`}>Others</h2>
+            </div>
+          </div>
+          
+          {/* Desktop Header */}
+          <div className="hidden md:grid grid-cols-3 gap-4 md:gap-8">
+            <div></div>
+            <div className="text-center">
+              <h2 className={`text-lg md:text-xl font-bold text-[#39BB9C] mb-1 ${poppins.className}`}>
+                Black Pebble
+              </h2>
+              <h2 className={`text-lg md:text-xl font-bold text-[#39BB9C] mb-1 ${poppins.className}`}>
+                Education
+              </h2>
+            </div>
+            <div className="text-center">
+              <h2 className={`text-lg md:text-xl font-bold text-black-600 mb-1 ${poppins.className}`}>
+                Other Finance
+              </h2>
+              <h2 className={`text-lg md:text-xl font-bold text-black-600 mb-1 ${poppins.className}`}>
+                Programs
+              </h2>
+            </div>
+          </div>
+        </div>
 
         {/* Feature Rows */}
         <div className="space-y-3 md:space-y-4">
@@ -112,9 +122,25 @@ const CoinIcon = ({ className }) => (
               key={index}
               className="bg-white backdrop-blur-sm rounded-2xl p-6 md:p-8  transition-shadow duration-300"
             >
-              <div className="grid grid-cols-3 gap-4 md:gap-8 items-center">
+              {/* Mobile Layout */}
+              <div className="grid grid-cols-5 gap-2 items-center md:hidden">
+                <div className="col-span-3">
+                  <h3 className={`text-base font-semibold text-gray-800 leading-relaxed ${poppins.className}`}>
+                    {item.feature}
+                  </h3>
+                </div>
+                <div className="flex justify-center">
+                  {item.blackPebble ? <CheckIcon /> : <CrossIcon />}
+                </div>
+                <div className="flex justify-center">
+                  {item.otherPrograms ? <CheckIcon /> : <CrossIcon />}
+                </div>
+              </div>
+
+              {/* Desktop Layout */}
+              <div className="hidden md:grid grid-cols-3 gap-4 md:gap-8 items-center">
                 <div>
-<h3 className={`text-base md:text-lg font-semibold text-gray-800 leading-relaxed ${poppins.className}`}>
+                  <h3 className={`text-base md:text-lg font-semibold text-gray-800 leading-relaxed ${poppins.className}`}>
                     {item.feature}
                   </h3>
                 </div>
@@ -133,7 +159,7 @@ const CoinIcon = ({ className }) => (
     <img
         src="/effects/moneyclass.png"
         alt="black transition"
-        className='w-[200%] block relative -top-7 z-0'
+        className='w-[200%] block relative -top-2 lg:-top-7 z-0'
       />
     </> 
   );

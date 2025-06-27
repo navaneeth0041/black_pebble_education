@@ -78,7 +78,7 @@ export default function MakingFinanceWonderful() {
 
   return (
     <>
-    <div className="min-h-[70vh] lg:min-h-screen  flex flex-col items-center justify-center sm:p-6 md:p-8 overflow-x-hidden relative z-10"
+    <div className="min-h-[70vh] lg:min-h-screen  flex flex-col items-center justify-center p-6 md:p-8 overflow-x-hidden relative z-10"
       style={{ background: 'linear-gradient(225deg, #D6FFE9 0%, #E6FFF9 77%, #ECECEC 100%)' }}>
       <div>
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
@@ -86,7 +86,7 @@ export default function MakingFinanceWonderful() {
           <div className="flex-1 lg:max-w-md">
             <div className="relative h-40 sm:h-auto">
               {/* Piggy Bank Icon */}
-              <div className="-top-20 ml-8 w-25 h-25 lg:w-30 lg:h-30">
+              <div className="-top-20 w-25 h-25 lg:w-30 lg:h-30">
               <img
                 src="./home_page_assets/1/pig.png"
                 alt="Piggy Bank"
@@ -95,7 +95,7 @@ export default function MakingFinanceWonderful() {
             </div>
 
               {/* Main Title - Mobile on 2 lines */}
-              <div className={`${PopOne.className} ml-0 lg:ml-12`}>
+              <div className={`${PopOne.className} lg:ml-12`}>
                 <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#39BB9C] leading-tight">
                   Making Finance
                 </h1>
@@ -127,7 +127,7 @@ export default function MakingFinanceWonderful() {
     <img
         src="/effects/littlegreen.png"
         alt="green transition"
-        className='w-[120%] block relative -top-4  z-0'
+        className='w-[120%] block relative -top-1 lg:-top-4  z-0'
         style={{ margin: 0, padding: 0, display: 'block' }}
       />
     

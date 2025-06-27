@@ -7,7 +7,7 @@ export default function ImpactPage() {
         <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
           
           <div className="order-1 lg:order-2 mb-8 lg:mb-0 py-8">
-            <h1 className="text-[#035276] font-normal text-[32px] md:text-[45px] leading-[149%] tracking-[-0.855px] text-center lg:text-left"
+            <h1 className="text-[#035276] font-normal text-[32px] md:text-[45px] leading-[149%] tracking-[-0.855px] text-left pl-6 lg:pl-0"
                 style={{ fontFamily: '"Mochiy Pop One", sans-serif' }}>
               The Impact Starts Early, and Lasts Forever
             </h1>
@@ -74,7 +74,7 @@ export default function ImpactPage() {
             </div>
           </div>
 
-          <div className="order-3 lg:hidden space-y-6">
+          <div className="order-3 lg:hidden space-y-6 px-4">
             <p className="text-[#035276] font-medium text-lg leading-[149%] tracking-[-0.456px]" 
                style={{ fontFamily: 'Poppins, sans-serif' }}>
               We promise impact, not through words but through our actions.

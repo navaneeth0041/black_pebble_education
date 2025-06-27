@@ -84,7 +84,7 @@ export default function Home1({
       <img
         src="/effects/black.png"
         alt="black transition"
-        className="w-[200%] block relative -top-7 z-0"
+        className="w-[200%] block relative -top-2 lg:-top-7 z-0"
       />
     </>
   );

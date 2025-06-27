@@ -92,7 +92,7 @@ const UniquePedagogy = () => {
 
   return (
     <>
-    <section className="text-white min-h-screen lg:min-h-screen overflow-hidden flex flex-col justify-center items-center px-4 -mt-5 lg:-mt-30 pt-40" style={{backgroundColor: '#343434'}}>
+    <section className="text-white min-h-screen lg:min-h-screen overflow-hidden flex flex-col justify-center items-center px-4 -mt-5 lg:-mt-30 pt-5 lg:pt-40" style={{backgroundColor: '#343434'}}>
       <div className="text-center w-full flex flex-col justify-center items-center h-full py-10">
         <div className="flex justify-center mb-8">
           <div className="w-32 h-32 relative">
@@ -112,8 +112,8 @@ const UniquePedagogy = () => {
           <span className="block md:inline"> Pedagogy</span>
         </h2>
 
-        <div className="w-full mb-16 py-2 md:py-4 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-center px-4" style={{color: '#39BB9C'}}>
+        <div className="w-full mb-16 py-1 md:py-4 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <p className="text-lg sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-center px-4" style={{color: '#39BB9C'}}>
             Our <span className="font-semibold" style={{color: '#FFE4A1'}}>research-backed</span> and{' '}
             <span className="font-semibold" style={{color: '#FFE4A1'}}>IP-protected</span>{' '}
             Teaching Methodology is designed for<br />
@@ -228,7 +228,7 @@ const UniquePedagogy = () => {
     <img
         src="/effects/black.png"
         alt="black transition"
-        className='w-full block relative -top-7 z-0'
+        className='w-full block relative -top-2 lg:-top-7 z-0'
       />
     </> 
   );
