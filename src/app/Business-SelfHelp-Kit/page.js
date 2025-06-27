@@ -33,13 +33,32 @@ export default function SelfHelpPage() {
     enthusiastText: "Business Enthusiasts"
   };
 
+  const businessBenefits = {
+    title: "Why Self-Help Kits Work?",
+    subtitle: {
+      line1: "Benefits of using self",
+      line2: "help kits"
+    },
+    icon: "/self_help_kit/3/money.svg",
+    items: [
+      "Builds business confidence",
+      "Encourages independent thinking",
+      "Easy-to-follow structure",
+      "No screen time needed",
+      "Parent-guided or self-led"
+    ]
+  };
+
   return (
     <>
       <Header />
-      <SelfHelpKits smartMoneyConcepts={businessConcepts} />
+      <SelfHelpKits 
+        smartMoneyConcepts={businessConcepts} 
+        benefits={businessBenefits}
+      />
       <PreFooter
         mainTitle="Why Business Self-Help Kits?"
-        subText1="Some kids naturally show a tendency towards a business mindset at a young age, but they don’t get an opportunity to nurture it. This kit empowers kids to explore, understand, and own their business learning journey!"
+        subText1="Some kids naturally show a tendency towards a business mindset at a young age, but they don't get an opportunity to nurture it. This kit empowers kids to explore, understand, and own their business learning journey!"
         buttonText="Call Us to Order Your Business Kit"
       />
       <Footer />

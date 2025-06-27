@@ -38,6 +38,22 @@ const SelfHelpKits = ({
       description: "Invest in your child's growth with 49+ guided resources-"
     },
     enthusiastText: "Money Enthusiasts",  
+  },
+  // Benefits Section Props
+  benefits = {
+    title: "Why Self-Help Kits Work?",
+    subtitle: {
+      line1: "Benefits of using self",
+      line2: "help kits"
+    },
+    icon: "/self_help_kit/3/money.svg",
+    items: [
+      "Builds financial confidence",
+      "Encourages independent thinking",
+      "Easy-to-follow structure",
+      "No screen time needed",
+      "Parent-guided or self-led"
+    ]
   }
 }) => {
   return (
@@ -244,21 +260,21 @@ const SelfHelpKits = ({
 {/* Left side - Title and subtitle */}
 <div className="flex flex-col items-start gap-5 max-w-lg">
 <h2 className="text-white font-['Mochiy_Pop_One'] text-3xl sm:text-4xl lg:text-[40px] font-normal leading-snug tracking-tight">
- Why Self-Help Kits Work?
+ {benefits.title}
 </h2>
 {/* Subtitle with image */}
 <div className="flex items-center gap-2">
 <div className="flex flex-col">
 <span className="text-white font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug">
- Benefits of using self
+ {benefits.subtitle.line1}
 </span>
 <span className="text-white font-poppins text-lg sm:text-xl lg:text-2xl font-medium leading-snug">
- help kits
+ {benefits.subtitle.line2}
 </span>
 </div>
 <img
-src="/self_help_kit/3/money.svg"
-alt="Money icon"
+src={benefits.icon}
+alt="Benefits icon"
 className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
 />
 </div>
@@ -266,13 +282,7 @@ className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
 {/* Right side - Benefits list */}
 <div className="flex flex-col items-center justify-center gap-6 w-full lg:w-auto">
   <div className="flex flex-col gap-4 sm:gap-6">
-    {[
-      "Builds financial confidence",
-      "Encourages independent thinking",
-      "Easy-to-follow structure",
-      "No screen time needed",
-      "Parent-guided or self-led"
-    ].map((text, idx) => (
+    {benefits.items.map((text, idx) => (
       <div key={idx} className="flex items-center gap-3">
         <svg
           width="23"
