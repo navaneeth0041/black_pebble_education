@@ -19,7 +19,7 @@ const poppins = Poppins({
 const PrivacyPolicy = () => {
   return (
     <div className={`${poppins.className} min-h-screen bg-[#343434] text-white`}>
-      {/* Simple Header */}
+      {/* Header */}
       <div className="border-b border-gray-700 py-2 px-4">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
@@ -31,200 +31,47 @@ const PrivacyPolicy = () => {
             </button>
             <h1 className={`${mochiyPopOne.className} text-2xl font-bold`}>Privacy Policy</h1>
           </div>
-          
-          {/* Logo */}
           <div className="flex-shrink-0">
             <BlackLogoWithText logoHeight={60} textHeight={120} />
           </div>
         </div>
       </div>
 
-      {/* Main Content */}
+      {/* Content */}
       <div className="max-w-4xl mx-auto px-4 pt-2 pb-6">
-        <div className="space-y-4 text-sm leading-relaxed">
-          
-          {/* Effective Date */}
-          <div>
-            <p className="text-gray-400 mb-4">Effective Date: 24-06-2025</p>
-          </div>
+        <div className="space-y-4 text-sm leading-relaxed text-gray-300">
+          <p><strong>BLACK PEBBLE EDUCATION</strong> is committed to protecting your personal information provided or collected on this website. We want our services to be safe and secure for you. Uniform practices for collecting, using, disclosing, storing, retaining, disposing, accessing, transferring, or otherwise processing such information assist us in processing personal information fairly and appropriately, disclosing it and/or transferring it only under appropriate circumstances. The following privacy policy relates to our use of any personal information we collect from you.</p>
 
-          {/* Introduction */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Introduction</h2>
-            <p className="text-gray-300 mb-4">
-              At Practical Doctors, we are committed to protecting your privacy and ensuring the security of your personal information.
-            </p>
-            <p className="text-gray-300">
-              This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you interact with our website and services.
-            </p>
-          </div>
+          <p>This privacy policy informs you how we use your personal information collected through this website. This policy will be updated subject to any changes in information collection, activities performed, or any applicable regulations. You are encouraged to review the privacy policy whenever you visit this website, to ensure that you understand how any personal information you provide will be used.</p>
 
-          {/* Information We Collect */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Information We Collect</h2>
-            <p className="text-gray-300 mb-4">
-              We may collect information about you in various ways, whether you visit our website or other platforms, use our services. The following categories of information may be collected:
-            </p>
-            
-            <h3 className={`${mochiyPopOne.className} text-base font-bold mb-3 text-white`}>Information You Provide</h3>
-            <p className="text-gray-300 mb-3">
-              We collect personal information that you provide when using our services, including:
-            </p>
-            <ul className="text-gray-300 ml-6 space-y-1">
-              <li>• Name</li>
-              <li>• Email address</li>
-              <li>• Phone number</li>
-              <li>• Address</li>
-              <li>• Payment information</li>
-              <li>• Professional, medical and relevant health information</li>
-              <li>• Any other details you voluntarily provide, such as feedback or user-generated content</li>
-            </ul>
+          <p><strong>Please Note:</strong><br/>
+          The privacy practices outlined in this privacy policy are for this website only. If there are external links to other websites, please review those privacy policies too, which may differ from those of BLACK PEBBLE EDUCATION.</p>
 
-            <h3 className={`${mochiyPopOne.className} text-base font-bold mb-3 mt-6 text-white`}>Usage and Analytics Information</h3>
-            <p className="text-gray-300 mb-3">
-              When you interact with our services, we collect about your device and usage patterns, including:
-            </p>
-            <ul className="text-gray-300 ml-6 space-y-1">
-              <li>• Internet Protocol (IP) address</li>
-              <li>• Browser type and version</li>
-              <li>• Operating system</li>
-              <li>• Referring and exit pages</li>
-              <li>• Date and time stamps</li>
-              <li>• Clickstream data on specific pages and user interactions (e.g., videos, scrolling)</li>
-            </ul>
+          <h2 className="text-white font-bold mt-6">PURPOSE</h2>
+          <p>The purpose of this policy is to highlight various obligations, best practices, and processes that support compliance with data privacy regulations applicable to BLACK PEBBLE EDUCATION in its role as both a data controller and a processor.</p>
 
-            <h3 className={`${mochiyPopOne.className} text-base font-bold mb-3 mt-6 text-white`}>Cookies and Similar Technologies</h3>
-            <p className="text-gray-300">
-              We use cookies and similar technologies to enhance your experience, analyze usage, and serve tailored marketing content. Cookies are small data files stored on your device. You can control cookie preferences through your browser settings, but disabling cookies may affect website functionality.
-            </p>
-          </div>
+          <h2 className="text-white font-bold mt-6">APPLICABILITY</h2>
+          <p>This policy applies to all BLACK PEBBLE EDUCATION’s personnel, operating units, and wholly owned subsidiaries worldwide.</p>
 
-          {/* How We Use Your Information */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>How We Use Your Information</h2>
-            <p className="text-gray-300 mb-3">
-              We use the information collected for various purposes, including:
-            </p>
-            <ul className="text-gray-300 ml-6 space-y-1">
-              <li>• To provide and manage our services</li>
-              <li>• To communicate with you about our services, updates, and promotional content</li>
-              <li>• To improve our services based on user feedback and usage patterns</li>
-              <li>• To prevent fraud and ensure compliance with legal obligations</li>
-              <li>• To analyze trends and optimize our platform&apos;s performance</li>
-            </ul>
+          <h2 className="text-white font-bold mt-6">COLLECTION AND USE OF INFORMATION</h2>
+          <p>We collect, process, and retain information about you when you visit our website. You may choose to provide us with your name, phone number, address, or other information to access protected information or connect with you after your visit, based on your consent.</p>
 
-            <p className="text-gray-300 mt-4">
-              If you are located in the European Union, we collect and process your information based on:
-            </p>
-            <ul className="text-gray-300 ml-6 space-y-1">
-              <li>• Necessity for service provision</li>
-              <li>• Legitimate interests that do not override your rights</li>
-              <li>• Your consent for specific purposes</li>
-            </ul>
+          <p>When you visit our website, we may track, collect, and aggregate information such as pages visited, visit timing, and links clicked.</p>
 
-            <p className="text-gray-300 mt-4">
-              You may withdraw consent at any time, although this will not affect prior processing.
-            </p>
-          </div>
+          <p><strong>Uses of collected information include:</strong></p>
+          <ul className="list-disc ml-6">
+            <li>To provide course information and respond to your queries</li>
+            <li>To communicate regarding training sessions</li>
+            <li>To customize content and improve service quality</li>
+            <li>To share essential data with third-party training service providers</li>
+            <li>To contact you based on your requests or interest</li>
+          </ul>
 
-          {/* Information Sharing */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Information Sharing</h2>
-            <p className="text-gray-300 mb-3">
-              We do not sell or rent your personal information to third parties. Your information may be shared in the following scenarios:
-            </p>
-            <ul className="text-gray-300 ml-6 space-y-1">
-              <li>• With your consent</li>
-              <li>• With service providers who assist in our operations (e.g., billing, analytics)</li>
-              <li>• To comply with legal requirements or to protect our rights</li>
-            </ul>
+          <h2 className="text-white font-bold mt-6">INFORMATION DISCLOSURE</h2>
+          <p>We do not share, sell, rent, or trade personal information with third parties except as described. Only contracted third-party service providers processing data on our behalf may receive limited personal information to provide training-related services.</p>
 
-            <h3 className={`${mochiyPopOne.className} text-base font-bold mb-3 mt-6 text-white`}>Online Analytics and Tailored Marketing</h3>
-            <p className="text-gray-300 mb-3">
-              We partner with third parties, such as Google Analytics to help us understand how users interact with our website.
-            </p>
-            <p className="text-gray-300">
-              These services may collect information directly from you and use it to evaluate your actual patterns. You can opt out of Google Analytics by installing the Google Analytics Opt-Out Browser Add-on.
-            </p>
-          </div>
-
-          {/* Access to Your Information */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Access to Your Information</h2>
-            <p className="text-gray-300">
-              You may request access to or correction of your personal information by contacting us. For EU residents, you have additional rights regarding the processing of your information.
-            </p>
-          </div>
-
-          {/* Retention of Information */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Retention of Information</h2>
-            <p className="text-gray-300">
-              We retain your personal information for as long as your account is active or necessary for providing services. If you wish to cancel your account or request that we no longer use your information to provide services, please contact us. Following account cancellation, we will retain your information only as required by law.
-            </p>
-          </div>
-
-          {/* Security Measures */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Security Measures</h2>
-            <p className="text-gray-300">
-              We implement reasonable physical, electronic, and managerial safeguards to protect your information from unauthorized access. While we strive to maintain the security of your data, no method of transmission over the internet or primary source solutions can be guaranteed to be 100% secure.
-            </p>
-          </div>
-
-          {/* Email Communications */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Email Communications</h2>
-            <p className="text-gray-300">
-              You can choose to opt out of receiving promotional communications from us by following the unsubscribe instructions included in our emails or by contacting us directly.
-            </p>
-          </div>
-
-          {/* Third-Party Links */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Third-Party Links</h2>
-            <p className="text-gray-300">
-              Our website may contain links to third-party sites. We are not responsible for their privacy practices or content. Additionally, third-party advertisers may collect information automatically when you interact with their ads on our site.
-            </p>
-          </div>
-
-          {/* Data Transfer */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Data Transfer</h2>
-            <p className="text-gray-300">
-              Your information may be transferred to, and stored at, locations outside of your country. By providing your information, you consent to this transfer.
-            </p>
-          </div>
-
-          {/* Individual Data Subject Rights */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Individual Data Subject Rights</h2>
-            <p className="text-gray-300">
-              Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected information from a child, we will take steps to delete that information.
-            </p>
-          </div>
-
-          {/* Changes to This Policy */}
-          <div>
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Changes to This Policy</h2>
-            <p className="text-gray-300 mb-4">
-              If there are any questions or concerns about this Privacy Policy, please contact us via email at info@practicaldoctors.com
-            </p>
-            <p className="text-gray-300">
-              We reserve the right to update this Privacy Policy periodically to reflect changes in our practices. Please review this page regularly for updates. Your continued use of our services after any modifications indicates your acceptance of the revised policy.
-            </p>
-          </div>
-
-          {/* Contact Information */}
-          <div className="border-t border-gray-700 pt-6 mt-8">
-            <h2 className={`${mochiyPopOne.className} text-lg font-bold mb-4 text-white`}>Contact Information</h2>
-            <div className="text-gray-300 space-y-2">
-              <p>Email: blackpebbleeducation@gmail.com</p>
-              <p>Phone: +91-8928557529</p>
-              <p>Address: 8th Floor, A Block, WESTGATE BUSINESS BAY, Discrete Chalet 19, Sarkhej - Gandhinagar Hwy, Makarba, Ahmedabad, Gujarat 380051</p>
-            </div>
-          </div>
-
+          <h2 className="text-white font-bold mt-6">CHANGES TO THE POLICY</h2>
+          <p>We reserve the right to modify this Privacy Policy at any time. Changes become effective immediately upon posting on the Platform. Your continued use indicates acceptance of these modifications. Please review the policy regularly. If you do not agree with it, do not use our services.</p>
         </div>
       </div>
     </div>
