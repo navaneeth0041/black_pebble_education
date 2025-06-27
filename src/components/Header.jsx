@@ -7,8 +7,22 @@ import BlackLogoWithText from './blacklogo';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState(0);
   const pathname = usePathname();
+
+  // Effect to add/remove body class for content shifting
+  React.useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add('mobile-menu-open');
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
+    };
+  }, [isMobileMenuOpen]);
 
   const navigationItems = [
     { 
@@ -72,7 +86,11 @@ const Header = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    setActiveDropdown(null);
+    if (!isMobileMenuOpen) {
+      setActiveDropdown(null); // Don't auto-expand any dropdown
+    } else {
+      setActiveDropdown(null);
+    }
   };
 
   const toggleDropdown = (index) => {
@@ -120,6 +138,15 @@ const Header = () => {
     return {};
   };
 
+  const getCheckmarkStyle = () => {
+    return {
+      background: 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+      backgroundClip: 'text'
+    };
+  };
+
   const handleDownloadClick = (href, fileName) => {
     window.open(href, '_blank', 'noopener,noreferrer');
     
@@ -133,206 +160,294 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full bg-[#343434]">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
-        <div className="flex items-center justify-between h-12 lg:h-14">
-          {/* Mobile: Toggle button on left with proper spacing */}
-          <div className="lg:hidden flex-shrink-0">
+    <>
+      {/* Mobile Header Bar - Hidden when sidebar is open */}
+      {!isMobileMenuOpen ? (
+        <header className="lg:hidden w-full bg-[#343434] relative z-40">
+        <div className="px-4 py-4">
+          <div className="flex items-center justify-between">
+            {/* Menu Button */}
             <button
               onClick={toggleMobileMenu}
               className="text-white hover:text-gray-300 transition-colors duration-200 p-2"
             >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              <Menu className="h-6 w-6" />
             </button>
-          </div>
 
-          {/* Logo - centered on mobile with proper spacing, left on desktop */}
-          <div className="flex-1 flex justify-center lg:flex-none lg:justify-start">
-            <div className="lg:hidden">
-              <Link href="/" className="block">
-                <BlackLogoWithText logoHeight={40} textHeight={100} />
-              </Link>
+            {/* Logo */}
+            <Link href="/" className="block">
+              <BlackLogoWithText logoHeight={40} textHeight={100} />
+            </Link>
+
+            {/* Call us button */}
+            <div className="relative group">
+              <button className="border border-white text-white px-3 py-1.5 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-xs">
+                Call us
+              </button>
+              <div className="absolute top-full right-0 mt-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 whitespace-nowrap">
+                +91-8928557529
+                <div className="absolute bottom-full right-4 w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-gray-800"></div>
+              </div>
             </div>
-            <div className="hidden lg:block">
+          </div>
+        </div>
+        </header>
+      ) : (
+        // Invisible spacer to maintain content position when sidebar is open
+        <div className="lg:hidden w-full h-[88px]"></div>
+      )}
+
+      {/* Desktop Header */}
+      <header className="hidden lg:block w-full bg-[#343434]">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
+          <div className="flex items-center justify-between h-12 lg:h-14">
+            {/* Logo */}
+            <div className="flex-none">
               <Link href="/" className="block">
                 <BlackLogoWithText logoHeight={80} textHeight={200} />
               </Link>
             </div>
-          </div>
 
-          {/* Mobile: Call us button on right with proper spacing */}
-          <div className="lg:hidden flex-shrink-0 relative group">
-            <button className="border border-white text-white px-3 py-1.5 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-xs sm:text-sm">
-              Call us
-            </button>
-            {/* Phone number tooltip for mobile */}
-            <div className="absolute top-full right-0 mt-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 whitespace-nowrap">
-              +91-8928557529
-              {/* Arrow pointing up */}
-              <div className="absolute bottom-full right-4 w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-gray-800"></div>
-            </div>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center">
-            {/* Rounded background container for navigation */}
-            <div className="rounded-full px-4 py-2 flex items-center space-x-3" style={{ backgroundColor: 'rgba(71,71,71,0.16)' }}>
-              <nav className="flex items-center space-x-4">
-                {navigationItems.map((item, index) => (
-                  <div key={index} className="relative group">
-                    <button className="flex items-center text-white px-5 py-2 rounded-full hover:bg-gray-500/70 transition-colors duration-200">
-                      <span 
-                        className="font-medium text-base whitespace-nowrap flex items-center"
-                        style={getMainNavTextStyle(item)}
-                      >
-                        {item.label}
-                        {isMainNavActive(item) && (
-                          <Check className="ml-2 h-4 w-4" style={getMainNavTextStyle(item)} />
+            {/* Desktop Navigation */}
+            <div className="flex items-center">
+              <div className="rounded-full px-4 py-2 flex items-center space-x-3" style={{ backgroundColor: 'rgba(71,71,71,0.16)' }}>
+                <nav className="flex items-center space-x-4">
+                  {navigationItems.map((item, index) => (
+                    <div key={index} className="relative group">
+                      <button className="flex items-center text-white px-5 py-2 rounded-full hover:bg-gray-500/70 transition-colors duration-200">
+                        <span 
+                          className="font-medium text-base whitespace-nowrap flex items-center"
+                          style={getMainNavTextStyle(item)}
+                        >
+                          {item.label}
+                          {isMainNavActive(item) && (
+                            <Check className="ml-2 h-4 w-4" style={getMainNavTextStyle(item)} />
+                          )}
+                        </span>
+                        {item.hasDropdown && (
+                          <ChevronDown className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                         )}
-                      </span>
+                      </button>
+                      {/* Dropdown */}
                       {item.hasDropdown && (
-                        <ChevronDown className="ml-1.5 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
-                      )}
-                    </button>
-                    {/* Dropdown */}
-                    {item.hasDropdown && (
-                      <div className="absolute top-full left-0 mt-2 w-56 bg-[#343434] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-600">
-                        <div className="py-2">
-                          {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
-                            <React.Fragment key={dropdownIndex}>
-                              {dropdownItem.download ? (
-                                <button 
-                                  onClick={() => handleDownloadClick(dropdownItem.href, dropdownItem.label)}
-                                  className="flex items-center w-full text-left px-4 py-3 text-gray-200 hover:bg-gray-600/70 hover:text-white transition-colors duration-200 text-sm"
-                                >
-                                  <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
-                                    {dropdownItem.label}
-                                    {isActivePage(dropdownItem.href) && (
-                                      <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
-                                    )}
-                                  </span>
-                                </button>
-                              ) : (
-                                <a 
-                                  href={dropdownItem.href} 
-                                  className="flex items-center px-4 py-3 text-gray-200 hover:bg-gray-600/70 hover:text-white transition-colors duration-200 text-sm"
-                                >
-                                  <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
-                                    {dropdownItem.label}
-                                    {isActivePage(dropdownItem.href) && (
-                                      <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
-                                    )}
-                                  </span>
-                                </a>
-                              )}
-                              {/* Line separator - don't show after last item */}
-                              {dropdownIndex < item.dropdownItems.length - 1 && (
-                                <div className="mx-4 border-b border-gray-600/50"></div>
-                              )}
-                            </React.Fragment>
-                          ))}
+                        <div className="absolute top-full left-0 mt-2 w-56 bg-[#343434] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-600">
+                          <div className="py-2">
+                            {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
+                              <React.Fragment key={dropdownIndex}>
+                                {dropdownItem.download ? (
+                                  <button 
+                                    onClick={() => handleDownloadClick(dropdownItem.href, dropdownItem.label)}
+                                    className="flex items-center w-full text-left px-4 py-3 text-gray-200 hover:bg-gray-600/70 hover:text-white transition-colors duration-200 text-sm"
+                                  >
+                                    <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
+                                      {dropdownItem.label}
+                                      {isActivePage(dropdownItem.href) && (
+                                        <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
+                                      )}
+                                    </span>
+                                  </button>
+                                ) : (
+                                  <a 
+                                    href={dropdownItem.href} 
+                                    className="flex items-center px-4 py-3 text-gray-200 hover:bg-gray-600/70 hover:text-white transition-colors duration-200 text-sm"
+                                  >
+                                    <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
+                                      {dropdownItem.label}
+                                      {isActivePage(dropdownItem.href) && (
+                                        <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
+                                      )}
+                                    </span>
+                                  </a>
+                                )}
+                                {dropdownIndex < item.dropdownItems.length - 1 && (
+                                  <div className="mx-4 border-b border-gray-600/50"></div>
+                                )}
+                              </React.Fragment>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
+                  ))}
+                </nav>
+                
+                <div className="relative group">
+                  <button className="ml-3 border border-white text-white px-5 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-base">
+                    Call us
+                  </button>
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-4 py-3 bg-[#343434] text-white text-sm rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap border border-gray-600 shadow-xl z-50">
+                    +91-8928557529
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-gray-600"></div>
                   </div>
-                ))}
-              </nav>
-              
-              <div className="relative group">
-                <button className="ml-3 border border-white text-white px-5 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-base">
-                  Call us
-                </button>
-                {/* Phone number tooltip */}
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-4 py-3 bg-[#343434] text-white text-sm rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap border border-gray-600 shadow-xl z-50">
-                  +91-8928557529
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-gray-600"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </header>
 
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50" style={{ top: '68px' }}>
-            {/* Backdrop */}
-            <div className="absolute inset-0 bg-black/50" onClick={toggleMobileMenu}></div>
-            
-            {/* Menu Panel */}
-            <div className="absolute left-0 top-0 w-80 max-w-[90vw] h-full bg-[#3a4048] shadow-xl">
-              <div className="p-4 space-y-2 overflow-y-auto h-full">
-                {navigationItems.map((item, index) => (
-                  <div key={index}>
-                    <button
-                      onClick={() => item.hasDropdown && toggleDropdown(index)}
-                      className="flex items-center justify-between w-full text-left text-white hover:text-gray-300 hover:bg-gray-600/50 px-3 py-3 rounded-md transition-colors duration-200"
+      {/* Mobile Navigation Sidebar */}
+      <div className={`lg:hidden fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out ${
+        isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+      }`}>
+        {/* Sidebar Header - Extends full width (inverted L shape) */}
+        <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-3 bg-[#1a1a1a] min-h-[54px] z-10">
+          {/* Logo aligned to left */}
+          <Link href="/" className="flex-shrink-0">
+            <BlackLogoWithText logoHeight={32} textHeight={85} />
+          </Link>
+          
+          {/* Close button on top-right */}
+          <button
+            onClick={toggleMobileMenu}
+            className="text-white hover:text-gray-300 transition-colors duration-200 p-1.5 rounded-full hover:bg-gray-600/20 flex-shrink-0"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+
+        {/* Black background for the right side area */}
+        <div className="absolute top-0 left-56 right-0 h-[44px] bg-[#1a1a1a] z-5"></div>
+
+        {/* Left Sidebar Navigation */}
+        <div className="w-56 max-w-[75vw] bg-[#1a1a1a] h-full overflow-y-auto flex flex-col relative shadow-xl pt-[90px]">
+          {/* ...existing code... */}
+          <div className="flex-1 px-4 py-2">
+            {navigationItems.map((item, index) => (
+              <div key={index} className="mb-2">
+                {/* Main navigation item with conditional styling */}
+                <div className={`rounded-lg ${activeDropdown === index ? '' : ''}`} style={{ backgroundColor: activeDropdown === index ? '#343434' : 'transparent' }}>
+                  <button
+                    onClick={() => item.hasDropdown && toggleDropdown(index)}
+                    className={`flex items-center justify-between w-full text-left text-white px-4 py-3 transition-colors duration-200 hover:bg-gray-600/20 ${
+                      activeDropdown === index ? 'rounded-t-lg' : 'rounded-lg'
+                    }`}
+                    style={{
+                      fontFamily: 'Poppins, sans-serif',
+                      fontWeight: 500,
+                      fontSize: '16px',
+                      lineHeight: '150%',
+                      letterSpacing: '-1.9%',
+                      textAlign: 'left',
+                      backgroundColor: activeDropdown === index ? '#FFFFFF40' : 'transparent'
+                    }}
+                  >
+                    <span 
+                      className="flex items-center"
+                      style={getMainNavTextStyle(item)}
                     >
-                      <span 
-                        className="font-medium whitespace-nowrap flex items-center"
-                        style={getMainNavTextStyle(item)}
-                      >
-                        {item.label}
-                        {isMainNavActive(item) && (
-                          <Check className="ml-2 h-4 w-4" style={getMainNavTextStyle(item)} />
-                        )}
-                      </span>
-                      {item.hasDropdown && (
-                        <ChevronDown 
-                          className={`h-4 w-4 transition-transform duration-200 ${
-                            activeDropdown === index ? 'rotate-180' : ''
-                          }`} 
-                        />
+                      {item.label}
+                      {isMainNavActive(item) && (
+                        <Check className="ml-2 h-4 w-4" style={getMainNavTextStyle(item)} />
                       )}
-                    </button>
-                    {item.hasDropdown && activeDropdown === index && (
-                      <div className="pl-6 space-y-1 bg-[#2d333a] rounded-lg ml-2 mr-2 py-2">
-                        {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
-                          <React.Fragment key={dropdownIndex}>
-                            {dropdownItem.download ? (
-                              <button 
-                                onClick={() => handleDownloadClick(dropdownItem.href, dropdownItem.label)}
-                                className="flex items-center w-full text-left text-gray-300 hover:text-white hover:bg-gray-600/50 px-3 py-2 rounded-md transition-colors duration-200"
-                              >
-                                <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
-                                  {dropdownItem.label}
-                                  {isActivePage(dropdownItem.href) && (
-                                    <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
-                                  )}
-                                </span>
-                              </button>
-                            ) : (
-                              <a 
-                                href={dropdownItem.href} 
-                                className="flex items-center text-gray-300 hover:text-white hover:bg-gray-600/50 px-3 py-2 rounded-md transition-colors duration-200"
-                              >
-                                <span className="flex items-center" style={getTextStyle(dropdownItem.href)}>
-                                  {dropdownItem.label}
-                                  {isActivePage(dropdownItem.href) && (
-                                    <Check className="ml-2 h-3 w-3" style={getTextStyle(dropdownItem.href)} />
-                                  )}
-                                </span>
-                              </a>
-                            )}
-                            {/* Line separator - don't show after last item */}
-                            {dropdownIndex < item.dropdownItems.length - 1 && (
-                              <div className="mx-3 border-b border-gray-600/50"></div>
-                            )}
-                          </React.Fragment>
-                        ))}
-                      </div>
+                    </span>
+                    {item.hasDropdown && (
+                      <ChevronDown 
+                        className={`h-4 w-4 text-gray-400 transition-transform duration-200 ${
+                          activeDropdown === index ? 'rotate-180' : ''
+                        }`} 
+                      />
                     )}
-                  </div>
-                ))}
+                  </button>
+                  
+                  {/* Expanded dropdown items */}
+                  {item.hasDropdown && activeDropdown === index && (
+                    <div className="rounded-b-lg px-2 pb-2" style={{ backgroundColor: '#343434' }}>
+                      {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
+                        <React.Fragment key={dropdownIndex}>
+                          {dropdownItem.download ? (
+                            <button 
+                              onClick={() => handleDownloadClick(dropdownItem.href, dropdownItem.label)}
+                              className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white px-4 py-2.5 transition-colors duration-200 hover:bg-gray-600/40 rounded-lg mb-1"
+                              style={{
+                                fontFamily: 'Poppins, sans-serif',
+                                fontWeight: 400,
+                                fontSize: '14px',
+                                lineHeight: '24px',
+                                letterSpacing: '0%',
+                                verticalAlign: 'middle'
+                              }}
+                            >
+                              <span style={getTextStyle(dropdownItem.href)}>
+                                {dropdownItem.label}
+                              </span>
+                              {isActivePage(dropdownItem.href) && (
+                                <Check className="h-4 w-4 flex-shrink-0" style={getCheckmarkStyle()} />
+                              )}
+                            </button>
+                          ) : (
+                            <a 
+                              href={dropdownItem.href} 
+                              className="flex items-center justify-between text-gray-300 hover:text-white px-4 py-2.5 transition-colors duration-200 hover:bg-gray-600/40 rounded-lg mb-1 block"
+                              onClick={toggleMobileMenu}
+                              style={{
+                                fontFamily: 'Poppins, sans-serif',
+                                fontWeight: 400,
+                                fontSize: '14px',
+                                lineHeight: '24px',
+                                letterSpacing: '0%',
+                                verticalAlign: 'middle'
+                              }}
+                            >
+                              <span style={getTextStyle(dropdownItem.href)}>
+                                {dropdownItem.label}
+                              </span>
+                              {isActivePage(dropdownItem.href) && (
+                                <Check className="h-4 w-4 flex-shrink-0" style={getCheckmarkStyle()} />
+                              )}
+                            </a>
+                          )}
+                          {/* White horizontal separation line */}
+                          {dropdownIndex < item.dropdownItems.length - 1 && (
+                            <div className="mx-2 border-b border-white/20 my-1"></div>
+                          )}
+                        </React.Fragment>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* Call us button at bottom of sidebar */}
+          <div className="mt-auto p-4 border-t border-gray-700 bg-[#1a1a1a]">
+            <div className="relative group">
+              <button className="w-full border border-white text-white px-4 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-sm">
+                Call us
+              </button>
+              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 whitespace-nowrap">
+                +91-8928557529
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-800"></div>
               </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
-    </header>
+
+      {/* Overlay for closing sidebar when clicking outside */}
+      {isMobileMenuOpen && (
+        <div 
+          className="lg:hidden fixed inset-0 bg-transparent z-30"
+          onClick={toggleMobileMenu}
+        ></div>
+      )}
+
+      {/* Global styles for content shifting */}
+      <style jsx global>{`
+        @media (max-width: 1024px) {
+          body.mobile-menu-open .main-content {
+            transform: translateX(224px);
+            transition: transform 0.3s ease-in-out;
+          }
+          
+          .main-content {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(0);
+          }
+        }
+      `}</style>
+    </>
   );
 };
 
