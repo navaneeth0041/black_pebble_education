@@ -78,7 +78,7 @@ const PreFooter = ({
 
   return (
     <div
-      className="relative px-4 -mt-5 lg:-mt-28 pt-40 md:px-10 py-25 min-h-[70vh] overflow-hidden z-10"
+      className="relative px-4 -mt-7 lg:-mt-28 pt-40 md:px-10 py-25 min-h-[70vh] overflow-hidden z-10"
       style={{
         background:
           'linear-gradient(90deg, #088F99 0%, #09BE9D 58%, #7ECCA2 88%)',

@@ -115,7 +115,7 @@ export default function Testimonials({
   return (
     <>
       <div className="w-full bg-[#FBDD9C]">
-        <div className="mx-auto py-8 -mt-5 lg:-mt-25 pt-16 min-h-[60vh] lg:min-h-[70vh] relative overflow-visible">
+        <div className="mx-auto py-8 -mt-7 lg:-mt-25 pt-16 min-h-[60vh] lg:min-h-[70vh] relative overflow-visible">
           
           {/* Desktop Layout */}
           <div className="hidden lg:flex lg:flex-col h-full">
@@ -218,27 +218,27 @@ export default function Testimonials({
           </div>
 
           {/* Mobile Layout */}
-          <div className="lg:hidden flex flex-col">
+          <div className="lg:hidden flex flex-col px-4">
             
             {/* Title */}
             <div className="mb-6 text-center">
-              <h2 className={`${mochiyPopOne.className} text-3xl sm:text-4xl font-bold text-[#F15B52] mb-2 flex items-center justify-center gap-4 leading-tight`}>
+              <h2 className={`${mochiyPopOne.className} text-4xl sm:text-5xl font-bold text-[#F15B52] mb-2 flex items-center justify-center gap-4 leading-tight`}>
                 {title1}
-                <img src={titleIcon} alt="Phone Icon" className="w-8 h-8 sm:w-10 sm:h-10" />
+                <img src={titleIcon} alt="Phone Icon" className="w-10 h-10 sm:w-12 sm:h-12" />
               </h2>
-              <h3 className={`${mochiyPopOne.className} text-3xl sm:text-4xl font-bold text-[#F15B52] leading-tight`}>
+              <h3 className={`${mochiyPopOne.className} text-4xl sm:text-5xl font-bold text-[#F15B52] leading-tight`}>
                 {title2}
               </h3>
             </div>
             
             {/* Testimonial Card */}
-            <div className="bg-white p-5 sm:p-6 rounded-2xl mb-6 shadow-lg">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl mb-6 shadow-lg mx-auto max-w-sm w-full min-h-[300px] sm:min-h-[320px] flex flex-col justify-center">
               {/* Star Rating */}
-              <div className="flex gap-1 mb-3 justify-center">
+              <div className="flex gap-1 justify-center">
                 {renderMobileStars(currentTestimonial.rating)}
               </div>
               
-              <p className={`${poppins.className} text-sm sm:text-base mb-3 leading-relaxed text-gray-700 text-center`}>
+              <p className={`${poppins.className} text-sm sm:text-base mb-2 leading-relaxed text-gray-700 text-center flex-1 flex items-center justify-center`}>
                 "{currentTestimonial.quote}"
               </p>
               <p className={`${poppins.className} font-semibold text-xs sm:text-sm text-[#F15B52] text-center`}>
@@ -269,7 +269,7 @@ export default function Testimonials({
       <img
         src="/effects/yellow.png"
         alt="yellow transition"
-        className='w-[200%] block relative -top-9 z-20'
+        className='w-[200%] block relative -top-2 lg:-top-9 z-20'
       />
     </>
   );

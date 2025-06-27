@@ -50,10 +50,10 @@ export default function CourseCurriculum({
 }) {
   return (
     <>
-    <div className="bg-white py-12 md:py-16 lg:py-20 pt-40 -mt-5 lg:-mt-15 relative overflow-hidden min-h-[80vh] lg:min-h-[90vh]">
+    <div className="bg-white py-12 md:py-16 lg:py-20 pt-20 lg:pt-40 -mt-5 lg:-mt-15 relative overflow-hidden min-h-[80vh] lg:min-h-[90vh]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-left md:text-center mb-12">
           <div className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-4 font-['Poppins']" style={{
             backgroundColor: '#E3FFF5',
             color: '#39BB9C',
@@ -72,25 +72,25 @@ export default function CourseCurriculum({
         <div className="max-w-4xl mx-auto space-y-8">
           {modules.map((module) => (
             <div key={module.id} className="flex flex-col md:flex-row gap-6 items-start">
-              <div className={`${module.bgColor} w-full md:w-64 h-40 md:h-36 rounded-xl flex flex-col items-center justify-center flex-shrink-0 p-4`}>
+              <div className={`${module.bgColor} w-2/5 md:w-64 h-24 md:h-36 rounded-xl flex flex-col items-center justify-center flex-shrink-0 p-2 md:p-4`}>
                 <img 
                   src={module.icon} 
                   alt={module.title}
-                  className="w-16 h-16 md:w-20 md:h-20 mb-2 filter brightness-0 invert"
+                  className="w-8 h-8 md:w-20 md:h-20 mb-1 md:mb-2 filter brightness-0 invert"
                 />
-                <div className="text-white text-[16px] md:text-[18px] font-normal text-center leading-[149%] tracking-[-0.342px] font-['Mochiy_Pop_One']">
+                <div className="text-white text-[10px] md:text-[18px] font-normal text-center leading-[149%] tracking-[-0.342px] font-['Mochiy_Pop_One']">
                   {module.title}
                 </div>
               </div>
               
               <div className="flex-1 pt-0 md:pt-2">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-2 mb-2">
+                <div className="flex flex-row items-center gap-2 mb-2 text-left">
                   <span className="text-gray-500 font-semibold font-medium text-base md:text-lg">Module {module.id}</span>
                   <span className="text-[#39BB9C] text-[20px] sm:text-[22px] md:text-[24px] font-semibold leading-[149%] tracking-[-0.456px] font-['Poppins']">
                     {module.title}
                   </span>
                 </div>
-                <p className="text-[#39BB9C] text-[14px] sm:text-[15px] md:text-[16px] font-medium leading-[149%] tracking-[-0.304px] font-['Poppins']">
+                <p className="text-[#39BB9C] text-[14px] sm:text-[15px] md:text-[16px] font-medium leading-[149%] tracking-[-0.304px] font-['Poppins'] text-left">
                   {module.description}
                 </p>
               </div>
@@ -102,7 +102,7 @@ export default function CourseCurriculum({
     <img
         src="/effects/white.png"
         alt="black transition"
-        className='w-full block relative -top-1 z-20'
+        className='w-full block relative lg:-top-1 z-20'
       />
     </>
   );
