@@ -1,6 +1,6 @@
 "use client";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Mochiy_Pop_One, Poppins } from 'next/font/google';
 
 const mochiyPopOne = Mochiy_Pop_One({
@@ -15,6 +15,60 @@ const poppins = Poppins({
   display: 'swap',
 });
 
+const renderStars = (rating) => {
+  const stars = [];
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 !== 0;
+  
+  for (let i = 0; i < fullStars; i++) {
+    stars.push(<span key={i} className="text-[#FFD700] text-2xl xl:text-3xl 2xl:text-4xl">★</span>);
+  }
+  
+  if (hasHalfStar) {
+    stars.push(
+      <span key="half" className="text-[#FFD700] text-2xl xl:text-3xl 2xl:text-4xl relative">
+        <span className="text-gray-300">★</span>
+        <span className="absolute left-0 top-0 overflow-hidden w-1/2">★</span>
+      </span>
+    );
+  }
+  
+  const remainingStars = 5 - Math.ceil(rating);
+  for (let i = 0; i < remainingStars; i++) {
+    stars.push(<span key={`empty-${i}`} className="text-gray-300 text-2xl xl:text-3xl 2xl:text-4xl">★</span>);
+  }
+  
+  return stars;
+};
+
+const renderMobileStars = (rating) => {
+  const stars = [];
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 !== 0;
+  
+  // Add full stars
+  for (let i = 0; i < fullStars; i++) {
+    stars.push(<span key={i} className="text-[#FFD700] text-lg">★</span>);
+  }
+  
+  if (hasHalfStar) {
+    stars.push(
+      <span key="half" className="text-[#FFD700] text-lg relative">
+        <span className="text-gray-300">★</span>
+        <span className="absolute left-0 top-0 overflow-hidden w-1/2">★</span>
+      </span>
+    );
+  }
+  
+  // Add empty stars to make 5 total
+  const remainingStars = 5 - Math.ceil(rating);
+  for (let i = 0; i < remainingStars; i++) {
+    stars.push(<span key={`empty-${i}`} className="text-gray-300 text-lg">★</span>);
+  }
+  
+  return stars;
+};
+
 export default function Testimonials({ 
   title1 = "Kids Loved It.",
   title2 = "Parents Approved.",
@@ -23,28 +77,40 @@ export default function Testimonials({
     {
       quote: "I was amazed at how my 11-year-old learned budgeting after a few sessions. The program made finance fun — she's thinking like a mini-CEO.",
       author: "Riya Malhotra, Parent of a 6th Grader",
+      rating: 5 // Optional: you can set specific ratings
     },
     {
       quote: "After just a couple of sessions, my daughter is already budgeting like an expert! She's even making grocery list to keep within our program made learning fun!",
       author: "Sarah Johnson, Parent at Grader",
+      rating: 4.5 // Optional: you can set specific ratings
     },
     {
       quote: "After just a couple of sessions, my daughter is already budgeting like an expert! She's even making grocery list to keep within our program made learning fun!",
       author: "Sarah Johnson, Parent at Grader",
+      rating: 4 // Optional: you can set specific ratings
     },
   ]
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const testimonialsWithRatings = useMemo(() => {
+    const possibleRatings = [4, 4.5, 5];
+    
+    return testimonials.map((testimonial, index) => ({
+      ...testimonial,
+      rating: testimonial.rating || possibleRatings[Math.floor(Math.random() * possibleRatings.length)]
+    }));
+  }, [testimonials]);
+
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex((prev) => (prev - 1 + testimonialsWithRatings.length) % testimonialsWithRatings.length);
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setCurrentIndex((prev) => (prev + 1) % testimonialsWithRatings.length);
   };
 
-  const currentTestimonial = testimonials[currentIndex];
+  const currentTestimonial = testimonialsWithRatings[currentIndex];
 
   return (
     <>
@@ -79,7 +145,7 @@ export default function Testimonials({
                     marginLeft: '28%'
                   }}
                 >
-                  {testimonials.map((testimonial, index) => {
+                  {testimonialsWithRatings.map((testimonial, index) => {
   // Determine card size and opacity
   let cardClass = "flex-shrink-0 mr-6 transition-all duration-300 flex items-center"; // Added flex and items-center
   let cardWidth = "w-[420px] xl:w-[490px] 2xl:w-[550px]";
@@ -91,8 +157,8 @@ export default function Testimonials({
     opacity = "opacity-100 scale-100 z-10";
     cardHeight = "h-64 xl:h-80 2xl:h-96"; // Full height for current
   } else if (
-    index === (currentIndex + 1) % testimonials.length ||
-    index === (currentIndex - 1 + testimonials.length) % testimonials.length
+    index === (currentIndex + 1) % testimonialsWithRatings.length ||
+    index === (currentIndex - 1 + testimonialsWithRatings.length) % testimonialsWithRatings.length
   ) {
     // Next or previous card
     cardWidth = "w-[420px] xl:w-[490px] 2xl:w-[550px]";
@@ -115,11 +181,8 @@ export default function Testimonials({
       }}
     >
       <div className={`bg-white p-6 xl:p-8 2xl:p-10 rounded-4xl shadow-lg flex flex-col ${cardHeight} justify-center`}>
-        {/* Star Rating - Centered and Bigger */}
         <div className="flex gap-1 mb-4 justify-center">
-          {[...Array(5)].map((_, i) => (
-            <span key={i} className="text-[#FFD700] text-2xl xl:text-3xl 2xl:text-4xl">★</span>
-          ))}
+          {renderStars(testimonial.rating)}
         </div>
         <p className={`${poppins.className} text-base xl:text-lg 2xl:text-xl mb-4 leading-relaxed text-[#F15B52] flex-1 overflow-hidden`}>
           "{testimonial.quote}"
@@ -172,9 +235,7 @@ export default function Testimonials({
             <div className="bg-white p-5 sm:p-6 rounded-2xl mb-6 shadow-lg">
               {/* Star Rating */}
               <div className="flex gap-1 mb-3 justify-center">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-[#FFD700] text-lg">★</span>
-                ))}
+                {renderMobileStars(currentTestimonial.rating)}
               </div>
               
               <p className={`${poppins.className} text-sm sm:text-base mb-3 leading-relaxed text-gray-700 text-center`}>

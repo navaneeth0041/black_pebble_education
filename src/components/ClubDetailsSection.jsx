@@ -117,13 +117,14 @@ const ClubDetailsSection = ({
                     }}>
                       Location
                     </h4>
-                    <p className="text-white font-poppins text-[22px] font-medium" style={{
+                    <div className="text-white font-poppins text-[22px] font-medium" style={{
                       fontWeight: 600,
                       lineHeight: '149%',
                       letterSpacing: '-0.418px'
                     }}>
-                      Online (LIVE sessions) |  Pan-India Participation
-                    </p>
+                      <div>Online (LIVE sessions) </div>
+                      <div>Pan-India Participation</div>
+                    </div>
                   </div>
                   <div className="flex flex-col gap-4 pb-6 md:pb-0 border-b border-white/30 md:border-b-0 md:px-6">
                     <h4 className="text-white font-poppins text-[22px] font-semibold" style={{
@@ -149,13 +150,14 @@ const ClubDetailsSection = ({
                     }}>
                       Frequency
                     </h4>
-                    <p className="text-white font-poppins text-[22px] font-semibold" style={{
+                    <div className="text-white font-poppins text-[22px] font-semibold" style={{
                       fontWeight: 600,
                       lineHeight: '149%',
                       letterSpacing: '-0.418px'
                     }}>
-                      Last Friday of Every Month | 6 PM - 7 PM IST
-                    </p>
+                      <div>Last Friday of Every Month</div>
+                      <div>6 PM - 7 PM IST</div>
+                    </div>
                   </div>
                 </div>
               </div>
