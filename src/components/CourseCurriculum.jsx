@@ -90,7 +90,7 @@ export default function CourseCurriculum({
                     {module.title}
                   </span>
                 </div>
-                <p className="text-[#39BB9C] text-[14px] sm:text-[15px] md:text-[16px] font-medium leading-[149%] tracking-[-0.304px] font-['Poppins'] text-left">
+                <p className="text-[#39BB9C] text-[18px] sm:text-[15px] md:text-[16px] font-medium leading-[149%] tracking-[-0.304px] font-['Poppins'] text-left">
                   {module.description}
                 </p>
               </div>

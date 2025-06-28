@@ -45,13 +45,13 @@ const PebbleBellaSection = () => {
 
   return (
     <>
-    <section className={`w-full pt-40 -mt-5 lg:-mt-30 min-h-screen z-30 bg-white py-8 md:py-16 lg:py-30 ${mochiyPopOne.variable} ${poppins.variable}`}>
+    <section className={`w-full pt-20 lg:pt-40 -mt-5 lg:-mt-30 min-h-screen z-30 bg-white py-8 md:py-16 lg:py-30 ${mochiyPopOne.variable} ${poppins.variable}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-18">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="order-2 lg:order-1">
+          <div className="order-1 lg:order-1 lg:pl-0 pl-4">
             {/* Updated heading to match the size of WhyPebbleBellaSection */}
-            <h2 className={`text-5xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-8 lg:mb-12 leading-tight ${mochiyPopOne.className}`}>
+            <h2 className={`text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-8 lg:mb-12 leading-tight ${mochiyPopOne.className}`}>
               <span className="text-[#7AD3BE] opacity-60">Who We Want as</span><br />
               <span className="text-[#39BB9C]">Pebble Bella</span>
             </h2>
@@ -87,8 +87,8 @@ const PebbleBellaSection = () => {
           </div>
           
           {/* Right Image */}
-          <div className="order-1 lg:order-2">
-            <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="order-2 lg:order-2">
+            <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden ">
               <Image
                 src="/images/momchild.png"
                 alt="Family learning together - father and daughter with piggy bank"
@@ -105,7 +105,7 @@ const PebbleBellaSection = () => {
     <img
         src="/effects/white.png"
         alt="black transition"
-        className='w-full block relative -top-8 z-30'
+        className='w-full block relative lg:-top-8 z-30'
       />
     </> 
   );

@@ -60,12 +60,21 @@ const SelfHelpKits = ({
     <>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-<section className="bg-[#343434] text-white h-[70vh] relative overflow-hidden flex items-center">
+<section className="bg-[#343434] text-white h-[60vh] lg:h-[70vh] relative overflow-hidden flex items-center">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 w-full">
     <div className="text-center lg:text-left">
+      <div className="flex justify-center ml-30 mb-4 lg:hidden">
+              <div className="w-20 h-20 xs:w-24 xs:h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 flex-shrink-0">
+                <img
+                  src="/self_help_kit/1/graph.svg"
+            alt="Graph image"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+      </div>
       {/* Use flex with items-start to align icon with top of text */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-8 mb-8 sm:mb-6">
-        <h1 className={`${mochiyPopOne.className} text-2xl sm:text-4xl md:text-4xl lg:text-7xl leading-snug tracking-tight text-left text-white mb-2 sm:mb-4 max-w-5xl`}>
+        <h1 className={`${mochiyPopOne.className} text-[34px] sm:text-4xl md:text-4xl lg:text-7xl leading-snug tracking-tight text-left text-white mb-2 sm:mb-4 max-w-5xl`}>
           Learn. Play. Grow —<br />
           <span className="text-white">At Your Own Pace!</span>
         </h1>
@@ -79,14 +88,14 @@ const SelfHelpKits = ({
         </div>
       </div>
       
-      <p className="mt-4 mb-8 sm:mb-6 text-[16px] xs:text-[17px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[24px] leading-[1.4] tracking-[-0.3px] text-gray-300 text-center lg:text-left font-medium font-poppins">
+      <p className="mt-4 mb-8 sm:mb-6 text-[23px] xs:text-[17px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[24px] leading-[1.4] tracking-[-0.3px] text-gray-300 text-center lg:text-left font-medium font-poppins">
         {smartMoneyConcepts.description}
       </p>
       
       <div className="mt-2 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
         <div className="relative group w-full sm:w-auto">
           <button 
-            className="bg-gradient-to-r from-[#08A69A] via-[#0ABE9D] to-[#69C9A1] hover:bg-teal-600 text-white w-full sm:w-auto text-xs sm:text-sm md:text-base px-5 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-full font-medium transition-all duration-200"
+            className="bg-gradient-to-r from-[#08A69A] via-[#0ABE9D] to-[#69C9A1] hover:bg-teal-600 text-white w-full sm:w-auto text-lg sm:text-sm md:text-base px-7 py-4 sm:px-6 sm:py-2.5 md:px-8 md:py-3 rounded-full font-medium transition-all duration-200"
           >
             Call Us to Order Your Kit
           </button>
@@ -104,13 +113,13 @@ const SelfHelpKits = ({
 <img 
   src="/effects/black.png" 
   alt="black transition" 
-  className="w-full block z-20 relative -top-8" 
+  className="w-full block z-20 relative -top-2 lg:-top-8" 
 />
 
 
       {/* What's Inside Section */}
-    <section className="flex flex-col items-center gap-8 py-16 px-8 pt-40 -mt-5 lg:-mt-18">
-      <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
+    <section className="flex flex-col items-center gap-8 py-16 px-8 pt-10 lg:pt-40 -mt-5 lg:-mt-18">
+      <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-[32px] lg:text-[49px] font-normal leading-[149%] tracking-[-0.931px] lg:text-center">
         What's Inside a Self-Help Kit?
       </h2>
       
@@ -139,14 +148,14 @@ const SelfHelpKits = ({
       {/* </div> */}
       
       {/* Feature Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full max-w-4xl">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl">
         <div className="bg-[#F7C342] rounded-[22px] p-6 flex flex-col items-center justify-center h-40">
           <img 
             src="/self_help_kit/note1.svg" 
             alt="Concept notes" 
             className="w-16 h-12 mb-4"
           />
-          <span className="text-white font-poppins text-lg font-semibold text-center">
+          <span className="text-white font-poppins text-sm lg:text-lg font-semibold text-center">
             21 Concept Notes
           </span>
         </div>
@@ -157,7 +166,7 @@ const SelfHelpKits = ({
             alt="Worksheets" 
             className="w-16 h-12 mb-4"
           />
-          <span className="text-white font-poppins text-lg font-semibold text-center">
+          <span className="text-white font-poppins text-sm lg:text-lg font-semibold text-center">
             14 Worksheets
           </span>
         </div>
@@ -168,7 +177,7 @@ const SelfHelpKits = ({
             alt="Exercises" 
             className="w-16 h-12 mb-4"
           />
-          <span className="text-white font-poppins text-lg font-semibold text-center">
+          <span className="text-white font-poppins text-sm lg:text-lg font-semibold text-center">
             7 Exercises
           </span>
         </div>
@@ -179,7 +188,7 @@ const SelfHelpKits = ({
             alt="Self evaluations" 
             className="w-16 h-12 mb-4"
           />
-          <span className="text-white font-poppins text-lg font-semibold text-center">
+          <span className="text-white font-poppins text-sm lg:text-lg font-semibold text-center">
             7 Self-evaluations
           </span>
         </div>
@@ -188,21 +197,21 @@ const SelfHelpKits = ({
     <img 
   src="/effects/white.png" 
   alt="black transition" 
-  className="w-full block -top-7 z-20 relative" 
+  className="w-full block lg:-top-7 z-20 relative" 
 />
 
       {/* Who is This For Section */}
-<section className="relative bg-[#E1FFF4] sm:py-24 overflow-hidden pt-40 -mt-5 lg:-mt-22">
+<section className="relative bg-[#E1FFF4] sm:py-24 overflow-hidden pt-5 lg:pt-40 -mt-5 lg:-mt-22">
   <img
     src="/self_help_kit/3/thread.svg"
     alt="Thread Illustration"
-    className="absolute top-0 left-20 sm:left-32 md:left-48 lg:left-60 w-68 sm:w-78 lg:w-112 opacity-90 pointer-events-none select-none pt-12" 
+    className="absolute top-0 lg:rotate-0 rotate-35 left-30 sm:left-32 md:left-48 lg:left-60 w-88 sm:w-78 lg:w-112 opacity-90 pointer-events-none select-none pt-12" 
   />
 
   {/* Main Content */}
-  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 px-6 sm:px-12 lg:px-24 z-10 pt-20 relative">
+  <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 px-6 sm:px-12 lg:px-24 z-10 pt-10 lg:pt-20 relative">
     {/* Left Side */}
-    <div className="flex flex-col items-start gap-4 sm:gap-5 max-w-md text-left">
+    <div className="flex flex-col items-start gap-4 sm:gap-5 pl-7 lg:pl-0 max-w-md text-left">
       <h2 className="text-[#39BB9C] font-['Mochiy_Pop_One'] text-3xl sm:text-4xl lg:text-[48px] font-normal leading-snug tracking-tight">
         Who is This For?
       </h2>
@@ -213,7 +222,7 @@ const SelfHelpKits = ({
 
     {/* Right Side - Cards */}
 <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[52px] p-6 w-72 sm:w-80 h-56 flex items-center justify-between">
+      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-xl lg:rounded-[52px] p-6 w-72 sm:w-80 h-40 lg:h-56 flex items-center justify-between">
         <div className="flex flex-col justify-center">
           <span className="text-white font-poppins text-3xl sm:text-4xl font-medium leading-snug tracking-tight">
             10+
@@ -230,7 +239,7 @@ const SelfHelpKits = ({
         </div>
       </Card>
 
-      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[52px] p-6 w-72 sm:w-80 h-56 flex items-center justify-between">
+      <Card className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-xl lg:rounded-[52px] p-6 w-72 sm:w-80 h-40 lg:h-56 flex items-center justify-between">
         <div className="flex flex-col justify-center">
           <span className="text-white font-poppins text-2xl sm:text-3xl font-medium leading-snug tracking-tight">
             {smartMoneyConcepts?.enthusiastText || "Money Enthusiasts"}
@@ -250,7 +259,7 @@ const SelfHelpKits = ({
 <img 
   src="/effects/lightaqua.svg" 
   alt="black transition" 
-  className="w-full block -top-8 z-0 relative" 
+  className="w-full block -top-1 lg:-top-8 z-0 relative" 
 />
 
 
@@ -258,7 +267,7 @@ const SelfHelpKits = ({
 <section className="bg-[#343434] py-16 sm:py-20 lg:py-24 -mt-5 lg:-mt-30">
  <div className="flex flex-col lg:flex-row items-center justify-between gap-12 px-4 sm:px-8 lg:px-32 max-w-7xl mx-auto">
 {/* Left side - Title and subtitle */}
-<div className="flex flex-col items-start gap-5 max-w-lg">
+<div className="flex flex-col items-start pl-6 lg:pl-0 gap-5 max-w-lg">
 <h2 className="text-white font-['Mochiy_Pop_One'] text-3xl sm:text-4xl lg:text-[40px] font-normal leading-snug tracking-tight">
  {benefits.title}
 </h2>
@@ -309,7 +318,7 @@ className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
 <img 
   src="/effects/black.png" 
   alt="black transition" 
-  className="w-full block -top-8 z-20 relative" 
+  className="w-full block -top-2 lg:-top-8 z-20 relative" 
 />
 
 
@@ -334,7 +343,7 @@ className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
       </div>
 
       {/* Concepts Grid */}
-      <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 relative md:ml-12">
+      <div className=" flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 relative md:ml-12">
         <div className="flex flex-col gap-6">
           {smartMoneyConcepts.concepts.slice(0, 4).map((concept) => (
             <Card key={concept.id} className="bg-white rounded-3xl p-4 sm:p-6 flex items-center justify-center h-28 sm:h-32 relative border border-gray-100">
@@ -399,7 +408,7 @@ className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
                 alt="Price Box"
                 className="w-28 h-auto"
               />
-              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-xl text-white">
+              <span className="absolute inset-0 flex items-center justify-center font-['Poppins'] font-bold text-2xl lg:text-xl text-white">
                 {smartMoneyConcepts.pricingData.currentPrice}
               </span>
             </div>
@@ -433,7 +442,7 @@ className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
         <img
           src="/Finance_clubs/1/whitecoins.svg"
           alt="White Coins"
-          className="absolute -right-4 bottom-2 w-20 sm:w-36 h-auto"
+          className="absolute -right-2 lg:-right-4 bottom-2 w-20 sm:w-36 h-auto"
         />
       </div>
     </div>
@@ -444,7 +453,7 @@ className="w-20 sm:w-24 md:w-28 lg:w-30 xl:w-32 h-auto ml-1"
   <img 
   src="/effects/littlegreen.png" 
   alt="black transition" 
-  className="w-full block -top-8 z-20 relative" 
+  className="w-full block -top-2 lg:-top-8 z-20 relative" 
 />
 </>
   

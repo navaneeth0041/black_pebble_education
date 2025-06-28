@@ -3,7 +3,7 @@ import React from 'react';
 export default function ThemesOfDiscussion() {
   return (
     <>
-    <div className="relative w-full py-16 min-h-screen flex items-center">
+    <div className="relative w-full py-16 lg:min-h-screen flex items-center">
       {/* Image Left - Absolutely Positioned */}
       <div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 h-[400px] xl:h-[450px] w-[45%] z-0">
         <img 
@@ -20,14 +20,14 @@ export default function ThemesOfDiscussion() {
           {/* Left Column - Empty spacer on large screens, image on mobile */}
           <div className="lg:hidden">
             <img 
-              src="./Finance_clubs/Course Introduction (2) 2.svg" 
+              src="./Finance_clubs/theme101.png" 
               alt="Financial Discussion" 
               className="w-full h-auto rounded-2xl shadow-lg object-cover"
             />
           </div>
           
           {/* Right Column - Content */}
-          <div className="lg:col-start-2 space-y-8 lg:pl-8 xl:pl-12">
+          <div className="lg:col-start-2 space-y-8 pl-10 lg:pl-8 xl:pl-12">
           <h2 
               className="text-4xl sm:text-4xl md:text-5xl font-bold text-teal-500 leading-tight -ml-10"
               style={{ fontFamily: 'Mochiy Pop One, cursive' }}
@@ -59,7 +59,7 @@ export default function ThemesOfDiscussion() {
     <img
         src="/effects/white.png"
         alt="black transition"
-        className='w-[200%] block relative -top-6 z-0'
+        className='w-[200%] block relative lg:-top-6 z-0'
       />
     </>
   );

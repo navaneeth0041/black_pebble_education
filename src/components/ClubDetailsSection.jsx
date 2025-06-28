@@ -8,18 +8,40 @@ const ClubDetailsSection = ({
 }) => {
   return (
     <>
-      <section className="bg-[#E3FFF5] py-20 px-6 lg:px-16 pt-40 -mt-5 lg:-mt-22">
+      <section className="bg-[#E3FFF5] py-20 px-6 lg:px-16 lg:pt-40 -mt-5 lg:-mt-22">
         <div className="flex flex-col items-center gap-6 max-w-6xl mx-auto">
-          <h2 className="bg-[#E3FFF5] bg-clip-text text-transparent font-['Mochiy_Pop_One'] text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
-            Club Details
-          </h2>
+          
+          {/* Mobile layout - Calendar positioned above Club Details text */}
+          <div className="w-full lg:hidden">
+            <div className="flex justify-start">
+              <img
+                src="/Finance_clubs/1/Group.svg"
+                alt="Calendar"
+                className="w-[80px] h-[90px] sm:w-[110px] sm:h-[120px]"
+              />
+            </div>
+            
+            <div className="flex justify-center">
+              <h1 className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] bg-clip-text text-transparent font-['Mochiy_Pop_One'] text-[32px] sm:text-[40px] font-normal leading-[149%] tracking-[-0.931px] text-center">
+                Club Details
+              </h1>
+            </div>
+          </div>
+
+          {/* Desktop layout - original centered title */}
+          <div className="hidden lg:flex justify-center mb-12">
+            <h1 className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] bg-clip-text text-transparent font-['Mochiy_Pop_One'] text-[32px] sm:text-[40px] lg:text-[49px] font-normal leading-[149%] tracking-[-0.931px] text-center">
+              Club Details
+            </h1>
+          </div>
 
           <div className="relative w-full">
-            <div className="absolute -left-8 -top-12 z-0 sm:-left-16 sm:-top-8 lg:-left-28 lg:-top-35">
+            {/* Desktop calendar - left positioned */}
+            <div className="absolute -left-28 -top-35 z-0 hidden lg:block">
               <img
-                src="./Finance_clubs/1/Group.svg"
+                src="/Finance_clubs/1/Group.svg"
                 alt="Calendar"
-                className="w-[90px] h-[100px] sm:w-[180px] sm:h-[200px] lg:w-[260px] lg:h-[280px]"
+                className="w-[260px] h-[280px]"
               />
             </div>
 
@@ -27,21 +49,37 @@ const ClubDetailsSection = ({
               className="bg-gradient-to-r from-[#088F99] via-[#09BE9D] to-[#7ECCA2] rounded-[23px] p-6 sm:p-8 md:p-12 lg:p-16 w-full shadow-lg relative overflow-visible z-10"
               style={{ minHeight: '500px' }}
             >
-              {/* White coins background */}
-              <div className="absolute -right-12 bottom-4 z-0 sm:-right-16 sm:bottom-10 lg:-right-45 lg:bottom-3 rotate-12">
+              {/* Mobile coins - positioned at top right */}
+              <div className="absolute -right-7 -top-7 z-0 lg:hidden">
                 <img
                   src="/Finance_clubs/1/whitecoins.svg"
                   alt="White Coins Background"
-                  className="w-[100px] h-[95px] sm:w-[180px] sm:h-[190px] lg:w-[320px] lg:h-[300px]"
+                  className="w-[120px] h-[115px] sm:w-[140px] sm:h-[135px]"
                 />
               </div>
 
-              {/* Decorative coins - visible overflow but smaller on mobile */}
-              <div className="absolute -right-10 bottom-2 z-10 sm:-right-24 sm:bottom-3 lg:-right-46 lg:bottom-5">
+              <div className="absolute -right-6 -top-6 z-10 lg:hidden">
                 <img
                   src="/Finance_clubs/1/Clip path group.svg"
                   alt="Decorative Coins"
-                  className="w-[100px] h-[95px] sm:w-[180px] sm:h-[190px] lg:w-[320px] lg:h-[300px] transform rotate-12"
+                  className="w-[120px] h-[115px] sm:w-[140px] sm:h-[135px] transform rotate-12"
+                />
+              </div>
+
+              {/* Desktop coins - original bottom right position */}
+              <div className="absolute -right-12 bottom-4 z-0 hidden lg:block sm:-right-16 sm:bottom-10 lg:-right-45 lg:bottom-3 rotate-12">
+                <img
+                  src="/Finance_clubs/1/whitecoins.svg"
+                  alt="White Coins Background"
+                  className="w-[320px] h-[300px]"
+                />
+              </div>
+
+              <div className="absolute -right-10 bottom-2 z-10 hidden lg:block sm:-right-24 sm:bottom-3 lg:-right-46 lg:bottom-5">
+                <img
+                  src="/Finance_clubs/1/Clip path group.svg"
+                  alt="Decorative Coins"
+                  className="w-[320px] h-[300px] transform rotate-12"
                 />
               </div>
 
@@ -168,7 +206,7 @@ const ClubDetailsSection = ({
       <img
         src="/effects/lightaqua.svg"
         alt="black transition"
-        className="w-full block relative -top-8 z-20"
+        className="w-full block relative -top-1 lg:-top-8 z-20"
       />
     </>
   );

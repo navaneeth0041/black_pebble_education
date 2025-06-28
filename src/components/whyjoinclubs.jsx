@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function WhyJoinClub({ imageSrc = "./images/childlap.png" }) {
   return (
-    <div className="w-full py-16 md:py-20 lg:py-24 min-h-screen flex items-center relative">
+    <div className="w-full py-5 lg:py-24 lg:min-h-screen flex items-center relative">
       <div className="flex flex-col lg:flex-row items-start justify-start w-full max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Left Content */}
-        <div className="w-full lg:w-1/2 space-y-8 mb-10 lg:mb-0 lg:pr-16">
+        <div className="w-full lg:w-1/2 space-y-8 mb-10 lg:mb-0 lg:pr-16 lg:pl-0 pl-4">
           <h2
             className="text-4xl sm:text-5xl md:text-5xl font-bold text-teal-500 leading-tight"
             style={{ fontFamily: 'Mochiy Pop One, sans-serif' }}

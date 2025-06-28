@@ -40,15 +40,15 @@ const WhyPebbleBellaSection = () => {
   return (
     <>
     <section
-      className={`min-h-[60vh] md:min-h-screen bg-[#E1FFF4] py-16 pt-40 -mt-5 lg:-mt-23 z-20 relative overflow-hidden ${mochiyPopOne.variable} ${poppins.variable}`}
+      className={`min-h-[60vh] md:min-h-screen bg-[#E1FFF4] py-16 pt-10  lg:pt-40 -mt-5 lg:-mt-23 z-20 relative overflow-hidden ${mochiyPopOne.variable} ${poppins.variable}`}
     >
-      {/* Decorative String - Touching bottom of screen */}
-      <div className=" absolute bottom-0 left-0 sm:left-3 md:left-4 w-[280px] h-[200px] sm:w-[350px] sm:h-[250px] md:w-[450px] md:h-[320px] lg:w-[700px] lg:h-[500px] z-0">
+      {/* Decorative String - Mobile: top right, Desktop: bottom left */}
+      <div className="absolute top-0 right-0 sm:top-0 sm:right-3 md:bottom-0 md:top-auto md:left-4 md:right-auto w-[280px] h-[200px] sm:w-[350px] sm:h-[250px] md:w-[450px] md:h-[320px] lg:w-[700px] lg:h-[500px] z-0">
         <Image
           src="./brand_ambassor_assets/string.svg"
           alt=""
           fill
-          className="object-contain object-left"
+          className="object-contain object-right md:object-left  scale-x-[-1] scale-y-[-1] md:scale-x-[1] md:scale-y-[1]"
         />
       </div>
       
@@ -58,7 +58,7 @@ const WhyPebbleBellaSection = () => {
           <div className="pt-4 md:pt-8 lg:pt-12 xl:pt-16 px-8 sm:px-12 md:px-16 lg:px-24 ml-4 sm:ml-8 md:ml-12">
             {/* Main heading uses Mochiy font */}
             <h2
-              className={`text-left text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text6xl font-bold text-[#08B39C] leading-tight ${mochiyPopOne.className}`}
+              className={`text-[35px] text-5xl sm:text-5xl md:text-5xl lg:text-6xl xl:text6xl font-bold text-[#08B39C] leading-tight ${mochiyPopOne.className}`}
             >
               Why be a <br />
               Pebble Bella
@@ -69,14 +69,14 @@ const WhyPebbleBellaSection = () => {
           <div className="space-y-12 md:space-y-16 lg:space-y-20 py-8 pr-12">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex gap-6 md:gap-8 lg:gap-8">
-                {/* Icon - Responsive sizing */}
+                {/* Icon - Bigger on mobile, responsive sizing */}
                 <div className="flex-shrink-0 mt-1">
                   <Image
                     src={benefit.icon}
                     alt={benefit.title}
                     width={120}
                     height={120}
-                    className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] md:w-[75px] md:h-[75px] lg:w-[150px] lg:h-[150px]"
+                    className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] md:w-[75px] md:h-[75px] lg:w-[150px] lg:h-[150px]"
                   />
                 </div>
                 
@@ -104,7 +104,7 @@ const WhyPebbleBellaSection = () => {
     <img
         src="/effects/bellalast.png"
         alt="black transition"
-        className='w-full block relative -top-8 z-20'
+        className='w-full block relative -top-1 lg:-top-8 z-20'
       />
     </> 
   );

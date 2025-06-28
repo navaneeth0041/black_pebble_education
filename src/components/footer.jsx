@@ -61,7 +61,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#2B2A2A] text-white">
-      <div className="w-full px-4 md:px-8 lg:px-12 xl:px-16 py-12">
+      <div className="w-full pl-7 lg:pl-0 px-4 md:px-8 lg:px-12 xl:px-16 py-12">
         {/* Top Section: Logo and YouTube */}
         <div className="flex flex-col lg:flex-row justify-between items-start mb-12">
           {/* Logo Section */}
