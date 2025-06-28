@@ -164,7 +164,7 @@ const Header = () => {
       {/* Mobile Header Bar - Hidden when sidebar is open */}
       {!isMobileMenuOpen ? (
         <header className="lg:hidden w-full bg-[#343434] relative z-40">
-        <div className="px-4 py-3"> {/* Reduced padding from py-4 to py-3 */}
+        <div className="px-4"> 
           <div className="flex items-center justify-between">
             {/* Menu Button */}
             <button
@@ -309,110 +309,113 @@ const Header = () => {
         {/* Gap between header and content with black background */}
         <div className="absolute top-[50px] left-0 right-0 h-4 bg-[#1a1a1a] z-5"></div>
 
-        {/* Left Sidebar Navigation - Adjusted top padding */}
-        <div className="w-52 max-w-[70vw] bg-[#1a1a1a] h-full overflow-y-auto flex flex-col relative shadow-xl pt-[74px]">
-          <div className="flex-1 px-4 py-6">
-            {navigationItems.map((item, index) => (
-              <div key={index} className="mb-2">
-                {/* Main navigation item with conditional styling */}
-                <div className={`rounded-lg ${activeDropdown === index ? '' : ''}`} style={{ backgroundColor: activeDropdown === index ? '#343434' : 'transparent' }}>
-                  <button
-                    onClick={() => item.hasDropdown && toggleDropdown(index)}
-                    className={`flex items-center justify-between w-full text-left text-white px-4 py-3 transition-colors duration-200 hover:bg-gray-600/20 ${
-                      activeDropdown === index ? 'rounded-t-lg' : 'rounded-lg'
-                    }`}
-                    style={{
-                      fontFamily: 'Poppins, sans-serif',
-                      fontWeight: 500,
-                      fontSize: '16px',
-                      lineHeight: '150%',
-                      letterSpacing: '-1.9%',
-                      textAlign: 'left',
-                      backgroundColor: activeDropdown === index ? '#FFFFFF40' : 'transparent'
-                    }}
-                  >
-                    <span 
-                      className="flex items-center"
-                      style={getMainNavTextStyle(item)}
+        {/* Left Sidebar Navigation - Fixed height with proper layout */}
+        <div className="w-52 max-w-[70vw] bg-[#1a1a1a] h-screen flex flex-col relative shadow-xl">
+          {/* Navigation content - scrollable area with fixed height */}
+          <div className="flex-1 overflow-y-auto pt-[74px]" style={{ maxHeight: 'calc(100vh - 120px)' }}>
+            <div className="px-4 py-2">
+              {navigationItems.map((item, index) => (
+                <div key={index} className="mb-2">
+                  {/* Main navigation item with conditional styling */}
+                  <div className={`rounded-lg ${activeDropdown === index ? '' : ''}`} style={{ backgroundColor: activeDropdown === index ? '#343434' : 'transparent' }}>
+                    <button
+                      onClick={() => item.hasDropdown && toggleDropdown(index)}
+                      className={`flex items-center justify-between w-full text-left text-white px-4 py-3 transition-colors duration-200 hover:bg-gray-600/20 ${
+                        activeDropdown === index ? 'rounded-t-lg' : 'rounded-lg'
+                      }`}
+                      style={{
+                        fontFamily: 'Poppins, sans-serif',
+                        fontWeight: 500,
+                        fontSize: '16px',
+                        lineHeight: '140%',
+                        letterSpacing: '-1.9%',
+                        textAlign: 'left',
+                        backgroundColor: activeDropdown === index ? '#FFFFFF40' : 'transparent'
+                      }}
                     >
-                      {item.label}
-                      {isMainNavActive(item) && (
-                        <Check className="ml-2 h-4 w-4" style={getMainNavTextStyle(item)} />
+                      <span 
+                        className="flex items-center"
+                        style={getMainNavTextStyle(item)}
+                      >
+                        {item.label}
+                        {isMainNavActive(item) && (
+                          <Check className="ml-2 h-4 w-4" style={getMainNavTextStyle(item)} />
+                        )}
+                      </span>
+                      {item.hasDropdown && (
+                        <ChevronDown 
+                          className={`h-4 w-4 text-gray-400 transition-transform duration-200 ${
+                            activeDropdown === index ? 'rotate-180' : ''
+                          }`} 
+                        />
                       )}
-                    </span>
-                    {item.hasDropdown && (
-                      <ChevronDown 
-                        className={`h-4 w-4 text-gray-400 transition-transform duration-200 ${
-                          activeDropdown === index ? 'rotate-180' : ''
-                        }`} 
-                      />
+                    </button>
+                    
+                    {/* Expanded dropdown items */}
+                    {item.hasDropdown && activeDropdown === index && (
+                      <div className="rounded-b-lg px-2 pb-2" style={{ backgroundColor: '#343434' }}>
+                        {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
+                          <React.Fragment key={dropdownIndex}>
+                            {dropdownItem.download ? (
+                              <button 
+                                onClick={() => handleDownloadClick(dropdownItem.href, dropdownItem.label)}
+                                className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white px-4 py-2 transition-colors duration-200 hover:bg-gray-600/40 rounded-lg mb-1"
+                                style={{
+                                  fontFamily: 'Poppins, sans-serif',
+                                  fontWeight: 400,
+                                  fontSize: '14px',
+                                  lineHeight: '20px',
+                                  letterSpacing: '0%',
+                                  verticalAlign: 'middle'
+                                }}
+                              >
+                                <span style={getTextStyle(dropdownItem.href)}>
+                                  {dropdownItem.label}
+                                </span>
+                                {isActivePage(dropdownItem.href) && (
+                                  <Check className="h-4 w-4 flex-shrink-0" style={getCheckmarkStyle()} />
+                                )}
+                              </button>
+                            ) : (
+                              <a 
+                                href={dropdownItem.href} 
+                                className="flex items-center justify-between text-gray-300 hover:text-white px-4 py-2 transition-colors duration-200 hover:bg-gray-600/40 rounded-lg mb-1 block"
+                                onClick={toggleMobileMenu}
+                                style={{
+                                  fontFamily: 'Poppins, sans-serif',
+                                  fontWeight: 400,
+                                  fontSize: '14px',
+                                  lineHeight: '20px',
+                                  letterSpacing: '0%',
+                                  verticalAlign: 'middle'
+                                }}
+                              >
+                                <span style={getTextStyle(dropdownItem.href)}>
+                                  {dropdownItem.label}
+                                </span>
+                                {isActivePage(dropdownItem.href) && (
+                                  <Check className="h-4 w-4 flex-shrink-0" style={getCheckmarkStyle()} />
+                                )}
+                              </a>
+                            )}
+                            {/* White horizontal separation line */}
+                            {dropdownIndex < item.dropdownItems.length - 1 && (
+                              <div className="mx-2 border-b border-white/20 my-1"></div>
+                            )}
+                          </React.Fragment>
+                        ))}
+                      </div>
                     )}
-                  </button>
-                  
-                  {/* Expanded dropdown items */}
-                  {item.hasDropdown && activeDropdown === index && (
-                    <div className="rounded-b-lg px-2 pb-2" style={{ backgroundColor: '#343434' }}>
-                      {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
-                        <React.Fragment key={dropdownIndex}>
-                          {dropdownItem.download ? (
-                            <button 
-                              onClick={() => handleDownloadClick(dropdownItem.href, dropdownItem.label)}
-                              className="flex items-center justify-between w-full text-left text-gray-300 hover:text-white px-4 py-2.5 transition-colors duration-200 hover:bg-gray-600/40 rounded-lg mb-1"
-                              style={{
-                                fontFamily: 'Poppins, sans-serif',
-                                fontWeight: 400,
-                                fontSize: '14px',
-                                lineHeight: '24px',
-                                letterSpacing: '0%',
-                                verticalAlign: 'middle'
-                              }}
-                            >
-                              <span style={getTextStyle(dropdownItem.href)}>
-                                {dropdownItem.label}
-                              </span>
-                              {isActivePage(dropdownItem.href) && (
-                                <Check className="h-4 w-4 flex-shrink-0" style={getCheckmarkStyle()} />
-                              )}
-                            </button>
-                          ) : (
-                            <a 
-                              href={dropdownItem.href} 
-                              className="flex items-center justify-between text-gray-300 hover:text-white px-4 py-2.5 transition-colors duration-200 hover:bg-gray-600/40 rounded-lg mb-1 block"
-                              onClick={toggleMobileMenu}
-                              style={{
-                                fontFamily: 'Poppins, sans-serif',
-                                fontWeight: 400,
-                                fontSize: '14px',
-                                lineHeight: '24px',
-                                letterSpacing: '0%',
-                                verticalAlign: 'middle'
-                              }}
-                            >
-                              <span style={getTextStyle(dropdownItem.href)}>
-                                {dropdownItem.label}
-                              </span>
-                              {isActivePage(dropdownItem.href) && (
-                                <Check className="h-4 w-4 flex-shrink-0" style={getCheckmarkStyle()} />
-                              )}
-                            </a>
-                          )}
-                          {/* White horizontal separation line */}
-                          {dropdownIndex < item.dropdownItems.length - 1 && (
-                            <div className="mx-2 border-b border-white/20 my-1"></div>
-                          )}
-                        </React.Fragment>
-                      ))}
-                    </div>
-                  )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           
-          {/* Call us button at bottom of sidebar */}
-          <div className="mt-auto p-4 border-t border-gray-700 bg-[#1a1a1a]">
+          {/* Call us button - Absolutely positioned at bottom */}
+          <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#1a1a1a] border-t border-transparent">
             <div className="relative group">
-              <button className="w-full border border-white text-white px-4 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-sm">
+              <button className="w-full border border-white text-white px-4 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-base">
                 Call us
               </button>
               <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 whitespace-nowrap">
