@@ -12,10 +12,11 @@ export const metadata = {
 };
 
 
-export default function BankingEssentials() {
-    return (
-      <>
-        <Header />
+export default function BankingEssentialsPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Banking Essentials"
           subtitle="Introduce your child to the heartbeat of finance - Banks!"
@@ -101,8 +102,7 @@ export default function BankingEssentials() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

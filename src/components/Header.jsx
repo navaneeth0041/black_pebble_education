@@ -164,7 +164,7 @@ const Header = () => {
       {/* Mobile Header Bar - Hidden when sidebar is open */}
       {!isMobileMenuOpen ? (
         <header className="lg:hidden w-full bg-[#343434] relative z-40">
-        <div className="px-4 py-4">
+        <div className="px-4 py-3"> {/* Reduced padding from py-4 to py-3 */}
           <div className="flex items-center justify-between">
             {/* Menu Button */}
             <button
@@ -174,9 +174,9 @@ const Header = () => {
               <Menu className="h-6 w-6" />
             </button>
 
-            {/* Logo */}
+            {/* Logo - Increased size */}
             <Link href="/" className="block">
-              <BlackLogoWithText logoHeight={40} textHeight={100} />
+              <BlackLogoWithText logoHeight={50} textHeight={125} />
             </Link>
 
             {/* Call us button */}
@@ -193,8 +193,8 @@ const Header = () => {
         </div>
         </header>
       ) : (
-        // Invisible spacer to maintain content position when sidebar is open
-        <div className="lg:hidden w-full h-[88px]"></div>
+        // Invisible spacer to maintain content position when sidebar is open - Reduced height
+        <div className="lg:hidden w-full h-[70px]"></div>
       )}
 
       {/* Desktop Header */}
@@ -290,29 +290,28 @@ const Header = () => {
       <div className={`lg:hidden fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out ${
         isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
-        {/* Sidebar Header - Extends full width (inverted L shape) */}
-        <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-3 bg-[#1a1a1a] min-h-[54px] z-10">
+        {/* Sidebar Header - Extends across top like inverted L */}
+        <div className="mobile-sidebar-header absolute top-0 left-0 right-0 flex items-center px-4 bg-[#1a1a1a] min-h-[50px] z-10">
           {/* Logo aligned to left */}
           <Link href="/" className="flex-shrink-0">
-            <BlackLogoWithText logoHeight={32} textHeight={85} />
+            <BlackLogoWithText logoHeight={50} textHeight={85} />
           </Link>
           
-          {/* Close button on top-right */}
+          {/* Close button - simple X icon */}
           <button
             onClick={toggleMobileMenu}
-            className="text-white hover:text-gray-300 transition-colors duration-200 p-1.5 rounded-full hover:bg-gray-600/20 flex-shrink-0"
+            className="text-white hover:text-gray-300 transition-colors duration-200 p-1 ml-auto"
           >
-            <X className="h-4 w-4" />
+            <span className="text-3xl font-light">×</span>
           </button>
         </div>
 
-        {/* Black background for the right side area */}
-        <div className="absolute top-0 left-56 right-0 h-[44px] bg-[#1a1a1a] z-5"></div>
+        {/* Gap between header and content with black background */}
+        <div className="absolute top-[50px] left-0 right-0 h-4 bg-[#1a1a1a] z-5"></div>
 
-        {/* Left Sidebar Navigation */}
-        <div className="w-56 max-w-[75vw] bg-[#1a1a1a] h-full overflow-y-auto flex flex-col relative shadow-xl pt-[90px]">
-          {/* ...existing code... */}
-          <div className="flex-1 px-4 py-2">
+        {/* Left Sidebar Navigation - Adjusted top padding */}
+        <div className="w-52 max-w-[70vw] bg-[#1a1a1a] h-full overflow-y-auto flex flex-col relative shadow-xl pt-[74px]">
+          <div className="flex-1 px-4 py-6">
             {navigationItems.map((item, index) => (
               <div key={index} className="mb-2">
                 {/* Main navigation item with conditional styling */}
@@ -425,28 +424,13 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Overlay for closing sidebar when clicking outside */}
+      {/* Overlay for closing sidebar when clicking outside - only covers the shifted content area */}
       {isMobileMenuOpen && (
         <div 
-          className="lg:hidden fixed inset-0 bg-transparent z-30"
+          className="lg:hidden fixed inset-0 left-56 bg-transparent z-30"
           onClick={toggleMobileMenu}
         ></div>
       )}
-
-      {/* Global styles for content shifting */}
-      <style jsx global>{`
-        @media (max-width: 1024px) {
-          body.mobile-menu-open .main-content {
-            transform: translateX(224px);
-            transition: transform 0.3s ease-in-out;
-          }
-          
-          .main-content {
-            transition: transform 0.3s ease-in-out;
-            transform: translateX(0);
-          }
-        }
-      `}</style>
     </>
   );
 };

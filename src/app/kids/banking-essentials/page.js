@@ -11,10 +11,11 @@ export const metadata = {
   description: "Introduce kids to banking functions with this 2.5-hour practical session for better financial understanding.",
 };
 
-export default function Banking() {
-    return (
-      <>
-        <Header />
+export default function KidsBankingEssentialsPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Banking Essentials"
           subtitle="Introduce your child to the heartbeat of finance - Banks!"
@@ -86,8 +87,7 @@ export default function Banking() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

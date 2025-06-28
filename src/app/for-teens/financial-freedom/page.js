@@ -11,10 +11,11 @@ export const metadata = {
   description: "This 3-hour session guides teens early on the ingredients of financial freedom to enjoy financial security sooner.",
 };
 
-export default function BankingEssentials() {
-    return (
-      <>
-        <Header />
+export default function FinancialFreedomPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Financial Freedom"
           subtitle="Give your child the recipe for financial freedom - Soon!"
@@ -100,8 +101,7 @@ export default function BankingEssentials() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

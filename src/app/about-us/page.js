@@ -11,21 +11,23 @@ export const metadata = {
   description: "Our mission is to cultivate a generation that is financially savvy and confident by breaking down complex money concepts into simple, relatable ideas for children.",
 };
 
-export default function About(){
-	return(
-		<>	
-      	<Header />
-      	<FinanciallyConfidentKidsHero />
-      	<MissionMethodModeSection />
-      	<WhyChooseUsSection />
-      	<MeetTheFounderSection />
-		<PreFooter
-        mainTitle="From the Founder’s Desk"
-		subText1="Join our mission to make finance fun and fearless for kids."
-        button1Text="Book a Counseling Session"
-		button2Text="Be our Brand Amabassador"
-      	/>
-        <Footer />
-		</>
-		);
+export default function AboutUsPage() {
+  return (
+    <>
+      <Header />
+      <main>
+        <FinanciallyConfidentKidsHero />
+        <MissionMethodModeSection />
+        <WhyChooseUsSection />
+        <MeetTheFounderSection />
+        <PreFooter
+          mainTitle="From the Founder’s Desk"
+          subText1="Join our mission to make finance fun and fearless for kids."
+          button1Text="Book a Counseling Session"
+          button2Text="Be our Brand Amabassador"
+        />
+      </main>
+      <Footer />
+    </>
+  );
 }

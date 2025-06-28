@@ -11,10 +11,11 @@ export const metadata = {
   description: "Teach teens the principles of credit in this 2-hour session to avoid irresponsible credit use and debt traps.",
 };
 
-export default function BankingEssentials() {
-    return (
-      <>
-        <Header />
+export default function CreditConceptsPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Credit Concepts"
           subtitle="Introduce your child to the often-misused concept - Credit!"
@@ -100,8 +101,7 @@ export default function BankingEssentials() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

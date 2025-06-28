@@ -11,10 +11,11 @@ export const metadata = {
   description: "Equip kids to start their financial growth journey by teaching saving, investing, and expense tracking in this 2.5-hour session.",
 };
 
-export default function financial() {
-    return (
-      <>
-        <Header />
+export default function KidsFinancialGrowthPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Financial Growth"
           subtitle="Money looks good when it grows - not on trees!"
@@ -86,8 +87,7 @@ export default function financial() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

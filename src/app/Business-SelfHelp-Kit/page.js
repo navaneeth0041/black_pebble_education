@@ -8,7 +8,7 @@ export const metadata = {
   description: "Support kids with a business mindset to nurture their entrepreneurial learning journey with this self-help kit.",
 };
 
-export default function SelfHelpPage() {
+export default function BusinessSelfHelpKitPage() {
   // Define your business concepts here
   const businessConcepts = {
     description:"Engage with an informative & creative self-help kit to explore business concepts - anytime, anywhere.",
@@ -52,15 +52,17 @@ export default function SelfHelpPage() {
   return (
     <>
       <Header />
-      <SelfHelpKits 
-        smartMoneyConcepts={businessConcepts} 
-        benefits={businessBenefits}
-      />
-      <PreFooter
-        mainTitle="Why Business Self-Help Kits?"
-        subText1="Some kids naturally show a tendency towards a business mindset at a young age, but they don't get an opportunity to nurture it. This kit empowers kids to explore, understand, and own their business learning journey!"
-        buttonText="Call Us to Order Your Business Kit"
-      />
+      <main>
+        <SelfHelpKits 
+          smartMoneyConcepts={businessConcepts} 
+          benefits={businessBenefits}
+        />
+        <PreFooter
+          mainTitle="Why Business Self-Help Kits?"
+          subText1="Some kids naturally show a tendency towards a business mindset at a young age, but they don't get an opportunity to nurture it. This kit empowers kids to explore, understand, and own their business learning journey!"
+          buttonText="Call Us to Order Your Business Kit"
+        />
+      </main>
       <Footer />
     </>
   );

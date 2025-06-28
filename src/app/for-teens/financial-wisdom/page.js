@@ -11,10 +11,11 @@ export const metadata = {
   description: "Explore Japanese money habits adapted for India in this 3-hour session to help teens develop ethical financial wisdom.",
 };
 
-export default function BankingEssentials() {
-    return (
-      <>
-        <Header />
+export default function FinancialWisdomPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Financial Wisdom"
           subtitle="Be financially wise - The Japanese Way!"
@@ -100,8 +101,7 @@ export default function BankingEssentials() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

@@ -12,20 +12,21 @@ export const metadata = {
   description: "Every child can be financially savvy — we teach them how to be one.",
 };
 
-export default function FinanceClubs() {
+export default function FinanceClubsPage() {
   return (
     <>
       <Header />
-      <FinanceHeroSection/>
-      <WhyJoinClub/>
-      <ClubHighlightsSection/>
-      <ThemesOfDiscussion/>
-      <ClubDetailsSection/>
-      <PreFooter
-        mainTitle="Every child can be financially savvy — we teach them how to be one."
-        buttonText="Book a Counseling Session"
-      />
-      <Footer />
+      <main>
+        <FinanceHeroSection/>
+        <WhyJoinClub/>
+        <ClubHighlightsSection/>
+        <ThemesOfDiscussion/>
+        <ClubDetailsSection/>
+        <PreFooter
+          mainTitle="Every child can be financially savvy — we teach them how to be one."
+          buttonText="Book a Counseling Session"
+        />
+      </main>
     </>
   );
 }

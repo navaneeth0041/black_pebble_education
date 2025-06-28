@@ -1,2 +1,74 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Mobile Menu Content Shifting Styles */
+@media (max-width: 1024px) {
+  /* Ensure content shifts properly when mobile menu is open */
+  body.mobile-menu-open {
+    overflow: hidden !important; /* Prevent all scrolling on body when menu is open */
+    height: 100vh !important; /* Lock height */
+  }
+  
+  /* Shift main content with curved border and overflow hidden */
+  body.mobile-menu-open main {
+    transform: translateX(208px) !important; /* Reduced from 224px to 208px (w-52) */
+    transition: transform 0.3s ease-in-out !important;
+    border-top-left-radius: 24px !important;
+    border-bottom-left-radius: 24px !important;
+    overflow: hidden !important; /* Hide all overflow on main content */
+    min-height: 100vh !important;
+    background: rgb(0, 0, 0) !important; /* Ensure background covers the area */
+    position: relative !important;
+    z-index: 1 !important;
+    margin-top: 18px !important;
+    margin-left: 18px !important; /* Add right margin to prevent content from touching the edge */
+    padding-top: 0 !important; /* Remove any existing padding-top */
+  }
+  
+  /* Apply border radius to body and html for smooth curves */
+  body.mobile-menu-open,
+  body.mobile-menu-open html {
+    border-top-left-radius: 24px !important;
+    border-bottom-left-radius: 24px !important;
+    overflow: hidden !important;
+    background: #1a1a1a !important; /* Black background to show gap */
+  }
+  
+  /* Ensure header and footer also get border radius */
+  body.mobile-menu-open header:not(.mobile-sidebar-header),
+  body.mobile-menu-open footer {
+    border-top-left-radius: 24px !important;
+    border-bottom-left-radius: 24px !important;
+  }
+  
+  /* Keep the inverted L header extending across full width */
+  body.mobile-menu-open .mobile-sidebar-header {
+    width: 100vw !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 60 !important;
+  }
+  
+  /* Add gap styling for better visual separation */
+  body.mobile-menu-open .mobile-sidebar-header + div {
+    background: #1a1a1a !important;
+  }
+}
+
+/* Desktop - no transformation */
+@media (min-width: 1025px) {
+  body.mobile-menu-open main {
+    transform: none !important;
+    width: auto !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    margin-top: 0 !important;
+  }
+  
+  body.mobile-menu-open,
+  body.mobile-menu-open html {
+    border-radius: 0 !important;
+    overflow: visible !important;
+    background: inherit !important;
+  }
+}

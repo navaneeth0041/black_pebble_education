@@ -11,10 +11,11 @@ export const metadata = {
   description: "Empower enterprising teens in this 3-hour course guiding them to start their ventures and gain professional independence.",
 };
 
-export default function BankingEssentials() {
-    return (
-      <>
-        <Header />
+export default function BusinessBasicsPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Business Basics"
           subtitle="Let your child be an entrepreneur - Teenpreneur!"
@@ -100,8 +101,7 @@ export default function BankingEssentials() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

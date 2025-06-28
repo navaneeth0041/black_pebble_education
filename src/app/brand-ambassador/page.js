@@ -10,14 +10,16 @@ export const metadata = {
   description: "Love what we do? Be our Brand Ambassador, Bella!",
 };
 
-export default function BrandAmbrPage() {
+export default function BrandAmbassadorPage() {
   return (
     <>
       <Header />
-      <HeroSection/>
-      <PebbleBellaSection />
-      <WhyPebbleBellaSection/>
-      <PebbleBellaContactSection/>
+      <main>
+        <HeroSection/>
+        <PebbleBellaSection />
+        <WhyPebbleBellaSection/>
+        <PebbleBellaContactSection/>
+      </main>
       <Footer/>
 
     </>

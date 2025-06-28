@@ -11,10 +11,11 @@ export const metadata = {
   description: "This 2.5-hour session teaches kids essential day-to-day banking concepts with professional guidance.",
 };
 
-export default function everyday() {
-    return (
-      <>
-        <Header />
+export default function KidsEverydayBankingPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Everyday Banking"
           subtitle="Introduce your child to the nuances of banking - in a fun way!"
@@ -86,8 +87,7 @@ export default function everyday() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

@@ -9,7 +9,7 @@ export const metadata = {
   description: "Empower kids to explore, understand, and own their money journey with this self-help financial literacy kit.",
 };
 
-export default function SelfHelpPage() {
+export default function SelfHelpKitPage() {
   const financialConcepts = {
     description: "Engage with an informative & creative self-help kit to explore financial concepts – anytime, anywhere.",
     conceptsCount: 7,
@@ -35,14 +35,15 @@ export default function SelfHelpPage() {
   return (
     <>
       <Header />
-      <SelfHelpKits smartMoneyConcepts={financialConcepts}/>
-      <PreFooter
-        mainTitle="Why Self-Help Kits?"
-        subText1="Most kids don’t learn about money until it’s too late. This kit empowers kids to explore, understand, and own their money journey!"
-        buttonText="Call Us to Order Your Kit"
-      />
+      <main>
+        <SelfHelpKits smartMoneyConcepts={financialConcepts}/>
+        <PreFooter
+          mainTitle="Why Self-Help Kits?"
+          subText1="Most kids don’t learn about money until it’s too late. This kit empowers kids to explore, understand, and own their money journey!"
+          buttonText="Call Us to Order Your Kit"
+        />
+      </main>
       <Footer />
     </>
   );
 }
-// ...existing code...

@@ -11,10 +11,11 @@ export const metadata = {
   description: "Teach kids about credit principles in this 2-hour session to promote responsible credit use and avoid debt traps.",
 };
 
-export default function everyday() {
-    return (
-      <>
-        <Header />
+export default function KidsCreditConceptsPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Credit Concepts"
           subtitle="Introduce your child to the often-misused concept - Credit!"
@@ -86,8 +87,7 @@ export default function everyday() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

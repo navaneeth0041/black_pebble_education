@@ -15,6 +15,7 @@ export default function financial() {
     return (
       <>
         <Header />
+        <main>
         <ValueOfMoneyHero 
           title="Financial Goals"
           subtitle="Give your child something to aspire - financially!"
@@ -88,6 +89,7 @@ export default function financial() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
+      </main>
       </>
 
     );

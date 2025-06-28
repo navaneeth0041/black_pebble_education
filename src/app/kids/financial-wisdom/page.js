@@ -11,10 +11,11 @@ export const metadata = {
   description: "Shape kids’ financial habits and mindset for responsible adult behavior with this 2.5-hour session.",
 };
 
-export default function financial() {
-    return (
-      <>
-        <Header />
+export default function KidsFinancialWisdomPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Financial Wisdom"
           subtitle="It’s never too early to be wise - financially!"
@@ -86,8 +87,7 @@ export default function financial() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

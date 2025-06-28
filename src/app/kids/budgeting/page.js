@@ -11,10 +11,11 @@ export const metadata = {
   description: "Help impulsive kids learn the difference between needs and wants with this 2-hour budgeting course fostering wise spending.",
 };
 
-export default function Budgeting() {
-    return (
-      <>
-        <Header />
+export default function KidsBudgetingPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Budgeting"
           subtitle="Make your child learn to be mindful of expenses - Money discipline!"
@@ -86,8 +87,7 @@ export default function Budgeting() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

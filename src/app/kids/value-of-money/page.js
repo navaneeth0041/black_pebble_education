@@ -11,10 +11,11 @@ export const metadata = {
   description: "This 2-hour session teaches kids the practical worth of money, helping avoid indulgence and unchecked expenses.",
 };
 
-export default function HomePage() {
-    return (
-      <>
-        <Header />
+export default function KidsValueOfMoneyPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Value of Money"
           subtitle="Introduce your child to the right money mindset - Respect for money!"
@@ -86,8 +87,7 @@ export default function HomePage() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

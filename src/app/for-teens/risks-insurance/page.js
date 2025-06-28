@@ -11,10 +11,11 @@ export const metadata = {
   description: "Dynamic and uncertain economies make risk awareness vital. This 2-hour session introduces teens to risks and insurance basics.",
 };
 
-export default function BankingEssentials() {
-    return (
-      <>
-        <Header />
+export default function RisksInsurancePage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Risks & Insurance"
           subtitle="Let your child learn to navigate risks - the smart way!"
@@ -100,8 +101,7 @@ export default function BankingEssentials() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

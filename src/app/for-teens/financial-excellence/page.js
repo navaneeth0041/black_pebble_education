@@ -11,10 +11,11 @@ export const metadata = {
   description: "A 9-hour course giving curious teens a complete understanding of important financial concepts, perfect for those ahead of the curve.",
 };
 
-export default function BankingEssentials() {
-    return (
-      <>
-        <Header />
+export default function FinancialExcellencePage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Financial Excellence Program"
           subtitle="Give your child full exposure to financial literacy in 4 weeks!"
@@ -100,8 +101,7 @@ export default function BankingEssentials() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}

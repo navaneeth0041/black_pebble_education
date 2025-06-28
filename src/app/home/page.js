@@ -12,28 +12,29 @@ import Testimonials from '@/components/Testimonials.jsx'
 import ImpactPage from '@/components/ImapctStarts.jsx';
 import PreFooter from '@/components/prefooter.jsx';
 
-
 export default function HomePage() {
   return (
     <>
       <Header />
-      <Home />
-      <WhoWeArePage/>
-      <MakingFinanceWonderful/>
-      <UniquePedagogy/>      
-      <FinancialLiteracyPage/>
-      <FinancialEducationHero/>
-      <MoneyClassComparison/>
-      {/* <Testimonials/> */}
-      <ImpactPage />
-      <MethodicalApproach />
-      <PreFooter
-        mainTitle="Not sure if your child is ready for our courses?"
-        subText1="We've got you covered. Our Counselor will help you."
-        subText2="We'll arrange a call with our Counselor to assess your child's readiness and recommend courses that suit them. Let's get started!"
-        buttonText="Book a Counseling Session"
-      />
-      <Footer />
+      <main>
+        <Home />
+        <WhoWeArePage/>
+        <MakingFinanceWonderful/>
+        <UniquePedagogy/>      
+        <FinancialLiteracyPage/>
+        <FinancialEducationHero/>
+        <MoneyClassComparison/>
+        {/* <Testimonials/> */}
+        <ImpactPage />
+        <MethodicalApproach />
+        <PreFooter
+          mainTitle="Not sure if your child is ready for our courses?"
+          subText1="We've got you covered. Our Counselor will help you."
+          subText2="We'll arrange a call with our Counselor to assess your child's readiness and recommend courses that suit them. Let's get started!"
+          buttonText="Book a Counseling Session"
+        />
+        <Footer />
+      </main>
     </>
   );
 }

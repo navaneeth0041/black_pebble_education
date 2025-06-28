@@ -19,10 +19,11 @@ This 2-hour session provides them with a relatable and practical understanding o
   },
 };
 
-export default function HomePage() {
-    return (
-      <>
-        <Header />
+export default function ValueOfMoneyPage() {
+  return (
+    <>
+      <Header />
+      <main>
         <ValueOfMoneyHero 
           title="Value of Money"
           subtitle="Introduce your child to the right money mindset - Respect for money!"
@@ -92,8 +93,7 @@ export default function HomePage() {
         buttonText="Book a Counseling Session"
       />
       <Footer /> 
-      </>
-
-    );
-  }
-  
+      </main>
+    </>
+  );
+}
