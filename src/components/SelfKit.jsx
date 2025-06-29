@@ -60,7 +60,7 @@ const SelfHelpKits = ({
     <>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-<section className="bg-[#343434] text-white h-[60vh] lg:h-[70vh] relative overflow-hidden flex items-center">
+<section className="bg-[#343434] text-white h-[70vh] relative overflow-hidden flex items-center">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 w-full">
     <div className="text-center lg:text-left">
       <div className="flex justify-center ml-30 mb-4 lg:hidden">
@@ -74,7 +74,7 @@ const SelfHelpKits = ({
       </div>
       {/* Use flex with items-start to align icon with top of text */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-8 mb-8 sm:mb-6">
-        <h1 className={`${mochiyPopOne.className} text-[34px] sm:text-4xl md:text-4xl lg:text-7xl leading-snug tracking-tight text-left text-white mb-2 sm:mb-4 max-w-5xl`}>
+        <h1 className={`${mochiyPopOne.className} text-[29px] sm:text-4xl md:text-4xl lg:text-7xl leading-snug tracking-tight text-left text-white mb-1 sm:mb-4 max-w-5xl`}>
           Learn. Play. Grow —<br />
           <span className="text-white">At Your Own Pace!</span>
         </h1>
@@ -88,7 +88,7 @@ const SelfHelpKits = ({
         </div>
       </div>
       
-      <p className="mt-4 mb-8 sm:mb-6 text-[23px] xs:text-[17px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[24px] leading-[1.4] tracking-[-0.3px] text-gray-300 text-center lg:text-left font-medium font-poppins">
+      <p className="mt-4 mb-8 sm:mb-6 text-[20px] xs:text-[17px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[24px] leading-[1.4] tracking-[-0.3px] text-gray-300 text-center lg:text-left font-medium font-poppins">
         {smartMoneyConcepts.description}
       </p>
       

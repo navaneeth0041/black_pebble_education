@@ -30,18 +30,27 @@ export default function FinanciallyConfidentKidsHero() {
 
   return (
     <>
-    <div className="bg-[#343434] text-white py-12 sm:py-16 md:py-16 lg:py-20 relative overflow-hidden">
+    <div className="bg-[#343434] text-white py-8 sm:py-16 md:py-16 lg:py-20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center ml-30 mb-4 lg:hidden">
+              <div className="w-20 h-20 xs:w-24 xs:h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 flex-shrink-0">
+                <img
+                  src="/about/Group.svg"
+                  alt="Calculator Icon"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8">
           {/* Content Section */}
           <div className="text-center lg:text-left lg:flex-1 w-full">
-            <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight ${mochiyPopOne.className}`}>
+            <h1 className={`text-[25px] sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight ${mochiyPopOne.className}`}>
               Building the Future of
               <br />
               <span className="text-white">Financially Confident Kids</span>
             </h1>
             
-            <p className={`mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 ${poppins.className}`}>
+            <p className={`mt-4 sm:mt-6 text-[20px] sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 ${poppins.className}`}>
 At Black Pebble Education, we simplify money for young minds - one course at a time!            </p>
             
             {/* Buttons */}
@@ -75,7 +84,7 @@ At Black Pebble Education, we simplify money for young minds - one course at a t
     <img
         src="/effects/black.png"
         alt="black transition"
-        className='w-[200%] block relative -top-7 z-0'
+        className='w-[200%] block relative -top-2 lg:-top-7 z-0'
       />
     </> 
   );

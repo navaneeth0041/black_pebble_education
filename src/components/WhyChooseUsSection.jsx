@@ -79,7 +79,7 @@ export default function WhyChooseUsSection() {
     <img
         src="/effects/blue.png"
         alt="black transition"
-        className='w-[200%] block relative -top-7 z-50'
+        className='w-[200%] block relative -top-2 lg:-top-7 z-50'
       />
     </> 
   );

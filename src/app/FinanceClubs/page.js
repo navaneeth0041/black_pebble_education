@@ -27,6 +27,7 @@ export default function FinanceClubsPage() {
           buttonText="Book a Counseling Session"
         />
       </main>
+      <Footer />
     </>
   );
 }

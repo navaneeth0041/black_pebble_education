@@ -36,7 +36,7 @@ export default function FinanceHeroSection({
               </div>
             </div>
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 lg:gap-8 mb-8 sm:mb-6">
-              <h1 className={`${PopOne.className} lg:pl-0 pl-4 text-[28px] sm:text-4xl md:text-4xl lg:text-7xl leading-snug tracking-tight lg:text-left text-white mb-2 sm:mb-4 max-w-5xl`}>
+              <h1 className={`${PopOne.className} lg:pl-0 pl-1 text-[25px] sm:text-4xl md:text-4xl lg:text-7xl leading-snug tracking-tight lg:text-left text-white mb-2 sm:mb-4 max-w-5xl`}>
                 Finance Discussions for<br />
                 <span className="text-white">{mindType} Minds ({ageRange})</span>
               </h1>
@@ -49,7 +49,7 @@ export default function FinanceHeroSection({
               </div>
             </div>
             
-            <p className="mt-4 mb-8 sm:mb-6 text-[23px] xs:text-[17px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[24px] leading-[1.4] tracking-[-0.3px] text-gray-300 text-center lg:text-left font-medium font-poppins">
+            <p className="mt-4 mb-8 sm:mb-6 text-[18px] xs:text-[17px] sm:text-[18px] md:text-[20px] lg:text-[24px] xl:text-[24px] leading-[1.4] tracking-[-0.3px] text-gray-300 text-center lg:text-left font-medium font-poppins">
               {subtitle}
             </p>
           </div>

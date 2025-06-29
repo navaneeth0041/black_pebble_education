@@ -26,7 +26,7 @@ export default function MeetTheFounderSection() {
 
   return (
     <>
-      <div className="bg-[#343434] text-[#09BE9D] min-h-screen -mt-5 lg:-mt-35 pt-40 py-12 relative overflow-hidden z-40">
+      <div className="bg-[#343434] text-[#09BE9D] min-h-screen -mt-5 lg:-mt-35 pt-20 lg:pt-40 py-12 relative overflow-hidden z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Top Section - Title and Photo */}
@@ -104,7 +104,7 @@ export default function MeetTheFounderSection() {
       <img
         src="/effects/black.png"
         alt="black transition"
-        className='w-full block relative -top-8 z-20'
+        className='w-full block relative -top-2 lg:-top-8 z-20'
       />
     </> 
   );
