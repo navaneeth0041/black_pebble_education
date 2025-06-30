@@ -55,16 +55,17 @@ export default function MeetTheFounderSection() {
 
             {/* Right - Photo Frame */}
             {/* Right - Photo Frame */}
-<div className="flex-shrink-0 lg:ml-auto lg:mr-16">
-  <div className="w-[300px] h-[400px] lg:w-[400px] lg:h-[550px] shadow-lg">
-    <img 
-      src="/about/frame.jpg" 
-      alt="Founder of Black Pebble Education" 
-      className="w-full h-full object-cover rounded-2xl"
-    />
-  </div>
+<div className="w-[300px] h-[400px] lg:w-[400px] lg:h-[550px] shadow-lg">
+  <img 
+    src="/about/frame.jpg" 
+    alt="Founder of Black Pebble Education" 
+    className="w-full h-full object-cover rounded-2xl"
+  />
+  <p className={`text-white text-center text-lg lg:text-xl mt-4 ${poppins.className}`}>
+    <strong>Salloni Mehta</strong><br />
+    B.E.(IT), MBA (Finance)
+  </p>
 </div>
-
           </div>
 
           {/* Bottom Section - Professional Journey */}

@@ -30,7 +30,7 @@ export default function KidsCreditConceptsPage() {
         modules={[
           {
             id: 1,
-            title: "Credit",
+            title: "Credit: The Concept",
             description: "Understanding credit and its importance.",
             bgColor: "bg-[#F7C342]",
             icon: "/Course_Design/1/Cash.svg"

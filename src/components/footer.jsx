@@ -61,30 +61,28 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#2B2A2A] text-white">
-      <div className="w-full pl-7 lg:pl-0 px-4 md:px-8 lg:px-12 xl:px-16 py-12">
-        {/* Top Section: Logo and YouTube */}
-        <div className="flex flex-col lg:flex-row justify-between items-start mb-12">
-          {/* Logo Section */}
-          <div className="mb-8 lg:mb-0">
+      <div className="w-full px-4 md:px-8 lg:px-12 xl:px-16 py-8 md:py-12">
+        
+        {/* Logo Section - Only on desktop */}
+        <div className="hidden lg:flex justify-between items-start mb-12">
+          <div>
             <BlackLogoWithText logoHeight={80} textHeight={150} />
           </div>
-
-          {/* YouTube Section */}
-          <div className="lg:self-start lg:ml-auto">
+          
+          {/* Desktop YouTube Section */}
+          <div>
             <a 
               href=" https://YouTube.com/@BlackPebbleEdu" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center rounded-lg text-base font-semibold transition-all duration-300 border border-white overflow-hidden hover:bg-white hover:text-[#2B2A2A]"
             >
-              {/* YouTube Icon Section */}
               <div className="px-4 py-3 flex-shrink-0">
                 <img src="/footer/youtube.png" alt="YouTube" className="h-12 w-12" />
               </div>
               
               <div className="w-px h-10 bg-white"></div>
               
-              {/* Text Section */}
               <div className="px-4 py-3 text-left">
                 <div className="text-base font-medium">{youtubeSection.title}</div>
                 <div className="text-sm opacity-90">{youtubeSection.subtitle}</div>
@@ -93,8 +91,34 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Main Content Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Mobile Logo and YouTube - Stacked */}
+        <div className="lg:hidden mb-8">
+          <div className="mb-6">
+            <BlackLogoWithText logoHeight={60} textHeight={120} />
+          </div>
+          
+          {/* Mobile YouTube Section */}
+          <a 
+            href=" https://YouTube.com/@BlackPebbleEdu" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-lg text-sm font-semibold transition-all duration-300 border border-white overflow-hidden hover:bg-white hover:text-[#2B2A2A] w-full max-w-sm"
+          >
+            <div className="px-3 py-2 flex-shrink-0">
+              <img src="/footer/youtube.png" alt="YouTube" className="h-8 w-8" />
+            </div>
+            
+            <div className="w-px h-8 bg-white"></div>
+            
+            <div className="px-3 py-2 text-left">
+              <div className="text-sm font-medium">{youtubeSection.title}</div>
+              <div className="text-xs opacity-90">{youtubeSection.subtitle}</div>
+            </div>
+          </a>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden lg:grid lg:grid-cols-2 lg:gap-8">
           {/* Left: Contact Information */}
           <div className="space-y-4">
             {/* Address */}
@@ -117,7 +141,7 @@ const Footer = () => {
                   transition: 'all 0.3s ease'
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.background = 'linear-gradient(107deg, #  08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                  e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
                   e.target.style.webkitBackgroundClip = 'text';
                   e.target.style.webkitTextFillColor = 'transparent';
                   e.target.style.backgroundClip = 'text';
@@ -161,7 +185,8 @@ const Footer = () => {
           </div>
 
           {/* Right: Links - 3 columns */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-16">
+          <div className="grid grid-cols-3 gap-16">
+            
             {/* Important Links */}
             <div>
               <h3 className="text-xl font-semibold mb-4 text-white">
@@ -268,12 +293,185 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Mobile Layout - Everything stacked vertically */}
+        <div className="lg:hidden space-y-6">
+          
+          {/* Contact Information */}
+          <div className="space-y-4">
+            {/* Address */}
+            <div className="flex items-start space-x-3">
+              <img src="/footer/location.png" alt="Location" className="h-6 w-4 flex-shrink-0 mt-1" />
+              <div className="text-sm text-white">
+                {contactInfo.address.line1}<br />
+                {contactInfo.address.line2}<br />
+                {contactInfo.address.line3}
+              </div>
+            </div>
+            
+            {/* Phone */}
+            <div className="flex items-center space-x-3">
+              <img src="/footer/whatsapp.png" alt="Phone" className="h-4 w-4 flex-shrink-0" />
+              <a 
+                href={`tel:${contactInfo.phone}`}
+                className="text-sm text-white transition-all duration-300"
+                style={{
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                  e.target.style.webkitBackgroundClip = 'text';
+                  e.target.style.webkitTextFillColor = 'transparent';
+                  e.target.style.backgroundClip = 'text';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = '';
+                  e.target.style.webkitBackgroundClip = '';
+                  e.target.style.webkitTextFillColor = '';
+                  e.target.style.backgroundClip = '';
+                }}
+              >
+                {contactInfo.phone}
+              </a>
+            </div>
+            
+            {/* Email */}
+            <div className="flex items-center space-x-3">
+              <img src="/footer/mail.png" alt="Email" className="h-3 w-4 flex-shrink-0" />
+              <a 
+                href={`mailto:${contactInfo.email}`}
+                className="text-sm text-white underline transition-all duration-300"
+                style={{
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                  e.target.style.webkitBackgroundClip = 'text';
+                  e.target.style.webkitTextFillColor = 'transparent';
+                  e.target.style.backgroundClip = 'text';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.background = '';
+                  e.target.style.webkitBackgroundClip = '';
+                  e.target.style.webkitTextFillColor = '';
+                  e.target.style.backgroundClip = '';
+                }}
+              >
+                {contactInfo.email}
+              </a>
+            </div>
+          </div>
+
+          {/* Important Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3 text-white">
+              {footerLinks.importantLinks.title}
+            </h3>
+            <ul className="space-y-2">
+              {footerLinks.importantLinks.items.map((item, index) => (
+                <li key={index}>
+                  <a 
+                    href={getCustomUrl(item)}
+                    target={item === "Book a Counseling Session" ? "_blank" : "_self"}
+                    rel={item === "Book a Counseling Session" ? "noopener noreferrer" : ""}
+                    className="text-sm text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                    style={{
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                      e.target.style.webkitBackgroundClip = 'text';
+                      e.target.style.webkitTextFillColor = 'transparent';
+                      e.target.style.backgroundClip = 'text';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.background = '';
+                      e.target.style.webkitBackgroundClip = '';
+                      e.target.style.webkitTextFillColor = '';
+                      e.target.style.backgroundClip = '';
+                    }}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Products */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3 text-white">
+              {footerLinks.products.title}
+            </h3>
+            <ul className="space-y-2">
+              {footerLinks.products.items.map((item, index) => (
+                <li key={index}>
+                  <a 
+                    href={getCustomUrl(item)}
+                    className="text-sm text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                    style={{
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                      e.target.style.webkitBackgroundClip = 'text';
+                      e.target.style.webkitTextFillColor = 'transparent';
+                      e.target.style.backgroundClip = 'text';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.background = '';
+                      e.target.style.webkitBackgroundClip = '';
+                      e.target.style.webkitTextFillColor = '';
+                      e.target.style.backgroundClip = '';
+                    }}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Legal */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3 text-white">
+              {footerLinks.legal.title}
+            </h3>
+            <ul className="space-y-2">
+              {footerLinks.legal.items.map((item, index) => (
+                <li key={index}>
+                  <a 
+                    href={getCustomUrl(item)}
+                    className="text-sm text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                    style={{
+                      transition: 'all 0.3s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.background = 'linear-gradient(107deg, #08A69A 0%, #0ABE9D 54%, #69C9A1 100%)';
+                      e.target.style.webkitBackgroundClip = 'text';
+                      e.target.style.webkitTextFillColor = 'transparent';
+                      e.target.style.backgroundClip = 'text';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.background = '';
+                      e.target.style.webkitBackgroundClip = '';
+                      e.target.style.webkitTextFillColor = '';
+                      e.target.style.backgroundClip = '';
+                    }}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
         {/* Copyright */}
-        <div className="mt-8 pt-4 text-right">
-          <p className="text-lg text-white">
+        <div className="mt-8 pt-4 text-center lg:text-right">
+          <p className="text-sm lg:text-lg text-white">
             <span>Copyright © 2025 Black Pebble Education- All Rights Reserved</span> 
           </p>
-            <p className="text-md text-white mt-2">
+          <p className="text-xs lg:text-md text-white mt-2">
             Powered by{' '}
             <a 
               href="https://500x.tech/" 
