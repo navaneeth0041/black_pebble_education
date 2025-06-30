@@ -100,14 +100,14 @@ const ClubDetailsSection = ({
                           lineHeight: '107%',
                           letterSpacing: '-0.893px'
                         }}>
-                          ₹250
+                          ₹2400
                         </div>
                         <div className="text-white font-poppins text-[56px] font-semibold" style={{
                           fontWeight: 600,
                           lineHeight: '107%',
                           letterSpacing: '-1.064px'
                         }}>
-                          ₹100/month
+                          ₹1200/Year
                         </div>
                       </div>
                     </div>

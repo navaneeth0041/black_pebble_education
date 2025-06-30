@@ -138,7 +138,7 @@ const PebbleBellaContactSection = () => {
               <h1
                 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-8 md:mb-12 text-left ${mochiyPopOne.className}`}
               >
-                Want to be Our Bella
+                Want to be Our Bella?
               </h1>
               
               {/* Success/Error Messages */}
