@@ -19,12 +19,12 @@ export default function FinanciallyConfidentKidsHero() {
     {
       text: "Book a Counseling Session",
       className: "bg-gradient-to-r from-[#08A69A] via-[#0ABE9D] to-[#69C9A1] hover:opacity-90 text-white px-4 lg:px-5 py-2 lg:py-2.5 rounded-full font-medium transition-all duration-200 text-sm whitespace-nowrap",
-      onClick: () => console.log("Book counselling clicked")
+      onClick: () => window.open("https://docs.google.com/forms/d/e/1FAIpQLSeeCFCunf99pwus2cnid2cGLyWrzv1LvKSDOMmqsLFmVp6yKA/viewform")
     },
     {
       text: "Be our Brand Ambassador",
       className: "bg-transparent border border-white hover:bg-white hover:text-gray-800 text-white px-4 lg:px-5 py-2 lg:py-2.5 rounded-full font-medium transition-all duration-200 text-sm whitespace-nowrap",
-      onClick: () => console.log("Brand ambassador clicked")
+      onClick: () => {window.location='/brand-ambassador'}
     }
   ];
 
