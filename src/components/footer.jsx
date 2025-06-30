@@ -93,28 +93,30 @@ const Footer = () => {
 
         {/* Mobile Logo and YouTube - Stacked */}
         <div className="lg:hidden mb-8">
-          <div className="mb-6">
+          <div className="mb-6 flex justify-center">
             <BlackLogoWithText logoHeight={60} textHeight={120} />
           </div>
           
           {/* Mobile YouTube Section */}
-          <a 
-            href=" https://YouTube.com/@BlackPebbleEdu" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center rounded-lg text-sm font-semibold transition-all duration-300 border border-white overflow-hidden hover:bg-white hover:text-[#2B2A2A] w-full max-w-sm"
-          >
-            <div className="px-3 py-2 flex-shrink-0">
-              <img src="/footer/youtube.png" alt="YouTube" className="h-8 w-8" />
-            </div>
-            
-            <div className="w-px h-8 bg-white"></div>
-            
-            <div className="px-3 py-2 text-left">
-              <div className="text-sm font-medium">{youtubeSection.title}</div>
-              <div className="text-xs opacity-90">{youtubeSection.subtitle}</div>
-            </div>
-          </a>
+          <div className="flex justify-center">
+            <a 
+              href=" https://YouTube.com/@BlackPebbleEdu" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-lg text-sm font-semibold transition-all duration-300 border border-white overflow-hidden hover:bg-white hover:text-[#2B2A2A] w-full max-w-sm"
+            >
+              <div className="px-3 py-2 flex-shrink-0">
+                <img src="/footer/youtube.png" alt="YouTube" className="h-8 w-8" />
+              </div>
+              
+              <div className="w-px h-8 bg-white"></div>
+              
+              <div className="px-3 py-2 text-left">
+                <div className="text-sm font-medium">{youtubeSection.title}</div>
+                <div className="text-xs opacity-90">{youtubeSection.subtitle}</div>
+              </div>
+            </a>
+          </div>
         </div>
 
         {/* Desktop Layout */}
