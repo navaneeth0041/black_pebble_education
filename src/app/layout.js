@@ -20,7 +20,18 @@ export const metadata = {
     "Empowering kids and teens with fun, age-tailored financial literacy education.",
   metadataBase: new URL("https://black-pebble-education.vercel.app/"),
   openGraph: {
+    title: "Black Pebble Education",
+    description: "Empowering kids and teens with fun, age-tailored financial literacy education.",
+    url: "https://black-pebble-education.vercel.app/",
     siteName: "Black Pebble Education",
+    images: [
+      {
+        url: "/images/a.jpg", // Note: Consider converting to PNG/JPG for better compatibility
+        width: 1200,
+        height: 630,
+        alt: "Black Pebble Education - Financial literacy for kids and teens",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -28,6 +39,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Black Pebble Education",
     description: "Teaching money mastery to the young, one course at a time.",
+    images: ["/images/a.jpg"], // Note: Consider converting to PNG/JPG for better compatibility
   },
   icons: {
     icon: "/favicon.ico",
