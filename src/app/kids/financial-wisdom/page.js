@@ -7,7 +7,7 @@ import PreFooter from '../../../components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
 export const metadata = {
-  title: "Financial Wisdom Course for Kids | Black Pebble Education",
+  title: "Financial Wisdom Course for Kids ",
   description: "Shape kids’ financial habits and mindset for responsible adult behavior with this 2.5-hour session.",
 };
 

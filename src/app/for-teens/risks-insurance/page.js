@@ -7,7 +7,7 @@ import PreFooter from '@/components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
 export const metadata = {
-  title: "Risks & Insurance Course for Teens | Black Pebble Education",
+  title: "Risks & Insurance Course for Teens ",
   description: "Dynamic and uncertain economies make risk awareness vital. This 2-hour session introduces teens to risks and insurance basics.",
 };
 

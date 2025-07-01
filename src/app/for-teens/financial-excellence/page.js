@@ -7,7 +7,7 @@ import PreFooter from '@/components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
 export const metadata = {
-  title: "Financial Excellence Course for Teens | Black Pebble Education",
+  title: "Financial Excellence Course for Teens ",
   description: "A 9-hour course giving curious teens a complete understanding of important financial concepts, perfect for those ahead of the curve.",
 };
 

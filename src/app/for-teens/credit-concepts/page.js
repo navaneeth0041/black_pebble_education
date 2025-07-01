@@ -7,7 +7,7 @@ import PreFooter from '@/components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
 export const metadata = {
-  title: "Credit Concepts Course for Teens | Black Pebble Education",
+  title: "Credit Concepts Course for Teens ",
   description: "Teach teens the principles of credit in this 2-hour session to avoid irresponsible credit use and debt traps.",
 };
 

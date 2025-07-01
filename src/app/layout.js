@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: {
     default: "Black Pebble Education",
-    template: "%s | Black Pebble Education",
+    template: "%s ",
   },
   description:
     "Empowering kids and teens with fun, age-tailored financial literacy education.",

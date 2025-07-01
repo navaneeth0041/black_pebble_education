@@ -4,7 +4,7 @@ import Footer from '../../components/footer.jsx';
 import PreFooter from '../../components/prefooter.jsx';
 
 export const metadata = {
-  title: "Self-help Kit on Business Literacy | Black Pebble Education",
+  title: "Self-help Kit on Business Literacy ",
   description: "Support kids with a business mindset to nurture their entrepreneurial learning journey with this self-help kit.",
 };
 

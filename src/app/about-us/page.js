@@ -7,7 +7,7 @@ import MeetTheFounderSection from '@/components/MeetTheFounderSection.jsx';
 import PreFooter from '@/components/prefooter.jsx'
 
 export const metadata = {
-  title: "About Us | Black Pebble Education",
+  title: "About Us ",
   description: "Our mission is to cultivate a generation that is financially savvy and confident by breaking down complex money concepts into simple, relatable ideas for children.",
 };
 

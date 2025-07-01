@@ -181,9 +181,12 @@ const Header = () => {
 
             {/* Call us button */}
             <div className="relative group">
-              <button className="border border-white text-white px-3 py-1.5 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-xs">
+              <a 
+                href="tel:+918928557529"
+                className="border border-white text-white px-3 py-1.5 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-xs inline-block"
+              >
                 Call us
-              </button>
+              </a>
               <div className="absolute top-full right-0 mt-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 whitespace-nowrap">
                 +91-8928557529
                 <div className="absolute bottom-full right-4 w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-gray-800"></div>
@@ -272,9 +275,12 @@ const Header = () => {
                 </nav>
                 
                 <div className="relative group">
-                  <button className="ml-3 border border-white text-white px-5 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-base">
+                  <a 
+                    href="tel:+918928557529"
+                    className="ml-3 border border-white text-white px-5 py-2 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-base inline-block"
+                  >
                     Call us
-                  </button>
+                  </a>
                   <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-4 py-3 bg-[#343434] text-white text-sm rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap border border-gray-600 shadow-xl z-50">
                     +91-8928557529
                     <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-b-4 border-l-transparent border-r-transparent border-b-gray-600"></div>
@@ -415,9 +421,12 @@ const Header = () => {
           {/* Call us button - Absolutely positioned at bottom */}
           <div className="absolute bottom-0 left-0 right-0 p-4 bg-[#1a1a1a] border-t border-transparent">
             <div className="relative group">
-              <button className="w-full border border-white text-white px-4 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-base">
+              <a 
+                href="tel:+918928557529"
+                className="w-full border border-white text-white px-4 py-3 rounded-full hover:bg-white hover:text-gray-900 transition-all duration-300 font-medium text-base inline-block text-center"
+              >
                 Call us
-              </button>
+              </a>
               <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-800 text-white text-xs rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 whitespace-nowrap">
                 +91-8928557529
                 <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-gray-800"></div>

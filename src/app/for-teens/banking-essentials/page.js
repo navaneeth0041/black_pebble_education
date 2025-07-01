@@ -7,7 +7,7 @@ import PreFooter from '@/components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
 export const metadata = {
-  title: "Banking Essentials Course for Teens | Black Pebble Education",
+  title: "Banking Essentials Course for Teens ",
   description: "Minimal experience in branch banking makes this 2-hour session crucial for teens to understand banking functions and importance practically and relatable.",
 };
 

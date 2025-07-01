@@ -5,7 +5,7 @@ import PreFooter from '../../components/prefooter.jsx';
 
 
 export const metadata = {
-  title: "Self-help Kit on Financial Literacy | Black Pebble Education",
+  title: "Self-help Kit on Financial Literacy ",
   description: "Empower kids to explore, understand, and own their money journey with this self-help financial literacy kit.",
 };
 

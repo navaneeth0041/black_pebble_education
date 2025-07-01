@@ -8,7 +8,7 @@ import ThemesOfDiscussion from '@/components/ThemesOfDiscussion';
 import WhyJoinClub from '@/components/whyjoinclubs';
 
 export const metadata = {
-  title: "Online Finance Club for Kids | Black Pebble Education",
+  title: "Online Finance Club for Kids ",
   description: "Every child can be financially savvy — we teach them how to be one.",
 };
 

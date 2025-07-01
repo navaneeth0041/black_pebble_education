@@ -6,7 +6,7 @@ import Footer from '@/components/footer.jsx';
 import HeroSection from '../../components/HeroSection.jsx';
 
 export const metadata = {
-  title: "Brand Ambassador Program | Black Pebble Education",
+  title: "Brand Ambassador Program ",
   description: "Love what we do? Be our Brand Ambassador, Bella!",
 };
 

@@ -7,7 +7,7 @@ import PreFooter from '../../../components/prefooter.jsx';
 import Testimonials from '@/components/Testimonials.jsx';
 
 export const metadata = {
-  title: "Financial Growth Course for Kids | Black Pebble Education",
+  title: "Financial Growth Course for Kids ",
   description: "Equip kids to start their financial growth journey by teaching saving, investing, and expense tracking in this 2.5-hour session.",
 };
 
