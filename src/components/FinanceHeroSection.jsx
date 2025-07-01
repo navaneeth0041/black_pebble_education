@@ -23,7 +23,7 @@ export default function FinanceHeroSection({
 }) {
   return (
     <>
-      <section className="bg-[#343434] text-white h-[60vh] lg:h-[70vh] relative overflow-hidden flex items-center">
+      <section className="bg-[#343434] text-white h-[70vh] relative overflow-hidden flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 w-full">
           <div className="text-center lg:text-left">
             <div className="flex justify-center ml-30 mb-4 lg:hidden">
