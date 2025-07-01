@@ -27,7 +27,7 @@ export default function ValueOfMoneyHero({
 }) {
   return (
     <>
-      <div className="bg-[#343434] text-white h-[60vh] lg:h-[70vh] relative overflow-hidden flex items-center">
+      <div className="bg-[#343434] text-white h-[70vh] relative overflow-hidden flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center lg:text-left">
             {/* Mobile: Icon above title, positioned more to left and bigger */}
